@@ -11,7 +11,6 @@ env:
   node-version: 16.x
 
 jobs:
-
   eslint:
     runs-on: ubuntu-latest
     defaults:
@@ -25,8 +24,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.node-version }}
-          cache: 'yarn'
-          cache-dependency-path: 'frontend/yarn.lock'
+          cache: "yarn"
+          cache-dependency-path: "frontend/yarn.lock"
 
       - name: Install packages
         run: make install
@@ -46,7 +45,6 @@ jobs:
       - name: Run Prettier
         run: npx prettier@2.0.5 --single-quote --check 'src/**/*.{js,jsx,ts,tsx,css,scss}' --config=package.json
 
-
   i18n:
     name: i18n sync
     runs-on: ubuntu-latest
@@ -62,8 +60,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.node-version }}
-          cache: 'yarn'
-          cache-dependency-path: 'frontend/yarn.lock'
+          cache: "yarn"
+          cache-dependency-path: "frontend/yarn.lock"
 
       - name: Install packages
         run: make install
@@ -84,8 +82,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.node-version }}
-          cache: 'yarn'
-          cache-dependency-path: 'frontend/yarn.lock'
+          cache: "yarn"
+          cache-dependency-path: "frontend/yarn.lock"
 
       - name: Install packages
         run: make install
@@ -101,7 +99,6 @@ jobs:
       packages: write
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -110,11 +107,10 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            https://github.com/intk/rietveld-frontend
+            intkbv/rietveld-frontend
           labels: |
-            org.label-schema.docker.cmd=docker run -d -p 3000:3000 https://github.com/intk/rietveld-frontend:latest
-          flavor:
-            latest=false
+            org.label-schema.docker.cmd=docker run -d -p 3000:3000 intkbv/rietveld-frontend:latest
+          flavor: latest=false
           tags: |
             type=ref,event=branch
             type=sha

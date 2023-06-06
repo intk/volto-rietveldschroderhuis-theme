@@ -107,9 +107,9 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            https://github.com/intk/rietveld-backend
+            intkbv/rietveld-backend
           labels: |
-            org.label-schema.docker.cmd=docker run -d -p 8080:8080 https://github.com/intk/rietveld-backend:latest
+            org.label-schema.docker.cmd=docker run -d -p 8080:8080 intkbv/rietveld-backend:latest
           flavor:
             latest=false
           tags: |
