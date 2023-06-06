@@ -1,0 +1,6 @@
+graft src/rietveld
+graft docs
+include *.rst
+include *.md
+include *.cfg
+global-exclude *.pyc
