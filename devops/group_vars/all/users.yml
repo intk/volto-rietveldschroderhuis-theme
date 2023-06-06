@@ -1,12 +1,11 @@
 ---
 users:
-
-  'plone':
-    name: 'Plone installation'
-    email: 'collective@plone.org'
-    public_keys: []
+  "plone":
+    name: "Plone installation"
+    email: "cihan@itsnotthatkind.org"
+    public_keys: ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCFOE5YZSiZify+wtBo90YVDemhSkyXRpMEK7ys+JbXzdLFMe6WeDLF7mAW7MGYE3b+txHA7J22CZp+ZPSK0a8XREObiVsTHB3GAOhQt2fulzT+oHP7r9lui9m13i0ZWPJCzyakigVY2VVmo+9iYMNFS5/K/GpdqAq43Srf5xJRSlKfurRGVlP+3mWWAWAI9gucgiS6kqfhOFEz1RfY/WU3sirgncYbC+l2PrG/uyrKTq0AQ1F2EH+F4WJLoMVV9agnRU7SRrMBoElpMbnqZ6Ghf4MTULXIgGyGRwmFrqV9jHx0KikdfFImo/h7Eul7wP2oxZeSONtofuBvB5sFc55N CM"]
     state: present
-    shell: '/bin/bash'
+    shell: "/bin/bash"
     groups:
-      - 'docker'
-      - 'plone'
+      - "docker"
+      - "plone"

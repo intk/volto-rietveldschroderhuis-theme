@@ -9,3 +9,4 @@ host_vars/https://github.com/intk-prod.yml
 lib
 lib64
 pyvenv.cfg
+CM.pem
