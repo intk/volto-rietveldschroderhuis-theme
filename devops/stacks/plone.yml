@@ -7,6 +7,7 @@ services:
     ports:
       - 80:80
       - 443:443
+      - 3000:3000
 
     deploy:
       labels:
@@ -65,7 +66,7 @@ services:
       - backend
     networks:
       - nw-webserver
-      - nw-data
+      - backend
     deploy:
       replicas: 2
       labels:
@@ -87,14 +88,12 @@ services:
     image: intkbv/rietveld-backend:latest
     environment:
       SITE: Plone
-      RELSTORAGE_DSN: "dbname='plone' user='plone' host='db' password='plone'"
-    depends_on:
-      - db
+    volumes:
+      - site-data:/data
     networks:
       - nw-webserver
-      - nw-data
+      - backend
     deploy:
-      replicas: 2
       labels:
         - traefik.enable=true
         - traefik.docker.network=nw-webserver
@@ -132,16 +131,16 @@ services:
         - traefik.http.routers.rt-backend-classic.service=svc-backend
         - traefik.http.routers.rt-backend-classic.middlewares=gzip,mw-backend-auth,mw-backend-vhm-classic
 
-  db:
-    image: postgres:14.2
-    environment:
-      POSTGRES_USER: plone
-      POSTGRES_PASSWORD: plone
-      POSTGRES_DB: plone
-    volumes:
-      - vol-site-data:/var/lib/postgresql/data
-    networks:
-      - nw-data
+  # db:
+  #   image: postgres:14.2
+  #   environment:
+  #     POSTGRES_USER: plone
+  #     POSTGRES_PASSWORD: plone
+  #     POSTGRES_DB: plone
+  #   volumes:
+  #     - vol-site-data:/var/lib/postgresql/data
+  #   networks:
+  #     - nw-data
 
 volumes:
   vol-traefik-public-certificates:
@@ -154,7 +153,7 @@ volumes:
       type: none
       device: /data/traefik/config
       o: bind
-  vol-site-data:
+  site-data:
     driver_opts:
       type: none
       device: /srv/rietveld/data
@@ -164,5 +163,5 @@ networks:
   nw-webserver:
     external: true
     driver: overlay
-  nw-data:
+  backend:
     driver: overlay
