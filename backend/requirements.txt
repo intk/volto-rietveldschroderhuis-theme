@@ -3,6 +3,12 @@
 
 zope.testrunner
 
+kitconcept.seo
+collective.volto.formsupport
+redturtle.voltoplugin.editablefooter
+collective.volto.socialsettings
+plone.app.multilingual
+
 # Add required add-ons
 # (Ideally add them in setup.py for rietveld)
 # collective.easyform

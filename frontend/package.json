@@ -28,7 +28,14 @@
     "@eeacms/volto-accordion-block",
     "@kitconcept/volto-blocks-grid",
     "@kitconcept/volto-slider-block",
-    "@eeacms/volto-matomo"
+    "@eeacms/volto-matomo",
+    "@eeacms/volto-columns-block",
+    "volto-multilingual-widget",
+    "@eeacms/volto-block-image-cards",
+    "volto-editablefooter",
+    "volto-social-settings",
+    "volto-gdpr-privacy",
+    "volto-form-block"
   ],
   "jest": {
     "modulePathIgnorePatterns": [
@@ -140,10 +147,17 @@
   },
   "dependencies": {
     "@eeacms/volto-accordion-block": "*",
+    "@eeacms/volto-block-image-cards": "0.6.3",
+    "@eeacms/volto-columns-block": "^6.0.2",
     "@eeacms/volto-matomo": "*",
     "@kitconcept/volto-blocks-grid": "*",
     "@kitconcept/volto-slider-block": "*",
-    "@plone/volto": "16.20.8"
+    "@plone/volto": "16.20.8",
+    "volto-editablefooter": "5.0.1",
+    "volto-form-block": "3.0.1",
+    "volto-gdpr-privacy": "2.0.0",
+    "volto-multilingual-widget": "3.0.0",
+    "volto-social-settings": "3.0.0"
   },
   "devDependencies": {
     "@plone/scripts": "^2.1.5",
