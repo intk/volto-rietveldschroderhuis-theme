@@ -1756,6 +1756,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-block-divider@npm:^2.0.0":
+  version: 2.1.6
+  resolution: "@eeacms/volto-block-divider@npm:2.1.6"
+  dependencies:
+    react-color: ~2.18.1
+  checksum: f7b71148192ebee6824c4fae0beec62b4f3d75949bbd34dcd204891b9776499a171dde134f885c980f26ecb49ea9112b3c3d33cd4aedb39077166ad8b77bfa18
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-block-image-cards@npm:0.6.3":
   version: 0.6.3
   resolution: "@eeacms/volto-block-image-cards@npm:0.6.3"
@@ -2538,6 +2547,16 @@ __metadata:
   peerDependencies:
     "@plone/volto": ">=16.0.0"
   checksum: e375acef67861b780748ac12e1786b9dc1bfd10e603c089678ed6bf318c380ef5f48d921525b12b9cde89f97daea4f7933de9dfc7d8661b517287c39f9d5b1c2
+  languageName: node
+  linkType: hard
+
+"@kitconcept/volto-carousel-block@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@kitconcept/volto-carousel-block@npm:1.1.0"
+  dependencies:
+    react-slick: 0.25.2
+    slick-carousel: 1.8.1
+  checksum: 7a3f2a70277ee4dd3ab255db42a667d5e15b3c404ef90f6bba3fd621b2a35e6e70c965871a0f4ed89501800d3e6ecf7038d9a4467784195f07d74f6fb2d965c8
   languageName: node
   linkType: hard
 
@@ -11781,10 +11800,12 @@ __metadata:
   resolution: "frontend@workspace:."
   dependencies:
     "@eeacms/volto-accordion-block": "*"
+    "@eeacms/volto-block-divider": ^2.0.0
     "@eeacms/volto-block-image-cards": 0.6.3
     "@eeacms/volto-columns-block": ^6.0.2
     "@eeacms/volto-matomo": "*"
     "@kitconcept/volto-blocks-grid": "*"
+    "@kitconcept/volto-carousel-block": 1.1.0
     "@kitconcept/volto-slider-block": "*"
     "@plone/scripts": ^2.1.5
     "@plone/volto": 16.20.8
@@ -20122,6 +20143,22 @@ __metadata:
     react: ^16.0.0
     react-dom: ^16.0.0
   checksum: 1f8670b4a0d5bd676101a3fabd4fd4e02b4b6009191adc39261095c1255744b8062bf15c7f8a622a29a2f18ec80eac9d70d20906a5546ba621d387d726f62cab
+  languageName: node
+  linkType: hard
+
+"react-slick@npm:0.25.2":
+  version: 0.25.2
+  resolution: "react-slick@npm:0.25.2"
+  dependencies:
+    classnames: ^2.2.5
+    enquire.js: ^2.1.6
+    json2mq: ^0.2.0
+    lodash.debounce: ^4.0.8
+    resize-observer-polyfill: ^1.5.0
+  peerDependencies:
+    react: ^0.14.0 || ^15.0.1 || ^16.0.0
+    react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0
+  checksum: a728161f6d6dd09a626db9d0c089d3eed3e8087246c0307c7e1343f6420c645d1760498c41733fce67138eadaf14a67552fd9e5d85227617cd54c750f4f542dc
   languageName: node
   linkType: hard
 

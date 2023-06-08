@@ -34,7 +34,10 @@
     "@eeacms/volto-block-image-cards",
     "volto-editablefooter",
     "volto-social-settings",
-    "volto-form-block"
+    "volto-form-block",
+    "@eeacms/volto-block-divider",
+    "@kitconcept/volto-carousel-block",
+    "@eeacms/volto-block-image-cards"
   ],
   "jest": {
     "modulePathIgnorePatterns": [
@@ -146,10 +149,12 @@
   },
   "dependencies": {
     "@eeacms/volto-accordion-block": "*",
+    "@eeacms/volto-block-divider": "^2.0.0",
     "@eeacms/volto-block-image-cards": "0.6.3",
     "@eeacms/volto-columns-block": "^6.0.2",
     "@eeacms/volto-matomo": "*",
     "@kitconcept/volto-blocks-grid": "*",
+    "@kitconcept/volto-carousel-block": "1.1.0",
     "@kitconcept/volto-slider-block": "*",
     "@plone/volto": "16.20.8",
     "volto-editablefooter": "5.0.1",
@@ -173,7 +178,8 @@
     "stylelint": "14.0.1",
     "stylelint-config-idiomatic-order": "8.1.0",
     "stylelint-config-prettier": "8.0.1",
-    "stylelint-prettier": "1.1.2"
+    "stylelint-prettier": "1.1.2",
+    "@eeacms/volto-block-image-cards": "^1.0.0"
   },
   "resolutions": {
     "react-error-overlay": "6.0.9"
