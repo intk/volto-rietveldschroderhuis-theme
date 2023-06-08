@@ -1,5 +1,7 @@
 body {
   overflow-x: hidden;
+  -webkit-tap-highlight-color: #0085a1;
+  -webkit-font-smoothing: antialiased;
 }
 
 #page-document.ui.container {
@@ -32,10 +34,7 @@ p {
 }
 
 #main{
-  body {
-    -webkit-tap-highlight-color: #0085a1;
-    -webkit-font-smoothing: antialiased;
-  }
+
 
   ::-moz-selection {
     color: white;
@@ -88,17 +87,35 @@ p {
   }
 
   h1.documentFirstHeading {
-    // color: #ffffff;
-    font-size: 76px;
+    color: #282931;
+    font-family: 'FranklinDmCp', Arial, sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.00em;
+    line-height: 62px;
     max-width: 100%;
-    margin-bottom: 0px;
-    line-height: 80px;
-    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+    margin-top: 15px;
+    border-bottom: 0px;
+    text-align: center;
+  }
+  .documentFirstHeading::before {
+    display: none;
+  }
+  @media screen and (max-width: 678px) {
+    h1.documentFirstHeading {
+      font-size: 40px;
+      line-height: 35px;
+      text-align: left;
+    }
   }
 
   h2.documentDescription{
     color: #282931;
-    font-size: 1.650em;
+    font-size: 1.75rem;
     letter-spacing: 0.00em;
     line-height: 42px;
     display: block;
@@ -114,17 +131,39 @@ p {
     h2.documentDescription {
       text-align: left;
       margin-top: 30px;
-      font-size: 1.500em;
+      font-size: 1.6rem;
       margin-bottom: 25px;
       letter-spacing: 0.00em;
       line-height: 42px;
     }
   }
 
+  h2{
+    font-size: 30px;
+    font-family: 'FranklinBook', Arial, sans-serif;
+  }
+
+  h3{
+    font-family: 'FranklinMed', Arial, sans-serif;
+    font-size: 25px;
+    color: #494A51;
+    letter-spacing: 0.0em;
+    line-height: 32px;
+    font-weight: 400;
+    margin-top: 45px;
+    text-transform: none;
+  }
+  @media screen and (max-width: 768px) {
+    h3{
+      font-size: 21.6px;
+      line-height: 32px;
+    }
+  }
+
 
   p {
     font-family: 'FranklinBook', Arial, sans-serif;
-    font-size: 1.230em;
+    font-size: 19.68px;
     line-height: 36px;
     letter-spacing: 0.0em;
     color: #494a51;
@@ -134,7 +173,7 @@ p {
 
   @media screen and (max-width: 768px) {
     p {
-      font-size: 1.180em;
+      font-size: 18.88px;
     }
   }
 
@@ -147,6 +186,10 @@ p {
     padding: 1em;
     border-left: 1em solid #ccc;
     clear: both;
+  }
+
+  ol,li, blockquote{
+    font-size: 17px;
   }
 }
 
@@ -215,7 +258,7 @@ p {
    display: block;
    margin-top: -5px !important;
    color: rgb(102, 102, 102);
-   font-size: 13px !important;
+   font-size: 15px !important;
    line-height: 23px !important;
    text-align: center;
    color: #777777 !important;
