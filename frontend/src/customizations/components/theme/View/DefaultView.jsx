@@ -7,7 +7,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 
-import { Container as SemanticContainer, Segment, Grid, Label } from 'semantic-ui-react';
+import {
+  Container as SemanticContainer,
+  Segment,
+  Grid,
+  Label,
+} from 'semantic-ui-react';
 import config from '@plone/volto/registry';
 import { getSchema } from '@plone/volto/actions';
 import { getWidget } from '@plone/volto/helpers/Widget/utils';
@@ -30,8 +35,15 @@ const DefaultView = (props) => {
   const dispatch = useDispatch();
   const { views } = config.widgets;
   const contentSchema = useSelector((state) => state.schema?.schema);
-  const fieldsetsToExclude = ['categorization', 'dates', 'ownership', 'settings'];
-  const fieldsets = contentSchema?.fieldsets.filter((fs) => !fieldsetsToExclude.includes(fs.id));
+  const fieldsetsToExclude = [
+    'categorization',
+    'dates',
+    'ownership',
+    'settings',
+  ];
+  const fieldsets = contentSchema?.fieldsets.filter(
+    (fs) => !fieldsetsToExclude.includes(fs.id),
+  );
 
   // TL;DR: There is a flash of the non block-based view because of the reset
   // of the content on route change. Subscribing to the content change at this
@@ -44,11 +56,14 @@ const DefaultView = (props) => {
   const contentLoaded = content && !isEqual(Object.keys(content), ['lock']);
 
   React.useEffect(() => {
-    content?.['@type'] && !hasBlocksData(content) && dispatch(getSchema(content['@type'], location.pathname));
+    content?.['@type'] &&
+      !hasBlocksData(content) &&
+      dispatch(getSchema(content['@type'], location.pathname));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const Container = config.getComponent({ name: 'Container' }).component || SemanticContainer;
+  const Container =
+    config.getComponent({ name: 'Container' }).component || SemanticContainer;
 
   // If the content is not yet loaded, then do not show anything
   return contentLoaded ? (
