@@ -1,12 +1,7 @@
-/* END OF FONTS */
-
 body {
   overflow-x: hidden;
 }
 
-
-
-// *****************************************
 #page-document.ui.container {
   width: @container-width !important;
 }
@@ -35,20 +30,6 @@ p {
   line-height: 1.5;
   margin: 30px 0;
 }
-
-// p a {
-//   text-decoration: underline;
-// }
-
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-//   font-weight: 800;
-// }
 
 #main{
   body {
@@ -114,8 +95,7 @@ p {
     line-height: 80px;
     margin-top: 0px;
   }
-
-
+  
   p {
     font-family: 'FranklinBook', Arial, sans-serif;
     font-size: 1.230em;
