@@ -51,7 +51,18 @@ const Arrows = (props) => {
 
 const RoundTiled = (props) => {
   const { data, editable } = props;
-  const { cards, image_scale, height = '600', fade = true, infinite = true, autoplay = true, hideArrows = false, pauseOnHover = true, autoplaySpeed = 10000, hideNavigationDots = true } = data;
+  const {
+    cards,
+    image_scale,
+    height = '600',
+    fade = true,
+    infinite = true,
+    autoplay = true,
+    hideArrows = false,
+    pauseOnHover = true,
+    autoplaySpeed = 10000,
+    hideNavigationDots = true,
+  } = data;
   const slider = React.useRef(null);
 
   var settings = {
@@ -93,7 +104,10 @@ const RoundTiled = (props) => {
                   style={
                     card.attachedimage
                       ? {
-                          backgroundImage: `url(${getScaleUrl(getPath(card.attachedimage), image_scale || 'great')})`,
+                          backgroundImage: `url(${getScaleUrl(
+                            getPath(card.attachedimage),
+                            image_scale || 'great',
+                          )})`,
                           height: `${height}px`,
                         }
                       : {}
@@ -119,9 +133,13 @@ const RoundTiled = (props) => {
                           }}
                         />
                       ) : (
-                        <div className="slide-description">{serializeNodes(card.text)}</div>
+                        <div className="slide-description">
+                          {serializeNodes(card.text)}
+                        </div>
                       )}
-                      <div className="slide-copyright">{serializeNodes(card.copyright)}</div>
+                      <div className="slide-copyright">
+                        {serializeNodes(card.copyright)}
+                      </div>
                     </div>
                   </div>
                 )}
