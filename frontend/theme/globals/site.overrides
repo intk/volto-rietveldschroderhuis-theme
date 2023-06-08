@@ -283,6 +283,15 @@ p {
 // *********************************8
 .slate-table-block {
   border: 0px !important;
+
+  th, td{
+    line-height: 32px !important;
+    padding-top: 10px !important;
+    padding-bottom: 5px !important;
+  }
+  td:last-child{
+    text-align: right !important;
+  }
 }
 .slate-table-block * {
   font-size: 17px !important;
