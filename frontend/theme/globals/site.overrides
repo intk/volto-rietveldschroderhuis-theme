@@ -1,0 +1,227 @@
+/* END OF FONTS */
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+// *****************************************
+#page-document.ui.container {
+  width: @container-width !important;
+}
+@media screen and (max-width: 768px){
+  #page-document.ui.container {
+    width: 100% !important;
+    margin: 0% !important;
+    padding: 0% !important;
+  }
+  #page-document.ui.container > *:not(.block.image.align, .block.video.align){
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  #page-document.ui.container > ol, #page-document.ui.container > ul {
+    padding-left: 35px !important;
+  }
+}
+
+body {
+  font-family: 'FranklinBook', Arial, sans-serif;
+  font-size: 16px;
+  color: #404040;
+}
+
+p {
+  line-height: 1.5;
+  margin: 30px 0;
+}
+
+// p a {
+//   text-decoration: underline;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+//   font-weight: 800;
+// }
+
+#main{
+  body {
+    -webkit-tap-highlight-color: #0085a1;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-moz-selection {
+    color: white;
+    text-shadow: none;
+    background: @brand-primary;
+  }
+
+  ::selection {
+    color: white;
+    text-shadow: none;
+    background: @brand-primary;
+  }
+
+  img::selection {
+    color: white;
+    background: transparent;
+  }
+
+  img::-moz-selection {
+    color: white;
+    background: transparent;
+  }
+
+  a {
+    color: #404040;
+  }
+
+  a:hover,
+  a:focus {
+    color: #0085a1;
+  }
+
+  a img:hover,
+  a img:focus {
+    cursor: zoom-in;
+  }
+
+  blockquote {
+    color: #808080;
+    font-style: italic;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    font-family: 'FranklinBook', Arial, sans-serif;
+    color: @brand-primary;
+  }
+
+  h1.documentFirstHeading {
+    // color: #ffffff;
+    font-size: 76px;
+    max-width: 100%;
+    margin-bottom: 0px;
+    line-height: 80px;
+    margin-top: 0px;
+  }
+
+
+  p {
+    font-family: 'FranklinBook', Arial, sans-serif;
+    font-size: 1.230em;
+    line-height: 36px;
+    letter-spacing: 0.0em;
+    color: #494a51;
+    margin: 8px 0;
+    margin-bottom: 35px;
+  }
+
+  @media screen and (max-width: 768px) {
+    p {
+      font-size: 1.180em;
+    }
+  }
+
+  #page-document a {
+    border-bottom: 1px solid #494a51;
+  }
+
+  p.callout {
+    background: #eee;
+    padding: 1em;
+    border-left: 1em solid #ccc;
+    clear: both;
+  }
+}
+
+
+
+// ************************
+// About the size of the Images and the Videos on wide screens
+@media screen and (min-width: 1200px) {
+.view-viewview .block.align.center {
+    text-align: center;
+
+    iframe,
+    img:not(.placeholder),
+    .video-inner{
+      max-width: 130%;
+      margin-right: auto;
+      margin-left: 50%;
+      transform: translateX(-61.5%);
+
+      &.medium {
+        max-width: 50%;
+      }
+
+      &.small {
+        max-width: 25%;
+      }
+    }
+
+    iframe {
+      width: 100%;
+    }
+
+    .video-inner {
+      width: 930px;
+      margin-left: 50%;
+      transform: translateX(-61.5%);
+    }
+  }
+
+  .view-viewview .columns-view .block.image.align.center {
+    img {
+      max-width: 100% !important;
+    }
+  }
+
+  //image credits section
+  .view-viewview {
+    #photo-credit.left {
+      width: 130% !important;
+      margin-right: auto;
+      margin-left: 50%;
+      transform: translateX(-61.5%);
+    }
+
+    #photo-credit.right {
+      width: 130% !important;
+      margin-right: auto;
+      margin-left: 50%;
+      transform: translateX(-61.5%);
+    }
+  }
+}
+
+//image credits alignment
+ p#photo-credit {
+   display: block;
+   margin-top: -5px !important;
+   color: rgb(102, 102, 102);
+   font-size: 13px !important;
+   line-height: 23px !important;
+   text-align: center;
+   color: #777777 !important;
+ }
+
+ #photo-credit.left {
+   text-align: left !important;
+ }
+
+ #photo-credit.right {
+   text-align: right !important;
+ }
+
+
+// *********************************8
