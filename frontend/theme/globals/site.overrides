@@ -281,8 +281,17 @@ p {
 
 
 // *********************************8
+.slate-table-block {
+  border: 0px !important;
+}
 .slate-table-block * {
+  font-size: 17px !important;
   background-color: #fff !important;
   margin: 0% !important;
-  border: 0% !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+}
+.slate-table-block td{
+  border-top: 1px black solid;
+  border-bottom: 0.625px rgb(234, 234, 234) solid;
 }
