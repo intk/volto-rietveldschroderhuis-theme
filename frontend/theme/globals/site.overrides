@@ -72,11 +72,6 @@ p {
     cursor: zoom-in;
   }
 
-  blockquote {
-    color: #808080;
-    font-style: italic;
-  }
-
   h1,
   h2,
   h3,
@@ -181,14 +176,21 @@ p {
     border-bottom: 1px solid #494a51;
   }
 
-  p.callout {
-    background: #eee;
+  blockquote {
+    font-family: 'FranklinBook', Arial, sans-serif;
+    font-size: 19.68px;
+    line-height: 36px;
+    letter-spacing: 0.0em;
+    color: #494a51 !important;
+    margin: 8px 0;
+    margin-bottom: 35px;
+    background: #eee !important;
     padding: 1em;
     border-left: 1em solid #ccc;
     clear: both;
   }
 
-  ol, ul, blockquote{
+  ol, ul{
     font-size: 18px;
     line-height: 37px;
     color: #494a51;
