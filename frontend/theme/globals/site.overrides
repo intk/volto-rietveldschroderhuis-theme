@@ -14,11 +14,11 @@ body {
     padding: 0% !important;
   }
   #page-document.ui.container > *:not(.block.image.align, .block.video.align){
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   #page-document.ui.container > ol, #page-document.ui.container > ul {
-    padding-left: 35px !important;
+    padding-left: 70px !important;
   }
 }
 
@@ -188,8 +188,15 @@ p {
     clear: both;
   }
 
-  ol,li, blockquote{
-    font-size: 17px;
+  ol, ul, blockquote{
+    font-size: 18px;
+    line-height: 37px;
+    color: #494a51;
+    padding-left: 40px;
+
+    li{
+      padding-left: 10px;
+    }
   }
 }
 
