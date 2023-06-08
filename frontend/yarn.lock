@@ -11805,7 +11805,6 @@ __metadata:
     stylelint-prettier: 1.1.2
     volto-editablefooter: 5.0.1
     volto-form-block: 3.0.1
-    volto-gdpr-privacy: 2.0.0
     volto-multilingual-widget: 3.0.0
     volto-social-settings: 3.0.0
   languageName: unknown
@@ -24421,15 +24420,6 @@ __metadata:
     "@plone/volto": ">=16.0.0-alpha.38"
     volto-subblocks: ^2.0.0
   checksum: 6d70971826e847a6615a5344ec48e502447e07cde0332c3ff1dd9e2b80324cf66dbf4ccfefeac830bf975838b0d9ffbcc8c8993b5eedfa43552f2b8da28a4e2b
-  languageName: node
-  linkType: hard
-
-"volto-gdpr-privacy@npm:2.0.0":
-  version: 2.0.0
-  resolution: "volto-gdpr-privacy@npm:2.0.0"
-  peerDependencies:
-    "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 1b3977377fa7d23ee9f2d78f8eb10c28ec305a889f2f3457e665999987a130c224658a1c63da270b29d6f94701856289c80a1910244ca1597fe7e63cf3fca228
   languageName: node
   linkType: hard
 
