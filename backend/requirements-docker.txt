@@ -5,4 +5,4 @@ kitconcept.seo
 collective.volto.formsupport
 redturtle.voltoplugin.editablefooter
 collective.volto.socialsettings
-plone.app.multilingual
+# plone.app.multilingual
