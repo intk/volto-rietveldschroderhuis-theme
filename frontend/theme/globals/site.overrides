@@ -4,16 +4,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-#page-document.ui.container {
+#page-document.ui.container, #page-edit .ui.container{
   width: @container-width !important;
 }
 @media screen and (max-width: 768px){
-  #page-document.ui.container {
+  #page-document.ui.container, #page-edit.ui.container {
     width: 100% !important;
     margin: 0% !important;
     padding: 0% !important;
   }
-  #page-document.ui.container > *:not(.block.image.align, .block.video.align){
+  #page-document.ui.container > *:not(.block.image.align, .block.video.align), #page-edit.ui.container >*:not(.block.image.align, .block.video.align){
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -33,9 +33,7 @@ p {
   margin: 30px 0;
 }
 
-#main{
-
-
+#view, #page-edit{
   ::-moz-selection {
     color: white;
     text-shadow: none;
@@ -207,7 +205,7 @@ p {
 // ************************
 // About the size of the Images and the Videos on wide screens
 @media screen and (min-width: 1200px) {
-.view-viewview .block.align.center {
+  .view-viewview .block.align.center {
     text-align: center;
 
     iframe,
@@ -247,7 +245,7 @@ p {
   //image credits section
   .view-viewview {
     #photo-credit.left {
-      width: 130% !important;
+      width: 114% !important;
       margin-right: auto;
       margin-left: 50%;
       transform: translateX(-61.5%);
@@ -283,3 +281,8 @@ p {
 
 
 // *********************************8
+.slate-table-block * {
+  background-color: #fff !important;
+  margin: 0% !important;
+  border: 0% !important;
+}
