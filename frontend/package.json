@@ -163,6 +163,7 @@
     "volto-social-settings": "3.0.0"
   },
   "devDependencies": {
+    "@eeacms/volto-block-image-cards": "^1.0.0",
     "@plone/scripts": "^2.1.5",
     "@storybook/addon-actions": "^6.3.0",
     "@storybook/addon-controls": "6.3.0",
@@ -178,8 +179,7 @@
     "stylelint": "14.0.1",
     "stylelint-config-idiomatic-order": "8.1.0",
     "stylelint-config-prettier": "8.0.1",
-    "stylelint-prettier": "1.1.2",
-    "@eeacms/volto-block-image-cards": "^1.0.0"
+    "stylelint-prettier": "1.1.2"
   },
   "resolutions": {
     "react-error-overlay": "6.0.9"

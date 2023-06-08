@@ -1765,33 +1765,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eeacms/volto-block-image-cards@npm:0.6.3":
-  version: 0.6.3
-  resolution: "@eeacms/volto-block-image-cards@npm:0.6.3"
+"@eeacms/volto-block-image-cards@npm:^1.0.0":
+  version: 1.3.1
+  resolution: "@eeacms/volto-block-image-cards@npm:1.3.1"
   dependencies:
-    "@eeacms/volto-block-style": "*"
     "@eeacms/volto-object-widget": "*"
     react-lazy-load-image-component: ^1.4.0
     react-resize-detector: 6.7.6
     react-slick: ^0.24.0
     slick-carousel: ^1.8.1
-    volto-slate: "*"
   peerDependencies:
     classnames: 2.2.6
     react-loadable: 5.5.0
     uuid: 8.3.1
-  checksum: e697747886edac6145bb8b2cca7363b296b5e168a0052df06a1ae016ea9bb75b7130f01402b36678500a3b659008480c4b83054b2c0a425865e4bf29a0c28f6c
-  languageName: node
-  linkType: hard
-
-"@eeacms/volto-block-style@npm:*":
-  version: 5.2.0
-  resolution: "@eeacms/volto-block-style@npm:5.2.0"
-  dependencies:
-    "@eeacms/volto-resize-helper": "*"
-    "@eeacms/volto-widget-theme-picker": "*"
-    react-color: ~2.18.1
-  checksum: 0071148d44166367afae90057d7b37e1aad11e5ce3e432b2270c42f183d51d8cb6a5e50a7ee61ad15317a0eb9b36329bab7e49a8cf490c4429263d1aa8ccab16
+  checksum: fedb2eebcd1a4e7582ab4c369c488809c98b66a6920fc94f7691fa5c929a25ffbe8c641b34e566318234f4d2e7486c687108ad60e322b6ae84ec0aa96d030b20
   languageName: node
   linkType: hard
 
@@ -11801,7 +11788,7 @@ __metadata:
   dependencies:
     "@eeacms/volto-accordion-block": "*"
     "@eeacms/volto-block-divider": ^2.0.0
-    "@eeacms/volto-block-image-cards": 0.6.3
+    "@eeacms/volto-block-image-cards": ^1.0.0
     "@eeacms/volto-columns-block": ^6.0.2
     "@eeacms/volto-matomo": "*"
     "@kitconcept/volto-blocks-grid": "*"
@@ -15027,7 +15014,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:^16.4.0, jsdom@npm:^16.6.0":
+"jsdom@npm:^16.4.0":
   version: 16.7.0
   resolution: "jsdom@npm:16.7.0"
   dependencies:
@@ -19752,15 +19739,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:^8.32.0":
-  version: 8.34.0
-  resolution: "react-intersection-observer@npm:8.34.0"
-  peerDependencies:
-    react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
-  checksum: 7713fecfd1512c7f5a60f9f0bf15403b8f8bbd4110bcafaeaea6de36a0e0eb60368c3638f99e9c97b75ad8fc787ea48c241dcb5c694f821d7f2976f709082cc5
-  languageName: node
-  linkType: hard
-
 "react-intl-redux@npm:2.2.0":
   version: 2.2.0
   resolution: "react-intl-redux@npm:2.2.0"
@@ -20295,18 +20273,6 @@ __metadata:
     react: ^15.3.0 || ^16.0.0-alpha
     react-dom: ^15.3.0 || ^16.0.0-alpha
   checksum: 5e3b566592293bc0057bc6be4f6ee29c58c8931421d2882a3ef45ca9b24c6f3ea78bbc5a182c2916af6520845e5a90f569b3a63c9b5e89428720913e6d6239cc
-  languageName: node
-  linkType: hard
-
-"react-visibility-sensor@npm:5.1.1":
-  version: 5.1.1
-  resolution: "react-visibility-sensor@npm:5.1.1"
-  dependencies:
-    prop-types: ^15.7.2
-  peerDependencies:
-    react: ">=16.0.0"
-    react-dom: ">=16.0.0"
-  checksum: ebce7bc743071930a2dd333a041c4a99aac24d5059c47a52eff25a8d81ab9307fadc87b8a6655ebb3154f5c1ceafcc309ae04ee07a7d5fad2949a6903d15acd5
   languageName: node
   linkType: hard
 
@@ -21855,17 +21821,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slate-history@npm:^0.66.0":
-  version: 0.66.0
-  resolution: "slate-history@npm:0.66.0"
-  dependencies:
-    is-plain-object: ^5.0.0
-  peerDependencies:
-    slate: ">=0.65.3"
-  checksum: e83d4fbf5d4097a5b434df4846420e593598a9a3f90d3e0638f16915b1014bc8a7dc5cd87e3bc0a31a8ad5eae582a18f96bdc04f4b0b0a5a82cf05bd0377601e
-  languageName: node
-  linkType: hard
-
 "slate-hyperscript@npm:0.81.3":
   version: 0.81.3
   resolution: "slate-hyperscript@npm:0.81.3"
@@ -21874,17 +21829,6 @@ __metadata:
   peerDependencies:
     slate: ">=0.65.3"
   checksum: cc3ba04d14e20c66eee5e5b0ca2d60fe92c0d38caf9b412153453d42f32d90bce61d57e3a00b2a4c30a7b15408bf8b14132871fd3c00f75de6ca4b49387637fe
-  languageName: node
-  linkType: hard
-
-"slate-hyperscript@npm:^0.67.0":
-  version: 0.67.0
-  resolution: "slate-hyperscript@npm:0.67.0"
-  dependencies:
-    is-plain-object: ^5.0.0
-  peerDependencies:
-    slate: ">=0.65.3"
-  checksum: 17ca7a30be4fd025ec46d960fade60743f68f11c6c4e7865b1b45972eaf7b26e1949d8246f4768de83a5a577ab119f1af3eac8db168eef98589cb09ef7148d90
   languageName: node
   linkType: hard
 
@@ -21908,26 +21852,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slate-react@npm:^0.71.0":
-  version: 0.71.0
-  resolution: "slate-react@npm:0.71.0"
-  dependencies:
-    "@types/is-hotkey": ^0.1.1
-    "@types/lodash": ^4.14.149
-    direction: ^1.0.3
-    is-hotkey: ^0.1.6
-    is-plain-object: ^5.0.0
-    lodash: ^4.17.4
-    scroll-into-view-if-needed: ^2.2.20
-    tiny-invariant: 1.0.6
-  peerDependencies:
-    react: ">=16.8.0"
-    react-dom: ">=16.8.0"
-    slate: ">=0.65.3"
-  checksum: 5b256f3ebc3d2da40015744e4eab9a1016e0fa785c922a90ca34338b60838b1cf1a367797ce5234a78f1212c6e3a9ef6d2f8d952a0dd26d928b4e16c96ce07f3
-  languageName: node
-  linkType: hard
-
 "slate@npm:0.84.0":
   version: 0.84.0
   resolution: "slate@npm:0.84.0"
@@ -21936,17 +21860,6 @@ __metadata:
     is-plain-object: ^5.0.0
     tiny-warning: ^1.0.3
   checksum: d74de16a40571b2513dbd96efee8fe891909357a7011131f8fae738a0eace5b3c7c2da1c0ebfb1ffe66c8c933507ca618772fb607fbc9e44aa5158d3d874c5a2
-  languageName: node
-  linkType: hard
-
-"slate@npm:^0.71.0":
-  version: 0.71.0
-  resolution: "slate@npm:0.71.0"
-  dependencies:
-    immer: ^9.0.6
-    is-plain-object: ^5.0.0
-    tiny-warning: ^1.0.3
-  checksum: 9c3d3b8464acf8e67eb49c8242aa6435f7e7f4fca36ba794c671a9979b9180635cc392caf569404a5fb269f8ec3797a3cf8e32d9d1f150198c170cbf9fa2ac1d
   languageName: node
   linkType: hard
 
@@ -24469,28 +24382,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-slate@npm:*":
-  version: 6.4.0
-  resolution: "volto-slate@npm:6.4.0"
-  dependencies:
-    "@eeacms/volto-object-widget": "*"
-    classnames: 2.2.6
-    image-extensions: 1.1.0
-    is-url: 1.2.4
-    jsdom: ^16.6.0
-    react-intersection-observer: ^8.32.0
-    react-visibility-sensor: 5.1.1
-    slate: ^0.71.0
-    slate-history: ^0.66.0
-    slate-hyperscript: ^0.67.0
-    slate-react: ^0.71.0
-    weak-key: ^1.0.2
-  peerDependencies:
-    "@plone/volto": ">=12.1.2"
-  checksum: 1f7785a088da215cadad6c90cb09ae336894d2ee09dfc71f288ed0e6e7c5f69cb5e63c7db991b4acdeef49e292f1e12817a6b1a46f106db6e927afd06e783b1d
-  languageName: node
-  linkType: hard
-
 "volto-social-settings@npm:3.0.0":
   version: 3.0.0
   resolution: "volto-social-settings@npm:3.0.0"
@@ -24614,13 +24505,6 @@ __metadata:
   dependencies:
     defaults: ^1.0.3
   checksum: 814e9d1ddcc9798f7377ffa448a5a3892232b9275ebb30a41b529607691c0491de47cba426e917a4d08ded3ee7e9ba2f3fe32e62ee3cd9c7d3bafb7754bd553c
-  languageName: node
-  linkType: hard
-
-"weak-key@npm:^1.0.2":
-  version: 1.0.3
-  resolution: "weak-key@npm:1.0.3"
-  checksum: 2c3268e593f374a4604a8afa2473f0de818cd8e63a50a569355b2e2ff85296761b95380f7f858af8c779cad7be49e9c0ba99e6dd21cc674007d8603f225f6d3c
   languageName: node
   linkType: hard
 
