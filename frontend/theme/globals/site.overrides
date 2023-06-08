@@ -95,7 +95,33 @@ p {
     line-height: 80px;
     margin-top: 0px;
   }
-  
+
+  h2.documentDescription{
+    color: #282931;
+    font-size: 1.650em;
+    letter-spacing: 0.00em;
+    line-height: 42px;
+    display: block;
+    margin-top: 55px;
+    margin-bottom: 5px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-family: 'FranklinBook', Arial, sans-serif;
+  }
+  @media screen and (max-width: 768px){
+    h2.documentDescription {
+      text-align: left;
+      margin-top: 30px;
+      font-size: 1.500em;
+      margin-bottom: 25px;
+      letter-spacing: 0.00em;
+      line-height: 42px;
+    }
+  }
+
+
   p {
     font-family: 'FranklinBook', Arial, sans-serif;
     font-size: 1.230em;
