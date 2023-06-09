@@ -30,7 +30,7 @@ const Arrows = (props) => {
             }
           }}
         >
-          <Icon name={leftSVG} size="55px" />
+          <Icon name={leftSVG} size="40px" />
         </button>
 
         <button
@@ -42,7 +42,7 @@ const Arrows = (props) => {
             }
           }}
         >
-          <Icon name={rightSVG} size="55px" />
+          <Icon name={rightSVG} size="40px" />
         </button>
       </div>
     </div>
@@ -51,7 +51,18 @@ const Arrows = (props) => {
 
 const Carousel = (props) => {
   const { data, editable } = props;
-  const { cards, image_scale, height = '600', fade = true, infinite = true, autoplay = true, hideArrows = false, pauseOnHover = true, autoplaySpeed = 10000, hideNavigationDots = true } = data;
+  const {
+    cards,
+    image_scale,
+    height = '600',
+    fade = true,
+    infinite = true,
+    autoplay = true,
+    hideArrows = false,
+    pauseOnHover = true,
+    autoplaySpeed = 10000,
+    hideNavigationDots = true,
+  } = data;
   const slider = React.useRef(null);
 
   var settings = {
@@ -92,7 +103,10 @@ const Carousel = (props) => {
                   style={
                     card.attachedimage
                       ? {
-                          backgroundImage: `url(${getScaleUrl(getPath(card.attachedimage), image_scale || 'great')})`,
+                          backgroundImage: `url(${getScaleUrl(
+                            getPath(card.attachedimage),
+                            image_scale || 'great',
+                          )})`,
                           height: `${height}px`,
                         }
                       : {}
@@ -104,10 +118,14 @@ const Carousel = (props) => {
                     <div className="slide-body">
                       {card.link ? (
                         <UniversalLink href={card.link}>
-                          <div className="slide-title">{card.title || props.properties.title}</div>
+                          <div className="slide-title">
+                            {card.title || props.properties.title}
+                          </div>
                         </UniversalLink>
                       ) : (
-                        <div className="slide-title">{card.title || props.properties.title}</div>
+                        <div className="slide-title">
+                          {card.title || props.properties.title}
+                        </div>
                       )}
 
                       {card.text?.data ? (
@@ -118,9 +136,14 @@ const Carousel = (props) => {
                           }}
                         />
                       ) : (
-                        <div className="slide-description">{card.text[0]?.children[0]?.text || props.properties.description}</div>
+                        <div className="slide-description">
+                          {card.text[0]?.children[0]?.text ||
+                            props.properties.description}
+                        </div>
                       )}
-                      <div className="slide-copyright">{serializeNodes(card.copyright)}</div>
+                      <div className="slide-copyright">
+                        {serializeNodes(card.copyright)}
+                      </div>
                     </div>
                   </div>
                 )}
