@@ -282,6 +282,10 @@ p {
 
 // *********************************8
 .slate-table-block {
+  thead p {
+    letter-spacing: 0.05em !important;
+  }
+
   border: 0px !important;
 
   th, td{
@@ -299,6 +303,9 @@ p {
   margin: 0% !important;
   border-left: 0px !important;
   border-right: 0px !important;
+  p {
+      letter-spacing: 1.275px !important;
+  }
 }
 .slate-table-block td{
   border-top: 1px black solid;
