@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { Container, Message } from 'semantic-ui-react';
 import Slider from 'react-slick';
 import teaserHeroTopTemplate from '../icons/teaser-template.svg';
@@ -14,18 +13,31 @@ import leftArrowSVG from '@plone/volto/icons/left-key.svg';
 const messages = defineMessages({
   PleaseChooseContent: {
     id: 'Please choose an existing content as source for this element',
-    defaultMessage: 'Please choose an existing content as source for this element',
+    defaultMessage:
+      'Please choose an existing content as source for this element',
   },
 });
 
 const PrevArrow = ({ className, style, onClick }) => (
-  <button icon className={className} style={{ ...style, display: 'block' }} onClick={onClick} aria-label="left arrow">
+  <button
+    icon
+    className={className}
+    style={{ ...style, display: 'block' }}
+    onClick={onClick}
+    aria-label="left arrow"
+  >
     <Icon name={leftArrowSVG} size="48px" />
   </button>
 );
 
 const NextArrow = ({ className, style, onClick }) => (
-  <button icon className={className} style={{ ...style, display: 'block' }} onClick={onClick} aria-label="right arrow">
+  <button
+    icon
+    className={className}
+    style={{ ...style, display: 'block' }}
+    onClick={onClick}
+    aria-label="right arrow"
+  >
     <Icon name={rightArrowSVG} size="48px" />
   </button>
 );
@@ -34,7 +46,6 @@ const CarouselView = (props) => {
   const { block, data, isEditMode, openObjectBrowser, onChangeBlock } = props;
   const intl = useIntl();
   const NoOfSlides = props.data.columns.length;
-  console.log(props.data.columns.length);
   // let initialNoOfSlides;
   // if (typeof window !== 'undefined') {
   //   if (window.innerWidth < 767) {
@@ -83,10 +94,32 @@ const CarouselView = (props) => {
           </Message>
         )}
         {data.columns?.length > 0 && (
-          <div className={cx({ 'full-width': data.useLargeContainer })} style={{ backgroundColor: props.data.bg_color }}>
+          <div
+            className={cx({ 'full-width': data.useLargeContainer })}
+            style={{ backgroundColor: props.data.bg_color }}
+          >
             {data.headline && <h2 className="headline">{data.headline}</h2>}
-            <Slider infinite={false} speed={500} slidesToShow={data.items_to_show} slidesToScroll={+NoOfSlides} nextArrow={<NextArrow />} prevArrow={<PrevArrow />}>
-              {data.columns && data.columns.map((item, index) => <Body key={item['@id']} data={item} isEditMode={isEditMode} dataBlock={data} index={index} block={block} openObjectBrowser={openObjectBrowser} onChangeBlock={onChangeBlock} />)}
+            <Slider
+              infinite={false}
+              speed={500}
+              slidesToShow={data.items_to_show}
+              slidesToScroll={+NoOfSlides}
+              nextArrow={<NextArrow />}
+              prevArrow={<PrevArrow />}
+            >
+              {data.columns &&
+                data.columns.map((item, index) => (
+                  <Body
+                    key={item['@id']}
+                    data={item}
+                    isEditMode={isEditMode}
+                    dataBlock={data}
+                    index={index}
+                    block={block}
+                    openObjectBrowser={openObjectBrowser}
+                    onChangeBlock={onChangeBlock}
+                  />
+                ))}
             </Slider>
           </div>
         )}
