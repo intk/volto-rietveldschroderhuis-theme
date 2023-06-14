@@ -1791,6 +1791,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-hero-block@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@eeacms/volto-hero-block@npm:1.0.0"
+  dependencies:
+    "@eeacms/volto-object-widget": "*"
+  checksum: 6c7e6f8bf8d6efb1220ec88bc567fbbe44c6fa7bbe3d5d1246260a68b17babd2f8ad9295b71be8cd42d2f969ac71646b06d3ffc1b0c83d51ec9c304fec3129c1
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-matomo@npm:*":
   version: 4.1.0
   resolution: "@eeacms/volto-matomo@npm:4.1.0"
@@ -11790,6 +11799,7 @@ __metadata:
     "@eeacms/volto-block-divider": ^2.0.0
     "@eeacms/volto-block-image-cards": ^1.0.0
     "@eeacms/volto-columns-block": ^6.0.2
+    "@eeacms/volto-hero-block": ^1.0.0
     "@eeacms/volto-matomo": "*"
     "@kitconcept/volto-blocks-grid": "*"
     "@kitconcept/volto-carousel-block": 1.1.0
