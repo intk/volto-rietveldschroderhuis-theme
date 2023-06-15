@@ -2,6 +2,7 @@ body {
   overflow-x: hidden;
   -webkit-tap-highlight-color: #0085a1;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #page-document.ui.container, #page-edit .ui.container{
@@ -106,30 +107,30 @@ p {
     }
   }
 
-  h2.documentDescription{
-    color: #282931;
-    font-size: 1.75rem;
-    letter-spacing: 0.00em;
-    line-height: 42px;
-    display: block;
-    margin-top: 55px;
-    margin-bottom: 5px;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    font-family: 'FranklinBook', Arial, sans-serif;
-  }
-  @media screen and (max-width: 768px){
-    h2.documentDescription {
-      text-align: left;
-      margin-top: 30px;
-      font-size: 1.6rem;
-      margin-bottom: 25px;
-      letter-spacing: 0.00em;
-      line-height: 42px;
-    }
-  }
+  // h2.documentDescription{
+  //   color: #282931;
+  //   font-size: 1.75rem;
+  //   letter-spacing: 0.00em;
+  //   line-height: 42px;
+  //   display: block;
+  //   margin-top: 55px;
+  //   margin-bottom: 5px;
+  //   max-width: 100%;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   text-align: left;
+  //   font-family: 'FranklinBook', Arial, sans-serif;
+  // }
+  // @media screen and (max-width: 768px){
+  //   h2.documentDescription {
+  //     text-align: left;
+  //     margin-top: 30px;
+  //     font-size: 1.6rem;
+  //     margin-bottom: 25px;
+  //     letter-spacing: 0.00em;
+  //     line-height: 42px;
+  //   }
+  // }
 
   h2{
     font-size: 30px;
@@ -247,7 +248,7 @@ p {
     #photo-credit.left {
       width: 114% !important;
       margin-right: auto;
-      margin-left: 50%;
+      margin-left: 40%;
       transform: translateX(-61.5%);
     }
 
@@ -256,6 +257,9 @@ p {
       margin-right: auto;
       margin-left: 50%;
       transform: translateX(-61.5%);
+    }
+    #photo-credit{
+      margin-left: -35%;
     }
   }
 }
@@ -321,7 +325,7 @@ p {
 
 
 // hero section
- .herosection, .herosection img{
+.has-hero-image .herosection, .herosection img{
     height: 90vw;
     min-height: 400px;
     max-height: 720px;
@@ -491,7 +495,7 @@ p {
 }
 
 
-#view .documentDescription, #page-edit .documentDescription{
+#view .documentDescription:not(:empty){
   color: #282931;
   font-size: 26.5px;
   letter-spacing: 0.00em;
@@ -504,4 +508,31 @@ p {
   margin-right: auto;
   text-align: left;
   font-family: 'FranklinBook', Arial, sans-serif;
+}
+
+
+// Button
+.button.container .ui.button{
+  font-family: 'FranklinMed', Arial, sans-serif;
+  margin: 0 auto;
+  margin-left: auto;
+  display: block;
+  padding: 17px;
+  border: 1px solid #282931;
+  border-radius: 0px;
+  text-transform: none;
+  height: auto;
+  color: #282931;
+  letter-spacing: 0.0em;
+  width: auto;
+  font-size: 17px;
+  background-color: #ffffff;
+  letter-spacing: 0.05em;
+  text-shadow: 0px 0px 0px #ffffff;
+  font-weight: 400;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 12px;
+  line-height: 27px;
+  display: inline-block;
 }
