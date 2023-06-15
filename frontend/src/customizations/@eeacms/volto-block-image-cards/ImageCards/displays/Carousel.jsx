@@ -51,7 +51,18 @@ const Arrows = (props) => {
 
 const Carousel = (props) => {
   const { data, editable } = props;
-  const { cards, image_scale, height = '600', fade = true, infinite = true, autoplay = true, hideArrows = false, pauseOnHover = true, autoplaySpeed = 10000, hideNavigationDots = true } = data;
+  const {
+    cards,
+    image_scale,
+    height = '600',
+    fade = true,
+    infinite = true,
+    autoplay = true,
+    hideArrows = false,
+    pauseOnHover = true,
+    autoplaySpeed = 10000,
+    hideNavigationDots = true,
+  } = data;
   const slider = React.useRef(null);
 
   var settings = {
@@ -92,7 +103,10 @@ const Carousel = (props) => {
                   style={
                     card.attachedimage
                       ? {
-                          backgroundImage: `url(${getScaleUrl(getPath(card.attachedimage), image_scale || 'great')})`,
+                          backgroundImage: `url(${getScaleUrl(
+                            getPath(card.attachedimage),
+                            image_scale || 'great',
+                          )})`,
                           height: `${height}px`,
                         }
                       : {}
@@ -102,9 +116,15 @@ const Carousel = (props) => {
                 {
                   <div className="slider-caption">
                     <div className="slide-body">
-                      <div className="slide-title">{card.title || props.properties.title}</div>
-                      <div className="slide-description">{props.properties.description}</div>
-                      <div className="slide-copyright">{serializeNodes(card.copyright)}</div>
+                      <div className="slide-title">
+                        {card.title || props.properties.title}
+                      </div>
+                      <div className="slide-description">
+                        {props.properties.description}
+                      </div>
+                      <div className="slide-copyright">
+                        {serializeNodes(card.copyright)}
+                      </div>
                     </div>
                   </div>
                 }
