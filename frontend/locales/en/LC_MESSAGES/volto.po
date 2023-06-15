@@ -11,4 +11,17 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+#: components/theme/Header/HeroSection
+# defaultMessage: Future
+msgid "Future"
+msgstr ""
 
+#: components/theme/Header/HeroSection
+# defaultMessage: Now on display
+msgid "Now on display"
+msgstr ""
+
+#: components/theme/Header/HeroSection
+# defaultMessage: Past exhibition
+msgid "Past exhibition"
+msgstr ""

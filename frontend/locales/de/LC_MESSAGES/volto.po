@@ -26,4 +26,17 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
 
+#: components/theme/Header/HeroSection
+# defaultMessage: Future
+msgid "Future"
+msgstr ""
 
+#: components/theme/Header/HeroSection
+# defaultMessage: Now on display
+msgid "Now on display"
+msgstr ""
+
+#: components/theme/Header/HeroSection
+# defaultMessage: Past exhibition
+msgid "Past exhibition"
+msgstr ""
