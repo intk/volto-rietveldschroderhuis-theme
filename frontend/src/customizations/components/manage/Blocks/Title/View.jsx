@@ -17,7 +17,6 @@ const TitleBlockView = ({ properties, metadata }) => {
       <h1 className="documentFirstHeading">
         {(metadata || properties)['title'] || ''}
       </h1>
-      {/* <h2 className="documentDescription">{(metadata || properties)['description'] || ''}</h2> */}
     </>
   );
 };
