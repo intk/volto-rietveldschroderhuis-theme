@@ -26,11 +26,6 @@ export default function applyConfig(config) {
     defaultLanguage: DEFAULT_LANG,
   };
 
-  // config.blocks.blocksConfig.title.view = () => null;
-  {
-    console.log(config);
-  }
-
   config.blocks.initialBlocks = {
     ...config.blocks.initialBlocks,
     Document: ['title', 'description'],
