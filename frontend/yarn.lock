@@ -2546,6 +2546,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@kitconcept/volto-button-block@npm:*":
+  version: 2.2.0
+  resolution: "@kitconcept/volto-button-block@npm:2.2.0"
+  checksum: 4299209a94b3387e802aeac077e796314827bd740b74ef6dac1e8acb22b2b22848a993c87694ff341f4c4e01aee644a7a2715e362ca7f93814b0ebb2bed6a3aa
+  languageName: node
+  linkType: hard
+
 "@kitconcept/volto-carousel-block@npm:1.1.0":
   version: 1.1.0
   resolution: "@kitconcept/volto-carousel-block@npm:1.1.0"
@@ -11802,6 +11809,7 @@ __metadata:
     "@eeacms/volto-hero-block": ^1.0.0
     "@eeacms/volto-matomo": "*"
     "@kitconcept/volto-blocks-grid": "*"
+    "@kitconcept/volto-button-block": "*"
     "@kitconcept/volto-carousel-block": 1.1.0
     "@kitconcept/volto-slider-block": "*"
     "@plone/scripts": ^2.1.5
