@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /**
  * Document view component.
  * @module components/theme/View/DefaultView
@@ -23,6 +24,18 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { isEqual } from 'lodash';
 
+function filterBlocks(content, types) {
+  if (!(content.blocks && content.blocks_layout?.items)) return content;
+
+  return {
+    ...content,
+    blocks_layout: {
+      ...content.blocks_layout,
+      items: content.blocks_layout.items.filter((id) => types.indexOf(content.blocks[id]?.['@type']) === -1),
+    },
+  };
+}
+
 /**
  * Component to display the default view.
  * @function DefaultView
@@ -44,6 +57,11 @@ const DefaultView = (props) => {
   const fieldsets = contentSchema?.fieldsets.filter(
     (fs) => !fieldsetsToExclude.includes(fs.id),
   );
+  // const description = content?.description;
+  const hasLeadImage = content?.preview_image;
+  const filteredContent = hasLeadImage
+    ? filterBlocks(content, ['title'])
+    : content;
 
   // TL;DR: There is a flash of the non block-based view because of the reset
   // of the content on route change. Subscribing to the content change at this
@@ -69,7 +87,7 @@ const DefaultView = (props) => {
   return contentLoaded ? (
     hasBlocksData(content) ? (
       <Container id="page-document">
-        <RenderBlocks {...props} path={path} />
+        <RenderBlocks {...props} path={path} content={filteredContent} />
       </Container>
     ) : (
       <Container id="page-document">
