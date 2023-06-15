@@ -113,40 +113,21 @@ const Carousel = (props) => {
                   }
                 />
                 <div className="slide-overlay"></div>
-                {(card.title || card.text || card.copyright) && (
+                {
                   <div className="slider-caption">
                     <div className="slide-body">
-                      {card.link ? (
-                        <UniversalLink href={card.link}>
-                          <div className="slide-title">
-                            {card.title || props.properties.title}
-                          </div>
-                        </UniversalLink>
-                      ) : (
-                        <div className="slide-title">
-                          {card.title || props.properties.title}
-                        </div>
-                      )}
-
-                      {card.text?.data ? (
-                        <div
-                          className="slide-description"
-                          dangerouslySetInnerHTML={{
-                            __html: card.text?.data,
-                          }}
-                        />
-                      ) : (
-                        <div className="slide-description">
-                          {card.text[0]?.children[0]?.text ||
-                            props.properties.description}
-                        </div>
-                      )}
+                      <div className="slide-title">
+                        {card.title || props.properties.title}
+                      </div>
+                      <div className="slide-description">
+                        {props.properties.description}
+                      </div>
                       <div className="slide-copyright">
                         {serializeNodes(card.copyright)}
                       </div>
                     </div>
                   </div>
-                )}
+                }
               </div>
             ))}
           </Slider>
