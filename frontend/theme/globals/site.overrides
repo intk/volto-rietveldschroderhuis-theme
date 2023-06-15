@@ -426,7 +426,7 @@ p {
 .header-title-dates{
   width: 100%;
   position: absolute;
-  bottom: 50px;
+  bottom: 25px;
   z-index: 3;
   padding-left: 95px;
   padding-right: 95px;
