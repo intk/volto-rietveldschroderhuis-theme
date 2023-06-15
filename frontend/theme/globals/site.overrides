@@ -125,6 +125,11 @@ p {
     margin-right: auto;
     text-align: left;
     font-family: 'FranklinBook', Arial, sans-serif;
+
+    @media screen and (max-width: 768px) {
+      margin-top:30px;
+      font-size: 24px;
+    }
   }
   //
 
@@ -437,7 +442,26 @@ p {
   }
 }
 
+.hero-dates{
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: 'FranklinMed', Arial, sans-serif;
+  margin-bottom: 10px;
+
+  @media(max-width: 768px){
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
 // hero title over
+.herosection{
+  height: 140px;
+}
 
 .has-hero-image .herosection,
 .herosection img {
