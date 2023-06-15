@@ -25,5 +25,24 @@ export default function applyConfig(config) {
     supportedLanguages: ['nl', 'en', 'de'],
     defaultLanguage: DEFAULT_LANG,
   };
+
+  // config.blocks.blocksConfig.title.view = () => null;
+  {
+    console.log(config);
+  }
+
+  config.blocks.initialBlocks = {
+    ...config.blocks.initialBlocks,
+    Document: ['title', 'description'],
+    Event: ['title', 'description'],
+    'News Item': ['title', 'description'],
+  };
+  config.blocks.initialBlocksFocus = {
+    ...config.blocks.initialBlocksFocus,
+    Document: 'title',
+    Event: 'title',
+    'News Item': 'title',
+  };
+
   return config;
 }
