@@ -2,22 +2,23 @@ import React from 'react';
 import { Container } from 'semantic-ui-react';
 import { BodyClass } from '@plone/volto/helpers';
 import Image from '../../Image/Image';
+// eslint-disable-next-line no-unused-vars
 import { defineMessages, useIntl } from 'react-intl';
 
-const messages = defineMessages({
-  pastExibition: {
-    id: 'Past exhibition',
-    defaultMessage: 'Past exhibition',
-  },
-  nowOnDisplay: {
-    id: 'Now on display',
-    defaultMessage: 'Now on display',
-  },
-  future: {
-    id: 'Future',
-    defaultMessage: 'Future',
-  },
-});
+// const messages = defineMessages({
+//   pastExibition: {
+//     id: 'Past exhibition',
+//     defaultMessage: 'Past exhibition',
+//   },
+//   nowOnDisplay: {
+//     id: 'Now on display',
+//     defaultMessage: 'Now on display',
+//   },
+//   future: {
+//     id: 'Future',
+//     defaultMessage: 'Future',
+//   },
+// });
 
 const getDateRangeDescription = (lang, start, end) => {
   if (
@@ -79,8 +80,8 @@ function HeroSection(props) {
   const endDate = new Date(end || Date.now());
   const startDate = new Date(start || Date.now());
 
-  const isCurrentEvent = startDate <= Date.now() && endDate >= Date.now();
-  const isFutureEvent = startDate > Date.now();
+  // const isCurrentEvent = startDate <= Date.now() && endDate >= Date.now();
+  // const isFutureEvent = startDate > Date.now();
 
   return (
     <div className="herosection">
@@ -102,7 +103,7 @@ function HeroSection(props) {
               )}
             </figure>
             <div className="header-title-dates">
-              {startDate && isEvent && (
+              {/* {startDate && isEvent && (
                 <div className="event-label">
                   <span
                     className={
@@ -120,6 +121,11 @@ function HeroSection(props) {
                       : intl.formatMessage(messages.pastExibition)}
                   </span>
                 </div>
+              )} */}
+              {startDate && isEvent && (
+                <p className="hero-dates">
+                  {getDateRangeDescription(intl.locale, startDate, endDate)}
+                </p>
               )}
               <h1 className="hero-title-floating">{title}</h1>
               <div className="description-container">
@@ -129,11 +135,6 @@ function HeroSection(props) {
                   )}
                 </Container>
               </div>
-              {startDate && isEvent && (
-                <p className="hero-dates">
-                  {getDateRangeDescription(intl.locale, startDate, endDate)}
-                </p>
-              )}
             </div>
           </>
         ) : (
@@ -142,7 +143,7 @@ function HeroSection(props) {
       </div>
       {title && !image_url && (
         <Container>
-          {startDate && isEvent && (
+          {/* {startDate && isEvent && (
             <div className="event-label">
               <span
                 className={
@@ -156,7 +157,7 @@ function HeroSection(props) {
                   : intl.formatMessage(messages.pastExibition)}
               </span>
             </div>
-          )}
+          )} */}
           <h1 className="documentFirstHeading">{title}</h1>
           {startDate && isEvent && (
             <p className="hero-dates">
