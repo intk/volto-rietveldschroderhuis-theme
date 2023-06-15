@@ -288,7 +288,7 @@ p {
 //image credits alignment
  p#photo-credit {
    display: block;
-   margin-top: -5px !important;
+   margin-top: -20px !important;
    color: rgb(102, 102, 102);
    font-size: 15px !important;
    line-height: 23px !important;
