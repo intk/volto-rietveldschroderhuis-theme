@@ -31,7 +31,9 @@ function filterBlocks(content, types) {
     ...content,
     blocks_layout: {
       ...content.blocks_layout,
-      items: content.blocks_layout.items.filter((id) => types.indexOf(content.blocks[id]?.['@type']) === -1),
+      items: content.blocks_layout.items.filter(
+        (id) => types.indexOf(content.blocks[id]?.['@type']) === -1,
+      ),
     },
   };
 }
