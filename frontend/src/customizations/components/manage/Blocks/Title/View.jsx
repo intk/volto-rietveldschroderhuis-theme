@@ -14,12 +14,8 @@ import PropTypes from 'prop-types';
 const TitleBlockView = ({ properties, metadata }) => {
   return (
     <>
-      <h1 className="documentFirstHeading">
-        {(metadata || properties)['title'] || ''}
-      </h1>
-      <h2 className="documentDescription">
-        {(metadata || properties)['description'] || ''}
-      </h2>
+      {/* <h1 className="documentFirstHeading">{(metadata || properties)['title'] || ''}</h1> */}
+      <h2 className="documentDescription">{(metadata || properties)['description'] || ''}</h2>
     </>
   );
 };
