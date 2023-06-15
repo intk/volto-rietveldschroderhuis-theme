@@ -489,3 +489,19 @@ p {
     // line-height: 1rem !important;
   }
 }
+
+
+#view .documentDescription, #page-edit .documentDescription{
+  color: #282931;
+  font-size: 26.5px;
+  letter-spacing: 0.00em;
+  line-height: 42px;
+  display: block;
+  margin-top: 90px;
+  margin-bottom: 35px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: 'FranklinBook', Arial, sans-serif;
+}
