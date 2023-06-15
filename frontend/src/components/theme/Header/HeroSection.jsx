@@ -122,6 +122,13 @@ function HeroSection(props) {
                 </div>
               )}
               <h1 className="hero-title-floating">{title}</h1>
+              <div className="description-container">
+                <Container>
+                  {description && (
+                    <p className="content-description">{description}</p>
+                  )}
+                </Container>
+              </div>
               {startDate && isEvent && (
                 <p className="hero-dates">
                   {getDateRangeDescription(intl.locale, startDate, endDate)}
@@ -158,11 +165,6 @@ function HeroSection(props) {
           )}
         </Container>
       )}
-      <div className="description-container">
-        <Container>
-          {description && <p className="content-description">{description}</p>}
-        </Container>
-      </div>
     </div>
   );
 }
