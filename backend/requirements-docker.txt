@@ -1,8 +1,3 @@
 -c constraints.txt
 src/rietveld
 
-kitconcept.seo
-collective.volto.formsupport
-redturtle.voltoplugin.editablefooter
-collective.volto.socialsettings
-# plone.app.multilingual

@@ -21,7 +21,7 @@ export default function applyConfig(config) {
 
   config.settings = {
     ...config.settings,
-    isMultilingual: false,
+    isMultilingual: true,
     supportedLanguages: ['nl', 'en', 'de'],
     defaultLanguage: DEFAULT_LANG,
   };

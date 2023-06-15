@@ -3,6 +3,6 @@ default_context:
   initial_user_password: "admin"
 
   load_zcml:
-    package_includes: ["rietveld", "kitconcept.seo", "collective.volto.formsupport", "redturtle.voltoplugin.editablefooter", "collective.volto.socialsettings", "plone.app.multilingual"]
+    package_includes: ["rietveld", "kitconcept.seo", "collective.volto.formsupport", "redturtle.voltoplugin.editablefooter", "collective.volto.socialsettings"]
 
   db_storage: direct
