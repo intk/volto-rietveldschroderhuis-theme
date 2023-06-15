@@ -24,7 +24,7 @@ import { injectIntl } from 'react-intl';
 import Error from '@plone/volto/error';
 
 import {
-  Breadcrumbs,
+  // Breadcrumbs,
   Footer,
   Header,
   Icon,

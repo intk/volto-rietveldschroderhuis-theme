@@ -3,6 +3,7 @@
 import React from 'react';
 import { InView } from 'react-intersection-observer';
 import { useSelector } from 'react-redux';
+// eslint-disable-next-line no-unused-vars
 import { Logo, Navigation } from '@plone/volto/components';
 import { BodyClass, isCmsUi } from '@plone/volto/helpers';
 import HeroSection from '@package/components/theme/Header/HeroSection'; // , StickyHeader
@@ -13,7 +14,7 @@ import { useLocation } from 'react-router-dom';
 import qs from 'query-string';
 
 const Header = (props) => {
-  const { navigationItems } = props;
+  // const { navigationItems } = props;
   const intl = useIntl();
   const { pathname, search } = useLocation();
   const searchableText = qs.parse(search).SearchableText;
