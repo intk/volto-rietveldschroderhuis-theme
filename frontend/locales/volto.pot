@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-15T14:46:04.693Z\n"
+"POT-Creation-Date: 2023-06-15T23:14:15.736Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -13,17 +13,4 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
-#: components/theme/Header/HeroSection
-# defaultMessage: Future
-msgid "Future"
-msgstr ""
 
-#: components/theme/Header/HeroSection
-# defaultMessage: Now on display
-msgid "Now on display"
-msgstr ""
-
-#: components/theme/Header/HeroSection
-# defaultMessage: Past exhibition
-msgid "Past exhibition"
-msgstr ""
