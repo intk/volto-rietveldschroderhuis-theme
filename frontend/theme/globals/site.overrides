@@ -296,6 +296,7 @@ p {
   }
   @media screen and (max-width: 1200px) {
     //image credits section
+    .block.image.align.center {
     .image-wrapper-large,
     .image-wrapper- {
       #photo-credit {
@@ -304,8 +305,10 @@ p {
       }
     }
   }
+  }
   @media screen and (max-width: 768px) {
     //image credits section
+      .block.image.align.center {
     .image-wrapper-large,
     .image-wrapper- {
       #photo-credit {
@@ -314,6 +317,7 @@ p {
       }
     }
   }
+}
 }
 #view{
   .block.image.align.right{
