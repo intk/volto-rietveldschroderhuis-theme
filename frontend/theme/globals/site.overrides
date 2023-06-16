@@ -294,16 +294,23 @@ p {
       }
     }
   }
+  @media screen and (max-width: 1200px) {
+    //image credits section
+    .image-wrapper-large,
+    .image-wrapper- {
+      #photo-credit {
+        position: absolute;
+        left: 0%;
+      }
+    }
+  }
   @media screen and (max-width: 768px) {
     //image credits section
-    .view-viewview {
-      position: relative;
-      .image-wrapper-large,
-      .image-wrapper- {
-        #photo-credit {
-          position: absolute;
-          left: 5%;
-        }
+    .image-wrapper-large,
+    .image-wrapper- {
+      #photo-credit {
+        position: absolute;
+        left: 5%;
       }
     }
   }
