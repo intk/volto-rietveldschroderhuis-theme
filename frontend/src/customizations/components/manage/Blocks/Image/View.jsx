@@ -63,7 +63,7 @@ export const View = ({ data, detached }) => {
             );
             if (href) {
               return (
-                <>
+                <div className="image-wrapper">
                   <UniversalLink
                     href={href}
                     openLinkInNewTab={data.openLinkInNewTab}
@@ -74,11 +74,18 @@ export const View = ({ data, detached }) => {
                     data.alt <br />
                     data.copyright
                   </p>
-                </>
+                </div>
               );
             } else {
               return (
-                <>
+                <div
+                  className={`image-wrapper-${cx({
+                    'full-width': data.align === 'full',
+                    large: data.size === 'l',
+                    medium: data.size === 'm',
+                    small: data.size === 's',
+                  })}`}
+                >
                   {image}
                   {data.textalign === 'left' ? (
                     <p id="photo-credit" className="left">
@@ -99,7 +106,7 @@ export const View = ({ data, detached }) => {
                       {data.copyright}
                     </p>
                   )}
-                </>
+                </div>
               );
             }
           })()}
