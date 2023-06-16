@@ -63,6 +63,22 @@ const getDateRangeDescription = (lang, start, end) => {
   ).format(end)}`;
 };
 
+const getHourRangeDescription = (lang, start, end, open_end, whole_day) => {
+  let formatter = new Intl.DateTimeFormat(lang, {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  });
+
+  if (whole_day) {
+    return '';
+  } else if (!open_end) {
+    return `${formatter.format(start)} - ${formatter.format(end)}`;
+  } else {
+    return `${formatter.format(start)}`;
+  }
+};
+
 function HeroSection(props) {
   const intl = useIntl();
   const { image_url, content } = props;
@@ -76,6 +92,8 @@ function HeroSection(props) {
   } = content || {};
 
   const isEvent = content?.['@type'] === 'Event';
+  const open_end = content?.open_end;
+  const whole_day = content?.whole_day;
 
   const endDate = new Date(end || Date.now());
   const startDate = new Date(start || Date.now());
@@ -122,11 +140,29 @@ function HeroSection(props) {
                   </span>
                 </div>
               )} */}
-              {startDate && isEvent && (
-                <p className="hero-dates">
-                  {getDateRangeDescription(intl.locale, startDate, endDate)}
-                </p>
-              )}
+              <div className="hero-dates-wrapper">
+                {startDate && isEvent && !open_end ? (
+                  <span className="hero-dates">
+                    {getDateRangeDescription(intl.locale, startDate, endDate)}
+                  </span>
+                ) : (
+                  <span className="hero-dates">
+                    {getDateRangeDescription(intl.locale, startDate)}
+                  </span>
+                )}
+                {startDate && isEvent && (
+                  <span className="hero-dates">
+                    {', '}
+                    {getHourRangeDescription(
+                      intl.locale,
+                      startDate,
+                      endDate,
+                      open_end,
+                      whole_day,
+                    )}{' '}
+                  </span>
+                )}
+              </div>
               <h1 className="hero-title-floating">{title}</h1>
               <div className="description-container">
                 <Container>

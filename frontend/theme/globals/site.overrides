@@ -499,6 +499,12 @@ p {
   }
 }
 
+.hero-dates-wrapper{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 .hero-dates{
   color: #fff;
   text-align: center;
