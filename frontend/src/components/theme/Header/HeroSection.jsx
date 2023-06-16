@@ -150,7 +150,7 @@ function HeroSection(props) {
                     {getDateRangeDescription(intl.locale, startDate)}
                   </span>
                 )}
-                {startDate && isEvent && (
+                {startDate && isEvent && !whole_day && (
                   <span className="hero-dates">
                     {', '}
                     {getHourRangeDescription(
