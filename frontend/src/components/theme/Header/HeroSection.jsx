@@ -146,10 +146,14 @@ function HeroSection(props) {
                     {getDateRangeDescription(intl.locale, startDate, endDate)}
                   </span>
                 ) : (
-                  <span className="hero-dates">
-                    {getDateRangeDescription(intl.locale, startDate)}
-                  </span>
+                  startDate &&
+                  isEvent && (
+                    <span className="hero-dates">
+                      {getDateRangeDescription(intl.locale, startDate)}
+                    </span>
+                  )
                 )}
+
                 {startDate && isEvent && !whole_day && (
                   <span className="hero-dates">
                     {', '}

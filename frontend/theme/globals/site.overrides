@@ -58,8 +58,8 @@ p {
   }
 
   img{
-    margin-top: 8px;
-    margin-bottom: 48px;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
 
   a {
@@ -471,6 +471,15 @@ p {
   padding-left: 95px;
   padding-right: 95px;
 
+
+  @media (max-width: 990px) {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    .description-container{
+      max-width: 80% !important;
+    }
+  }
+
   @media (max-width: 768px) {
     padding-left: 35px;
     padding-right: 35px;
@@ -481,7 +490,7 @@ p {
   font-family: 'FranklinDmCp', Arial, sans-serif;
   width: 100%;
   color: #ffffff;
-  font-size: 76px;
+  font-size: 86px;
   max-width: 100%;
   margin-bottom: 0px;
   line-height: 80px;
