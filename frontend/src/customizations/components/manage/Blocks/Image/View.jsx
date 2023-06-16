@@ -43,9 +43,16 @@ export const View = ({ data, detached }) => {
                   isInternalURL(data.url)
                     ? // Backwards compat in the case that the block is storing the full server URL
                       (() => {
-                        if (data.size === 'l') return `${flattenToAppURL(data.url)}/@@images/image`;
-                        if (data.size === 'm') return `${flattenToAppURL(data.url)}/@@images/image/preview`;
-                        if (data.size === 's') return `${flattenToAppURL(data.url)}/@@images/image/mini`;
+                        if (data.size === 'l')
+                          return `${flattenToAppURL(data.url)}/@@images/image`;
+                        if (data.size === 'm')
+                          return `${flattenToAppURL(
+                            data.url,
+                          )}/@@images/image/preview`;
+                        if (data.size === 's')
+                          return `${flattenToAppURL(
+                            data.url,
+                          )}/@@images/image/mini`;
                         return `${flattenToAppURL(data.url)}/@@images/image`;
                       })()
                     : data.url
@@ -64,7 +71,10 @@ export const View = ({ data, detached }) => {
                     small: data.size === 's',
                   })}`}
                 >
-                  <UniversalLink href={href} openLinkInNewTab={data.openLinkInNewTab}>
+                  <UniversalLink
+                    href={href}
+                    openLinkInNewTab={data.openLinkInNewTab}
+                  >
                     {image}
                   </UniversalLink>
                   <p id="photo-credit">
