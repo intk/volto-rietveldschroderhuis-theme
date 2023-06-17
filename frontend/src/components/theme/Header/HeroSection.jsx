@@ -40,27 +40,24 @@ const getDateRangeDescription = (lang, start, end) => {
   ) {
     return `${new Intl.DateTimeFormat(lang, {
       day: 'numeric',
-    }).format(start)} ${lang === 'nl' ? 't/m' : 'to'} ${new Intl.DateTimeFormat(
-      lang,
-      {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric',
-      },
-    ).format(end)}`;
+      month: 'short',
+      year: 'numeric',
+    }).format(start)}  —  ${new Intl.DateTimeFormat(lang, {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+    }).format(end)}`;
   }
 
   return `${new Intl.DateTimeFormat(lang, {
     day: 'numeric',
     month: 'short',
-  }).format(start)} ${lang === 'nl' ? 't/m' : 'to'} ${new Intl.DateTimeFormat(
-    lang,
-    {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric',
-    },
-  ).format(end)}`;
+    year: 'numeric',
+  }).format(start)} — ${new Intl.DateTimeFormat(lang, {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  }).format(end)}`;
 };
 
 const getHourRangeDescription = (lang, start, end, open_end, whole_day) => {
