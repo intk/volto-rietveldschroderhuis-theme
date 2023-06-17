@@ -203,6 +203,13 @@ p {
   }
 }
 
+// Logo
+.logo-nav-wrapper{
+  position: relative;
+  left: -180px;
+  top: 50px;
+}
+
 // ************************
 // About the size of the Images and the Videos on wide screens
 @media screen and (min-width: 1200px) {
