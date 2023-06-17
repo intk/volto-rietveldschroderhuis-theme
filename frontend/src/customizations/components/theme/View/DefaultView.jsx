@@ -62,7 +62,9 @@ const DefaultView = (props) => {
   // const description = content?.description;
   let hasLeadImage;
 
-  content.hide_top_image !== null ? hasLeadImage = content?.preview_image && !content.hide_top_image : hasLeadImage = content?.preview_image;
+  content.hide_top_image !== null
+    ? (hasLeadImage = content?.preview_image && !content.hide_top_image)
+    : (hasLeadImage = content?.preview_image);
 
   const filteredContent = hasLeadImage
     ? filterBlocks(content, ['title'])
