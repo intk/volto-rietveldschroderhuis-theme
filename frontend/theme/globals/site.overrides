@@ -439,20 +439,29 @@ p {
 .description-container>p {
   font-family: 'FranklinBook', Arial, sans-serif;
   text-align: center;
-  line-height: 1.6;
+  line-height: 32px;
   width: 100%;
   font-size: 19px;
   margin-top: 5px;
+  margin-bottom: 5px;
   color: #ffffff !important;
   margin-left: auto;
   margin-right: auto;
   font-weight: 500;
   letter-spacing: normal;
   z-index: 3;
+  max-width: 650px;
   .content-description {
-    max-width: 650px;
+    width: 100%;
+    text-align: center;
     margin-right: auto;
     margin-left: auto;
+    line-height: 1.6;
+
+    @media (max-width: 991px){
+      max-width: 80%;
+      margin-top: 5px;
+    }
   }
   @media (max-width: 768px) {
     display:none;
@@ -476,7 +485,8 @@ p {
     padding-left: 15vw;
     padding-right: 15vw;
     .description-container{
-      max-width: 80% !important;
+      width: 563px;
+      // max-width: 80% !important;
     }
   }
 
@@ -490,16 +500,17 @@ p {
   font-family: 'FranklinDmCp', Arial, sans-serif;
   width: 100%;
   color: #ffffff;
-  font-size: 86px;
+  font-size: 76px;
   max-width: 100%;
   margin-bottom: 0px;
-  line-height: 80px;
+  line-height: 85px;
   margin-top: 0px;
   text-align: center !important;
-  // position: absolute;
-  // bottom: -150px;
   z-index: 3;
 
+  @media (max-width: 991px) {
+    font-size: 86px;
+  }
 
   @media (max-width: 768px) {
     font-size: 60px !important;
