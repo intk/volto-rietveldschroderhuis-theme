@@ -134,31 +134,6 @@ p {
   }
   //
 
-  // h2.documentDescription{
-  //   color: #282931;
-  //   font-size: 1.75rem;
-  //   letter-spacing: 0.00em;
-  //   line-height: 42px;
-  //   display: block;
-  //   margin-top: 55px;
-  //   margin-bottom: 5px;
-  //   max-width: 100%;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   text-align: left;
-  //   font-family: 'FranklinBook', Arial, sans-serif;
-  // }
-  // @media screen and (max-width: 768px){
-  //   h2.documentDescription {
-  //     text-align: left;
-  //     margin-top: 30px;
-  //     font-size: 1.6rem;
-  //     margin-bottom: 25px;
-  //     letter-spacing: 0.00em;
-  //     line-height: 42px;
-  //   }
-  // }
-
   h2{
     font-size: 30px;
     font-family: 'FranklinBook', Arial, sans-serif;
@@ -227,8 +202,6 @@ p {
     }
   }
 }
-
-
 
 // ************************
 // About the size of the Images and the Videos on wide screens
@@ -434,6 +407,31 @@ p {
 
 // Hero section
 
+//hide top image
+.view-viewview.hide-top-image{
+  .portal-top{
+    display: none !important;
+  }
+  #view #page-document.ui.container{
+    padding-top: 120px;
+  }
+  .documentFirstHeading{
+    font-size: 60px !important;
+    padding-top: 55px;
+    margin-bottom: 0px !important;
+  }
+  .documentDescription{
+    max-width: 660px;
+    margin: 0 auto !important;
+    font-size: 1.500em;
+    line-height: 36px;
+    color: #494a51;
+    text-align: center !important;
+    text-justify: inter-word !important;
+    padding-top: 0px;
+    font-size: 24px !important;
+  }
+}
 //Hero title
 .description-container,
 .description-container>p {

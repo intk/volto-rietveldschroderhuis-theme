@@ -157,6 +157,12 @@ export class App extends Component {
             'public-ui': !isCmsUI,
           })}
         />
+        {this.props.content?.hide_top_image ? (
+          <BodyClass className="hide-top-image" />
+        ) : (
+          ' '
+        )}
+
         <SkipLinks />
         <Header pathname={path} />
         {/* <Breadcrumbs pathname={path} /> */}
