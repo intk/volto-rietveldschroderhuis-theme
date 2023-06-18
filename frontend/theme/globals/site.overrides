@@ -71,11 +71,6 @@ p {
     color: #0085a1;
   }
 
-  a img:hover,
-  a img:focus {
-    cursor: zoom-in;
-  }
-
   h1,
   h2,
   h3,
