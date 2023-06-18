@@ -4,6 +4,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@media screen and (min-width: 768px) {
+  .view-viewview .ui.basic.segment.content-area {
+    margin-left: 90px;
+  }
+}
 
 #page-document.ui.container, #page-edit .ui.container{
   width: @container-width !important;
