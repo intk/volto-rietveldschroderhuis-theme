@@ -10,6 +10,7 @@ import config from '@plone/volto/registry';
 import { UniversalLink } from '@plone/volto/components';
 import { toBackendLang } from '@plone/volto/helpers';
 import LogoImage from './Logo.svg';
+import blackLogoImage from './logo-black.svg';
 
 const messages = defineMessages({
   site: {
@@ -28,7 +29,7 @@ const messages = defineMessages({
  * @param {Object} intl Intl object
  * @returns {string} Markup of the component.
  */
-const Logo = () => {
+const Logo = (props) => {
   const { settings } = config;
   const lang = useSelector((state) => state.intl.locale);
   const intl = useIntl();
@@ -39,7 +40,7 @@ const Logo = () => {
       title={intl.formatMessage(messages.site)}
     >
       <Image
-        src={LogoImage}
+        src={props.black === true ? blackLogoImage : LogoImage}
         alt={intl.formatMessage(messages.plonesite)}
         title={intl.formatMessage(messages.plonesite)}
       />

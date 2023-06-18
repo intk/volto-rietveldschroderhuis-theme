@@ -55,7 +55,7 @@ const Header = (props) => {
             }`}
           >
             <div className="logo">
-              <Logo />
+              <Logo black={content?.hide_top_image} />
             </div>
 
             <div className="right-section">

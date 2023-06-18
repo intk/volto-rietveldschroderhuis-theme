@@ -414,8 +414,11 @@ p {
 
 //hide top image
 .view-viewview.hide-top-image{
-  .portal-top{
+  .header-bg{
     display: none !important;
+  }
+  .logo-nav-wrapper.page-nav{
+    // display: block !important;
   }
   #view #page-document.ui.container{
     padding-top: 120px;
