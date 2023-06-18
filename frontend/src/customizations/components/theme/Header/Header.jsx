@@ -14,7 +14,7 @@ import { useLocation } from 'react-router-dom';
 import qs from 'query-string';
 
 const Header = (props) => {
-  // const { navigationItems } = props;
+  const { navigationItems } = props;
   const intl = useIntl();
   const { pathname, search } = useLocation();
   const searchableText = qs.parse(search).SearchableText;
@@ -59,7 +59,7 @@ const Header = (props) => {
             </div>
 
             <div className="right-section">
-              {/* <Navigation pathname={pathname} navigation={navigationItems} /> */}
+              <Navigation pathname={pathname} navigation={navigationItems} />
             </div>
           </div>
         </div>

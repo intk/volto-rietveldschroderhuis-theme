@@ -203,12 +203,7 @@ p {
   }
 }
 
-// Logo
-.logo-nav-wrapper{
-  position: relative;
-  left: -180px;
-  top: 50px;
-}
+
 
 // ************************
 // About the size of the Images and the Videos on wide screens
@@ -553,8 +548,7 @@ p {
 
 .has-hero-image .herosection,
 .herosection img {
-  // height: 90vw;
-  height: 720px;
+  height: 100%;
   min-height: 400px;
   max-height: 720px;
 }
@@ -565,8 +559,7 @@ p {
   z-index: 2;
   display: flex;
   width: 100%;
-  // height: 90vw;
-  height: 720px;
+  height: 90vh;
   min-height: 400px;
   max-height: 720px;
   align-items: flex-end;
