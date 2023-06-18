@@ -77,9 +77,9 @@ export const View = ({ data, detached }) => {
                   >
                     {image}
                   </UniversalLink>
-                  <p id="photo-credit">
-                    data.alt <br />
-                    data.copyright
+                  <p id="photo-credit">{data.alt}</p>
+                  <p id="photo-credit" className="photo-credit-copytight">
+                    {data.copyright}
                   </p>
                 </div>
               );
@@ -94,8 +94,8 @@ export const View = ({ data, detached }) => {
                   })}`}
                 >
                   {image}
-                  <p id="photo-credit">
-                    {data.alt} <br />
+                  <p id="photo-credit">{data.alt}</p>
+                  <p id="photo-credit" className="photo-credit-copyright">
                     {data.copyright}
                   </p>
                 </div>
