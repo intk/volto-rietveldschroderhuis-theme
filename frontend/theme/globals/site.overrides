@@ -352,8 +352,13 @@ p {
  #photo-credit.right {
    text-align: right !important;
  }
- .photo-credit-copyright{
+ #photo-credit.photo-credit-copyright{
   padding-top: 30px;
+  font-size: 12px !important;
+  letter-spacing: 0.0;
+  color: #777777 !important;
+  font-weight: 600 !important;
+  line-height: 49px !important;
  }
 
 
