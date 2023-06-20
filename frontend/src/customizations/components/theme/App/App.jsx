@@ -162,6 +162,11 @@ export class App extends Component {
         ) : (
           ' '
         )}
+        {this.props.content?.align_image_on_right === true ? (
+          <BodyClass className={`top-image-align-right`} />
+        ) : (
+          ' '
+        )}
 
         <SkipLinks />
         <Header pathname={path} />

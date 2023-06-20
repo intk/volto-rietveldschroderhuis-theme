@@ -673,8 +673,33 @@ p {
 }
 
 
-// listing default
+.view-viewview.top-image-align-right {
+  .header-container{
+    background: #fbf9f2 !important;
+  }
+  .herosection-content-image {
+    &::after{
+      background-image: none !important;
+    }
+  }
+  .herosection-content-image img {
+    -o-object-fit: contain !important;
+    object-fit: contain !important;
+    -o-object-position: right !important;
+    object-position: right !important;
+  }
+  .header-title-dates{
+    width: 50%;
+    bottom: 32%;
+    padding-left: 0px;
+    padding-right: 0px;
+    .hero-title-floating, .description-container, .hero-dates{
+      color: #000000 !important;
+    }
+  }
+}
 
+// listing default
 #view #page-document .block.listing.default #page-listing {
   position: relative;
   width: 100vw;
