@@ -94,9 +94,8 @@ export const View = ({ data, detached }) => {
                   })}`}
                 >
                   {image}
-                  <p id="photo-credit">{data.alt}</p>
-                  <p id="photo-credit" className="photo-credit-copyright">
-                    {data.copyright}
+                  <p id="photo-credit">
+                    {data.alt} {data.copyright}
                   </p>
                 </div>
               );

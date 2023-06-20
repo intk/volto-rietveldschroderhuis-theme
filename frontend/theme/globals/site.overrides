@@ -3,6 +3,9 @@ body {
   -webkit-tap-highlight-color: #0085a1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'FranklinBook', Arial, sans-serif;
+  font-size: 16px;
+  color: #404040;
 }
 @media screen and (min-width: 768px) {
   .view-viewview .ui.basic.segment.content-area {
@@ -26,12 +29,6 @@ body {
   #page-document.ui.container > ol, #page-document.ui.container > ul {
     padding-left: 70px !important;
   }
-}
-
-body {
-  font-family: 'FranklinBook', Arial, sans-serif;
-  font-size: 16px;
-  color: #404040;
 }
 
 p {
@@ -354,11 +351,11 @@ p {
  }
  #photo-credit.photo-credit-copyright{
   padding-top: 30px;
-  font-size: 12px !important;
-  letter-spacing: 0.0;
-  color: #777777 !important;
-  font-weight: 600 !important;
-  line-height: 49px !important;
+  // font-size: 12px !important;
+  // letter-spacing: 0.0;
+  // color: #777777 !important;
+  // font-weight: 600 !important;
+  // line-height: 49px !important;
  }
 
 
