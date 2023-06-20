@@ -84,7 +84,12 @@ const EventView = (props) => {
     (fs) => !fieldsetsToExclude.includes(fs.id),
   );
   // const description = content?.description;
-  const hasLeadImage = content?.preview_image;
+  let hasLeadImage = content?.preview_image;
+
+  content.hide_top_image !== null
+    ? (hasLeadImage = content?.preview_image && !content.hide_top_image)
+    : (hasLeadImage = content?.preview_image);
+
   const filteredContent = hasLeadImage
     ? filterBlocks(content, ['title'])
     : content;
