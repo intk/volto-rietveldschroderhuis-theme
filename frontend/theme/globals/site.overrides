@@ -563,6 +563,10 @@ p {
   // height: 720px;
   min-height: 400px;
   max-height: 720px;
+
+  @media (min-width: 1640px) {
+      max-height: 1000px !important;
+    }
 }
 
 .herosection-content-image {
@@ -576,6 +580,10 @@ p {
   max-height: 720px;
   align-items: flex-end;
   margin: 0;
+
+  @media (min-width: 1640px) {
+      max-height: 1000px !important;
+    }
 
   picture {
     display: flex;
