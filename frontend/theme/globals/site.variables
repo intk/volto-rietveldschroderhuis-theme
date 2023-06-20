@@ -29,6 +29,7 @@
     url('../assets/fonts/ITCFranklinGothicStd-Book.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -37,6 +38,7 @@
     url('../assets/fonts/ITCFranklinGothicStd-DmCp.otf')format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -45,6 +47,7 @@
     url('../assets/fonts/ITCFranklinGothicStd-Med.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 
