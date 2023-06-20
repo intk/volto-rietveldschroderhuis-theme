@@ -429,6 +429,32 @@ p {
 
 // Hero section
 
+//hide title
+.view-viewview.hide-title {
+  .header-bg {
+    display: none !important;
+  }
+  .ui.basic.segment.content-area {
+    margin-left: 0px !important;
+  }
+  .ui.segment {
+      padding-top: 0px !important;
+      margin-top: 0px !important;
+    }
+  #view{
+    .ui.container{
+      padding-top: 0px !important;
+    }
+    h1.documentFirstHeading {
+      display: none !important;
+    }
+    .documentDescription{
+      text-align: left !important;
+      padding-bottom: 30px;
+    }
+  }
+}
+
 //hide top image
 .view-viewview.hide-top-image{
   .header-bg{

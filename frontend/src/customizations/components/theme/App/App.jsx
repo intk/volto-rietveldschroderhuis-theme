@@ -167,6 +167,11 @@ export class App extends Component {
         ) : (
           ' '
         )}
+        {this.props.content?.slideshow_page === true ? (
+          <BodyClass className={`hide-title`} />
+        ) : (
+          ' '
+        )}
 
         <SkipLinks />
         <Header pathname={path} />
