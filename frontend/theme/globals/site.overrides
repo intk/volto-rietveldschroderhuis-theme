@@ -251,6 +251,12 @@ p {
     }
   }
 }
+
+// image link section
+#view #page-document a{
+  border-bottom: none;
+}
+
 //image credits section
 .view-viewview {
   position: relative;
