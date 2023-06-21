@@ -242,6 +242,10 @@ p {
     }
   }
 
+  .block.image.align.center{
+    padding-top: 37px !important;
+  }
+
   .view-viewview .columns-view .block.image.align.center {
     img {
       max-width: 100% !important;
