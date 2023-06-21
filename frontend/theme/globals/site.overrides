@@ -200,6 +200,7 @@ p {
   }
 }
 
+
 // Logo
 .logo-nav-wrapper{
   display: none;
@@ -611,7 +612,6 @@ p {
 .has-hero-image .herosection,
 .herosection img {
   height: 90vh;
-  // height: 720px;
   min-height: 400px;
   max-height: 720px;
 
