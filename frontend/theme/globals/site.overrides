@@ -286,6 +286,12 @@ p {
   }
   @media screen and (max-width: 1200px) {
     //image credits section
+    .block.video.align{
+      #photo-credit {
+        position: absolute;
+        left: 0%;
+      }
+    }
     .block.image.align.center {
     .image-wrapper-large,
     .image-wrapper- {
@@ -298,7 +304,14 @@ p {
   }
   @media screen and (max-width: 768px) {
     //image credits section
-      .block.image.align.center {
+    .block.video.align {
+      #photo-credit {
+        position: absolute;
+        left: 5%;
+      }
+    }
+
+    .block.video.align, .block.image.align.center {
     .image-wrapper-large,
     .image-wrapper- {
       #photo-credit {
@@ -313,12 +326,17 @@ p {
   .block.image.align.right{
     .image-wrapper- {
       max-width: 50%;
-      margin-bottom: 1em;
+      margin-bottom: 0px !important;
+      padding-top: 1em !important;
       margin-left: 1em !important;
+      margin-right: 1em !important;
       float: right;
       img{
         max-width: 100%;
         padding-top: 0px !important;
+      }
+      #photo-credit{
+        margin-bottom: 0px !important;
       }
     }
   }
@@ -326,13 +344,18 @@ p {
     .image-wrapper- {
       padding-top: 0px !important;
       max-width: 50%;
-      margin-bottom: 1em;
+      padding-top: 1em !important;
+      margin-bottom: 0px !important;
       margin-right: 1em !important;
+      margin-left: 1em !important;
       float: left;
     }
     img {
       max-width: 100%;
       padding-top: 0px !important;
+    }
+    #photo-credit {
+      margin-bottom: 0px !important;
     }
   }
 }
@@ -850,6 +873,8 @@ p {
   }
 
   @media only screen and (max-width: 767px) {
+    padding-left: 25px;
+    padding-right: 25px;
     #content-core .listing-items {
       width: 100% !important;
       padding-bottom: 85px !important;
