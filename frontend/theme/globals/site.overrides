@@ -61,7 +61,7 @@ p {
 
   .image-wrapper-, .image-wrapper-large, .image-wrapper-medium, .image-wrapper-small, .block.video.align{
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
   }
 
   a {
