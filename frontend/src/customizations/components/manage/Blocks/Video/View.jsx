@@ -28,7 +28,10 @@ const View = (props) => {
       )}
     >
       <Body data={data} />
-      <p id="photo-credit"> {data.alt} {data.copyright} </p>
+      <p id="photo-credit">
+        {' '}
+        {data.alt} {data.copyright}{' '}
+      </p>
     </div>
   );
 };
