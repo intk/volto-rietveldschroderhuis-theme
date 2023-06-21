@@ -6,59 +6,41 @@ import Image from '../../Image/Image';
 import { defineMessages, useIntl } from 'react-intl';
 
 const getDateRangeDescription = (lang, start, end) => {
+  const format = (date, options) =>
+    new Intl.DateTimeFormat(lang, options).format(date);
+  const defaultOptions = { day: 'numeric', month: 'short', year: 'numeric' };
+  const dayOptions = { day: 'numeric' };
+
   if (
     !end ||
-    (start.getMonth() === end.getMonth() &&
-      start.getFullYear() === end.getFullYear() &&
-      start.getDate() === end.getDate())
+    (start.getDate() === end.getDate() &&
+      start.getMonth() === end.getMonth() &&
+      start.getFullYear() === end.getFullYear())
   ) {
-    return new Intl.DateTimeFormat(lang, {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric',
-    }).format(start);
+    return format(start, defaultOptions);
   }
 
   if (
     start.getMonth() === end.getMonth() &&
     start.getFullYear() === end.getFullYear()
   ) {
-    return `${new Intl.DateTimeFormat(lang, {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric',
-    }).format(start)}  —  ${new Intl.DateTimeFormat(lang, {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric',
-    }).format(end)}`;
+    return `${format(start, dayOptions)} — ${format(end, defaultOptions)}`;
   }
 
-  return `${new Intl.DateTimeFormat(lang, {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  }).format(start)} — ${new Intl.DateTimeFormat(lang, {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  }).format(end)}`;
+  return `${format(start, defaultOptions)} — ${format(end, defaultOptions)}`;
 };
 
 const getHourRangeDescription = (lang, start, end, open_end, whole_day) => {
-  let formatter = new Intl.DateTimeFormat(lang, {
+  if (whole_day) return '';
+
+  const format = new Intl.DateTimeFormat(lang, {
     hour: '2-digit',
     minute: '2-digit',
     hour12: false,
   });
+  const startHour = format.format(start);
 
-  if (whole_day) {
-    return '';
-  } else if (!open_end) {
-    return `${formatter.format(start)} - ${formatter.format(end)}`;
-  } else {
-    return `${formatter.format(start)}`;
-  }
+  return open_end ? startHour : `${startHour} - ${format.format(end)}`;
 };
 
 function HeroSection(props) {

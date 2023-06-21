@@ -80,7 +80,7 @@ const Header = (props) => {
           </div>
         </div>
       )}
-      {isSearch && (
+      {/* {isSearch && (
         <div className="header-bg">
           <div className="header-container">
             <HeroSection
@@ -93,7 +93,7 @@ const Header = (props) => {
             />
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
