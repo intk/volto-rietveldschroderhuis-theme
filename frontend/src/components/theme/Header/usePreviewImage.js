@@ -12,26 +12,9 @@ import { useSelector } from 'react-redux';
 // };
 
 const usePreviewImage = (pathname) => {
-  // const dispatch = useDispatch();
   const contentData = useSelector((state) => state.content.data);
-  // const contentId = flattenToAppURL(contentData?.['@id'] || '');
-  // const subrequestId = `${contentId}-preview_image_request}`;
-  // const subrequest = useSelector(
-  //   (state) => state.content.subrequests?.[subrequestId],
-  // );
-  const preview_image = contentData?.preview_image; // || subrequest?.data?.preview_image;
 
-  // const parentPath = parent(
-  //   subrequest?.data
-  //     ? flattenToAppURL(subrequest.data['@id'])
-  //     : flattenToAppURL(contentData?.['@id']),
-  // );
-  //
-  // React.useEffect(() => {
-  //   if (!preview_image && parentPath) {
-  //     dispatch(getContent(parentPath, null, subrequestId));
-  //   }
-  // }, [preview_image, parentPath, dispatch, subrequestId]);
+  const preview_image = contentData?.preview_image; // || subrequest?.data?.preview_image;
 
   return preview_image;
 };

@@ -5,21 +5,6 @@ import Image from '../../Image/Image';
 // eslint-disable-next-line no-unused-vars
 import { defineMessages, useIntl } from 'react-intl';
 
-// const messages = defineMessages({
-//   pastExibition: {
-//     id: 'Past exhibition',
-//     defaultMessage: 'Past exhibition',
-//   },
-//   nowOnDisplay: {
-//     id: 'Now on display',
-//     defaultMessage: 'Now on display',
-//   },
-//   future: {
-//     id: 'Future',
-//     defaultMessage: 'Future',
-//   },
-// });
-
 const getDateRangeDescription = (lang, start, end) => {
   if (
     !end ||
@@ -95,9 +80,6 @@ function HeroSection(props) {
   const endDate = new Date(end || Date.now());
   const startDate = new Date(start || Date.now());
 
-  // const isCurrentEvent = startDate <= Date.now() && endDate >= Date.now();
-  // const isFutureEvent = startDate > Date.now();
-
   return (
     <div className="herosection">
       {multiple_content_view && <BodyClass className="multiple-content-view" />}
@@ -118,25 +100,6 @@ function HeroSection(props) {
               )}
             </figure>
             <div className="header-title-dates">
-              {/* {startDate && isEvent && (
-                <div className="event-label">
-                  <span
-                    className={
-                      isFutureEvent
-                        ? 'future'
-                        : isCurrentEvent
-                        ? 'current'
-                        : 'past'
-                    }
-                  >
-                    {isFutureEvent
-                      ? intl.formatMessage(messages.future)
-                      : isCurrentEvent
-                      ? intl.formatMessage(messages.nowOnDisplay)
-                      : intl.formatMessage(messages.pastExibition)}
-                  </span>
-                </div>
-              )} */}
               <div className="hero-dates-wrapper">
                 {startDate && isEvent && !open_end ? (
                   <span className="hero-dates">
@@ -150,7 +113,6 @@ function HeroSection(props) {
                     </span>
                   )
                 )}
-
                 {startDate && isEvent && !whole_day && (
                   <span className="hero-dates">
                     {', '}
@@ -180,21 +142,6 @@ function HeroSection(props) {
       </div>
       {title && !image_url && (
         <Container>
-          {/* {startDate && isEvent && (
-            <div className="event-label">
-              <span
-                className={
-                  isFutureEvent ? 'future' : isCurrentEvent ? 'current' : 'past'
-                }
-              >
-                {isFutureEvent
-                  ? intl.formatMessage(messages.future)
-                  : isCurrentEvent
-                  ? intl.formatMessage(messages.nowOnDisplay)
-                  : intl.formatMessage(messages.pastExibition)}
-              </span>
-            </div>
-          )} */}
           <h1 className="documentFirstHeading">{title}</h1>
           {startDate && isEvent && (
             <p className="hero-dates">
