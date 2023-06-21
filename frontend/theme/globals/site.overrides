@@ -7,7 +7,7 @@ body {
   font-size: 16px;
   color: #404040;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .view-viewview .ui.basic.segment.content-area {
     margin-left: 100px;
   }
