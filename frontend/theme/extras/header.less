@@ -172,23 +172,18 @@ body.has-hero-section.section-add {
     width: 50px;
     border-radius: 50%;
 
-    @media (max-width: 991px) {
-      height: 53px;
-      padding: 15px 10px;
-    }
-
-
     &:hover,
     &:focus {
       opacity: 1;
     }
 
     .hamburger-box {
-      width: 25px;
-      height: 25px;
+      width: 22px;
+      height: 22px;
+      // right: -2px !important;
 
       @media (max-width: 991px) {
-        width: 30px;
+        // width: 30px;
       }
 
       .hamburger-inner {
@@ -200,7 +195,7 @@ body.has-hero-section.section-add {
           height: 2px;
 
           @media (max-width: 991px) {
-            width: 20px;
+            // width: 20px;
           }
         }
       }
@@ -511,7 +506,7 @@ body.has-toolbar .mobile-menu {
 .mobile-menu-enter.mobile-menu-enter-active {
   display: block;
   transform: translateX(0%) !important;
-  transition: transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91);
+  transition: transform 0.5s cubic-bezier(0.91, 0.1, 0.6, 0.99);
 }
 
 .mobile-menu-enter-done {
@@ -525,13 +520,13 @@ body.has-toolbar .mobile-menu {
 .mobile-menu-exit {
   display: block;
   transform: translateX(0%) !important;
-  transition: transform 0.5s cubic-bezier(0.09, 0.11, 0.24, 0.91);
+  transition: transform 0.5s cubic-bezier(0.91, 0.1, 0.6, 0.99);
 }
 
 .mobile-menu-exit.mobile-menu-exit-active {
   display: block;
   transform: translateX(-100%) !important;
-  transition: transform 0.5s 0.2s cubic-bezier(0.09, 0.11, 0.24, 0.91);
+  transition: transform 0.5s cubic-bezier(0.91, 0.1, 0.6, 0.99);
 }
 
 main,
@@ -554,7 +549,7 @@ main,
 
 body.intk-menu-opened {
   .logo {
-    display: none;
+    // display: none;
   }
 
   .right-section {
@@ -592,9 +587,8 @@ body.intk-menu-opening {
   }
 
   .logo {
-    position: relative;
-    z-index: 5;
-    display: none;
+    width:100%;
+    left: 0%;
   }
 }
 
@@ -605,15 +599,14 @@ body.intk-menu-opening {
   .header-bg,
   .logo,
   #footer{
-    // height: 100%;
     overflow-y: auto;
     transform: translateX(100%) !important;
-    transition: transform 0.5s cubic-bezier(0.1, 0.01, 0.6, 0.99);
+    transition: transform 0.5s cubic-bezier(0.91, 0.1, 0.6, 0.99);
   }
 
   .search {
     display: flex;
-    animation: slideIn 0.5s cubic-bezier(0.91, 0.01, 0.6, 0.99) forwards;
+    animation: slideIn 0.5s cubic-bezier(0.91, 0.1, 0.6, 0.99) forwards;
   }
 }
 
