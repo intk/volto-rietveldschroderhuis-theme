@@ -11,6 +11,7 @@ import { UniversalLink } from '@plone/volto/components';
 import { toBackendLang } from '@plone/volto/helpers';
 import LogoImage from './Logo.svg';
 import blackLogoImage from './logo-black.svg';
+import navigationLogo from './navigationlogo.svg';
 
 const messages = defineMessages({
   site: {
@@ -40,7 +41,13 @@ const Logo = (props) => {
       title={intl.formatMessage(messages.site)}
     >
       <Image
-        src={props.black === true ? blackLogoImage : LogoImage}
+        src={
+          props.black === true
+            ? blackLogoImage
+            : props.navigation === true
+            ? navigationLogo
+            : LogoImage
+        }
         alt={intl.formatMessage(messages.plonesite)}
         title={intl.formatMessage(messages.plonesite)}
       />

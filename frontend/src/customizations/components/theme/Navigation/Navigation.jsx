@@ -17,6 +17,7 @@ import { CSSTransition } from 'react-transition-group';
 import NavItems from './NavItems';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import SearchWidget from '../SearchWidget/SearchWidget';
+import { Logo } from '@plone/volto/components';
 
 const messages = defineMessages({
   closeMobileMenu: {
@@ -198,6 +199,10 @@ class Navigation extends Component {
         >
           <div key="mobile-menu-key" className="mobile-menu">
             <BodyClass className="has-mobile-menu-open" />
+
+            <div className="logo-nav">
+              <Logo navigation={true} />
+            </div>
 
             <div className="mobile-menu-nav">
               <Container>
