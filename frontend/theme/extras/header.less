@@ -579,9 +579,24 @@ body.intk-menu-opening {
     .logo-nav {
       margin-left: 40px;
       flex: 0 0 345px;
+
+      .background-section{
+        width: 320px;
+        height: 100%;
+        position: absolute;
+        left: 0%;
+        top: 0px;
+
+        background: #FBF9F2;
+      }
       @media (max-width: 992px) {
         margin-left: 30px;
         flex-basis: 200px;
+
+        .background-section{
+          width: 100%;
+          height: 200px;
+        }
       }
     }
 
