@@ -6,13 +6,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Dropdown } from 'semantic-ui-react';
 
 import { useSelector } from 'react-redux';
 import cx from 'classnames';
 import { find, map } from 'lodash';
 
-import { Helmet, langmap, flattenToAppURL } from '@plone/volto/helpers';
+import {
+  Helmet,
+  langmap,
+  flattenToAppURL,
+  toReactIntlLang,
+} from '@plone/volto/helpers';
 
 import config from '@plone/volto/registry';
 
@@ -36,42 +40,36 @@ const LanguageSelector = (props) => {
 
   return settings.isMultilingual ? (
     <div className="language-selector">
-      <Dropdown text={currentLang.toUpperCase()} basic>
-        <Dropdown.Menu>
-          {map(
-            settings.supportedLanguages.filter((l) => l !== currentLang),
-            (lang) => {
-              const translation = find(translations, { language: lang });
-              return (
-                <Dropdown.Item key={`language-selector-${lang}`}>
-                  <Link
-                    aria-label={`${intl.formatMessage(
-                      messages.switchLanguageTo,
-                    )} ${langmap[lang].nativeName.toLowerCase()}`}
-                    className={cx({ selected: lang === currentLang })}
-                    to={
-                      translation
-                        ? flattenToAppURL(translation['@id'])
-                        : `/${lang}`
-                    }
-                    title={langmap[lang].nativeName}
-                    onClick={() => {
-                      props.onClickAction();
-                    }}
-                    key={`language-selector-${lang}`}
-                  >
-                    {lang.toUpperCase()}
-                  </Link>
-                </Dropdown.Item>
-              );
-            },
-          )}
-        </Dropdown.Menu>
-      </Dropdown>
+      {map(
+        settings.supportedLanguages.filter((l) => l !== currentLang),
+        (lang) => {
+          const translation = find(translations, { language: lang });
+          return (
+            <Link
+              aria-label={`${intl.formatMessage(
+                messages.switchLanguageTo,
+              )} ${langmap[lang].nativeName.toLowerCase()}`}
+              className={cx({
+                selected: toReactIntlLang(lang) === currentLang,
+              })}
+              to={
+                translation ? flattenToAppURL(translation['@id']) : `/${lang}`
+              }
+              title={langmap[lang].nativeName}
+              onClick={() => {
+                props.onClickAction();
+              }}
+              key={`language-selector-${lang}`}
+            >
+              {langmap[lang].nativeName}
+            </Link>
+          );
+        },
+      )}
     </div>
   ) : (
     <Helmet>
-      <html lang={settings.defaultLanguage} />
+      <html lang={toReactIntlLang(settings.defaultLanguage)} />
     </Helmet>
   );
 };

@@ -199,20 +199,16 @@ class Navigation extends Component {
             </div>
             <div className="nav-seach-wrapper">
               <div className="lang-search-wrapper">
-                <div className="tools-search-wrapper">
-                  <LanguageSelector onClickAction={this.closeMobileMenu} />
-                </div>
                 <div className="search">
                   <SearchWidget onClose={this.closeMobileMenu} />
+                </div>
+                <div className="tools-search-wrapper">
+                  <LanguageSelector onClickAction={this.closeMobileMenu} />
                 </div>
               </div>
               <div className="mobile-menu-nav">
                 <Container>
-                  <NavItems
-                    items={this.props.items}
-                    lang={this.props.lang}
-                    onClose={this.closeMobileMenu}
-                  />
+                  <NavItems items={this.props.items} lang={this.props.lang} onClose={this.closeMobileMenu} />
                 </Container>
               </div>
             </div>
