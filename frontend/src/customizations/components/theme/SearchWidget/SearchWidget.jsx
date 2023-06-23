@@ -9,9 +9,6 @@ import { Form, Input } from 'semantic-ui-react';
 import { defineMessages, useIntl } from 'react-intl';
 import { useDetectClickOutside } from 'react-detect-click-outside';
 
-import { Icon } from '@plone/volto/components';
-import zoomSVG from '@plone/volto/icons/zoom.svg';
-
 const messages = defineMessages({
   search: {
     id: 'Search',
@@ -59,6 +56,7 @@ const SearchWidget = ({ onClose }) => {
       <Form action="/search" onSubmit={onSubmit}>
         <Form.Field className={`searchbox${visible ? ' visible' : ''}`}>
           <Input
+            id="input"
             ref={inputRef}
             aria-label={intl.formatMessage(messages.searchSite)}
             onChange={onChangeText}
@@ -66,7 +64,7 @@ const SearchWidget = ({ onClose }) => {
             value={text}
             transparent
             autoComplete="off"
-            placeholder={intl.formatMessage(messages.search)}
+            placeholder={intl.formatMessage(messages.searchSite)}
             title={intl.formatMessage(messages.search)}
           />
           <button
@@ -86,7 +84,13 @@ const SearchWidget = ({ onClose }) => {
               }
             }}
           >
-            <Icon name={zoomSVG} size="40px" fill="#000" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="18px"
+              viewBox="0 0 512 512"
+            >
+              <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+            </svg>
           </button>
         </Form.Field>
       </Form>

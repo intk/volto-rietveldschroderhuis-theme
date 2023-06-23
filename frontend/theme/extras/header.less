@@ -256,14 +256,14 @@ nav.navigation {
     position: relative;
     z-index: 5;
     display: flex;
-    width: 70%;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
     padding: 0;
     margin: 0;
     list-style: none;
-    margin-left: auto;
+    flex-grow: 1;
+    // margin-left: auto;
 
     li.item {
       display: flex;
@@ -571,7 +571,7 @@ body.intk-menu-visible,
 body.intk-menu-opening {
   .mobile-menu {
     display: flex !important;
-    padding-top: 40px;
+    padding-top: 30px;
 
     @media (max-width: 992px) {
       padding-top: 20px;
@@ -579,6 +579,7 @@ body.intk-menu-opening {
     .logo-nav {
       margin-left: 40px;
       flex: 0 0 345px;
+      margin-top: 10px;
 
       .background-section{
         width: 320px;
@@ -647,24 +648,50 @@ body.has-toolbar.has-hero-image {
 .nav-seach-wrapper{
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 .lang-search-wrapper{
   display: flex;
   justify-content: flex-end;
-  margin-right: 150px;
+  margin-right: 90px;
+  .search{
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 35px;
+    height: 35px;
+    width: 318px;
+    .field.searchbox{
+      border: none;
+    }
+    .ui.form, .field.searchbox, .ui.transparent.input{
+      height: 32px;
+      width: 300px;
+    }
+    #input{
+      font-family: 'FranklinBook', Arial, sans-serif;
+      font-size: 15px;
+      font-style: italic;
+      letter-spacing: 0.75px;
+      line-height: 21.5px;
+      padding-top: 7px !important;
+      padding-left: 7px !important;
+      margin-top: auto;
+      margin-bottom: auto;
+      color: #404040 !important;
+    }
+  }
   .tools-search-wrapper{
-    margin-left: 50px;
+    margin-left: 40px;
 
     .language-selector{
-      // line-height: 5px;
-      margin-top: 5px;
+      margin-top: 11px;
       a{
         color: #494a51;
         text-transform: uppercase;
         font-size: 18px;
         font-family: 'FranklinMed', Arial, sans-serif;
         letter-spacing: 0.00em;
-        padding-top: 20px;
+        padding-top: 10px;
         text-decoration: none;
       }
     }
