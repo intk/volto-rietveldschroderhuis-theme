@@ -132,13 +132,6 @@ class Navigation extends Component {
   render() {
     return (
       <nav className="navigation" id="navigation" aria-label="navigation">
-        <div className="tools-search-wrapper">
-          <LanguageSelector onClickAction={this.closeMobileMenu} />
-        </div>
-
-        <div className="search">
-          <SearchWidget onClose={this.closeMobileMenu} />
-        </div>
         <div className="hamburger-wrapper">
           {/* <a
             href="https://ticketshop.haagshistorischmuseum.nl"
@@ -204,15 +197,20 @@ class Navigation extends Component {
               <div className="background-section">''</div>
               <Logo navigation={true} />
             </div>
-
-            <div className="mobile-menu-nav">
-              <Container>
-                <NavItems
-                  items={this.props.items}
-                  lang={this.props.lang}
-                  onClose={this.closeMobileMenu}
-                />
-              </Container>
+            <div className="nav-seach-wrapper">
+              <div className="lang-search-wrapper">
+                <div className="tools-search-wrapper">
+                  <LanguageSelector onClickAction={this.closeMobileMenu} />
+                </div>
+                <div className="search">
+                  <SearchWidget onClose={this.closeMobileMenu} />
+                </div>
+              </div>
+              <div className="mobile-menu-nav">
+                <Container>
+                  <NavItems items={this.props.items} lang={this.props.lang} onClose={this.closeMobileMenu} />
+                </Container>
+              </div>
             </div>
           </div>
         </CSSTransition>
