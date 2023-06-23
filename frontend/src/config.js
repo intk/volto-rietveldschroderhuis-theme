@@ -26,6 +26,8 @@ export default function applyConfig(config) {
     defaultLanguage: DEFAULT_LANG,
   };
 
+  config.settings.navDepth = 2;
+
   config.blocks.initialBlocks = {
     ...config.blocks.initialBlocks,
     Document: ['title', 'description'],

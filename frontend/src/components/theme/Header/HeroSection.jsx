@@ -58,7 +58,6 @@ function HeroSection(props) {
   const isEvent = content?.['@type'] === 'Event';
   const open_end = content?.open_end;
   const whole_day = content?.whole_day;
-
   const endDate = new Date(end || Date.now());
   const startDate = new Date(start || Date.now());
 
