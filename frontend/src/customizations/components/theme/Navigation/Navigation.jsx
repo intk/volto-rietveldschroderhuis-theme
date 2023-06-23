@@ -208,7 +208,11 @@ class Navigation extends Component {
               </div>
               <div className="mobile-menu-nav">
                 <Container>
-                  <NavItems items={this.props.items} lang={this.props.lang} onClose={this.closeMobileMenu} />
+                  <NavItems
+                    items={this.props.items}
+                    lang={this.props.lang}
+                    onClose={this.closeMobileMenu}
+                  />
                 </Container>
               </div>
             </div>
