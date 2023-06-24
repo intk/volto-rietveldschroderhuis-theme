@@ -124,7 +124,7 @@ const Image = ({
       <picture className={pictureClassName}>
         {srcset?.length > 0 && <source srcSet={srcset} sizes={sizes} />}
         <img
-          src={`${flattenToAppURL(src)}/@@images/image`}
+          src={`${flattenToAppURL(src)}`}
           alt={alt}
           className={className}
           role={role}
@@ -141,7 +141,7 @@ const Image = ({
           dangerouslySetInnerHTML={{
             __html: `
               <img
-                src="${src}"
+                src="${flattenToAppURL(src)}"
                 ${srcSet?.length && `srcset="${srcSet.join(', ')}"`}
                 alt="${alt}"
                 class="${className || ''}"
