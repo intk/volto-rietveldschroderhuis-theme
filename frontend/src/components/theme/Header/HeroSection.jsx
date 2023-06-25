@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container } from 'semantic-ui-react';
 import { BodyClass } from '@plone/volto/helpers';
 import Image from '../../Image/Image';
@@ -61,6 +61,12 @@ function HeroSection(props) {
   const endDate = new Date(end || Date.now());
   const startDate = new Date(start || Date.now());
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []); // empty dependency array ensures this only runs after first render
+
   return (
     <div className="herosection">
       {multiple_content_view && <BodyClass className="multiple-content-view" />}
@@ -69,11 +75,16 @@ function HeroSection(props) {
           <>
             <BodyClass className="has-hero-image" />
             <figure className="herosection-content-image document-image">
-              <Image
-                image={content.preview_image}
-                width="100vw"
-                height="90vh"
-              />
+              {isLoaded && content?.preview_image ? (
+                <Image
+                  image={content.preview_image}
+                  width="100vw"
+                  height="90vh"
+                />
+              ) : (
+                <div className="herosection-missing-image"></div>
+              )}
+
               {preview_caption && (
                 <figcaption className="content-image-caption">
                   {preview_caption}
