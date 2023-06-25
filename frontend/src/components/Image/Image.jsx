@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { getImageAttributes } from '@package/helpers/images';
-import { flattenToAppURL } from '@plone/volto/helpers';
+// import { flattenToAppURL } from '@plone/volto/helpers';
 
 /**
  * Image component
@@ -124,7 +124,7 @@ const Image = ({
       <picture className={pictureClassName}>
         {srcset?.length > 0 && <source srcSet={srcset} sizes={sizes} />}
         <img
-          src={`${flattenToAppURL(src)}`}
+          src={src}
           alt={alt}
           className={className}
           role={role}
@@ -141,7 +141,7 @@ const Image = ({
           dangerouslySetInnerHTML={{
             __html: `
               <img
-                src="${flattenToAppURL(src)}"
+                src="${src}"
                 ${srcSet?.length && `srcset="${srcSet.join(', ')}"`}
                 alt="${alt}"
                 class="${className || ''}"
