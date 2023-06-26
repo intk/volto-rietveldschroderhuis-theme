@@ -194,7 +194,7 @@ class Navigation extends Component {
             <BodyClass className="has-mobile-menu-open" />
 
             <div className="logo-nav">
-              <div className="background-section">''</div>
+              <div className="background-section"></div>
               <Logo navigation={true} />
             </div>
             <div className="nav-seach-wrapper">
