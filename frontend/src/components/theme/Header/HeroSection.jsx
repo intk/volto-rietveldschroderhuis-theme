@@ -69,11 +69,11 @@ function HeroSection(props) {
           <>
             <BodyClass className="has-hero-image" />
             <figure className="herosection-content-image document-image">
-                <Image
-                  image={content.preview_image}
-                  width="100vw"
-                  height="90vh"
-                />
+              <Image
+                image={content.preview_image}
+                width="100vw"
+                height="90vh"
+              />
 
               {preview_caption && (
                 <figcaption className="content-image-caption">
