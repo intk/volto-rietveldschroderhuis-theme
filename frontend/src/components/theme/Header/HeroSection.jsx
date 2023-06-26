@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Container } from 'semantic-ui-react';
 import { BodyClass } from '@plone/volto/helpers';
 import Image from '../../Image/Image';
