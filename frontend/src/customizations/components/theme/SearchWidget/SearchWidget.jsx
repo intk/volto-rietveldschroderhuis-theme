@@ -52,7 +52,7 @@ const SearchWidget = ({ onClose }) => {
   };
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className='searchWrapper'>
       <Form action="/search" onSubmit={onSubmit}>
         <Form.Field className={`searchbox${visible ? ' visible' : ''}`}>
           <Input

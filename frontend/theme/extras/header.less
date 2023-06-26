@@ -248,19 +248,37 @@ body.has-hero-section.section-add {
   width: 250px !important;
 }
 
+li.item.level-0{
+  flex-basis: auto;
+  min-width: 177px;
+}
+
 li.item.level-0 > a > span{
   font-family: 'FranklinDmCp', Arial, sans-serif !important;
   font-size: 37px !important;
   margin-bottom: 15px !important;
   color: #282931 !important;
+
+  @media (max-width: 992px){
+    font-size: 28px !important;
+  }
+}
+
+@media (max-width: 992px){
+  #main .item.level-0{
+    margin-top: 40px !important;
+  }
 }
 
 li.item.level-1 > a {
   line-height: 25.7px;
   span {
   font-family: 'FranklinBook', Arial, sans-serif !important;
-  font-size: 19px !important;
+  font-size: 19px;
   color: #494a51 !important;
+  @media (max-width: 767px) {
+      font-size: 18px !important;
+    }
 
   &:hover,
     &:focus {
@@ -311,12 +329,16 @@ nav.navigation {
       a {
         display: inline-block;
         padding-right: 30px;
-        padding-left: 40px;
+        padding-left: 30px;
         color: #000 !important;
         font-size: 24px;
         font-weight: 700;
         line-height: 1.2;
         text-decoration: none !important;
+
+        @media (max-width: 767px){
+          padding-left: 15px;
+        }
 
         &.active {
           color: #000 !important;
@@ -347,7 +369,7 @@ nav.navigation {
 
     &.nav-items-nested {
       flex-direction: column;
-      margin-top: 1.2em;
+      margin-top: 1em;
 
       li.item {
         width: 100%;
@@ -504,6 +526,15 @@ nav.navigation {
   .mobile-menu-nav {
     align-items: flex-start;
     margin-top: 75px;
+    padding: 0 15px;
+
+    @media (max-width: 992px){
+      margin-top: 0px;
+    }
+
+    @media (max-width: 767px){
+      padding: 0 0 !important;
+    }
   }
 
   &::before {
@@ -598,9 +629,9 @@ body.has-toolbar.intk-menu-opened {
   }
 }
 
-  .mobile-menu {
-    display: flex !important;
-    padding-top: 30px;
+#main .mobile-menu {
+  display: flex !important;
+  padding-top: 30px;
 
     @media (max-width: 992px) {
       padding-top: 20px;
@@ -608,7 +639,7 @@ body.has-toolbar.intk-menu-opened {
     .logo-nav {
       margin-left: 40px;
       flex: 0 0 345px;
-      margin-top: 10px;
+      // margin-top: 10px;
 
       .background-section{
         width: 320px;
@@ -635,6 +666,15 @@ body.has-toolbar.intk-menu-opened {
 
   .search {
     display: flex;
+    .searchWrapper{
+      flex-grow: 1;
+      margin-right: 15px;
+      @media (max-width: 911px) {
+        .ui.form{
+          width: 100% !important;
+        }
+      }
+    }
   }
 
   nav.navigation {
@@ -683,19 +723,24 @@ body.has-toolbar.has-hero-image {
 .lang-search-wrapper{
   display: flex;
   justify-content: flex-end;
-  margin-right: 90px;
+  margin-right: 80px;
 
   @media (max-width: 992px){
     flex-direction: column;
     padding-left: 45px;
-    padding-right: 80px;
-    margin-top: 30px;
+    // padding-right: 80px;
+    margin-top: 35px;
     .search{
       width: 100% !important;
     }
     .tools-search-wrapper {
       margin-left: 0px !important;
     }
+  }
+  @media (max-width: 767px){
+    margin-right: 30px;
+    padding-left: 30px;
+    margin-top: 25px;
   }
 
   .search{
@@ -709,7 +754,7 @@ body.has-toolbar.has-hero-image {
     }
     .ui.form, .field.searchbox, .ui.transparent.input{
       height: 32px;
-      width: 300px;
+      // width: 300px;
     }
     #input{
       font-family: 'FranklinBook', Arial, sans-serif;
