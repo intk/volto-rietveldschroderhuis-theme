@@ -132,7 +132,18 @@ const SiteDataSchema = ({ intl }) => ({
     {
       id: 'contact',
       title: intl.formatMessage(messages.contact),
-      fields: ['addressTitle', 'name', 'address', 'addressSecond', 'email', 'contactTitle', 'timeLine1', 'timeLine2', 'timeLine3', 'planYourVisit'],
+      fields: [
+        'addressTitle',
+        'name',
+        'address',
+        'addressSecond',
+        'email',
+        'contactTitle',
+        'timeLine1',
+        'timeLine2',
+        'timeLine3',
+        'planYourVisit',
+      ],
     },
     // {
     //   id: 'socialLinks',
