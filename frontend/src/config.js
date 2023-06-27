@@ -15,6 +15,9 @@
 
 // All your imports required for the config here BEFORE this line
 import '@plone/volto/config';
+import { getContent } from '@plone/volto/actions';
+import installFooter from './footer';
+import installBlocks from './components/Blocks';
 
 export default function applyConfig(config) {
   const DEFAULT_LANG = 'nl';
@@ -27,6 +30,7 @@ export default function applyConfig(config) {
   };
 
   config.settings.navDepth = 2;
+  config.settings.siteDataPageId = 'footer';
 
   config.blocks.initialBlocks = {
     ...config.blocks.initialBlocks,
@@ -41,5 +45,42 @@ export default function applyConfig(config) {
     'News Item': 'title',
   };
 
-  return config;
+  config.settings.asyncPropsExtenders = [
+    ...config.settings.asyncPropsExtenders,
+    {
+      path: '/',
+      key: 'footer',
+      extend: (dispatchActions) => {
+        const action = {
+          key: 'footer',
+          promise: ({ location, store }) => {
+            // const currentLang = state.intl.locale;
+            const bits = location.pathname.split('/');
+            const currentLang =
+              bits.length >= 2 ? bits[1] || DEFAULT_LANG : DEFAULT_LANG;
+
+            const state = store.getState();
+            if (state.content.subrequests?.[`footer-${currentLang}`]?.data) {
+              return;
+            }
+
+            const siteDataPageId = config.settings.siteDataPageId;
+            const url = `/${currentLang}/${siteDataPageId}`;
+            const action = getContent(url, null, `footer-${currentLang}`);
+            return store.dispatch(action).catch((e) => {
+              // eslint-disable-next-line
+              console.log(
+                `Footer links folder not found: ${url}. Please create as page
+                named ${siteDataPageId} in the root of your current language and
+                fill it with the appropriate action blocks`,
+              );
+            });
+          },
+        };
+        return [...dispatchActions, action];
+      },
+    },
+  ];
+
+  return installFooter(installBlocks(config));
 }

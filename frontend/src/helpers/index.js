@@ -5,3 +5,4 @@
  * export { Api } from './Api/Api';
  */
 export * from './images';
+export useSiteDataContent from './useSiteDataContent';
