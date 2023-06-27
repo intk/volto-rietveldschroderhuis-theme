@@ -35,6 +35,10 @@ const Logo = (props) => {
   const lang = useSelector((state) => state.intl.locale);
   const intl = useIntl();
 
+  const clickHandler = () => {
+    props.onCloseMobileMenu();
+  };
+
   return (
     <UniversalLink
       href={settings.isMultilingual ? `/${toBackendLang(lang)}` : '/'}
@@ -50,6 +54,7 @@ const Logo = (props) => {
         }
         alt={intl.formatMessage(messages.plonesite)}
         title={intl.formatMessage(messages.plonesite)}
+        onClick={clickHandler}
       />
     </UniversalLink>
   );

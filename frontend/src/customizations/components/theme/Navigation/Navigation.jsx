@@ -195,7 +195,10 @@ class Navigation extends Component {
 
             <div className="logo-nav">
               <div className="background-section"></div>
-              <Logo navigation={true} />
+              <Logo
+                navigation={true}
+                onCloseMobileMenu={this.closeMobileMenu}
+              />
             </div>
             <div className="nav-seach-wrapper">
               <div className="lang-search-wrapper">
