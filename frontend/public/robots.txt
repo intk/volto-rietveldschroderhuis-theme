@@ -12,6 +12,7 @@ User-agent: *
 Disallow:
 
 
+
 # Add Googlebot-specific syntax extension to exclude forms
 # that are repeated for each piece of content in the site
 # the wildcard is only supported by Googlebot
