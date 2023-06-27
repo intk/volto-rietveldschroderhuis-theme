@@ -32,7 +32,6 @@
     "@eeacms/volto-columns-block",
     "volto-multilingual-widget",
     "@eeacms/volto-block-image-cards",
-    "volto-editablefooter",
     "volto-social-settings",
     "volto-form-block",
     "@eeacms/volto-block-divider",
@@ -161,7 +160,6 @@
     "@kitconcept/volto-carousel-block": "1.1.0",
     "@kitconcept/volto-slider-block": "*",
     "@plone/volto": "16.20.8",
-    "volto-editablefooter": "5.0.1",
     "volto-form-block": "3.0.1",
     "volto-multilingual-widget": "3.0.0",
     "volto-social-settings": "3.0.0"
