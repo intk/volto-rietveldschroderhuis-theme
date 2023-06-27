@@ -142,7 +142,7 @@ class Navigation extends Component {
             Tickets
           </a> */}
           <button
-            className={cx('hamburger hamburger--spin', {
+            className={cx('hamburger hamburger--arrow', {
               'is-active': this.state.isMobileMenuOpen,
             })}
             aria-label={

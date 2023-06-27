@@ -1031,3 +1031,49 @@ body.has-toolbar.has-hero-image {
 //     }
 //   }
 // }
+
+#main {
+
+    // .hamburger--arrow{
+    //   transition-duration: 0.22s;
+    //   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    // }
+
+    // .hamburger--arrow .hamburger-inner::before {
+    //   transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    // }
+
+    // .hamburger--arrow .hamburger-inner::after {
+    //   transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    // }
+
+
+
+  .hamburger--arrow.is-active {
+    .hamburger-inner {
+
+      width: 22px;
+      height: 2px;
+
+      &::before,
+      &::after {
+        width: 17px;
+        height: 2px;
+      }
+    }
+  }
+
+  .hamburger--arrow.is-active .hamburger-inner{
+    transition: transform 0.3s ease-out;
+    transform: translate3d(-4px, 0, 0) rotate(180deg) scale(0.7, 1);
+  }
+  .hamburger--arrow.is-active .hamburger-inner::before {
+    transition: transform 0.3s ease-out;
+    transform: translate3d(9px, 7px, 0) rotate(30deg) scale(0.7, 1);
+  }
+
+  .hamburger--arrow.is-active .hamburger-inner::after {
+    transition: transform 0.3s ease-out;
+    transform: translate3d(10px, -7px, 0) rotate(140deg) scale(0.7, 1);
+  }
+}
