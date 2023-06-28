@@ -11,6 +11,11 @@ import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 import { useSelector, shallowEqual } from 'react-redux';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
+import { Image } from 'semantic-ui-react';
+import {
+  getScaleUrl,
+  getPath,
+} from '@package/components/Blocks/SiteData/utils';
 
 import { useSiteDataContent } from '@package/helpers';
 
@@ -30,6 +35,7 @@ const messages = defineMessages({
 
 export const Contact = ({
   addressTitle,
+  name,
   address,
   addressSecond,
   addressButton,
@@ -39,25 +45,43 @@ export const Contact = ({
   contactButton,
   newsletterTitle,
   newsletterText,
+  contactImage,
 }) => (
-  <div className="footerInfoBox">
-    <div className="titleWrapper">{addressTitle}</div>
-    <div>{!!address && <p id="address">{address}</p>}</div>
-    <div>{!!addressSecond && <p id="address">{addressSecond}</p>}</div>
-    <div>
-      {!!email && (
-        <a
-          id="mailadress"
-          data-linktype="email"
-          href={`mailto:${email}`}
-          data-val={email}
-          data-subject="Contact via Email"
-        >
-          {email}
-        </a>
-      )}
+  <div className="column-one">
+    <div className="row-info">
+      <h3>
+        <b>{addressTitle}</b>
+      </h3>
+      <p>{name}</p>
+      <p>{address}</p>
+      <p>{addressSecond}</p>
+      <p>{email}</p>
+    </div>
+    <div className="row-image">
+      <Image
+        src={getScaleUrl(getPath(contactImage), 'preview')}
+        alt={contactImage}
+      ></Image>
     </div>
   </div>
+  // <div className="column-one">
+  //   <div className="titleWrapper">{addressTitle}</div>
+  //   <div>{!!address && <p id="address">{address}</p>}</div>
+  //   <div>{!!addressSecond && <p id="address">{addressSecond}</p>}</div>
+  //   <div>
+  //     {!!email && (
+  //       <a
+  //         id="mailadress"
+  //         data-linktype="email"
+  //         href={`mailto:${email}`}
+  //         data-val={email}
+  //         data-subject="Contact via Email"
+  //       >
+  //         {email}
+  //       </a>
+  //     )}
+  //   </div>
+  // </div>
 );
 
 export const OpenningTimes = ({
@@ -76,7 +100,7 @@ export const OpenningTimes = ({
   timeLine3,
   planYourVisit,
 }) => (
-  <div className="footerInfoBox">
+  <div className="column-two">
     <div>
       <div className="titleWrapper">{contactTitle}</div>
       <div>{!!timeLine1 && <p>{timeLine1}</p>}</div>
@@ -86,6 +110,12 @@ export const OpenningTimes = ({
     </div>
   </div>
 );
+
+// export const SiteLogo = ({ siteLogo }) => (
+//          <div className="site-logo">
+//            <Image src={getScaleUrl(getPath(footerData.siteLogo), 'preview')} alt={footerData.siteLogo} />
+//          </div>
+//        );
 
 const Footer = ({ intl }) => {
   const siteDataContent = useSiteDataContent();
@@ -105,20 +135,46 @@ const Footer = ({ intl }) => {
   const footerData = blocks[siteDataId] || {};
 
   return (
-    <Segment
-      role="contentinfo"
-      vertical
-      padded
-      inverted
-      color="grey"
-      textAlign="center"
-      id="footer"
-    >
-      <Container>
-        <Contact {...footerData} />
-        <OpenningTimes {...footerData} />
-      </Container>
-    </Segment>
+    <div id="footerWrapper">
+      <div id="Footer">
+        {console.log(footerData.siteLogo)}
+        <div className="site-logo">
+          <Image src={getScaleUrl(getPath(footerData.siteLogo), 'preview')} alt={footerData.siteLogo} />
+        </div>
+        <div className="information-columns">
+          <div className="column">
+            <div className="row">
+              <h3>
+                <b>{footerData.addressTitle}</b>
+              </h3>
+              <p>{footerData.name}</p>
+              <p>{footerData.address}</p>
+              <p>{footerData.addressSecond}</p>
+              <p>{footerData.email}</p>
+            </div>
+            <div className="row">
+              <h3>
+                <b>{footerData.contactTitle}</b>
+              </h3>
+              <p>{footerData.timeLine1}</p>
+              <p>{footerData.timeLine2}</p>
+              <p>{footerData.timeLine3}</p>
+              <p>{footerData.planYourVisit}</p>
+            </div>
+            <div className="row">
+              <Image src={getScaleUrl(getPath(footerData.contactImage), 'preview')} alt={footerData.contactImage}></Image>
+            </div>
+            <div className="row">
+              {' '}
+              <Image src={getScaleUrl(getPath(footerData.timesImage), 'preview')} alt={footerData.timesImages}></Image>
+              <p id="photo-credit" className="photo-credit">
+                {footerData.timesImageCaption}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

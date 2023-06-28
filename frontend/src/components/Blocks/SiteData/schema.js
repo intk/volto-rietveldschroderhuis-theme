@@ -122,34 +122,18 @@ const SiteDataSchema = ({ intl }) => ({
     {
       id: 'default',
       title: 'Default',
-      fields: [
-        // 'openingHours',
-        // 'openingHoursTitle',
-        // 'buttonTitle',
-        // 'buttonHref',
-      ],
+      fields: ['siteLogo'],
+    },
+    {
+      id: 'sectionTitle',
+      title: 'Defaults',
+      fields: ['addressTitle', 'name', 'address', 'addressSecond', 'email', 'contactImage'],
     },
     {
       id: 'contact',
       title: intl.formatMessage(messages.contact),
-      fields: [
-        'addressTitle',
-        'name',
-        'address',
-        'addressSecond',
-        'email',
-        'contactTitle',
-        'timeLine1',
-        'timeLine2',
-        'timeLine3',
-        'planYourVisit',
-      ],
+      fields: ['contactTitle', 'timeLine1', 'timeLine2', 'timeLine3', 'planYourVisit', 'timesImage', 'timesImageCaption'],
     },
-    // {
-    //   id: 'socialLinks',
-    //   title: intl.formatMessage(messages.SocialLinks),
-    //   fields: ['socialLinks'],
-    // },
   ],
 
   properties: {
@@ -224,6 +208,21 @@ const SiteDataSchema = ({ intl }) => ({
     //   allowExternals: true,
     //   description: intl.formatMessage(messages.buttonDescription),
     // },
+    contactImage: {
+      title: 'first image',
+      widget: 'attachedimage',
+    },
+    timesImage: {
+      title: 'second image',
+      widget: 'attachedimage',
+    },
+    siteLogo: {
+      title: 'Site Logo',
+      widget: 'attachedimage',
+    },
+    timesImageCaption: {
+      title: 'Image Caption',
+    },
   },
   required: [],
 });

@@ -1,1 +1,2 @@
 @import url('header.less');
+@import url('footer.less');
