@@ -1,119 +1,70 @@
 import { defineMessages } from 'react-intl';
 
-// export const SocialLink = (props) => ({
-//   title: 'Social link',
-//   fieldsets: [
-//     {
-//       id: 'default',
-//       title: 'Default',
-//       fields: ['href', 'title'],
-//     },
-//   ],
-//   properties: {
-//     title: {
-//       title: 'Link title',
-//     },
-//     href: {
-//       title: 'Social link',
-//       widget: 'url',
-//     },
-//   },
-//   required: ['title', 'href'],
-// });
-
 const messages = defineMessages({
-  sectionTitle: {
-    id: 'Section title',
-    defaultMessage: 'Address Section Title',
-  },
-  name: {
-    id: 'Name',
-    defaultMessage: 'Name of the museum',
-  },
-  address: {
-    id: 'Address',
-    defaultMessage: 'Address 1. line',
-  },
-  addressSecond: {
-    id: 'AddressSecond',
-    defaultMessage: 'Address 2. line',
-  },
-  contactSectionTitle: {
-    id: 'Contact title',
-    defaultMessage: 'Contact Section Title',
-  },
-  phone: {
-    id: 'Phone',
-    defaultMessage: 'Phone',
-  },
-  email: {
-    id: 'E-mail',
-    defaultMessage: 'E-mail',
-  },
-  contact: {
-    id: 'Contact',
-    defaultMessage: 'Contact',
-  },
-  openingHours: {
-    id: 'Opening hours',
-    defaultMessage: 'Opening hours',
-  },
-  openingHoursDescription: {
-    id: 'Opening hours are displayed in the header',
-    defaultMessage: 'Opening hours are displayed in the header',
-  },
   SiteData: {
-    id: 'SiteData',
-    defaultMessage: 'Global site settings',
+    id: 'Site Data',
+    defaultMessage: 'Footer Data',
   },
-  timeLine1: {
-    id: 'TimeLine1',
-    defaultMessage: 'First line',
+  siteLogo: {
+    id: 'Site Logo',
+    defaultMessages: 'Site Logo',
   },
-  timeLine2: {
-    id: 'TimeLine2',
-    defaultMessage: 'Second line',
+  colOneTitle: {
+    id: 'Column One Title',
+    defaultMessage: 'Title of the first column',
   },
-  timeLine3: {
-    id: 'TimeLine3',
-    defaultMessage: 'Third line',
+  rowOne: {
+    id: 'rowOne',
+    defaultMessage: 'First row',
+  },
+  rowTwo: {
+    id: 'rowTwo',
+    defaultMessage: 'Second row',
+  },
+  rowThree: {
+    id: 'rowThree',
+    defaultMessage: 'Third row',
+  },
+  rowFour: {
+    id: 'rowFour',
+    defaultMessage: 'Fourth row',
+  },
+  colOneImage: {
+    id: 'Column One Image',
+    defaultMessage: 'Image of the first column',
+  },
+  colTwoTitle: {
+    id: 'Column Two Title',
+    defaultMessage: 'Title of the second column',
+  },
+  secLine1: {
+    id: 'secLine1',
+    defaultMessage: 'First row',
+  },
+  secLine2: {
+    id: 'secLine2',
+    defaultMessage: 'Second row',
+  },
+  secLine3: {
+    id: 'secLine3',
+    defaultMessage: 'Third row',
   },
   planYourVisit: {
-    id: 'PlanYourVisit',
+    id: 'planYourVisit',
     defaultMessage: 'Plan your visit',
   },
-  // SocialLinks: {
-  //   id: 'Social links',
-  //   defaultMessage: 'Social links',
-  // },
-  // buttonTitle: {
-  //   id: 'Button title',
-  //   defaultMessage: 'Button title',
-  // },
-  // buttonHrefTitle: {
-  //   id: 'Button call to action',
-  //   defaultMessage: 'Button call to action',
-  // },
-  // buttonDescription: {
-  //   id: 'Tickets button. Displayed in the header',
-  //   defaultMessage: 'Tickets button. Displayed in the header',
-  // },
-  // addressButton: {
-  //   id: 'Address Button',
-  //   defaultMessage: 'Address Button',
-  // },
-  // contactButton: {
-  //   id: 'Contact Button',
-  //   defaultMessage: 'Contact Button',
-  // },
-  // newsletterTitle: {
-  //   id: 'Newsletter Title',
-  //   defaultMessage: 'Newsletter Title',
-  // },
-  // newsletterText: {
-  //   id: 'Newsletter Text',
-  //   defaultMessage: 'Newsletter Text',
-  // },
+  planYourVisitLink: {
+    id: 'planYourVisitLink',
+    defaultMessage: 'Plan your visit link',
+  },
+  colTwoImage: {
+    id: 'Column Two Image',
+    defaultMessage: 'Image of the second column',
+  },
+  secondImageCap: {
+    id: 'ImageCaption',
+    defaultMessage: 'Image caption',
+  },
 });
 
 const SiteDataSchema = ({ intl }) => ({
@@ -125,103 +76,81 @@ const SiteDataSchema = ({ intl }) => ({
       fields: ['siteLogo'],
     },
     {
-      id: 'sectionTitle',
-      title: 'Defaults',
-      fields: ['addressTitle', 'name', 'address', 'addressSecond', 'email', 'contactImage'],
+      id: 'colOneTitle',
+      title: intl.formatMessage(messages.colOneTitle),
+      fields: [
+        'colOneTitle',
+        'rowOne',
+        'rowTwo',
+        'rowThree',
+        'rowFour',
+        'colOneImage',
+      ],
     },
     {
-      id: 'contact',
-      title: intl.formatMessage(messages.contact),
-      fields: ['contactTitle', 'timeLine1', 'timeLine2', 'timeLine3', 'planYourVisit', 'timesImage', 'timesImageCaption'],
+      id: 'colTwoTitle',
+      title: intl.formatMessage(messages.colTwoTitle),
+      fields: [
+        'colTwoTitle',
+        'secLine1',
+        'secLine2',
+        'secLine3',
+        'planYourVisit',
+        'planYourVisitLink',
+        'colTwoImage',
+        'secondImageCap',
+      ],
     },
   ],
 
   properties: {
-    addressTitle: {
-      title: intl.formatMessage(messages.sectionTitle),
-    },
-    name: {
-      title: intl.formatMessage(messages.name),
-    },
-    address: {
-      title: intl.formatMessage(messages.address),
-    },
-    addressSecond: {
-      title: intl.formatMessage(messages.addressSecond),
-    },
-    // addressButton: {
-    //   title: intl.formatMessage(messages.addressButton),
-    // },
-    contactTitle: {
-      title: intl.formatMessage(messages.contactSectionTitle),
-    },
-    // phone: {
-    //   title: intl.formatMessage(messages.phone),
-    // },
-    email: {
-      title: intl.formatMessage(messages.email),
-    },
-    // contactButton: {
-    //   title: intl.formatMessage(messages.contactButton),
-    // },
-    // newsletterTitle: {
-    //   title: intl.formatMessage(messages.newsletterTitle),
-    // },
-    // newsletterText: {
-    //   title: intl.formatMessage(messages.newsletterText),
-    // },
-    openingHours: {
-      title: intl.formatMessage(messages.openingHours),
-    },
-    openingHoursTitle: {
-      title: intl.formatMessage(messages.openingHoursDescription),
-    },
-    timeLine1: {
-      title: intl.formatMessage(messages.timeLine1),
-    },
-    timeLine2: {
-      title: intl.formatMessage(messages.timeLine2),
-    },
-    timeLine3: {
-      title: intl.formatMessage(messages.timeLine3),
-    },
-    planYourVisit: {
-      title: intl.formatMessage(messages.planYourVisit),
-    },
-    // socialLinksTitle: {
-    //   title: intl.formatMessage(messages.sectionTitle),
-    // },
-    // socialLinks: {
-    //   title: intl.formatMessage(messages.SocialLinks),
-    //   widget: 'object_list',
-    //   schema: SocialLink(),
-    // },
-    // buttonTitle: {
-    //   title: intl.formatMessage(messages.buttonTitle),
-    //   default: 'Tickets',
-    // },
-    // buttonHref: {
-    //   title: intl.formatMessage(messages.buttonHrefTitle),
-    //   widget: 'object_browser',
-    //   mode: 'link',
-    //   selectedItemAttrs: ['Title', 'Description'],
-    //   allowExternals: true,
-    //   description: intl.formatMessage(messages.buttonDescription),
-    // },
-    contactImage: {
-      title: 'first image',
-      widget: 'attachedimage',
-    },
-    timesImage: {
-      title: 'second image',
-      widget: 'attachedimage',
-    },
     siteLogo: {
       title: 'Site Logo',
       widget: 'attachedimage',
     },
-    timesImageCaption: {
-      title: 'Image Caption',
+    colOneTitle: {
+      title: intl.formatMessage(messages.colOneTitle),
+    },
+    rowOne: {
+      title: intl.formatMessage(messages.rowOne),
+    },
+    rowTwo: {
+      title: intl.formatMessage(messages.rowTwo),
+    },
+    rowThree: {
+      title: intl.formatMessage(messages.rowThree),
+    },
+    rowFour: {
+      title: intl.formatMessage(messages.rowFour),
+    },
+    colOneImage: {
+      title: intl.formatMessage(messages.colOneImage),
+      widget: 'attachedimage',
+    },
+    colTwoTitle: {
+      title: intl.formatMessage(messages.colTwoTitle),
+    },
+    secLine1: {
+      title: intl.formatMessage(messages.secLine1),
+    },
+    secLine2: {
+      title: intl.formatMessage(messages.secLine2),
+    },
+    secLine3: {
+      title: intl.formatMessage(messages.secLine3),
+    },
+    planYourVisit: {
+      title: intl.formatMessage(messages.planYourVisit),
+    },
+    planYourVisitLink: {
+      title: intl.formatMessage(messages.planYourVisitLink),
+    },
+    colTwoImage: {
+      title: intl.formatMessage(messages.colTwoImage),
+      widget: 'attachedimage',
+    },
+    secondImageCap: {
+      title: intl.formatMessage(messages.secondImageCap),
     },
   },
   required: [],

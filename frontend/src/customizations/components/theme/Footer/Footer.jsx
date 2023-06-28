@@ -5,12 +5,8 @@
  */
 
 import React from 'react';
-import { Container, List, Segment } from 'semantic-ui-react';
-import { map } from 'lodash';
-import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
+import { defineMessages, injectIntl } from 'react-intl';
 import { useSelector, shallowEqual } from 'react-redux';
-import { UniversalLink } from '@plone/volto/components';
-import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
 import { Image } from 'semantic-ui-react';
 import {
   getScaleUrl,
@@ -33,90 +29,6 @@ const messages = defineMessages({
  * @returns {string} Markup of the component
  */
 
-export const Contact = ({
-  addressTitle,
-  name,
-  address,
-  addressSecond,
-  addressButton,
-  contactTitle,
-  phone,
-  email,
-  contactButton,
-  newsletterTitle,
-  newsletterText,
-  contactImage,
-}) => (
-  <div className="column-one">
-    <div className="row-info">
-      <h3>
-        <b>{addressTitle}</b>
-      </h3>
-      <p>{name}</p>
-      <p>{address}</p>
-      <p>{addressSecond}</p>
-      <p>{email}</p>
-    </div>
-    <div className="row-image">
-      <Image
-        src={getScaleUrl(getPath(contactImage), 'preview')}
-        alt={contactImage}
-      ></Image>
-    </div>
-  </div>
-  // <div className="column-one">
-  //   <div className="titleWrapper">{addressTitle}</div>
-  //   <div>{!!address && <p id="address">{address}</p>}</div>
-  //   <div>{!!addressSecond && <p id="address">{addressSecond}</p>}</div>
-  //   <div>
-  //     {!!email && (
-  //       <a
-  //         id="mailadress"
-  //         data-linktype="email"
-  //         href={`mailto:${email}`}
-  //         data-val={email}
-  //         data-subject="Contact via Email"
-  //       >
-  //         {email}
-  //       </a>
-  //     )}
-  //   </div>
-  // </div>
-);
-
-export const OpenningTimes = ({
-  addressTitle,
-  address,
-  addressSecond,
-  addressButton,
-  contactTitle,
-  phone,
-  email,
-  contactButton,
-  newsletterTitle,
-  newsletterText,
-  timeLine1,
-  timeLine2,
-  timeLine3,
-  planYourVisit,
-}) => (
-  <div className="column-two">
-    <div>
-      <div className="titleWrapper">{contactTitle}</div>
-      <div>{!!timeLine1 && <p>{timeLine1}</p>}</div>
-      <div>{!!timeLine2 && <p>{timeLine2}</p>}</div>
-      <div>{!!timeLine3 && <p>{timeLine3}</p>}</div>
-      <div>{!!planYourVisit && <p>{planYourVisit}</p>}</div>
-    </div>
-  </div>
-);
-
-// export const SiteLogo = ({ siteLogo }) => (
-//          <div className="site-logo">
-//            <Image src={getScaleUrl(getPath(footerData.siteLogo), 'preview')} alt={footerData.siteLogo} />
-//          </div>
-//        );
-
 const Footer = ({ intl }) => {
   const siteDataContent = useSiteDataContent();
 
@@ -137,38 +49,46 @@ const Footer = ({ intl }) => {
   return (
     <div id="footerWrapper">
       <div id="Footer">
-        {console.log(footerData.siteLogo)}
         <div className="site-logo">
-          <Image src={getScaleUrl(getPath(footerData.siteLogo), 'preview')} alt={footerData.siteLogo} />
+          <Image
+            src={getScaleUrl(getPath(footerData.siteLogo), 'preview')}
+            alt={footerData.siteLogo}
+          />
         </div>
         <div className="information-columns">
           <div className="column">
             <div className="row">
               <h3>
-                <b>{footerData.addressTitle}</b>
+                <b>{footerData.colOneTitle}</b>
               </h3>
-              <p>{footerData.name}</p>
-              <p>{footerData.address}</p>
-              <p>{footerData.addressSecond}</p>
-              <p>{footerData.email}</p>
+              <p>{footerData.rowOne}</p>
+              <p>{footerData.rowTwo}</p>
+              <p>{footerData.rowThree}</p>
+              <p>{footerData.rowFour}</p>
             </div>
             <div className="row">
               <h3>
-                <b>{footerData.contactTitle}</b>
+                <b>{footerData.colTwoTitle}</b>
               </h3>
-              <p>{footerData.timeLine1}</p>
-              <p>{footerData.timeLine2}</p>
-              <p>{footerData.timeLine3}</p>
+              <p>{footerData.secLine1}</p>
+              <p>{footerData.secLine2}</p>
+              <p>{footerData.secLine3}</p>
               <p>{footerData.planYourVisit}</p>
             </div>
             <div className="row">
-              <Image src={getScaleUrl(getPath(footerData.contactImage), 'preview')} alt={footerData.contactImage}></Image>
+              <Image
+                src={getScaleUrl(getPath(footerData.colOneImage), 'preview')}
+                alt={footerData.colOneImage}
+              ></Image>
             </div>
             <div className="row">
               {' '}
-              <Image src={getScaleUrl(getPath(footerData.timesImage), 'preview')} alt={footerData.timesImages}></Image>
+              <Image
+                src={getScaleUrl(getPath(footerData.colTwoImage), 'preview')}
+                alt={footerData.colTwoImage}
+              ></Image>
               <p id="photo-credit" className="photo-credit">
-                {footerData.timesImageCaption}
+                {footerData.secondImageCap}
               </p>
             </div>
           </div>
