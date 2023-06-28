@@ -66,7 +66,7 @@ p {
 
   a {
     text-decoration: none;
-    border-bottom: 1 solid black !important;
+    border-bottom: 1 solid black;
     color: @brand-primary-text;
   }
 
