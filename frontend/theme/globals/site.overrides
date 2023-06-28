@@ -65,12 +65,15 @@ p {
   }
 
   a {
-    color: #404040;
+    text-decoration: none;
+    border-bottom: 1 solid black !important;
+    color: @brand-primary-text;
   }
 
   a:hover,
   a:focus {
-    color: #0085a1;
+    color: @brand-primary-red;
+    border-bottom: 1 solid @brand-primary-red !important;
   }
 
   h1,
@@ -255,9 +258,9 @@ p {
 }
 
 // image link section
-#view #page-document a{
-  border-bottom: none;
-}
+// #view #page-document a{
+//   border-bottom: none;
+// }
 
 //image credits section
 .view-viewview {
