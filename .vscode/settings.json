@@ -1,1 +1,4 @@
-{ "eslint.workingDirectories": ["./frontend"] }
+{
+  "eslint.workingDirectories": ["./frontend"],
+  "search.useIgnoreFiles": false
+}
