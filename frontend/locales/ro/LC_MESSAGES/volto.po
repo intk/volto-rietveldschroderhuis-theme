@@ -18,76 +18,81 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Address 1. line
-msgid "Address"
+# defaultMessage: Image of the first column
+msgid "Column One Image"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Address 2. line
-msgid "AddressSecond"
+# defaultMessage: Title of the first column
+msgid "Column One Title"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Contact
-msgid "Contact"
+# defaultMessage: Image of the second column
+msgid "Column Two Image"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Contact Section Title
-msgid "Contact title"
+# defaultMessage: Title of the second column
+msgid "Column Two Title"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: E-mail
-msgid "E-mail"
+# defaultMessage: Image caption
+msgid "ImageCaption"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Name of the museum
-msgid "Name"
+# defaultMessage: Footer Data
+msgid "Site Data"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Opening hours
-msgid "Opening hours"
-msgstr ""
-
-#: components/Blocks/SiteData/schema
-# defaultMessage: Opening hours are displayed in the header
-msgid "Opening hours are displayed in the header"
-msgstr ""
-
-#: components/Blocks/SiteData/schema
-# defaultMessage: Phone
-msgid "Phone"
+# defaultMessage: undefined
+msgid "Site Logo"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
 # defaultMessage: Plan your visit
-msgid "PlanYourVisit"
+msgid "planYourVisit"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Address Section Title
-msgid "Section title"
+# defaultMessage: Plan your visit link
+msgid "planYourVisitLink"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Global site settings
-msgid "SiteData"
+# defaultMessage: Fourth row
+msgid "rowFour"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: First line
-msgid "TimeLine1"
+# defaultMessage: First row
+msgid "rowOne"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Second line
-msgid "TimeLine2"
+# defaultMessage: Third row
+msgid "rowThree"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Third line
-msgid "TimeLine3"
+# defaultMessage: Second row
+msgid "rowTwo"
+msgstr ""
+
+#: components/Blocks/SiteData/schema
+# defaultMessage: First row
+msgid "secLine1"
+msgstr ""
+
+#: components/Blocks/SiteData/schema
+# defaultMessage: Second row
+msgid "secLine2"
+msgstr ""
+
+#: components/Blocks/SiteData/schema
+# defaultMessage: Third row
+msgid "secLine3"
 msgstr ""
