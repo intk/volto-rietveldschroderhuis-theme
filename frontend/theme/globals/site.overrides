@@ -66,14 +66,14 @@ p {
 
   a {
     text-decoration: none;
-    border-bottom: 1 solid black;
+    border-bottom: 1px solid black;
     color: @brand-primary-text;
   }
 
   a:hover,
   a:focus {
     color: @brand-primary-red;
-    border-bottom: 1 solid @brand-primary-red !important;
+    border-bottom: 1px solid @brand-primary-red !important;
   }
 
   h1,
