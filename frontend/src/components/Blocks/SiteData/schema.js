@@ -33,6 +33,10 @@ const messages = defineMessages({
     id: 'Column One Image',
     defaultMessage: 'Image of the first column',
   },
+  colOneImageLink: {
+    id: 'Column One Image Link',
+    defaultMessage: 'Link for the Image',
+  },
   colTwoTitle: {
     id: 'Column Two Title',
     defaultMessage: 'SECOND COLUMN',
@@ -61,6 +65,10 @@ const messages = defineMessages({
     id: 'Column Two Image',
     defaultMessage: 'Image of the second column',
   },
+  colTwoImageLink: {
+    id: 'Column Two Image Link',
+    defaultMessage: 'Link for the Image',
+  },
   secondImageCap: {
     id: 'ImageCaption',
     defaultMessage: 'Image caption',
@@ -85,6 +93,7 @@ const SiteDataSchema = ({ intl }) => ({
         'rowThree',
         'rowFour',
         'colOneImage',
+        'colOneImageLink',
       ],
     },
     {
@@ -98,6 +107,7 @@ const SiteDataSchema = ({ intl }) => ({
         'planYourVisit',
         'planYourVisitLink',
         'colTwoImage',
+        'colTwoImageLink',
         'secondImageCap',
       ],
     },
@@ -127,6 +137,9 @@ const SiteDataSchema = ({ intl }) => ({
       title: intl.formatMessage(messages.colOneImage),
       widget: 'attachedimage',
     },
+    colOneImageLink: {
+      title: intl.formatMessage(messages.colOneImageLink),
+    },
     colTwoTitle: {
       title: intl.formatMessage(messages.colTwoTitle),
     },
@@ -148,6 +161,9 @@ const SiteDataSchema = ({ intl }) => ({
     colTwoImage: {
       title: intl.formatMessage(messages.colTwoImage),
       widget: 'attachedimage',
+    },
+    colTwoImageLink: {
+      title: intl.formatMessage(messages.colTwoImageLink)
     },
     secondImageCap: {
       title: intl.formatMessage(messages.secondImageCap),

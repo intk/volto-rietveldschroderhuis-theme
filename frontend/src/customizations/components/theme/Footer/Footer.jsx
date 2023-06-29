@@ -114,44 +114,66 @@ const Footer = ({ intl }) => {
 
       <div id="Footer">
         <div className="site-logo">
-          <Image
-            src={getScaleUrl(getPath(footerData.siteLogo), 'preview')}
-            alt={footerData.siteLogo}
-          />
+          {!!footerData.siteLogo && (
+            <Image
+              src={getScaleUrl(getPath(footerData.siteLogo), 'preview')}
+              alt={footerData.siteLogo}
+            />
+          )}
         </div>
         <div className="information-columns">
           <div className="column">
             <div className="row">
-              <h3>{footerData.colOneTitle}</h3>
-              <p>{footerData.rowOne}</p>
-              <p>{footerData.rowTwo}</p>
-              <p>{footerData.rowThree}</p>
-              <a href={footerData.rowFour}>{footerData.rowFour}</a>
+              {!!footerData.colOneTitle && <h3>{footerData.colOneTitle}</h3>}
+              {!!footerData.rowOne && <p>{footerData.rowOne}</p>}
+              {!!footerData.rowTwo && <p>{footerData.rowTwo}</p>}
+              {!!footerData.rowThree && <p>{footerData.rowThree}</p>}
+              {!!footerData.rowFour && (
+                <a
+                  id="mailadress"
+                  data-linktype="email"
+                  href={`mailto:${footerData.rowFour}`}
+                  data-val={footerData.rowFour}
+                  data-subject="Contact via website"
+                >
+                  {footerData.rowFour}
+                </a>
+              )}
             </div>
             <div className="row">
-              <h3>{footerData.colTwoTitle}</h3>
-              <p>{footerData.secLine1}</p>
-              <p>{footerData.secLine2}</p>
-              <p>{footerData.secLine3}</p>
-              <a href={footerData.planYourVisitLink}>
-                {footerData.planYourVisit}
-              </a>
+              {!!footerData.colTwoTitle && <h3>{footerData.colTwoTitle}</h3>}
+              {!!footerData.secLine1 && <p>{footerData.secLine1}</p>}
+              {!!footerData.secLine2 && <p>{footerData.secLine2}</p>}
+              {!!footerData.secLine3 && <p>{footerData.secLine3}</p>}
+              {!!footerData.planYourVisit && (
+                <a href={footerData.planYourVisitLink}>
+                  {footerData.planYourVisit}
+                </a>
+              )}
             </div>
             <div className="row image">
-              <Image
-                src={getScaleUrl(getPath(footerData.colOneImage), 'preview')}
-                alt={footerData.colOneImage}
-              ></Image>
+              {!!footerData.colOneImage && (
+                <Image
+                  src={getScaleUrl(getPath(footerData.colOneImage), 'preview')}
+                  alt={footerData.colOneImage}
+                  href={footerData.colOneImageLink}
+                ></Image>
+              )}
             </div>
             <div className="row image">
               {' '}
-              <Image
-                src={getScaleUrl(getPath(footerData.colTwoImage), 'preview')}
-                alt={footerData.colTwoImage}
-              ></Image>
-              <p id="photo-credit" className="photo-credit">
-                {footerData.secondImageCap}
-              </p>
+              {!!footerData.colTwoImage && (
+                <Image
+                  src={getScaleUrl(getPath(footerData.colTwoImage), 'preview')}
+                  alt={footerData.colTwoImage}
+                  href={footerData.colTwoImageLink}
+                ></Image>
+              )}
+              {!!footerData.secondImageCap && (
+                <p id="photo-credit" className="photo-credit">
+                  {footerData.secondImageCap}
+                </p>
+              )}
             </div>
           </div>
         </div>
