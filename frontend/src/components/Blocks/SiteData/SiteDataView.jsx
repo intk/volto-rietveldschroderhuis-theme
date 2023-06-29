@@ -11,47 +11,53 @@ const SiteDataView = (props) => {
     <div id="footer-preview-wrapper">
       <div className="site-data-preview">
         <div className="site-logo">
-          <Image
-            src={getScaleUrl(getPath(props.data.siteLogo), 'preview')}
-            alt={props.data.siteLogo}
-          />
+          {!!props.data.siteLogo && (
+            <Image
+              src={getScaleUrl(getPath(props.data.siteLogo), 'preview')}
+              alt={props.data.siteLogo}
+            />
+          )}
         </div>
         <div className="information-columns">
           <div className="column">
             <div className="row">
-              <h3>
-                <b>{props.data.colOneTitle}</b>
-              </h3>
-              <p>{props.data.rowOne}</p>
-              <p>{props.data.rowTwo}</p>
-              <p>{props.data.rowThree}</p>
-              <a href={props.data.rowFour}>{props.data.rowFour}</a>
+              {!!props.data.colOneTitle && <h3>{props.data.colOneTitle}</h3>}
+              {!!props.data.rowOne && <p>{props.data.rowOne}</p>}
+              {!!props.data.rowTwo && <p>{props.data.rowTwo}</p>}
+              {!!props.data.rowThree && <p>{props.data.rowThree}</p>}
+              {!!props.data.rowFour && (
+                <a href={props.data.rowFour}>{props.data.rowFour}</a>
+              )}
             </div>
 
             <div className="row">
-              <h3>
-                <b>{props.data.colTwoTitle}</b>
-              </h3>
-              <p>{props.data.secLine1}</p>
-              <p>{props.data.secLine2}</p>
-              <p>{props.data.secLine3}</p>
-              <a href={props.data.planYourVisitLink}>
-                {props.data.planYourVisit}
-              </a>
+              {!!props.data.colTwoTitle && <h3>{props.data.colTwoTitle}</h3>}
+              {!!props.data.secLine1 && <p>{props.data.secLine1}</p>}
+              {!!props.data.secLine2 && <p>{props.data.secLine2}</p>}
+              {!!props.data.secLine3 && <p>{props.data.secLine3}</p>}
+              {!!props.data.planYourVisit && (
+                <a href={props.data.planYourVisitLink}>
+                  {props.data.planYourVisit}
+                </a>
+              )}
             </div>
 
             <div className="row">
-              <Image
-                src={getScaleUrl(getPath(props.data.colOneImage), 'preview')}
-                alt={props.data.colOneImage}
-              ></Image>
+              {!!props.data.colOneImage && (
+                <Image
+                  src={getScaleUrl(getPath(props.data.colOneImage), 'preview')}
+                  alt={props.data.colOneImage}
+                ></Image>
+              )}
             </div>
 
             <div className="row">
-              <Image
-                src={getScaleUrl(getPath(props.data.colTwoImage), 'preview')}
-                alt={props.data.colTwoImage}
-              ></Image>
+              {!!props.data.colTwoImage && (
+                <Image
+                  src={getScaleUrl(getPath(props.data.colTwoImage), 'preview')}
+                  alt={props.data.colTwoImage}
+                ></Image>
+              )}
               <p id="photo-credit" className="photo-credit">
                 {props.data.secondImageCap}
               </p>
