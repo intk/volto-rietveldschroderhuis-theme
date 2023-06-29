@@ -56,7 +56,7 @@ const Footer = ({ intl }) => {
 
   return (
     <div id="footerWrapper">
-      <div id="Tickets">
+      {/* <div id="Tickets">
         <h3 className="Header">{intl.formatMessage(messages.ticket)}</h3>
         <div className="buttons">
           <button className="button button1" href="/">
@@ -66,7 +66,7 @@ const Footer = ({ intl }) => {
             Menu
           </button>
         </div>
-      </div>
+      </div> */}
       <div id="Newsletter">
         <h3 className="Header">{intl.formatMessage(messages.newsletter)}</h3>
         <form
