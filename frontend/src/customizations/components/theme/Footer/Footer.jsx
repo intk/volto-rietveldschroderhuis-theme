@@ -20,6 +20,14 @@ const messages = defineMessages({
     id: 'Copyright',
     defaultMessage: 'Copyright',
   },
+  ticket: {
+    id: 'Ticket',
+    defaultMessage: 'Het huis met eigen ogen bekijken?',
+  },
+  newsletter: {
+    id: 'Newsletter',
+    defaultMessage: 'Nieuws over Rietveld in je mail',
+  },
 });
 
 /**
@@ -49,7 +57,7 @@ const Footer = ({ intl }) => {
   return (
     <div id="footerWrapper">
       <div id="Tickets">
-        <h3 className="Header">Het huis met eigen ogen bekijken?</h3>
+        <h3 className="Header">{intl.formatMessage(messages.ticket)}</h3>
         <div className="buttons">
           <button className="button button1" href="/">
             Tickets
@@ -60,7 +68,7 @@ const Footer = ({ intl }) => {
         </div>
       </div>
       <div id="Newsletter">
-        <h3 className="Header">Nieuws over Rietveld in je mail</h3>
+        <h3 className="Header">{intl.formatMessage(messages.newsletter)}</h3>
         <form
           id="newsletter-form"
           method="get"
