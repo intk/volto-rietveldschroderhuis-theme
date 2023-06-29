@@ -119,7 +119,10 @@ const Footer = ({ intl }) => {
       <div id="Tickets">
         <h3 className="Header">{intl.formatMessage(messages.ticket)}</h3>
         <div className="buttons">
-          <button className="button button1" href="/">
+          <button
+            className="button button1"
+            href="https://tickets.rietveldschroderhuis.nl/nl/tickets"
+          >
             Tickets
           </button>
           <button className="button button2" href="/">
@@ -172,7 +175,13 @@ const Footer = ({ intl }) => {
         <div className="information-columns">
           <div className="column">
             <div className="row">
-              {!!footerData.colOneTitle && <h3>{footerData.colOneTitle}</h3>}
+              {!!footerData.colOneTitle && (
+                <h3>
+                  <a className="titleLink" href={footerData.colOneTitleLink}>
+                    {footerData.colOneTitle}
+                  </a>
+                </h3>
+              )}
               {!!footerData.rowOne && <p>{footerData.rowOne}</p>}
               {!!footerData.rowTwo && <p>{footerData.rowTwo}</p>}
               {!!footerData.rowThree && <p>{footerData.rowThree}</p>}
@@ -189,7 +198,13 @@ const Footer = ({ intl }) => {
               )}
             </div>
             <div className="row">
-              {!!footerData.colTwoTitle && <h3>{footerData.colTwoTitle}</h3>}
+              {!!footerData.colTwoTitle && (
+                <h3>
+                  <a className="titleLink" href={footerData.colTwoTitleLink}>
+                    {footerData.colTwoTitle}
+                  </a>
+                </h3>
+              )}
               {!!footerData.secLine1 && <p>{footerData.secLine1}</p>}
               {!!footerData.secLine2 && <p>{footerData.secLine2}</p>}
               {!!footerData.secLine3 && <p>{footerData.secLine3}</p>}

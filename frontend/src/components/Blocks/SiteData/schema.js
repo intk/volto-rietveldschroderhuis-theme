@@ -13,6 +13,10 @@ const messages = defineMessages({
     id: 'Column One Title',
     defaultMessage: 'FIRST COLUMN',
   },
+  colOneTitleLink: {
+    id: 'Column One Title Link',
+    defaultMessage: 'First column title link',
+  },
   rowOne: {
     id: 'rowOne',
     defaultMessage: 'First row',
@@ -40,6 +44,10 @@ const messages = defineMessages({
   colTwoTitle: {
     id: 'Column Two Title',
     defaultMessage: 'SECOND COLUMN',
+  },
+  colTwoTitleLink: {
+    id: 'Column Two Title Link',
+    defaultMessage: 'Second column title link',
   },
   secLine1: {
     id: 'secLine1',
@@ -88,6 +96,7 @@ const SiteDataSchema = ({ intl }) => ({
       title: intl.formatMessage(messages.colOneTitle),
       fields: [
         'colOneTitle',
+        'colOneTitleLink',
         'rowOne',
         'rowTwo',
         'rowThree',
@@ -101,6 +110,7 @@ const SiteDataSchema = ({ intl }) => ({
       title: intl.formatMessage(messages.colTwoTitle),
       fields: [
         'colTwoTitle',
+        'colTwoTitleLink',
         'secLine1',
         'secLine2',
         'secLine3',
@@ -120,6 +130,9 @@ const SiteDataSchema = ({ intl }) => ({
     },
     colOneTitle: {
       title: intl.formatMessage(messages.colOneTitle),
+    },
+    colOneTitleLink: {
+      title: intl.formatMessage(messages.colOneTitleLink),
     },
     rowOne: {
       title: intl.formatMessage(messages.rowOne),
@@ -142,6 +155,9 @@ const SiteDataSchema = ({ intl }) => ({
     },
     colTwoTitle: {
       title: intl.formatMessage(messages.colTwoTitle),
+    },
+    colTwoTitleLink: {
+      title: intl.formatMessage(messages.colTwoTitleLink),
     },
     secLine1: {
       title: intl.formatMessage(messages.secLine1),
