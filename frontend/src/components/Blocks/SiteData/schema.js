@@ -163,7 +163,7 @@ const SiteDataSchema = ({ intl }) => ({
       widget: 'attachedimage',
     },
     colTwoImageLink: {
-      title: intl.formatMessage(messages.colTwoImageLink)
+      title: intl.formatMessage(messages.colTwoImageLink),
     },
     secondImageCap: {
       title: intl.formatMessage(messages.secondImageCap),
