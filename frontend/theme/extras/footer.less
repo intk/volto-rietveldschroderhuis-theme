@@ -1,16 +1,12 @@
 #footer-preview-wrapper, #footerWrapper {
   padding-left: 35px;
   padding-right: 35px;
-  height: 607px;
-
-  @media (min-width: 769px){
-    padding-bottom: 22px;
-  }
+  height: auto;
 
   .site-data-preview{
     display: flex;
     position: relative;
-    height: 513px;
+    // height: 513px;
     width: 100vw;
     right: 50%;
     left: 50%;
@@ -23,13 +19,23 @@
     display:flex;
     width: 100%;
     padding-top: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 579px;
+
+    @media (min-width: 769px) {
+      padding-bottom: 22px;
+    }
   }
   .site-logo{
     flex-grow: 1;
     flex-basis: 50%;
     flex-shrink: 1;
+    padding-left: 15px;
+    padding-right: 15px;
     img{
       padding-left: 78px;
+      max-width: 500px;
     }
   }
 
@@ -38,29 +44,33 @@
     flex-basis: 50%;
     flex-shrink: 1;
     display: flex;
-    padding-right: 65px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .column{
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 50%;
-    margin-right: 40px;
-    margin-left: 40px;
+    // margin-right: 40px;
+    // margin-left: 40px;
     display: flex;
     flex-wrap: wrap;
 
     .row{
+      padding-left: 15px;
       width: 50%;
       margin-bottom: 36px;
     }
 
     h3{
-      font-family: 'FranklinBook', Arial, sans-serif;
-      font-size: 19.5px;
+      font-family: 'FranklinMed', Arial, sans-serif;
+      font-size: 17px;
       line-height: 36px;
-      letter-spacing: 0.0em;
+      letter-spacing: 0.85px;
       color: #494a51;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
     p{
       color: #494a51;
@@ -70,17 +80,124 @@
       line-height: 28px;
       letter-spacing: normal;
     }
+
+    a {
+      font-size: 18px;
+      text-decoration: none;
+      border-bottom: 1px solid black;
+      color: @brand-primary-text;
+      line-height: 28px;
+    }
+
+    a:hover,
+    a:focus {
+      color: @brand-primary-red;
+      border-bottom: 1px solid @brand-primary-red !important;
+    }
+
     img{
       max-width: 150px !important;
+      padding-top: 25px;
+      opacity: 0.65;
+      min-height: 110px;
+
+      // @media (max-width: 1830px){
+      //   padding-top: 25px;
+      // }
+    }
+    img:hover{
+      opacity: 1;
+      cursor: pointer;
     }
   }
   .photo-credit{
     padding-top: 19px;
-    height: 110px;
+    height: 100px;
+    opacity: 0.65;
   }
 }
 
 
-#footer{
+#footerWrapper{
   background-color: #f9fafb;
+  // background-color: aqua;
+}
+
+@media (max-width: 992px) {
+  #footerWrapper{
+    #Footer, .site-data-preview {
+      flex-direction: column;
+      padding-left: 0px;
+      padding-bottom: 40px;
+
+      img {
+        padding-left: 0px;
+        padding-top: 5px;
+      }
+      .information-columns{
+        padding-left: 0px;
+        padding-right: 5px;
+      }
+      .row{
+        flex-basis: 40%;
+        padding-top: 50px;
+        margin-left: 10px;
+        padding-left: 15px;
+        margin-right: 15px;
+        padding-right: 15px;
+        margin-bottom: 0px;
+      }
+      .row.image{
+        padding-top: 86px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        #photo-credit{
+          font-size: 15px !important;
+          padding-top: 24px !important;
+        }
+      }
+      .site-logo{
+        padding-bottom: 30px;
+        padding-left: 10px;
+        img{
+          max-width: 330px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  #footerWrapper {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    #Footer,
+    .site-data-preview{
+      padding-top: 50px !important;
+      padding-bottom: 10px !important;
+
+      .site-logo {
+        padding-bottom: 10px;
+          img {
+            max-width: 350px;
+          }
+        }
+
+      .row {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .row.image{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        flex-basis: 50% !important;
+        margin-top: 5px !important;
+        padding-left: 25px !important;
+      }
+
+      .row:not(.image) {
+        flex-basis: 100% !important;
+      }
+    }
+  }
 }

@@ -11,7 +11,7 @@ const messages = defineMessages({
   },
   colOneTitle: {
     id: 'Column One Title',
-    defaultMessage: 'Title of the first column',
+    defaultMessage: 'FIRST COLUMN',
   },
   rowOne: {
     id: 'rowOne',
@@ -27,7 +27,7 @@ const messages = defineMessages({
   },
   rowFour: {
     id: 'rowFour',
-    defaultMessage: 'Fourth row',
+    defaultMessage: 'Email',
   },
   colOneImage: {
     id: 'Column One Image',
@@ -35,7 +35,7 @@ const messages = defineMessages({
   },
   colTwoTitle: {
     id: 'Column Two Title',
-    defaultMessage: 'Title of the second column',
+    defaultMessage: 'SECOND COLUMN',
   },
   secLine1: {
     id: 'secLine1',

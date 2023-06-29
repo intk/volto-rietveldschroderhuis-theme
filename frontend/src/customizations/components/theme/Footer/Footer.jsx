@@ -8,10 +8,7 @@ import React from 'react';
 import { defineMessages, injectIntl } from 'react-intl';
 import { useSelector, shallowEqual } from 'react-redux';
 import { Image } from 'semantic-ui-react';
-import {
-  getScaleUrl,
-  getPath,
-} from '@package/components/Blocks/SiteData/utils';
+import { getScaleUrl, getPath } from '@package/components/Blocks/SiteData/utils';
 
 import { useSiteDataContent } from '@package/helpers';
 
@@ -33,9 +30,7 @@ const Footer = ({ intl }) => {
   const siteDataContent = useSiteDataContent();
 
   const { blocks = {} } = siteDataContent;
-  const siteDataId = Object.keys(blocks).find(
-    (id) => blocks[id]?.['@type'] === 'footerData',
-  );
+  const siteDataId = Object.keys(blocks).find((id) => blocks[id]?.['@type'] === 'footerData');
 
   const { siteActions = [] } = useSelector(
     (state) => ({
@@ -50,43 +45,30 @@ const Footer = ({ intl }) => {
     <div id="footerWrapper">
       <div id="Footer">
         <div className="site-logo">
-          <Image
-            src={getScaleUrl(getPath(footerData.siteLogo), 'preview')}
-            alt={footerData.siteLogo}
-          />
+          <Image src={getScaleUrl(getPath(footerData.siteLogo), 'preview')} alt={footerData.siteLogo} />
         </div>
         <div className="information-columns">
           <div className="column">
             <div className="row">
-              <h3>
-                <b>{footerData.colOneTitle}</b>
-              </h3>
+              <h3>{footerData.colOneTitle}</h3>
               <p>{footerData.rowOne}</p>
               <p>{footerData.rowTwo}</p>
               <p>{footerData.rowThree}</p>
-              <p>{footerData.rowFour}</p>
+              <a href={footerData.rowFour}>{footerData.rowFour}</a>
             </div>
             <div className="row">
-              <h3>
-                <b>{footerData.colTwoTitle}</b>
-              </h3>
+              <h3>{footerData.colTwoTitle}</h3>
               <p>{footerData.secLine1}</p>
               <p>{footerData.secLine2}</p>
               <p>{footerData.secLine3}</p>
-              <p>{footerData.planYourVisit}</p>
+              <a href={footerData.planYourVisitLink}>{footerData.planYourVisit}</a>
             </div>
-            <div className="row">
-              <Image
-                src={getScaleUrl(getPath(footerData.colOneImage), 'preview')}
-                alt={footerData.colOneImage}
-              ></Image>
+            <div className="row image">
+              <Image src={getScaleUrl(getPath(footerData.colOneImage), 'preview')} alt={footerData.colOneImage}></Image>
             </div>
-            <div className="row">
+            <div className="row image">
               {' '}
-              <Image
-                src={getScaleUrl(getPath(footerData.colTwoImage), 'preview')}
-                alt={footerData.colTwoImage}
-              ></Image>
+              <Image src={getScaleUrl(getPath(footerData.colTwoImage), 'preview')} alt={footerData.colTwoImage}></Image>
               <p id="photo-credit" className="photo-credit">
                 {footerData.secondImageCap}
               </p>
