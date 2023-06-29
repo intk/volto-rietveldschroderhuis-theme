@@ -69,9 +69,20 @@ const Footer = ({ intl }) => {
       </div>
       <div id="Newsletter">
         <h3 className="Header">{intl.formatMessage(messages.newsletter)}</h3>
-        <form id="newsletter-form" method="get" action="https://centraalmuseum.us2.list-manage.com/subscribe/post-json?c=?">
+        <form
+          id="newsletter-form"
+          method="get"
+          action="https://centraalmuseum.us2.list-manage.com/subscribe/post-json?c=?"
+        >
           <div id="formfield-form-widgets-email">
-            <input id="form-widgets-email" name="EMAIL" className="text-widget required textline-field" value="" type="text" placeholder="Je emailadres" />
+            <input
+              id="form-widgets-email"
+              name="EMAIL"
+              className="text-widget required textline-field"
+              value=""
+              type="text"
+              placeholder="Je emailadres"
+            />
           </div>
 
           <input type="hidden" value="c04600e3ceefae8c502cbabec" name="u" />
@@ -79,7 +90,13 @@ const Footer = ({ intl }) => {
           <input type="hidden" value="1" name="group[15893][1]" />
 
           <div className="formControls">
-            <input id="form-buttons-subscribe" name="form.buttons.subscribe" className="submit-widget button-field context" value="Inschrijven" type="submit" />
+            <input
+              id="form-buttons-subscribe"
+              name="form.buttons.subscribe"
+              className="submit-widget button-field context"
+              value="Inschrijven"
+              type="submit"
+            />
           </div>
 
           <div id="subscribe-result">
@@ -88,14 +105,23 @@ const Footer = ({ intl }) => {
             </p>
 
             <p className="success-msg" style={{ display: 'none' }}>
-              Bedankt voor je aanmelding. Je ontvangt een e-mail waarin je inschrijving wordt bevestigd.
+              Bedankt voor je aanmelding. Je ontvangt een e-mail waarin je
+              inschrijving wordt bevestigd.
             </p>
           </div>
         </form>
       </div>
 
       <div id="Footer">
-        <div className="site-logo">{!!footerData.siteLogo && <Image src={getScaleUrl(getPath(footerData.siteLogo), 'preview')} alt={footerData.siteLogo} href="/" />}</div>
+        <div className="site-logo">
+          {!!footerData.siteLogo && (
+            <Image
+              src={getScaleUrl(getPath(footerData.siteLogo), 'preview')}
+              alt={footerData.siteLogo}
+              href="/"
+            />
+          )}
+        </div>
         <div className="information-columns">
           <div className="column">
             <div className="row">
@@ -104,7 +130,13 @@ const Footer = ({ intl }) => {
               {!!footerData.rowTwo && <p>{footerData.rowTwo}</p>}
               {!!footerData.rowThree && <p>{footerData.rowThree}</p>}
               {!!footerData.rowFour && (
-                <a id="mailadress" data-linktype="email" href={`mailto:${footerData.rowFour}`} data-val={footerData.rowFour} data-subject="Contact via website">
+                <a
+                  id="mailadress"
+                  data-linktype="email"
+                  href={`mailto:${footerData.rowFour}`}
+                  data-val={footerData.rowFour}
+                  data-subject="Contact via website"
+                >
                   {footerData.rowFour}
                 </a>
               )}
@@ -114,12 +146,32 @@ const Footer = ({ intl }) => {
               {!!footerData.secLine1 && <p>{footerData.secLine1}</p>}
               {!!footerData.secLine2 && <p>{footerData.secLine2}</p>}
               {!!footerData.secLine3 && <p>{footerData.secLine3}</p>}
-              {!!footerData.planYourVisit && <a href={footerData.planYourVisitLink}>{footerData.planYourVisit}</a>}
+              {!!footerData.planYourVisit && (
+                <a href={footerData.planYourVisitLink}>
+                  {footerData.planYourVisit}
+                </a>
+              )}
             </div>
-            <div className="row image">{!!footerData.colOneImage && <Image src={getScaleUrl(getPath(footerData.colOneImage), 'preview')} alt={footerData.colOneImage} href={footerData.colOneImageLink} target="_blank"></Image>}</div>
+            <div className="row image">
+              {!!footerData.colOneImage && (
+                <Image
+                  src={getScaleUrl(getPath(footerData.colOneImage), 'preview')}
+                  alt={footerData.colOneImage}
+                  href={footerData.colOneImageLink}
+                  target="_blank"
+                ></Image>
+              )}
+            </div>
             <div className="row image">
               {' '}
-              {!!footerData.colTwoImage && <Image src={getScaleUrl(getPath(footerData.colTwoImage), 'preview')} alt={footerData.colTwoImage} href={footerData.colTwoImageLink} target="_blank"></Image>}
+              {!!footerData.colTwoImage && (
+                <Image
+                  src={getScaleUrl(getPath(footerData.colTwoImage), 'preview')}
+                  alt={footerData.colTwoImage}
+                  href={footerData.colTwoImageLink}
+                  target="_blank"
+                ></Image>
+              )}
               {!!footerData.secondImageCap && (
                 <p id="photo-credit" className="photo-credit">
                   {footerData.secondImageCap}
