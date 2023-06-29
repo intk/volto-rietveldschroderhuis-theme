@@ -3,6 +3,117 @@
   padding-right: 35px;
   height: auto;
 
+  // Tickets section
+  h3{
+    font-family: 'FranklinDmCp', Arial, sans-serif;
+    font-size: 48px;
+    color: #282931;
+    letter-spacing: 0.0em;
+    line-height: 55px;
+    font-weight: 400;
+    margin-top: 45px;
+    text-transform: none;
+    text-align: center;
+  }
+
+  #Tickets {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .Header{
+      margin-bottom: 10px;
+    }
+    .buttons{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 35px;
+      margin-top: 18px;
+
+      .button {
+          background-color: white;
+          margin: 0px 10px !important;
+          padding: 17px 28px 12px;
+          color: black;
+          width: 200px;
+          font-family: 'FranklinMed', Arial, Helvetica;
+          letter-spacing: 0.85px;
+          font-size: 17px;
+          line-height: 36px;
+          border: 1px solid black;
+        }
+        .button:hover {
+          background-color: black !important;
+          color: white;
+        }
+    }
+    @media (max-width: 992px){
+      margin-bottom: 85px;
+      h3.Header{
+          font-size: 28.8px;
+          margin-bottom: 40px;
+      }
+    }
+    @media (max-width: 645px){
+      margin-bottom: 65px;
+      h3.Header{
+        margin-bottom: 28px;
+      }
+      .buttons{
+        flex-direction: column;
+        align-items: center;
+        .button{
+          margin-bottom: 20px !important;
+        }
+      }
+    }
+  }
+
+  // Newsletter Section
+  #Newsletter{
+    background-color: #e1ecf2;
+    padding-bottom: 70px;
+    padding-top: 30px;
+
+    .Header {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    #newsletter-form{
+      display:flex;
+      justify-content: center;
+      #formfield-form-widgets-email{
+        border: 1px solid #c3c3c3;
+        background: white;
+        width: 28%;
+        margin-right: 5px;
+        #form-widgets-email{
+          border: 0px;
+          width: 100%;
+          color: #848484;
+          line-height: 22.8px;
+          padding: 16px 20px 13px;
+
+        }
+      }
+      #form-buttons-subscribe {
+        background-color: white;
+        padding: 15px 15px 12px;
+        color: black;
+        width: 228px;
+        font-family: 'FranklinMed', Arial, Helvetica;
+        letter-spacing: 0.05em;
+        font-size: 17px;
+        line-height: 24px;
+        border: 1px solid black;
+      }
+
+      #form-buttons-subscribe:hover {
+        background-color: black !important;
+        color: white;
+      }
+    }
+  }
+
   .site-data-preview{
     display: flex;
     position: relative;
@@ -124,7 +235,10 @@
 }
 
 @media (max-width: 992px) {
-  #footerWrapper{
+  #footer-preview-wrapper .site-data-preview{
+    padding-left: 35px !important;
+  }
+  #footer-preview-wrapper, #footerWrapper{
     #Footer, .site-data-preview {
       flex-direction: column;
       padding-left: 0px;
@@ -168,7 +282,7 @@
 }
 
 @media (max-width: 769px) {
-  #footerWrapper {
+  #footer-preview-wrapper, #footerWrapper {
     padding-left: 20px !important;
     padding-right: 20px !important;
     #Footer,
