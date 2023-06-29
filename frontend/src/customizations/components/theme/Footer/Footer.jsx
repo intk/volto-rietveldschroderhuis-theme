@@ -4,7 +4,8 @@
  * @module components/theme/Footer/Footer
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { defineMessages, injectIntl } from 'react-intl';
 import { useSelector, shallowEqual } from 'react-redux';
 import { Image } from 'semantic-ui-react';
@@ -27,6 +28,19 @@ const messages = defineMessages({
   newsletter: {
     id: 'Newsletter',
     defaultMessage: 'Nieuws over Rietveld in je mail',
+  },
+  approve: {
+    id: 'Approve',
+    defaultMessage:
+      'Thank you for registering. You will receive an email confirming your registration.',
+  },
+  unable: {
+    id: 'Unable',
+    defaultMessage: 'Unable to subscribe to newsletter.',
+  },
+  error: {
+    id: 'Error',
+    defaultMessage: 'An error occurred. Please try again.',
   },
 });
 
@@ -53,10 +67,56 @@ const Footer = ({ intl }) => {
   );
 
   const footerData = blocks[siteDataId] || {};
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState(null);
+  const history = useHistory();
+
+  useEffect(() => {
+    return history.listen(() => {
+      setMessage(null); // Clear the message when route changes
+    });
+  }, [history]);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const data = {
+      EMAIL: email,
+      u: 'c04600e3ceefae8c502cbabec',
+      id: '42702e9770',
+      'group[15893][1]': '1',
+    };
+
+    try {
+      const response = await fetch(
+        'https://centraalmuseum.us2.list-manage.com/subscribe/post-json?c=?',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        },
+      );
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setMessage(
+          'Bedankt voor je aanmelding. Je ontvangt een e-mail waarin je inschrijving wordt bevestigd.',
+        );
+        // setMessage(
+        //   {intl.formatMesssage(messages.approve)}
+        // )
+      } else {
+        setMessage('Aanmelden op nieuwsbrief mislukt.');
+      }
+    } catch (error) {
+      setMessage('Er is een fout opgetreden. Probeer het opnieuw.');
+    }
+  };
 
   return (
     <div id="footerWrapper">
-      {/* <div id="Tickets">
+      <div id="Tickets">
         <h3 className="Header">{intl.formatMessage(messages.ticket)}</h3>
         <div className="buttons">
           <button className="button button1" href="/">
@@ -66,50 +126,37 @@ const Footer = ({ intl }) => {
             Menu
           </button>
         </div>
-      </div> */}
+      </div>
+
       <div id="Newsletter">
         <h3 className="Header">{intl.formatMessage(messages.newsletter)}</h3>
-        <form
-          id="newsletter-form"
-          method="get"
-          action="https://centraalmuseum.us2.list-manage.com/subscribe/post-json?c=?"
-        >
+        <form id="newsletter-form" onSubmit={handleSubmit}>
           <div id="formfield-form-widgets-email">
             <input
               id="form-widgets-email"
               name="EMAIL"
               className="text-widget required textline-field"
-              value=""
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               type="text"
               placeholder="Je emailadres"
             />
           </div>
-
-          <input type="hidden" value="c04600e3ceefae8c502cbabec" name="u" />
-          <input type="hidden" value="42702e9770" name="id" />
-          <input type="hidden" value="1" name="group[15893][1]" />
-
           <div className="formControls">
             <input
+              type="submit"
               id="form-buttons-subscribe"
               name="form.buttons.subscribe"
               className="submit-widget button-field context"
               value="Inschrijven"
-              type="submit"
             />
           </div>
-
-          <div id="subscribe-result">
-            <p className="error-msg" style={{ display: 'none' }}>
-              Aanmelden op nieuwsbrief mislukt.
-            </p>
-
-            <p className="success-msg" style={{ display: 'none' }}>
-              Bedankt voor je aanmelding. Je ontvangt een e-mail waarin je
-              inschrijving wordt bevestigd.
-            </p>
-          </div>
         </form>
+        {message && (
+          <div className="message">
+            <p>{message}</p>
+          </div>
+        )}
       </div>
 
       <div id="Footer">
