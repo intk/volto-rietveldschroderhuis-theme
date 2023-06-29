@@ -32,7 +32,7 @@ msgid "Column One Image"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Title of the first column
+# defaultMessage: FIRST COLUMN
 msgid "Column One Title"
 msgstr ""
 
@@ -42,7 +42,7 @@ msgid "Column Two Image"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Title of the second column
+# defaultMessage: SECOND COLUMN
 msgid "Column Two Title"
 msgstr ""
 
@@ -72,7 +72,7 @@ msgid "planYourVisitLink"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
-# defaultMessage: Fourth row
+# defaultMessage: Email
 msgid "rowFour"
 msgstr ""
 
