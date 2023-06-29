@@ -24,6 +24,11 @@ msgid "Column One Image"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
+# defaultMessage: Link for the Image
+msgid "Column One Image Link"
+msgstr ""
+
+#: components/Blocks/SiteData/schema
 # defaultMessage: FIRST COLUMN
 msgid "Column One Title"
 msgstr ""
@@ -31,6 +36,11 @@ msgstr ""
 #: components/Blocks/SiteData/schema
 # defaultMessage: Image of the second column
 msgid "Column Two Image"
+msgstr ""
+
+#: components/Blocks/SiteData/schema
+# defaultMessage: Link for the Image
+msgid "Column Two Image Link"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
