@@ -11,7 +11,10 @@ const SiteDataView = (props) => {
     <div id="footer-preview-wrapper">
       <div className="site-data-preview">
         <div className="site-logo">
-          <Image src={getScaleUrl(getPath(props.data.siteLogo), 'preview')} alt={props.data.siteLogo} />
+          <Image
+            src={getScaleUrl(getPath(props.data.siteLogo), 'preview')}
+            alt={props.data.siteLogo}
+          />
         </div>
         <div className="information-columns">
           <div className="column">
@@ -32,15 +35,23 @@ const SiteDataView = (props) => {
               <p>{props.data.secLine1}</p>
               <p>{props.data.secLine2}</p>
               <p>{props.data.secLine3}</p>
-              <a href={props.data.planYourVisitLink}>{props.data.planYourVisit}</a>
+              <a href={props.data.planYourVisitLink}>
+                {props.data.planYourVisit}
+              </a>
             </div>
 
             <div className="row">
-              <Image src={getScaleUrl(getPath(props.data.colOneImage), 'preview')} alt={props.data.colOneImage}></Image>
+              <Image
+                src={getScaleUrl(getPath(props.data.colOneImage), 'preview')}
+                alt={props.data.colOneImage}
+              ></Image>
             </div>
 
             <div className="row">
-              <Image src={getScaleUrl(getPath(props.data.colTwoImage), 'preview')} alt={props.data.colTwoImage}></Image>
+              <Image
+                src={getScaleUrl(getPath(props.data.colTwoImage), 'preview')}
+                alt={props.data.colTwoImage}
+              ></Image>
               <p id="photo-credit" className="photo-credit">
                 {props.data.secondImageCap}
               </p>
