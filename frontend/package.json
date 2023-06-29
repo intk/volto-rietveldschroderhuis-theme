@@ -159,7 +159,7 @@
     "@kitconcept/volto-button-block": "*",
     "@kitconcept/volto-carousel-block": "1.1.0",
     "@kitconcept/volto-slider-block": "*",
-    "@plone/volto": "16.20.8",
+    "@plone/volto": "16.21.2",
     "volto-form-block": "3.0.1",
     "volto-multilingual-widget": "3.0.0",
     "volto-social-settings": "3.0.0"
