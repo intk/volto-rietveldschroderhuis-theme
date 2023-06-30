@@ -7,11 +7,11 @@ body {
   font-size: 16px;
   color: #404040;
 }
-@media screen and (min-width: 1200px) {
-  .view-viewview .ui.basic.segment.content-area {
-    margin-left: 100px;
-  }
-}
+// @media screen and (min-width: 1200px) {
+//   .view-viewview .ui.basic.segment.content-area {
+//     margin-left: 100px;
+//   }
+// }
 
 #page-document.ui.container, #page-edit .ui.container{
   width: @container-width !important;
@@ -20,7 +20,8 @@ body {
   #page-document.ui.container, #page-edit.ui.container {
     width: 100% !important;
     margin: 0% !important;
-    padding: 0% !important;
+    padding-right: 0% !important;
+    padding-left: 0% !important;
   }
   #page-document.ui.container > *:not(.block.image.align, .block.video.align), #page-edit.ui.container >*:not(.block.image.align, .block.video.align){
     padding-left: 30px;
@@ -501,19 +502,49 @@ p {
   }
   .documentFirstHeading{
     font-size: 60px !important;
-    padding-top: 55px;
-    margin-bottom: 0px !important;
+    padding-top: 45px;
+    margin-bottom: 15px !important;
   }
   .documentDescription{
     max-width: 660px;
     margin: 0 auto !important;
     font-size: 1.500em;
-    line-height: 36px;
+    line-height: 36px !important;
     color: #494a51;
     text-align: center !important;
     text-justify: inter-word !important;
     padding-top: 0px;
     font-size: 24px !important;
+  }
+  @media (max-width: 992px){
+    .documentFirstHeading, .documentDescription{
+        position: relative !important;
+        max-width: 100vw !important;
+        width: 100vw !important;
+        right: 50% !important;
+        left: 50% !important;
+        margin-right: -50vw !important;
+        margin-left: -50vw !important;
+        padding-left: 125px !important;
+        padding-right: 125px !important;
+    }
+    .documentFirstHeading{
+      margin-top: 5px !important;
+      padding-top: 38px !important;
+      margin-bottom: 5px !important;
+      font-size: 45px !important;
+    }
+    .documentDescription{
+      font-size: 18.8px !important;
+      line-height: 28.32px !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .documentFirstHeading{
+      text-align: center !important;
+      padding-top: 20px !important;
+      margin-bottom: 25px !important;
+    }
   }
 }
 //Hero title
@@ -784,10 +815,10 @@ p {
   width: 100vw;
   right: 50%;
   left: 50%;
-  margin-top: 50px;
+  margin-top: 60px;
   margin-right: -50vw !important;
   margin-left: -50vw !important;
-  padding: 0px 100px 50px 100px;
+  padding: 0px 94px 50px 106px;
 
   #list-title h1 {
     text-align: center;
@@ -830,7 +861,7 @@ p {
       margin-top: 0%;
       margin-bottom: 0%;
       box-shadow: none;
-      aspect-ratio: 16/12;
+      aspect-ratio: 1.5;
 
       #jaarverslag-title {
         // height: 100px;
@@ -876,7 +907,7 @@ p {
         width: 100%;
         object-fit: cover;
         height: auto;
-        aspect-ratio: 16/12;
+        aspect-ratio: 1.5;
       }
     }
   }
@@ -891,18 +922,55 @@ p {
   }
 
   @media only screen and (max-width: 991px) {
+    padding: 0px 123px 50px 123px;
     #content-core .listing-items {
       width: 50% !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
     }
   }
 
   @media only screen and (max-width: 767px) {
-    padding-left: 25px;
-    padding-right: 25px;
+    // padding-left: 25px;
+    // padding-right: 25px;
+    padding: 0px 114px 50px 116px;
+    margin-top: 30px;
     #content-core .listing-items {
       width: 100% !important;
-      padding-bottom: 85px !important;
+      padding-bottom: 60px !important;
+
+      p{
+        font-size: 18.8px !important;
+      }
     }
+  }
+  @media only screen and (max-width: 480px){
+    padding: 0px 50px 50px 50px;
   }
 }
 
+// listing block pagination
+#view #page-document .pagination-wrapper a {
+  font-family: 'FranklinBook', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 400;
+  background: #ffffff;
+  color: #282931;
+  border: 1px solid #ffffff !important;
+  border-bottom: 1px solid #282931 !important;
+  padding: 5px 9px;
+  min-width: 5px !important;
+  border-radius: 1px !important;
+
+  svg{
+    opacity: 0.65;
+  }
+}
+
+#view #page-document .pagination-wrapper a:not(.active):not(:hover){
+  border-bottom: 0px !important;
+}
+#view #page-document .pagination-wrapper a.disabled{
+  display: none;
+}
