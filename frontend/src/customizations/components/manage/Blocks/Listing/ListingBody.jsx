@@ -61,14 +61,20 @@ const ListingBody = withQuerystringResults((props) => {
     <>
       {listingItems?.length > 0 ? (
         <div className="listing-wrapper" ref={listingRef}>
-          <ListingBodyTemplate items={listingItems} isEditMode={isEditMode} {...data} {...variation} />
+          <ListingBodyTemplate
+            items={listingItems}
+            isEditMode={isEditMode}
+            {...data}
+            {...variation}
+          />
           {totalPages > 1 && (
             <div className="pagination-wrapper">
               <Pagination
                 activePage={currentPage}
                 totalPages={totalPages}
                 onPageChange={(e, { activePage }) => {
-                  !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
+                  !isEditMode &&
+                    listingRef.current.scrollIntoView({ behavior: 'smooth' });
                   onPaginationChange(e, { activePage });
                 }}
                 firstItem={null}
@@ -95,14 +101,23 @@ const ListingBody = withQuerystringResults((props) => {
               })}
             >
               <h2>{data.headline}</h2>
-              <p className={`content-button`}>{buttonMessage['button'][lang]}</p>
+              <p className={`content-button`}>
+                {buttonMessage['button'][lang]}
+              </p>
             </div>
           )}
         </div>
       ) : isEditMode ? (
         <div className="listing message" ref={listingRef}>
-          {isFolderContentsListing && <FormattedMessage id="No items found in this container." defaultMessage="No items found in this container." />}
-          {hasLoaded && NoResults && <NoResults isEditMode={isEditMode} {...data} />}
+          {isFolderContentsListing && (
+            <FormattedMessage
+              id="No items found in this container."
+              defaultMessage="No items found in this container."
+            />
+          )}
+          {hasLoaded && NoResults && (
+            <NoResults isEditMode={isEditMode} {...data} />
+          )}
           <Dimmer active={!hasLoaded} inverted>
             <Loader indeterminate size="small">
               <FormattedMessage id="loading" defaultMessage="Loading" />
@@ -111,7 +126,9 @@ const ListingBody = withQuerystringResults((props) => {
         </div>
       ) : (
         <div className="emptyListing">
-          {hasLoaded && NoResults && <NoResults isEditMode={isEditMode} {...data} />}
+          {hasLoaded && NoResults && (
+            <NoResults isEditMode={isEditMode} {...data} />
+          )}
           <Dimmer active={!hasLoaded} inverted>
             <Loader indeterminate size="small">
               <FormattedMessage id="loading" defaultMessage="Loading" />
