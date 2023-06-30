@@ -11,10 +11,11 @@ body.cms-ui{
 }
 
 // menu
-.view-viewview main #view {
-  h1.documentFirstHeading {
-    display: none; // it is displayed as part of the HeroSection
-  }
+.view-viewview.has-hero-image:not(.hide-top-image) main #view h1.documentFirstHeading {
+  display: none; // it is displayed as part of the HeroSection
+}
+.view-viewview:not(has-hero-image) #main .herosection h1.documentFirstHeading {
+  display: none; // it is displayed as part of the HeroSection
 }
 
 .view-addview .header-bg,
