@@ -2,12 +2,12 @@ import React, { createRef } from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import cx from 'classnames';
 import { Pagination, Dimmer, Loader } from 'semantic-ui-react';
-import { Icon } from '@plone/volto/components';
 import config from '@plone/volto/registry';
 import withQuerystringResults from './withQuerystringResults';
 
-import paginationLeftSVG from '@plone/volto/icons/left-key.svg';
-import paginationRightSVG from '@plone/volto/icons/right-key.svg';
+import { HiMiniArrowLongLeft } from 'react-icons/hi2';
+import { HiMiniArrowLongRight } from 'react-icons/hi2';
+
 import { useSelector } from 'react-redux';
 
 const ListingBody = withQuerystringResults((props) => {
@@ -61,32 +61,26 @@ const ListingBody = withQuerystringResults((props) => {
     <>
       {listingItems?.length > 0 ? (
         <div className="listing-wrapper" ref={listingRef}>
-          <ListingBodyTemplate
-            items={listingItems}
-            isEditMode={isEditMode}
-            {...data}
-            {...variation}
-          />
+          <ListingBodyTemplate items={listingItems} isEditMode={isEditMode} {...data} {...variation} />
           {totalPages > 1 && (
             <div className="pagination-wrapper">
               <Pagination
                 activePage={currentPage}
                 totalPages={totalPages}
                 onPageChange={(e, { activePage }) => {
-                  !isEditMode &&
-                    listingRef.current.scrollIntoView({ behavior: 'smooth' });
+                  !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
                   onPaginationChange(e, { activePage });
                 }}
                 firstItem={null}
                 lastItem={null}
                 prevItem={{
-                  content: <Icon name={paginationLeftSVG} size="18px" />,
+                  content: <HiMiniArrowLongLeft />,
                   icon: true,
                   'aria-disabled': !prevBatch,
                   className: !prevBatch ? 'disabled' : null,
                 }}
                 nextItem={{
-                  content: <Icon name={paginationRightSVG} size="18px" />,
+                  content: <HiMiniArrowLongRight />,
                   icon: true,
                   'aria-disabled': !nextBatch,
                   className: !nextBatch ? 'disabled' : null,
@@ -101,23 +95,14 @@ const ListingBody = withQuerystringResults((props) => {
               })}
             >
               <h2>{data.headline}</h2>
-              <p className={`content-button`}>
-                {buttonMessage['button'][lang]}
-              </p>
+              <p className={`content-button`}>{buttonMessage['button'][lang]}</p>
             </div>
           )}
         </div>
       ) : isEditMode ? (
         <div className="listing message" ref={listingRef}>
-          {isFolderContentsListing && (
-            <FormattedMessage
-              id="No items found in this container."
-              defaultMessage="No items found in this container."
-            />
-          )}
-          {hasLoaded && NoResults && (
-            <NoResults isEditMode={isEditMode} {...data} />
-          )}
+          {isFolderContentsListing && <FormattedMessage id="No items found in this container." defaultMessage="No items found in this container." />}
+          {hasLoaded && NoResults && <NoResults isEditMode={isEditMode} {...data} />}
           <Dimmer active={!hasLoaded} inverted>
             <Loader indeterminate size="small">
               <FormattedMessage id="loading" defaultMessage="Loading" />
@@ -126,9 +111,7 @@ const ListingBody = withQuerystringResults((props) => {
         </div>
       ) : (
         <div className="emptyListing">
-          {hasLoaded && NoResults && (
-            <NoResults isEditMode={isEditMode} {...data} />
-          )}
+          {hasLoaded && NoResults && <NoResults isEditMode={isEditMode} {...data} />}
           <Dimmer active={!hasLoaded} inverted>
             <Loader indeterminate size="small">
               <FormattedMessage id="loading" defaultMessage="Loading" />
