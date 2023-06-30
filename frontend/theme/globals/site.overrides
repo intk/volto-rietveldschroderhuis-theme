@@ -216,7 +216,10 @@ p {
   position: relative;
   left: -180px;
   top: 50px;
-}
+  a{
+    pointer-events: auto;
+  }
+ }
 
 // ************************
 // About the size of the Images and the Videos on wide screens
@@ -725,6 +728,7 @@ p {
 .header-wrapper {
   position: absolute;
   z-index: 3;
+  pointer-events: none;
 }
 
 
