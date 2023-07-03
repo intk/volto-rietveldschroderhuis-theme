@@ -865,7 +865,7 @@ p {
 
       #jaarverslag-title {
         // height: 100px;
-        padding-top: 18px;
+        padding-top: 0px;
 
         h2 {
           margin-bottom: 5px !important;
@@ -899,10 +899,6 @@ p {
         margin: 0% !important;
       }
 
-      div {
-        padding-top: 30px;
-      }
-
       img {
         width: 100%;
         object-fit: cover;
@@ -918,6 +914,19 @@ p {
       // font-family: 'UniversLightCn';
       font-size: 22px;
       text-decoration: none !important;
+    }
+    .listing-dates-wrapper{
+      padding-top: 20px;
+    }
+    .listing-dates{
+      font-size: 15px;
+      line-height: 32px;
+      color: #494a51;
+      letter-spacing: 0.05em;
+      // padding-bottom: 10px;
+      // padding-top: 14px;
+      text-transform: uppercase;
+      font-family: 'FranklinMed', Arial, sans-serif;
     }
   }
 
