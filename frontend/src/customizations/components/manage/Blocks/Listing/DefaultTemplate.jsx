@@ -105,7 +105,11 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                       )
                     )}
                     {item.start && !item.whole_day && (
-                      <span className="listing-dates">
+                      <span
+                        className={`listing-dates ${
+                          new Date(item.end) < new Date() ? 'expired' : ''
+                        }`}
+                      >
                         {', '}
                         {getHourRangeDescription(
                           intl.locale,
