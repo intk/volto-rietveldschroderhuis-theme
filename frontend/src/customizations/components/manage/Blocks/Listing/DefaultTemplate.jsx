@@ -88,7 +88,15 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
               )}
               {['Event'].includes(item['@type']) ? (
                 <div className="listing-date-time">
-                  <div className="listing-dates-wrapper">
+                  <div
+                    className={`listing-dates-wrapper ${
+                      item.start &&
+                      !item.open_end &&
+                      new Date(item.end) < new Date()
+                        ? 'expired'
+                        : ''
+                    }`}
+                  >
                     {item.start && !item.open_end ? (
                       <span className="listing-dates">
                         {getDateRangeDescription(
@@ -105,11 +113,7 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                       )
                     )}
                     {item.start && !item.whole_day && (
-                      <span
-                        className={`listing-dates ${
-                          new Date(item.end) < new Date() ? 'expired' : ''
-                        }`}
-                      >
+                      <span className="listing-dates">
                         {', '}
                         {getHourRangeDescription(
                           intl.locale,

@@ -928,8 +928,10 @@ p {
       text-transform: uppercase;
       font-family: 'FranklinMed', Arial, sans-serif;
     }
-    .listing-dates.expired{
-      text-decoration: line-through !important;
+    .listing-dates-wrapper.expired {
+      .listing-dates {
+        text-decoration: line-through !important;
+      }
     }
   }
 
