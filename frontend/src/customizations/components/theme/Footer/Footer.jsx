@@ -9,6 +9,7 @@ import { useHistory } from 'react-router-dom';
 import { defineMessages, injectIntl } from 'react-intl';
 import { useSelector, shallowEqual } from 'react-redux';
 import { Image } from 'semantic-ui-react';
+import { getBaseUrl } from '@plone/volto/helpers';
 import {
   getScaleUrl,
   getPath,
@@ -79,7 +80,7 @@ const Footer = ({ intl }) => {
     .filter((id) => blocks[id]?.title === 'ImagesColumn')
     .map((id) => blocks[id]);
 
-  let informationColumnBlocks = columnBlockIds
+  let FooterColumnsBlocks = columnBlockIds
     .filter((id) => blocks[id]?.title === 'FooterColumns')
     .map((id) => blocks[id]);
 
@@ -175,7 +176,7 @@ const Footer = ({ intl }) => {
       </div>
 
       <div id="Footer">
-        {informationColumnBlocks.map((mainColumnBlock) => {
+        {FooterColumnsBlocks.map((mainColumnBlock) => {
           return mainColumnBlock.data.blocks_layout.items.map(
             (columnBlockId) => {
               const columnBlock = mainColumnBlock.data.blocks[columnBlockId];
@@ -197,7 +198,7 @@ const Footer = ({ intl }) => {
                         </p>
                       ) : row['@type'] === 'image' ? (
                         <Image
-                          src={getScaleUrl(getPath(row.url), 'preview')}
+                          src={row.url}
                           alt={row.alt}
                           key={`row-${itemId}`}
                         />
