@@ -197,7 +197,7 @@ const Footer = ({ intl }) => {
                         </p>
                       ) : row['@type'] === 'image' ? (
                         <Image
-                          src={`${row.url}/@@images/image/preview`}
+                          src={getScaleUrl(getPath(row.url), 'preview')}
                           alt={row.alt}
                           key={`row-${itemId}`}
                         />
