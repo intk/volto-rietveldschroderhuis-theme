@@ -56,7 +56,7 @@ const Footer = ({ intl }) => {
 
   const { blocks = {} } = siteDataContent;
   const siteDataId = Object.keys(blocks).find(
-    (id) => blocks[id]?.['@type'] === 'footerData',
+    (id) => blocks[id]?.['@type'] === 'columnsBlock',
   );
 
   const { siteActions = [] } = useSelector(
@@ -70,6 +70,8 @@ const Footer = ({ intl }) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState(null);
   const history = useHistory();
+
+  console.log(footerData);
 
   useEffect(() => {
     return history.listen(() => {
@@ -172,76 +174,22 @@ const Footer = ({ intl }) => {
             />
           )}
         </div>
-        <div className="information-columns">
-          <div className="column">
-            <div className="row">
-              {!!footerData.colOneTitle && (
-                <h3>
-                  <a className="titleLink" href={footerData.colOneTitleLink}>
-                    {footerData.colOneTitle}
-                  </a>
-                </h3>
-              )}
-              {!!footerData.rowOne && <p>{footerData.rowOne}</p>}
-              {!!footerData.rowTwo && <p>{footerData.rowTwo}</p>}
-              {!!footerData.rowThree && <p>{footerData.rowThree}</p>}
-              {!!footerData.rowFour && (
-                <a
-                  id="mailadress"
-                  data-linktype="email"
-                  href={`mailto:${footerData.rowFour}`}
-                  data-val={footerData.rowFour}
-                  data-subject="Contact via website"
-                >
-                  {footerData.rowFour}
-                </a>
-              )}
+        {footerData.data.blocks_layout.items.map((columnId) => {
+          const column = footerData.data.blocks[columnId];
+          return (
+            <div
+              className="footer-information-column"
+              key={`column-${columnId}`}
+            >
+              {column.blocks_layout.items.map((itemId) => {
+                const row = column.blocks[itemId];
+                return row ? (
+                  <p key={`row-${itemId}`}>{row.plaintext}</p>
+                ) : null;
+              })}
             </div>
-            <div className="row">
-              {!!footerData.colTwoTitle && (
-                <h3>
-                  <a className="titleLink" href={footerData.colTwoTitleLink}>
-                    {footerData.colTwoTitle}
-                  </a>
-                </h3>
-              )}
-              {!!footerData.secLine1 && <p>{footerData.secLine1}</p>}
-              {!!footerData.secLine2 && <p>{footerData.secLine2}</p>}
-              {!!footerData.secLine3 && <p>{footerData.secLine3}</p>}
-              {!!footerData.planYourVisit && (
-                <a href={footerData.planYourVisitLink}>
-                  {footerData.planYourVisit}
-                </a>
-              )}
-            </div>
-            <div className="row image">
-              {!!footerData.colOneImage && (
-                <Image
-                  src={getScaleUrl(getPath(footerData.colOneImage), 'preview')}
-                  alt={footerData.colOneImage}
-                  href={footerData.colOneImageLink}
-                  target="_blank"
-                ></Image>
-              )}
-            </div>
-            <div className="row image">
-              {' '}
-              {!!footerData.colTwoImage && (
-                <Image
-                  src={getScaleUrl(getPath(footerData.colTwoImage), 'preview')}
-                  alt={footerData.colTwoImage}
-                  href={footerData.colTwoImageLink}
-                  target="_blank"
-                ></Image>
-              )}
-              {!!footerData.secondImageCap && (
-                <p id="photo-credit" className="photo-credit">
-                  {footerData.secondImageCap}
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </div>
   );
