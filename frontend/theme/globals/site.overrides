@@ -894,6 +894,11 @@ p {
           color: #494a51;
         }
       }
+      #jaarverslag-title.item-title.private{
+        h2, a, p {
+          color: red;
+        }
+      }
 
       img {
         margin: 0% !important;

@@ -129,7 +129,12 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
               ) : (
                 ''
               )}
-              <div id="jaarverslag-title">
+              <div
+                id="jaarverslag-title"
+                className={`item-title ${
+                  item.review_state === 'private' ? 'private' : ''
+                }`}
+              >
                 <h2>
                   <UniversalLink item={item}>{item.title}</UniversalLink>
                 </h2>
