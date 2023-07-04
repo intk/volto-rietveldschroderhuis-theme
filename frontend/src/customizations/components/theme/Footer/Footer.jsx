@@ -71,7 +71,17 @@ const Footer = ({ intl }) => {
   const [message, setMessage] = useState(null);
   const history = useHistory();
 
-  console.log(footerData);
+  let columnBlockIds = Object.keys(blocks).filter(
+    (id) => blocks[id]?.['@type'] === 'columnsBlock',
+  );
+
+  let imagesColumnBlocks = columnBlockIds
+    .filter((id) => blocks[id]?.title === 'ImagesColumn')
+    .map((id) => blocks[id]);
+
+  let informationColumnBlocks = columnBlockIds
+    .filter((id) => blocks[id]?.title === 'InformationColumn')
+    .map((id) => blocks[id]);
 
   useEffect(() => {
     return history.listen(() => {
@@ -165,27 +175,58 @@ const Footer = ({ intl }) => {
       </div>
 
       <div id="Footer">
-        <div className="site-logo">
-          {!!footerData.siteLogo && (
-            <Image
-              src={getScaleUrl(getPath(footerData.siteLogo), 'preview')}
-              alt={footerData.siteLogo}
-              href="/"
-            />
-          )}
-        </div>
-        {footerData.data.blocks_layout.items.map((columnId) => {
-          const column = footerData.data.blocks[columnId];
+        {informationColumnBlocks.map((mainColumnBlock) => {
+          return mainColumnBlock.data.blocks_layout.items.map(
+            (columnBlockId) => {
+              const columnBlock = mainColumnBlock.data.blocks[columnBlockId];
+              return (
+                <div
+                  className="footer-information-column"
+                  key={`column-${columnBlockId}`}
+                >
+                  {columnBlock.blocks_layout?.items.map((itemId) => {
+                    const row = columnBlock.blocks[itemId];
+                    return row ? (
+                      row['@type'] === 'slate' &&
+                      row.value &&
+                      row.value[0] &&
+                      row.value[0].children &&
+                      row.value[0].children[0] ? (
+                        <p key={`row-${itemId}`}>
+                          {row.value[0].children[0].text || ''}
+                        </p>
+                      ) : null
+                    ) : null;
+                  })}
+                </div>
+              );
+            },
+          );
+        })}
+        {imagesColumnBlocks.map((columnBlock) => {
           return (
             <div
-              className="footer-information-column"
-              key={`column-${columnId}`}
+              className="footer-images-column"
+              key={`column-${columnBlock.id}`}
             >
-              {column.blocks_layout.items.map((itemId) => {
-                const row = column.blocks[itemId];
-                return row ? (
-                  <p key={`row-${itemId}`}>{row.plaintext}</p>
-                ) : null;
+              {columnBlock.data.blocks_layout?.items.map((itemId) => {
+                const column = columnBlock.data.blocks[itemId];
+                return column.blocks_layout.items.map((subItemId) => {
+                  const row = column.blocks[subItemId];
+                  return row ? (
+                    row['@type'] === 'image' ? (
+                      <Image
+                        src={getScaleUrl(getPath(row.url), 'preview')}
+                        alt={row.alt}
+                        key={`row-${subItemId}`}
+                      />
+                    ) : (
+                      <p key={`row-${subItemId}`}>
+                        {row.value && row.value[0].children[0].text}
+                      </p>
+                    )
+                  ) : null;
+                });
               })}
             </div>
           );
