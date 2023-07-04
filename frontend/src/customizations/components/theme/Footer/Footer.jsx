@@ -80,7 +80,7 @@ const Footer = ({ intl }) => {
     .map((id) => blocks[id]);
 
   let informationColumnBlocks = columnBlockIds
-    .filter((id) => blocks[id]?.title === 'InformationColumn')
+    .filter((id) => blocks[id]?.title === 'FooterColumns')
     .map((id) => blocks[id]);
 
   useEffect(() => {
