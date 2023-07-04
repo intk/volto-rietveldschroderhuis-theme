@@ -83,8 +83,6 @@ const Footer = ({ intl }) => {
     .filter((id) => blocks[id]?.title === 'FooterColumns')
     .map((id) => blocks[id]);
 
-  console.log(FooterColumnsBlocks);
-
   useEffect(() => {
     return history.listen(() => {
       setMessage(null); // Clear the message when route changes
