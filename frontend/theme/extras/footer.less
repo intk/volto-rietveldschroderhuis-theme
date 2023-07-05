@@ -441,26 +441,39 @@
   .documentFirstHeading, .documentDescription{
     display: none !important;
   }
-  .columns-view{
-    position: relative !important;
-    max-width: 100vw !important;
-    width: 100vw !important;
-    right: 50% !important;
-    left: 50% !important;
-    margin-right: -50vw !important;
-    margin-left: -50vw !important;
-    padding-left: 125px !important;
-    padding-right: 125px !important;
-  }
-
 }
 
-.has-sidebar{
-#page-document.Footer {
-    .columns-view {
+
+.section-footer {
+  #page-document,
+  #page-edit {
+
+    .columns-view,
+    .columnsBlock {
+      position: relative !important;
+      max-width: 100vw !important;
+      width: 100vw !important;
+      right: 50% !important;
+      left: 50% !important;
+      margin-right: -50vw !important;
+      margin-left: -50vw !important;
+      padding-left: 125px !important;
+      padding-right: 125px !important;
+    }
+  }
+}
+
+
+.section-footer.has-sidebar {
+
+  #page-document,
+  #page-edit {
+
+    .columns-view,
+    .columnsBlock {
       width: calc(100vw - 100px) !important;
-      padding-left: 250px !important;
-      padding-right: 250px !important;
+      padding-left: 280px !important;
+      padding-right: 230px !important;
     }
   }
 }

@@ -63,16 +63,16 @@ const Footer = ({ intl }) => {
 
   const path = getPath(siteDataContent['@id']);
 
-  const { siteActions = [] } = useSelector(
-    (state) => ({
-      siteActions: state.actions?.actions?.site_actions,
-    }),
-    shallowEqual,
-  );
+  // const { siteActions = [] } = useSelector(
+  //   (state) => ({
+  //     siteActions: state.actions?.actions?.site_actions,
+  //   }),
+  //   shallowEqual,
+  // );
 
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState(null);
-  const history = useHistory();
+  // const [email, setEmail] = useState('');
+  // const [message, setMessage] = useState(null);
+  // const history = useHistory();
 
   // useEffect(() => {
   //   return history.listen(() => {
