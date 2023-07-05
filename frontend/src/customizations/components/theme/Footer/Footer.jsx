@@ -63,64 +63,109 @@ const Footer = ({ intl }) => {
 
   const path = getPath(siteDataContent['@id']);
 
-  // const { siteActions = [] } = useSelector(
-  //   (state) => ({
-  //     siteActions: state.actions?.actions?.site_actions,
-  //   }),
-  //   shallowEqual,
-  // );
+  const { siteActions = [] } = useSelector(
+    (state) => ({
+      siteActions: state.actions?.actions?.site_actions,
+    }),
+    shallowEqual,
+  );
 
-  // const [email, setEmail] = useState('');
-  // const [message, setMessage] = useState(null);
-  // const history = useHistory();
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState(null);
+  const history = useHistory();
 
-  // useEffect(() => {
-  //   return history.listen(() => {
-  //     setMessage(null); // Clear the message when route changes
-  //   });
-  // }, [history]);
+  useEffect(() => {
+    return history.listen(() => {
+      setMessage(null); // Clear the message when route changes
+    });
+  }, [history]);
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-  //   const data = {
-  //     EMAIL: email,
-  //     u: 'c04600e3ceefae8c502cbabec',
-  //     id: '42702e9770',
-  //     'group[15893][1]': '1',
-  //   };
+    const data = {
+      EMAIL: email,
+      u: 'c04600e3ceefae8c502cbabec',
+      id: '42702e9770',
+      'group[15893][1]': '1',
+    };
 
-  //   try {
-  //     const response = await fetch(
-  //       'https://centraalmuseum.us2.list-manage.com/subscribe/post-json?c=?',
-  //       {
-  //         method: 'POST',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //         },
-  //         body: JSON.stringify(data),
-  //       },
-  //     );
+    try {
+      const response = await fetch(
+        'https://centraalmuseum.us2.list-manage.com/subscribe/post-json?c=?',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        },
+      );
 
-  //     const result = await response.json();
+      const result = await response.json();
 
-  //     if (response.ok) {
-  //       setMessage(
-  //         'Bedankt voor je aanmelding. Je ontvangt een e-mail waarin je inschrijving wordt bevestigd.',
-  //       );
-  //       // setMessage(
-  //       //   {intl.formatMesssage(messages.approve)}
-  //       // )
-  //     } else {
-  //       setMessage('Aanmelden op nieuwsbrief mislukt.');
-  //     }
-  //   } catch (error) {
-  //     setMessage('Er is een fout opgetreden. Probeer het opnieuw.');
-  //   }
-  // };
+      if (response.ok) {
+        setMessage(
+          'Bedankt voor je aanmelding. Je ontvangt een e-mail waarin je inschrijving wordt bevestigd.',
+        );
+        // setMessage(
+        //   {intl.formatMesssage(messages.approve)}
+        // )
+      } else {
+        setMessage('Aanmelden op nieuwsbrief mislukt.');
+      }
+    } catch (error) {
+      setMessage('Er is een fout opgetreden. Probeer het opnieuw.');
+    }
+  };
 
   return (
     <main>
+      {/* <div id="Tickets">
+          <h3 className="Header">{intl.formatMessage(messages.ticket)}</h3>
+          <div className="buttons">
+            <button
+              className="button button1"
+              href="https://tickets.rietveldschroderhuis.nl/nl/tickets"
+            >
+              Tickets
+            </button>
+            <button className="button button2" href="/">
+              Menu
+            </button>
+          </div>
+        </div> */}
+
+      <div id="Newsletter">
+        <h3 className="Header">{intl.formatMessage(messages.newsletter)}</h3>
+        <form id="newsletter-form" onSubmit={handleSubmit}>
+          <div id="formfield-form-widgets-email">
+            <input
+              id="form-widgets-email"
+              name="EMAIL"
+              className="text-widget required textline-field"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              placeholder="Je emailadres"
+            />
+          </div>
+          <div className="formControls">
+            <input
+              type="submit"
+              id="form-buttons-subscribe"
+              name="form.buttons.subscribe"
+              className="submit-widget button-field context"
+              value="Inschrijven"
+            />
+          </div>
+        </form>
+        {message && (
+          <div className="message">
+            <p>{message}</p>
+          </div>
+        )}
+      </div>
       <div id="view">
         <Container id="page-document" className="Footer">
           <RenderBlocks content={siteDataContent} path={path} intl={intl} />
