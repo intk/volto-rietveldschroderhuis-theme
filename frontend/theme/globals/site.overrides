@@ -503,7 +503,7 @@ p {
   .documentFirstHeading{
     font-size: 60px !important;
     padding-top: 45px;
-    margin-bottom: 15px !important;
+    margin-bottom: 16px !important;
   }
   .documentDescription{
     max-width: 660px;
@@ -529,10 +529,12 @@ p {
         padding-right: 125px !important;
     }
     .documentFirstHeading{
-      margin-top: 5px !important;
+      margin-top: 15px !important;
       padding-top: 38px !important;
       margin-bottom: 5px !important;
       font-size: 45px !important;
+      line-height: 42px !important;
+      margin-bottom: 18px !important;
     }
     .documentDescription{
       font-size: 18.8px !important;
@@ -542,8 +544,8 @@ p {
   @media (max-width: 768px) {
     .documentFirstHeading{
       text-align: center !important;
-      padding-top: 20px !important;
-      margin-bottom: 25px !important;
+      padding-top: 10px !important;
+      margin-bottom: 15px !important;
     }
   }
 }
@@ -815,10 +817,10 @@ p {
   width: 100vw;
   right: 50%;
   left: 50%;
-  margin-top: 60px;
+  // margin-top: 60px;
   margin-right: -50vw !important;
   margin-left: -50vw !important;
-  padding: 0px 94px 50px 106px;
+  padding: 60px 93px 0px 107px;
 
   #list-title h1 {
     text-align: center;
@@ -855,13 +857,17 @@ p {
       justify-content: flex-start;
       padding-top: 0px !important;
       padding-right: 25px !important;
-      padding-bottom: 75px !important;
+      padding-bottom: 52px !important;
       padding-left: 25px !important;
       border: none !important;
       margin-top: 0%;
       margin-bottom: 0%;
       box-shadow: none;
       aspect-ratio: 1.5;
+
+      a{
+        border-bottom: 0px !important;
+      }
 
       #jaarverslag-title {
         // height: 100px;
@@ -872,23 +878,25 @@ p {
           text-decoration: none !important;
           font-size: 32px;
           border-bottom: 0px !important;
+          line-height: 40px !important;
           // text-transform: none !important;
         }
 
         a {
-          line-height: 1rem !important;
+          line-height: 40px !important;
           text-decoration: none !important;
           font-family: "FranklinDmCp", Arial, sans-serif;
           font-size: 32px;
           border-bottom: 0px !important;
+          letter-spacing: 0.0em !important;
         }
 
         p {
           margin-top: 10px;
-          line-height: 30px;
+          line-height: 30px !important;
           margin-bottom: 5px;
           font-family: 'FranklinBook', Arial, sans-serif;
-          font-size: 19.5px;
+          font-size: 19.65px;
           line-height: 36px;
           letter-spacing: 0.0em;
           color: #494a51;
@@ -952,7 +960,7 @@ p {
   @media only screen and (max-width: 767px) {
     // padding-left: 25px;
     // padding-right: 25px;
-    padding: 0px 114px 50px 116px;
+    padding: 0px 117px 0px 118px;
     margin-top: 30px;
     #content-core .listing-items {
       width: 100% !important;
@@ -985,8 +993,13 @@ p {
   svg{
     opacity: 0.65;
   }
-}
 
+
+}
+@media (max-width: 768px) {
+  font-size: 16px;
+  line-height: 16px;
+}
 #view #page-document .pagination-wrapper a:not(.active):not(:hover){
   border-bottom: 0px !important;
 }
