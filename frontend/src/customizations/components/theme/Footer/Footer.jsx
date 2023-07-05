@@ -13,6 +13,8 @@ import {
   getScaleUrl,
   getPath,
 } from '@package/components/Blocks/SiteData/utils';
+import { Container, Segment, Grid, Label } from 'semantic-ui-react';
+import RenderBlocks from './RenderBlocks';
 
 import { useSiteDataContent } from '@package/helpers';
 
@@ -54,10 +56,12 @@ const messages = defineMessages({
 const Footer = ({ intl }) => {
   const siteDataContent = useSiteDataContent();
 
-  const { blocks = {} } = siteDataContent;
-  const siteDataId = Object.keys(blocks).find(
-    (id) => blocks[id]?.['@type'] === 'columnsBlock',
-  );
+  const content = {
+    blocks: siteDataContent.blocks,
+    blocks_layout: siteDataContent.blocks_layout,
+  };
+
+  const path = getPath(siteDataContent['@id']);
 
   const { siteActions = [] } = useSelector(
     (state) => ({
@@ -66,179 +70,63 @@ const Footer = ({ intl }) => {
     shallowEqual,
   );
 
-  const footerData = blocks[siteDataId] || {};
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState(null);
   const history = useHistory();
 
-  let columnBlockIds = Object.keys(blocks).filter(
-    (id) => blocks[id]?.['@type'] === 'columnsBlock',
-  );
+  // useEffect(() => {
+  //   return history.listen(() => {
+  //     setMessage(null); // Clear the message when route changes
+  //   });
+  // }, [history]);
 
-  let imagesColumnBlocks = columnBlockIds
-    .filter((id) => blocks[id]?.title === 'ImagesColumn')
-    .map((id) => blocks[id]);
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
 
-  let FooterColumnsBlocks = columnBlockIds
-    .filter((id) => blocks[id]?.title === 'FooterColumns')
-    .map((id) => blocks[id]);
+  //   const data = {
+  //     EMAIL: email,
+  //     u: 'c04600e3ceefae8c502cbabec',
+  //     id: '42702e9770',
+  //     'group[15893][1]': '1',
+  //   };
 
-  useEffect(() => {
-    return history.listen(() => {
-      setMessage(null); // Clear the message when route changes
-    });
-  }, [history]);
+  //   try {
+  //     const response = await fetch(
+  //       'https://centraalmuseum.us2.list-manage.com/subscribe/post-json?c=?',
+  //       {
+  //         method: 'POST',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify(data),
+  //       },
+  //     );
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  //     const result = await response.json();
 
-    const data = {
-      EMAIL: email,
-      u: 'c04600e3ceefae8c502cbabec',
-      id: '42702e9770',
-      'group[15893][1]': '1',
-    };
-
-    try {
-      const response = await fetch(
-        'https://centraalmuseum.us2.list-manage.com/subscribe/post-json?c=?',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        },
-      );
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setMessage(
-          'Bedankt voor je aanmelding. Je ontvangt een e-mail waarin je inschrijving wordt bevestigd.',
-        );
-        // setMessage(
-        //   {intl.formatMesssage(messages.approve)}
-        // )
-      } else {
-        setMessage('Aanmelden op nieuwsbrief mislukt.');
-      }
-    } catch (error) {
-      setMessage('Er is een fout opgetreden. Probeer het opnieuw.');
-    }
-  };
+  //     if (response.ok) {
+  //       setMessage(
+  //         'Bedankt voor je aanmelding. Je ontvangt een e-mail waarin je inschrijving wordt bevestigd.',
+  //       );
+  //       // setMessage(
+  //       //   {intl.formatMesssage(messages.approve)}
+  //       // )
+  //     } else {
+  //       setMessage('Aanmelden op nieuwsbrief mislukt.');
+  //     }
+  //   } catch (error) {
+  //     setMessage('Er is een fout opgetreden. Probeer het opnieuw.');
+  //   }
+  // };
 
   return (
-    <div id="footerWrapper">
-      <div id="Tickets">
-        <h3 className="Header">{intl.formatMessage(messages.ticket)}</h3>
-        <div className="buttons">
-          <button
-            className="button button1"
-            href="https://tickets.rietveldschroderhuis.nl/nl/tickets"
-          >
-            Tickets
-          </button>
-          <button className="button button2" href="/">
-            Menu
-          </button>
-        </div>
+    <main>
+      <div id="view">
+        <Container id="page-document" className="Footer">
+          <RenderBlocks content={siteDataContent} path={path} intl={intl} />
+        </Container>
       </div>
-
-      <div id="Newsletter">
-        <h3 className="Header">{intl.formatMessage(messages.newsletter)}</h3>
-        <form id="newsletter-form" onSubmit={handleSubmit}>
-          <div id="formfield-form-widgets-email">
-            <input
-              id="form-widgets-email"
-              name="EMAIL"
-              className="text-widget required textline-field"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              type="text"
-              placeholder="Je emailadres"
-            />
-          </div>
-          <div className="formControls">
-            <input
-              type="submit"
-              id="form-buttons-subscribe"
-              name="form.buttons.subscribe"
-              className="submit-widget button-field context"
-              value="Inschrijven"
-            />
-          </div>
-        </form>
-        {message && (
-          <div className="message">
-            <p>{message}</p>
-          </div>
-        )}
-      </div>
-
-      <div id="Footer">
-        {FooterColumnsBlocks.map((mainColumnBlock) => {
-          return mainColumnBlock.data.blocks_layout.items.map(
-            (columnBlockId) => {
-              const columnBlock = mainColumnBlock.data.blocks[columnBlockId];
-              return (
-                <div
-                  className="footer-information-column"
-                  key={`column-${columnBlockId}`}
-                >
-                  {columnBlock.blocks_layout?.items.map((itemId) => {
-                    const row = columnBlock.blocks[itemId];
-                    return row ? (
-                      row['@type'] === 'slate' &&
-                      row.value &&
-                      row.value[0] &&
-                      row.value[0].children &&
-                      row.value[0].children[0] ? (
-                        <p key={`row-${itemId}`}>
-                          {row.value[0].children[0].text || ''}
-                        </p>
-                      ) : row['@type'] === 'image' ? (
-                        <Image
-                          src={getScaleUrl(getPath(row.url), 'preview')}
-                          alt={row.alt}
-                          key={`row-${itemId}`}
-                        />
-                      ) : null
-                    ) : null;
-                  })}
-                </div>
-              );
-            },
-          );
-        })}
-        {imagesColumnBlocks.map((columnBlock) => {
-          return (
-            <div
-              className="footer-images-column"
-              key={`column-${columnBlock.id}`}
-            >
-              {columnBlock.data.blocks_layout?.items.map((itemId) => {
-                const column = columnBlock.data.blocks[itemId];
-                return column.blocks_layout.items.map((subItemId) => {
-                  const row = column.blocks[subItemId];
-                  return row ? (
-                    row['@type'] === 'image' ? (
-                      <Image
-                        src={row.url}
-                        alt={row.alt}
-                        key={`row-${subItemId}`}
-                      />
-                    ) : (
-                      <p key={`row-${subItemId}`}>
-                        {row.value && row.value[0].children[0].text}
-                      </p>
-                    )
-                  ) : null;
-                });
-              })}
-            </div>
-          );
-        })}
-      </div>
-    </div>
+    </main>
   );
 };
 
