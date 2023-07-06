@@ -436,58 +436,18 @@
 // }
 
 
+//To hide the title and the description
 #page-document.Footer{
   .documentFirstHeading, .documentDescription{
     display: none !important;
   }
 }
 
-// .section-footer #page-edit .ui.container{
-//   width: 90% !important;
-//   img {
-//     width: 300px !important;
-//   }
-// }
 
-// .section-footer.has-sidebar #page-edit + .columnsBlock {
-//   padding-left: 20vw !important;
-//   padding-right: 20vw !important;
-// }
-
-
-@media (max-width: 992px){
-  #page-document.Footer>.columns-view>.ui.column.grid.column-grid,
-  .section-footer #page-document>.columns-view>.ui.column.grid.column-grid{
-      flex-direction: column;
-    .column-blocks-wrapper {
-      align-self: flex-start !important;
-    }
-  }
-  #page-document.Footer>.columns-view>.ui.column.grid.column-grid >.column-blocks-wrapper,
-  .section-footer #page-document>.columns-view>.ui.column.grid.column-grid>.column-blocks-wrapper{
-    width:100% !important;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 991px) {
-  #page-document.Footer>.columns-view>.ui.column.grid.column-grid,
-  .section-footer #page-document>.columns-view>.ui.column.grid.column-grid{
-    max-width: 750px;
-  }
-}
-@media (max-width: 769px) {
-  #page-document.Footer .columns-view#logos > .ui.column.grid.column-grid > .column.column-blocks-wrapper,
-  .section-footer #page-document .columns-view#logos>.ui.column.grid.column-grid>.column.column-blocks-wrapper
-  {
-    max-width: 50% !important;
-  }
-}
-
-
-
+// Styling for the page widths
 .section-footer #page-document > .columns-view, #page-document.Footer > .columns-view {
   padding-top: 50px;
-  padding-bottom: 90px;
+  padding-bottom: 45px;
   position: relative !important;
   max-width: 100vw !important;
   width: 100vw !important;
@@ -495,7 +455,7 @@
   left: 50% !important;
   margin-right: -50vw !important;
   margin-left: -50vw !important;
-  padding-left: 65px !important;
+  padding-left: 72px !important;
   padding-right: 65px !important;
 }
 .has-sidebar #page-document.Footer > .columns-view {
@@ -519,7 +479,10 @@
 }
 
 
-.section-footer #page-document   .columns-view, #page-document.Footer  .columns-view {
+// General styling for the text elements
+.section-footer #page-document .columns-view,
+#page-document.Footer .columns-view,
+.section-footer #page-edit>.ui.container>.blocks-form{
   h3 {
     font-family: 'FranklinMed', Arial, sans-serif;
     font-size: 17px;
@@ -529,6 +492,15 @@
     text-transform: uppercase;
     margin-bottom: 10px;
     margin-top: 0px;
+    a{
+      border-bottom: 0px !important;
+      font-size: 17px;
+    }
+    a:hover{
+      text-decoration: none !important;
+      color: #494a51 !important;
+      border-bottom:  0px !important;
+    }
   }
   p{
     color: #494a51;
@@ -579,6 +551,7 @@
   }
   .block.image.align.left .image-wrapper-{
     margin: 0px !important;
+    padding-top: 0px !important;
   }
   img:hover{
     opacity: 1;
@@ -589,12 +562,215 @@
     height: 100px;
     opacity: 0.65;
   }
+
 }
 
 
+// Styling about the specific things about the footer site logo
+#page-document.Footer #sitelogo.columns-view{
+  @media (max-width: 769px) {
+      img {
+        margin-bottom: 0px !important;
+      }
+    }
+  @media (min-width: 992px) {
+    img {
+      padding-left: 70px;
+    }
+  }
+  @media (min-width: 1200px) {
+    img{
+      padding-left: 78px;
+    }
+  }
+
+  @media (max-width: 430px){
+    .image-wrapper- {
+      height: 100%;
+
+      img {
+        width: 200%;
+        max-width: 200%;
+        margin: 0px !important;
+      }
+    }
+  }
+}
+
+// Styling about the specific things about the information and logos sections
+#page-document.Footer #information.columns-view,
+#page-document.Footer #logos.columns-view {
+  padding-left: 23px !important;
+  padding-right: 10px !important;
+  .column-blocks-wrapper{
+    padding-left: 4px !important;
+    padding-top: 9px !important;
+  }
+}
+#page-document.Footer #information.columns-view{
+  .column-grid{
+    margin-top: 17px;
+  }
+}
+#page-document.Footer #logos.columns-view {
+  margin-top: 25px;
+}
+
+// #page-document.Footer>.columns-view>.ui.column.grid.column-grid,
+// .section-footer #page-document>.columns-view>.ui.column.grid.column-grid {
+
+//   .column-blocks-wrapper {
+//     padding-left: 0px !important;
+//   }
+// }
 
 
 
 
+// Different viewports
+@media (max-width: 1738px){
+.section-footer #page-document>.columns-view,
+  #page-document.Footer>.columns-view {
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 992px) {
+  .section-footer #page-document>.columns-view,
+  #page-document.Footer>.columns-view {
+    max-width: 750px !important;
+  }
 
+  // .section-footer #page-edit>.columnsBlock>.ui.column.grid.column-grid,
+  #page-document.Footer>.columns-view>.ui.column.grid.column-grid,
+  .section-footer #page-document>.columns-view>.ui.column.grid.column-grid {
+    flex-direction: column !important;
 
+    .column-blocks-wrapper {
+      align-self: flex-start !important;
+
+    }
+  }
+
+  #page-document.Footer>.columns-view>.ui.column.grid.column-grid>.column-blocks-wrapper,
+  .section-footer #page-document>.columns-view>.ui.column.grid.column-grid>.column-blocks-wrapper {
+    width: 100% !important;
+  }
+  #page-document.Footer #logos.columns-view {
+    margin-top: 80px;
+  }
+
+  #page-document.Footer>.columns-view,
+  .section-footer #page-document>.columns-view{
+    padding-left: 53px !important;
+    padding-right: 22px !important;
+    padding-top: 55px !important;
+    padding-bottom: 73px;
+  }
+  #page-document.Footer #sitelogo.columns-view,
+  .section-footer #page-document #sitelogo.columns-view{
+    img{
+      max-width: 330px !important;
+    }
+  }
+    .section-footer #page-document #sitelogo.columns-view,
+    .section-footer #page-document #information.columns-view
+    #page-document.Footer #information.columns-view,
+    #page-document.Footer #logos.columns-view {
+      padding-left: 0px !important;
+
+      .column-blocks-wrapper {
+        padding-left: 27px !important;
+        padding-top: 9px !important;
+        padding-right: 32px !important;
+      }
+    }
+  #page-document.Footer #logos.columns-view,
+  .section-footer #page-document #logos.columns-view {
+    margin-top: 85px;
+  }
+  .section-footer #page-document #information.columns-view
+  #page-document.Footer #information.columns-view{
+    padding-top: 2px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  #page-document.Footer>.columns-view>.ui.column.grid.column-grid,
+  .section-footer #page-document>.columns-view>.ui.column.grid.column-grid {
+    max-width: 750px !important;
+  }
+}
+
+@media (max-width: 769px) {
+
+  #page-document.Footer>.columns-view {
+    // padding-left: 53px !important;
+    // padding-right: 22px !important;
+    padding-top: 17px !important;
+    padding-bottom: 40px !important;
+    padding-left: 19px !important;
+    padding-right: 19px !important;
+  }
+
+  #page-document.Footer #sitelogo.columns-view {
+    img {
+      max-width: 351px !important;
+    }
+  }
+  #page-document.Footer #information.columns-view,
+  #page-document.Footer #logos.columns-view {
+    // padding-left: 0px !important;
+
+    .column-blocks-wrapper {
+      padding-left: 15px !important;
+      padding-top: 0px !important;
+      padding-right: 32px !important;
+    }
+  }
+
+  .section-footer #page-document>.columns-view,
+    #page-document.Footer>.columns-view {
+      max-width: 100% !important;
+    }
+
+  #page-document.Footer .columns-view#logos>.ui.column.grid.column-grid>.column.column-blocks-wrapper,
+  .section-footer #page-document .columns-view#logos>.ui.column.grid.column-grid>.column.column-blocks-wrapper {
+    max-width: 50% !important;
+  }
+
+  #page-document.Footer #information.columns-view,
+  #page-document.Footer #logos.columns-view {
+    padding-left: 33px !important;
+    padding-right: 33px !important;
+    .column-grid, .column-blocks-wrapper{
+      margin-top: 0px;
+      padding-top: 0px;
+      margin-bottom: 22px;
+    }
+  }
+  #page-document.Footer #logos.columns-view {
+    margin-top: 58px;
+    .image-wrapper-small{
+
+    }
+  }
+  //This is the custom css class that I gave in the column footer of the Logo
+  #page-document.Footer #sitelogo.columns-view {
+    padding-left: 19px !important;
+    padding-right: 19px !important;
+  }
+
+  .section-footer #page-document .columns-view,
+  #page-document.Footer > .columns-view,
+  .section-footer #page-edit>.ui.container>.blocks-form {
+    padding-top: 0px;
+
+    .column-grid{
+      margin-bottom: 0px;
+      margin-top: 8px;
+    }
+    .column-blocks-wrapper{
+      padding-top: 8px;
+    }
+  }
+}
