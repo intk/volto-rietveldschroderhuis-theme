@@ -436,6 +436,11 @@
 // }
 
 
+
+
+
+
+
 //To hide the title and the description
 #page-document.Footer{
   .documentFirstHeading, .documentDescription{
@@ -443,10 +448,109 @@
   }
 }
 
+// General styling for the text elements
+.section-footer #page-document .columns-view,
+#page-document.Footer .columns-view,
+.section-footer #page-edit>.ui.container>.blocks-form {
+  h3 {
+    font-family: 'FranklinMed', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 36px;
+    letter-spacing: 0.85px;
+    color: #494a51;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 0px;
+
+    a {
+      border-bottom: 0px !important;
+      font-size: 17px;
+    }
+
+    a:hover {
+      text-decoration: none !important;
+      color: #494a51 !important;
+      border-bottom: 0px !important;
+    }
+  }
+
+  p {
+    color: #494a51;
+    font-size: 18px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    line-height: 28px;
+    letter-spacing: normal;
+  }
+
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    color: @brand-primary-text;
+    line-height: 28px;
+  }
+
+  a:hover,
+  a:focus {
+    color: @brand-primary-red;
+    border-bottom: 1px solid @brand-primary-red !important;
+  }
+
+  a.titleLink {
+    border: 0px !important;
+    font-size: 17px !important;
+  }
+
+  a.titleLink:hover {
+    color: @brand-primary-text !important;
+    border: 0px !important;
+  }
+
+  .block.image.align.left img:not(.small) {
+    max-width: 430px !important;
+  }
+
+  .image-wrapper-small {
+    margin-bottom: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  img.small {
+    max-width: 150px !important;
+    padding-top: 15px;
+    opacity: 0.65;
+    min-height: 150px;
+    margin-bottom: 0px !important;
+    height: 105px !important;
+    aspect-ratio: 16/9 !important;
+  }
+
+  .block.image.align.left .image-wrapper- {
+    margin: 0px !important;
+    padding-top: 0px !important;
+  }
+
+  img:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .photo-credit {
+    padding-top: 10px;
+    height: 100px;
+    opacity: 0.65;
+  }
+}
+
+
 
 // Styling for the page widths
 .section-footer #page-document > .columns-view, #page-document.Footer > .columns-view {
-  padding-top: 50px;
+  background-color: #f9fafb !important;
+  padding-top: 49.5px;
   padding-bottom: 45px;
   position: relative !important;
   max-width: 100vw !important;
@@ -479,109 +583,43 @@
 }
 
 
-// General styling for the text elements
-.section-footer #page-document .columns-view,
-#page-document.Footer .columns-view,
-.section-footer #page-edit>.ui.container>.blocks-form{
-  h3 {
-    font-family: 'FranklinMed', Arial, sans-serif;
-    font-size: 17px;
-    line-height: 36px;
-    letter-spacing: 0.85px;
-    color: #494a51;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    margin-top: 0px;
-    a{
-      border-bottom: 0px !important;
-      font-size: 17px;
-    }
-    a:hover{
-      text-decoration: none !important;
-      color: #494a51 !important;
-      border-bottom:  0px !important;
-    }
-  }
-  p{
-    color: #494a51;
-    font-size: 18px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    line-height: 28px;
-    letter-spacing: normal;
-  }
-
-  a {
-    font-size: 18px;
-    text-decoration: none;
-    border-bottom: 1px solid black;
-    color: @brand-primary-text;
-    line-height: 28px;
-  }
-
-  a:hover,
-  a:focus {
-    color: @brand-primary-red;
-    border-bottom: 1px solid @brand-primary-red !important;
-  }
-  a.titleLink{
-    border: 0px !important;
-    font-size: 17px !important;
-  }
-  a.titleLink:hover{
-    color: @brand-primary-text !important;
-    border: 0px !important;
-  }
-  .block.image.align.left img:not(.small){
-    max-width: 430px !important;
-  }
-  .image-wrapper-small{
-    margin-bottom: 0px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  img.small{
-    max-width: 150px !important;
-    padding-top: 15px;
-    opacity: 0.65;
-    min-height: 150px;
-    margin-bottom: 0px !important;
-  }
-  .block.image.align.left .image-wrapper-{
-    margin: 0px !important;
-    padding-top: 0px !important;
-  }
-  img:hover{
-    opacity: 1;
-    cursor: pointer;
-  }
-  .photo-credit {
-    padding-top: 10px;
-    height: 100px;
-    opacity: 0.65;
-  }
-
-}
 
 
-// Styling about the specific things about the footer site logo
+// Styling about the specific things about the footer SITE LOGO
 .section-footer #page-document #sitelogo.columns-view,
 #page-document.Footer #sitelogo.columns-view{
-  @media (max-width: 769px) {
-      img {
-        margin-bottom: 0px !important;
-      }
+
+  @media (min-width: 1200px) {
+    img {
+      padding-left: 78.5px;
+      padding-top: 2.3px !important;
     }
+  }
+
   @media (min-width: 992px) {
     img {
       padding-left: 70px;
     }
   }
-  @media (min-width: 1200px) {
-    img{
-      padding-left: 78px;
+
+  @media (max-width: 992px) {
+    #page-document.Footer #sitelogo.columns-view,
+      .section-footer #page-document #sitelogo.columns-view {
+        img {
+          max-width: 330px !important;
+        }
+      }
+  }
+
+  @media (max-width: 769px) {
+    #page-document.Footer #sitelogo.columns-view {
+      padding-left: 19px !important;
+      padding-right: 19px !important;
+
+      img {
+        max-width: 351px !important;
+        margin-bottom: 0px !important;
+      }
     }
   }
 
@@ -598,14 +636,15 @@
   }
 }
 
-// Styling about the specific things about the information and logos sections
+
+// Styling about the specific things about the INFORMATION and LOGOS sections
 #page-document.Footer #information.columns-view,
 #page-document.Footer #logos.columns-view {
-  padding-left: 23px !important;
+  padding-left: 4px !important;
   padding-right: 10px !important;
   .column-blocks-wrapper{
-    padding-left: 4px !important;
-    padding-top: 9px !important;
+    padding-left: 25px !important;
+    padding-top: 10px !important;
   }
 }
 #page-document.Footer #information.columns-view{
@@ -617,24 +656,92 @@
   margin-top: 25px;
 }
 
-// #page-document.Footer>.columns-view>.ui.column.grid.column-grid,
-// .section-footer #page-document>.columns-view>.ui.column.grid.column-grid {
-
-//   .column-blocks-wrapper {
-//     padding-left: 0px !important;
-//   }
-// }
+@media (max-width: 992px) {
+  #page-document.Footer #logos.columns-view {
+    margin-top: 80px;
+  }
 
 
+  .section-footer #page-document #sitelogo.columns-view,
+  .section-footer #page-document #information.columns-view #page-document.Footer #information.columns-view,
+  #page-document.Footer #logos.columns-view {
+    padding-left: 0px !important;
 
+    .column-blocks-wrapper {
+      padding-left: 13px !important;
+      padding-top: 9px !important;
+      padding-right: 32px !important;
+    }
+  }
+
+  #page-document.Footer #logos.columns-view,
+  .section-footer #page-document #logos.columns-view {
+    margin-top: 85px;
+  }
+
+  .section-footer #page-document #information.columns-view #page-document.Footer #information.columns-view {
+    padding-top: 2px !important;
+  }
+}
+
+@media (max-width: 769px) {
+  #page-document.Footer #information.columns-view,
+    #page-document.Footer #logos.columns-view {
+
+      .column-blocks-wrapper {
+        padding-left: 15px !important;
+        padding-top: 0px !important;
+        padding-right: 32px !important;
+      }
+    }
+
+    #page-document.Footer #logos.columns-view {
+    margin-top: 58px;
+  }
+
+  #page-document.Footer .columns-view#logos>.ui.column.grid.column-grid>.column.column-blocks-wrapper,
+  .section-footer #page-document .columns-view#logos>.ui.column.grid.column-grid>.column.column-blocks-wrapper {
+    max-width: 50% !important;
+  }
+
+  #page-document.Footer #information.columns-view,
+  #page-document.Footer #logos.columns-view {
+    padding-left: 33px !important;
+    padding-right: 33px !important;
+
+    .column-grid,
+    .column-blocks-wrapper {
+      margin-top: 0px;
+      padding-top: 0px;
+      margin-bottom: 22px;
+    }
+  }
+}
+
+
+
+
+
+
+
+// For All widths
+#page-document.Footer>.columns-view>.ui.column.grid.column-grid,
+.section-footer #page-document>.columns-view>.ui.column.grid.column-grid {
+  .column-blocks-wrapper {
+    padding-top: 7px;
+  }
+}
 
 // Different viewports
 @media (max-width: 1738px){
 .section-footer #page-document>.columns-view,
   #page-document.Footer>.columns-view {
-    padding-bottom: 70px;
+    padding-bottom: 68px;
   }
 }
+
+
+
 @media (max-width: 992px) {
   .section-footer #page-document>.columns-view,
   #page-document.Footer>.columns-view {
@@ -656,9 +763,7 @@
   .section-footer #page-document>.columns-view>.ui.column.grid.column-grid>.column-blocks-wrapper {
     width: 100% !important;
   }
-  #page-document.Footer #logos.columns-view {
-    margin-top: 80px;
-  }
+
 
   #page-document.Footer>.columns-view,
   .section-footer #page-document>.columns-view{
@@ -667,33 +772,10 @@
     padding-top: 55px !important;
     padding-bottom: 73px;
   }
-  #page-document.Footer #sitelogo.columns-view,
-  .section-footer #page-document #sitelogo.columns-view{
-    img{
-      max-width: 330px !important;
-    }
-  }
-    .section-footer #page-document #sitelogo.columns-view,
-    .section-footer #page-document #information.columns-view
-    #page-document.Footer #information.columns-view,
-    #page-document.Footer #logos.columns-view {
-      padding-left: 0px !important;
-
-      .column-blocks-wrapper {
-        padding-left: 27px !important;
-        padding-top: 9px !important;
-        padding-right: 32px !important;
-      }
-    }
-  #page-document.Footer #logos.columns-view,
-  .section-footer #page-document #logos.columns-view {
-    margin-top: 85px;
-  }
-  .section-footer #page-document #information.columns-view
-  #page-document.Footer #information.columns-view{
-    padding-top: 2px !important;
-  }
 }
+
+
+
 
 @media (min-width: 769px) and (max-width: 991px) {
   #page-document.Footer>.columns-view>.ui.column.grid.column-grid,
@@ -702,62 +784,17 @@
   }
 }
 
+
+
 @media (max-width: 769px) {
-
-  #page-document.Footer>.columns-view {
-    padding-top: 17px !important;
-    padding-bottom: 40px !important;
-    padding-left: 19px !important;
-    padding-right: 19px !important;
-  }
-
-  #page-document.Footer #sitelogo.columns-view {
-    img {
-      max-width: 351px !important;
-    }
-  }
-  #page-document.Footer #information.columns-view,
-  #page-document.Footer #logos.columns-view {
-    // padding-left: 0px !important;
-
-    .column-blocks-wrapper {
-      padding-left: 15px !important;
-      padding-top: 0px !important;
-      padding-right: 32px !important;
-    }
-  }
-
   .section-footer #page-document>.columns-view,
     #page-document.Footer>.columns-view {
       max-width: 100% !important;
+      padding-top: 17px !important;
+      padding-bottom: 40px !important;
+      padding-left: 19px !important;
+      padding-right: 19px !important;
     }
-
-  #page-document.Footer .columns-view#logos>.ui.column.grid.column-grid>.column.column-blocks-wrapper,
-  .section-footer #page-document .columns-view#logos>.ui.column.grid.column-grid>.column.column-blocks-wrapper {
-    max-width: 50% !important;
-  }
-
-  #page-document.Footer #information.columns-view,
-  #page-document.Footer #logos.columns-view {
-    padding-left: 33px !important;
-    padding-right: 33px !important;
-    .column-grid, .column-blocks-wrapper{
-      margin-top: 0px;
-      padding-top: 0px;
-      margin-bottom: 22px;
-    }
-  }
-  #page-document.Footer #logos.columns-view {
-    margin-top: 58px;
-    .image-wrapper-small{
-
-    }
-  }
-  //This is the custom css class that I gave in the column footer of the Logo
-  #page-document.Footer #sitelogo.columns-view {
-    padding-left: 19px !important;
-    padding-right: 19px !important;
-  }
 
   .section-footer #page-document .columns-view,
   #page-document.Footer > .columns-view,

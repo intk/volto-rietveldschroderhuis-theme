@@ -368,7 +368,6 @@ p {
       margin-bottom: 0px !important;
       margin-right: 1em !important;
       margin-left: 1em !important;
-      // float: left;
     }
     img {
       max-width: 100%;
