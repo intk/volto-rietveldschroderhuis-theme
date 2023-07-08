@@ -524,12 +524,12 @@
 
   img.small {
     max-width: 150px !important;
-    padding-top: 15px;
+    // padding-top: 15px;
     opacity: 0.65;
-    min-height: 150px;
     margin-bottom: 0px !important;
-    height: 105px !important;
-    aspect-ratio: 16/9 !important;
+    padding: 0% !important;
+    margin: 0% !important;
+    width: 150px;
   }
 
   .block.image.align.left .image-wrapper- {
@@ -542,10 +542,11 @@
     cursor: pointer;
   }
 
-  .photo-credit {
+  #photo-credit {
+    font-size: 15px !important;
     padding-top: 10px;
-    height: 100px;
     opacity: 0.65;
+    margin-right: 20px;
   }
 }
 
@@ -595,7 +596,7 @@
 
   @media (max-width: 430px) {
       .image-wrapper- {
-        height: 100%;
+      //   height: 100%;
 
       img {
         width: 200%;
@@ -604,7 +605,7 @@
       }
     }
   }
-  @media only screen and (min-width: 430px) and (max-width: 769px) {
+  @media only screen and (max-width: 769px) {
     padding-left: 15px !important;
     padding-right: 15px !important;
 
@@ -665,6 +666,7 @@
     padding-right: 30px !important;
 
     .column-grid{
+      justify-content: space-between;
       margin-top: 0px;
       padding-top: 0px;
       margin-bottom: 22px;
@@ -678,11 +680,27 @@
       margin-bottom: 22px;
       padding-left: 0px !important;
       padding-right: 0px !important;
+
+      image-wrapper-small{
+        padding-left: 30px;
+        padding-right: 30px;
+
+        img{
+          margin-right: 0px !important;
+          padding-top: 0px !important;
+        }
+      }
+    }
+    .column-blocks-wrapper.centralmuseumlogo {
+      padding-left: 30px !important;
+      #photo-credit{
+        padding-top: 24px !important;
+      }
     }
   }
 
   #page-document.Footer #logos.columns-view {
-    margin-top: 58px;
+    margin-top: 76px;
   }
 
   #page-document.Footer .columns-view#logos>.ui.column.grid.column-grid>.column.column-blocks-wrapper,
@@ -736,7 +754,7 @@
   #page-document.Footer>.columns-view {
     // max-width: 100% !important;
     padding-top: 36px !important;
-    padding-bottom: 39px !important;
+    padding-bottom: 33px !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
