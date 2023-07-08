@@ -120,7 +120,7 @@ const Footer = ({ intl }) => {
   };
 
   return (
-    <main>
+    <main id='Footer-wrapper'>
       {/* <div id="Tickets">
           <h3 className="Header">{intl.formatMessage(messages.ticket)}</h3>
           <div className="buttons">
