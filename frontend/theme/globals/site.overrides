@@ -812,7 +812,7 @@ p {
 }
 
 // listing default
-#view #page-document .block.listing.default #page-listing {
+#view #page-document .block.listing.default #page-listing, #page-edit .block.listing.default #page-listing {
   position: relative;
   width: 100vw;
   right: 50%;
@@ -992,10 +992,11 @@ p {
 }
 
 // listing block pagination
-#view #page-document .pagination-wrapper{
+#view #page-document .pagination-wrapper, #page-edit .pagination-wrapper{
   padding-bottom: 89px;
 }
-#view #page-document .pagination-wrapper a {
+#view #page-document .pagination-wrapper a,
+#page-edit .pagination-wrapper a{
   font-family: 'FranklinBook', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 19px;
