@@ -114,7 +114,7 @@
     margin-top: 45px;
     text-transform: none;
     text-align: center;
-    padding-left: 10px;
+    // padding-left: 10px;
   }
 
   #newsletter-form{
@@ -130,7 +130,7 @@
         width: 98%;
         color: #848484;
         line-height: 22.8px;
-        padding: 17px 20px 13px;
+        padding: 16.5px 20px 13.5px;
         font-family: 'FranklinBook', Arial, Helvetica;
         letter-spacing: 0.8px;
         font-size: 16px;
@@ -141,7 +141,7 @@
     }
     #form-buttons-subscribe {
       background-color: white;
-      padding: 15px 15px 14px;
+      padding: 15px 15px 12px;
       color: black;
       width: 100%;
       font-family: 'FranklinMed', Arial, Helvetica;
@@ -157,52 +157,106 @@
       cursor: pointer;
     }
   }
+  @media only screen and (max-width: 769px) {
+    padding-left: 0px;
+    h3.Header {
+      font-size: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 7px;
+    }
+        #newsletter-form {
+          flex-direction: column;
+          align-items: center;
+          padding-left: 30px;
+          padding-right: 30px;
+
+          #formfield-form-widgets-email {
+            width: 100% !important;
+            margin-right: 0px;
+          }
+
+          .formControls {
+            width: 100% !important;
+
+            #form-buttons-subscribe {
+              width: 100% !important;
+            }
+          }
+        }
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+          padding-right: 0px;
+          padding-left: 0px;
+          padding-top: 15px;
+
+          .Header {
+            margin-top: 30px;
+            margin-bottom: 20px;
+          }
+
+          .message {
+            width: 100% !important;
+          }
+
+          #newsletter-form {
+            flex-direction: column;
+            align-items: center;
+            padding-left: 45px;
+            padding-right: 45px;
+
+            #formfield-form-widgets-email {
+              width: 100% !important;
+              margin-right: 0px;
+            }
+
+            .formControls {
+              width: 100% !important;
+
+              #form-buttons-subscribe {
+                width: 100% !important;
+              }
+            }
+          }
+        }
+
+  @media only screen and (min-width: 992px){
+      padding-left: 25px;
+
+      #newsletter-form{
+        padding-right: 5px;
+      }
+
+      #newsletter-form #form-buttons-subscribe{
+        line-height: 26px !important;
+      }
+      .Header {
+        margin-top: 43px;
+        margin-bottom: 19px;
+      }
+  }
 
   @media (max-width: 1223px){
     #formfield-form-widgets-email{
-      width: 35% !important;
+      width: 35.2% !important;
     }
     .formControls {
-      width: 14% !important;
+      width: 14.2% !important;
     }
   }
 
-  @media (max-width: 992px){
-    padding-right: 0px;
-    padding-left: 0px;
-    padding-top: 15px;
-    .Header{
-      margin-top: 30px;
-      margin-bottom: 20px;
-    }
-    .message {
-      width: 100% !important;
-    }
-    #newsletter-form{
-      flex-direction: column;
-      align-items: center;
-      padding-left: 30px;
-      padding-right: 30px;
-
-      #formfield-form-widgets-email {
-        width: 100% !important;
-        margin-right: 0px;
+  @media only screen and (min-width: 1223px) {
+    #formfield-form-widgets-email {
+        width: 28.2% !important;
       }
+
       .formControls {
-        width: 100% !important;
-        #form-buttons-subscribe{
-          width: 100% !important;
-        }
+        width: 11.2% !important;
       }
-    }
   }
-  @media (max-width: 769px) {
-    h3.Header {
-        font-size: 25.2px;
-        margin-bottom: 7px;
-        margin-top: 18px;
-    }
-  }
+
+
+
 }
 
 //   //bottom section
