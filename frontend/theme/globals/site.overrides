@@ -514,6 +514,7 @@ p {
     text-justify: inter-word !important;
     padding-top: 0px;
     font-size: 24px !important;
+    color: #494A51 !important;
   }
   @media (max-width: 992px){
     .documentFirstHeading, .documentDescription{
@@ -524,8 +525,8 @@ p {
         left: 50% !important;
         margin-right: -50vw !important;
         margin-left: -50vw !important;
-        padding-left: 125px !important;
-        padding-right: 125px !important;
+        padding-left: 133px !important;
+        padding-right: 133px !important;
     }
     .documentFirstHeading{
       margin-top: 15px !important;
@@ -543,8 +544,8 @@ p {
   @media (max-width: 768px) {
     .documentFirstHeading{
       text-align: center !important;
-      padding-top: 10px !important;
-      margin-bottom: 15px !important;
+      padding-top: 8px !important;
+      margin-bottom: 18px !important;
     }
   }
 }
@@ -915,7 +916,7 @@ p {
         width: 100%;
         object-fit: cover;
         height: auto;
-        aspect-ratio: 1.5;
+        aspect-ratio: 1.4966;
       }
     }
   }
@@ -959,7 +960,7 @@ p {
   @media only screen and (max-width: 767px) {
     // padding-left: 25px;
     // padding-right: 25px;
-    padding: 0px 117px 0px 118px;
+    padding: 0px 118px 0px 117.5px;
     margin-top: 30px;
     #content-core .listing-items {
       width: 100% !important;
@@ -976,6 +977,9 @@ p {
 }
 
 // listing block pagination
+#view #page-document .pagination-wrapper{
+  padding-bottom: 89px;
+}
 #view #page-document .pagination-wrapper a {
   font-family: 'FranklinBook', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -985,7 +989,10 @@ p {
   color: #282931;
   border: 1px solid #ffffff !important;
   border-bottom: 1px solid #282931 !important;
-  padding: 5px 9px;
+  padding-top: 5px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-bottom: 0px;
   min-width: 5px !important;
   border-radius: 1px !important;
 
@@ -1001,6 +1008,8 @@ p {
 }
 #view #page-document .pagination-wrapper a:not(.active):not(:hover){
   border-bottom: 0px !important;
+  font-size: 16px;
+  color: #00000099;
 }
 #view #page-document .pagination-wrapper a.disabled{
   display: none;
