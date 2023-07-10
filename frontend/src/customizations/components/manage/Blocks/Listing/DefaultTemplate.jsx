@@ -86,55 +86,56 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                   />
                 </UniversalLink>
               )}
-              {['Event'].includes(item['@type']) ? (
-                <div className="listing-date-time">
-                  <div
-                    className={`listing-dates-wrapper ${
-                      item.start &&
-                      !item.open_end &&
-                      new Date(item.end) < new Date()
-                        ? 'expired'
-                        : ''
-                    }`}
-                  >
-                    {item.start && !item.open_end ? (
-                      <span className="listing-dates">
-                        {getDateRangeDescription(
-                          intl.locale,
-                          item.start,
-                          item.end,
-                        )}
-                      </span>
-                    ) : (
-                      item.start && (
-                        <span className="listing-dates">
-                          {getDateRangeDescription(intl.locale, item.start)}
-                        </span>
-                      )
-                    )}
-                    {item.start && !item.whole_day && (
-                      <span className="listing-dates">
-                        {', '}
-                        {getHourRangeDescription(
-                          intl.locale,
-                          item.start,
-                          item.end,
-                          item.open_end,
-                          item.whole_day,
-                        )}{' '}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              ) : (
-                ''
-              )}
+
               <div
                 id="jaarverslag-title"
                 className={`item-title ${
                   item.review_state === 'private' ? 'private' : ''
                 }`}
               >
+                {['Event'].includes(item['@type']) ? (
+                  <div className="listing-date-time">
+                    <div
+                      className={`listing-dates-wrapper ${
+                        item.start &&
+                        !item.open_end &&
+                        new Date(item.end) < new Date()
+                          ? 'expired'
+                          : ''
+                      }`}
+                    >
+                      {item.start && !item.open_end ? (
+                        <span className="listing-dates">
+                          {getDateRangeDescription(
+                            intl.locale,
+                            item.start,
+                            item.end,
+                          )}
+                        </span>
+                      ) : (
+                        item.start && (
+                          <span className="listing-dates">
+                            {getDateRangeDescription(intl.locale, item.start)}
+                          </span>
+                        )
+                      )}
+                      {item.start && !item.whole_day && (
+                        <span className="listing-dates">
+                          {', '}
+                          {getHourRangeDescription(
+                            intl.locale,
+                            item.start,
+                            item.end,
+                            item.open_end,
+                            item.whole_day,
+                          )}{' '}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                ) : (
+                  ''
+                )}
                 <h2>
                   <UniversalLink item={item}>{item.title}</UniversalLink>
                 </h2>
