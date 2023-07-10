@@ -120,7 +120,7 @@ const Footer = ({ intl }) => {
   };
 
   return (
-    <main id="Footer-wrapper">
+    <Container id="Footer-wrapper">
       {/* <div id="Tickets">
           <h3 className="Header">{intl.formatMessage(messages.ticket)}</h3>
           <div className="buttons">
@@ -171,7 +171,7 @@ const Footer = ({ intl }) => {
           <RenderBlocks content={siteDataContent} path={path} intl={intl} />
         </Container>
       </div>
-    </main>
+    </Container>
   );
 };
 
