@@ -61,6 +61,11 @@ msgstr ""
 msgid "Column Two Title Link"
 msgstr ""
 
+#: components/Blocks/Quoteblock/schema
+# defaultMessage: Headline
+msgid "Headline"
+msgstr ""
+
 #: components/Blocks/SiteData/schema
 # defaultMessage: Image caption
 msgid "ImageCaption"
@@ -74,6 +79,16 @@ msgstr ""
 #: components/Blocks/SiteData/schema
 # defaultMessage: undefined
 msgid "Site Logo"
+msgstr ""
+
+#: components/Blocks/Quoteblock/templates
+# defaultMessage: column
+msgid "column"
+msgstr ""
+
+#: components/Blocks/Quoteblock/templates
+# defaultMessage: columns
+msgid "columns"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
