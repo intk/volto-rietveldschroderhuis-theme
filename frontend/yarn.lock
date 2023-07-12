@@ -1800,6 +1800,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eeacms/volto-listing-block@npm:4.2.1":
+  version: 4.2.1
+  resolution: "@eeacms/volto-listing-block@npm:4.2.1"
+  dependencies:
+    "@eeacms/volto-widget-theme-picker": ^1.0.1
+    react-resize-detector: 7.1.2
+    react-slick: 0.29.0
+    slick-carousel: 1.8.1
+  checksum: 173f5597a847fde3b7c9a1e24c0620b34c8d9a48c0fb7103af114ee7e2127ec83d96c5b9beae6da9b9c864f7034183595ee905bb53080dbe16b0f9e41e9355a4
+  languageName: node
+  linkType: hard
+
 "@eeacms/volto-matomo@npm:*":
   version: 4.1.0
   resolution: "@eeacms/volto-matomo@npm:4.1.0"
@@ -1829,6 +1841,13 @@ __metadata:
   version: 1.1.0
   resolution: "@eeacms/volto-widget-theme-picker@npm:1.1.0"
   checksum: 046c44e5f270768dae2ad3a2838be5681a28ddbc77f0228d59f834f055394a682cb50953ce837317bff2a58ac5aa2ba171ff9933653129d44793d724b78a1f99
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-widget-theme-picker@npm:^1.0.1":
+  version: 1.1.1
+  resolution: "@eeacms/volto-widget-theme-picker@npm:1.1.1"
+  checksum: 744f7993ab5b75a1248da95d02142b6a5cf1db17fae69d779818863745f0e8d7ba3c070619e7a56401a2034b0648c268a7bcab6239b0510e27f0431d5b0ee8a4
   languageName: node
   linkType: hard
 
@@ -11807,6 +11826,7 @@ __metadata:
     "@eeacms/volto-block-image-cards": ^1.0.0
     "@eeacms/volto-columns-block": ^6.0.2
     "@eeacms/volto-hero-block": ^1.0.0
+    "@eeacms/volto-listing-block": 4.2.1
     "@eeacms/volto-matomo": "*"
     "@kitconcept/volto-blocks-grid": "*"
     "@kitconcept/volto-button-block": "*"
@@ -20009,6 +20029,18 @@ __metadata:
     react: ^16.0.0 || ^17.0.0
     react-dom: ^16.0.0 || ^17.0.0
   checksum: f2a7b0fbd43fb872f9f283fa9a5ea796c33daeb254ea368a46082a44c0c51e2492e8e67e88df9ca098072e541dc2d1ff5653edc26ed95d7a2da138cd8975a6a1
+  languageName: node
+  linkType: hard
+
+"react-resize-detector@npm:7.1.2":
+  version: 7.1.2
+  resolution: "react-resize-detector@npm:7.1.2"
+  dependencies:
+    lodash: ^4.17.21
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 55f4abad7f7523d16b081b5ab20f75c539a54a08253ce7e9df473d48386f42ceca6c31584ba9fa26e3528b498ef6685ec77fb9a22cffc97df05fb326d0bf1b26
   languageName: node
   linkType: hard
 
