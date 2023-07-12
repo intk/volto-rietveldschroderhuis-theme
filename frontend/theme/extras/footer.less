@@ -171,54 +171,54 @@
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
-          padding-right: 0px;
-          padding-left: 0px;
-          padding-top: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 15px;
 
-          .Header {
-            margin-top: 30px;
-            margin-bottom: 20px;
-          }
+    .Header {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
 
-          .message {
-            width: 100% !important;
-          }
+    .message {
+      width: 100% !important;
+    }
 
-          #newsletter-form {
-            flex-direction: column;
-            align-items: center;
-            padding-left: 45px;
-            padding-right: 45px;
+    #newsletter-form {
+      flex-direction: column;
+      align-items: center;
+      padding-left: 45px;
+      padding-right: 45px;
 
-            #formfield-form-widgets-email {
-              width: 100% !important;
-              margin-right: 0px;
-            }
+      #formfield-form-widgets-email {
+        width: 100% !important;
+        margin-right: 0px;
+      }
 
-            .formControls {
-              width: 100% !important;
+      .formControls {
+        width: 100% !important;
 
-              #form-buttons-subscribe {
-                width: 100% !important;
-              }
-            }
-          }
+        #form-buttons-subscribe {
+          width: 100% !important;
         }
+      }
+    }
+  }
 
   @media only screen and (min-width: 992px){
-      padding-left: 25px;
+    padding-left: 25px;
 
-      #newsletter-form{
-        padding-right: 5px;
-      }
+    #newsletter-form{
+      padding-right: 5px;
+    }
 
-      #newsletter-form #form-buttons-subscribe{
-        line-height: 26px !important;
-      }
-      .Header {
-        margin-top: 43px;
-        margin-bottom: 19px;
-      }
+    #newsletter-form #form-buttons-subscribe{
+      line-height: 26px !important;
+    }
+    .Header {
+      margin-top: 43px;
+      margin-bottom: 19px;
+    }
   }
 
   @media (max-width: 1223px){
@@ -235,9 +235,9 @@
         width: 28.2% !important;
       }
 
-      .formControls {
-        width: 11.2% !important;
-      }
+    .formControls {
+      width: 11.2% !important;
+    }
   }
 
 }
@@ -263,8 +263,7 @@
 // General styling for the text elements
 //
 .section-footer #page-document .columns-view,
-#page-document.Footer .columns-view,
-.section-footer #page-edit>.ui.container>.blocks-form {
+#page-document.Footer .columns-view, .section-footer #page-edit>.ui.container>.blocks-form {
   h3 {
     font-family: 'FranklinMed', Arial, sans-serif;
     font-size: 17px;
@@ -373,31 +372,31 @@
   width: 100% !important;
 }
 
-#page-document.Footer>.columns-view{
-  position: static;
-  width: 100%;
-}
+// #page-document.Footer>.columns-view{
+//   position: static;
+//   width: 100%;
+// }
 //
 // Special Styling for the Footer "Page"
 //
-.section-footer #page-document:not(.Footer)>.columns-view,
+// .section-footer #page-document:not(.Footer)>.columns-view,
 // #page-document.Footer>.columns-view,
-.section-footer #page-edit:not(.Footer)>.ui.container>.blocks-form{
-  position: relative !important;
-  max-width: 100vw !important;
-  width: 100vw !important;
-  right: 50% !important;
-  left: 50% !important;
-  margin-right: -50vw !important;
-  margin-left: -50vw !important;
-}
+// .section-footer #page-edit:not(.Footer)>.ui.container .ui.drag.block.inner.columnsBlock{
+//   position: relative !important;
+//   max-width: 100vw !important;
+//   width: 100vw !important;
+//   right: 50% !important;
+//   left: 50% !important;
+//   margin-right: -50vw !important;
+//   margin-left: -50vw !important;
+// }
 
-.section-footer #page-document:not(.Footer) > .columns-view{
-  padding: 49.5px 30px 72px 30px !important;
-}
-.section-footer #page-edit>.ui.container>.blocks-form {
-  padding: 50px 15vw 90px !important;
-}
+// .section-footer #page-document:not(.Footer) > .columns-view{
+//   padding: 49.5px 30px 72px 30px !important;
+// }
+// .section-footer #page-edit>.ui.container>.blocks-form {
+//   padding: 50px 15vw 90px !important;
+// }
 
 //
 // Styling about the specific things about the footer SITE LOGO
@@ -429,7 +428,7 @@
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
     padding-bottom: 7px;
-    padding-left: 0px !important;
+    padding-left: 7px !important;
     .column-grid{
       padding-left: 30px;
     }
@@ -491,7 +490,7 @@
     }
     .column-blocks-wrapper.centralmuseumlogo {
       .image-wrapper-small{
-        padding-left: 30px;
+        padding-left: 26px;
         #photo-credit{
           padding-top: 24px !important;
         }
@@ -521,7 +520,7 @@
     padding-left: 12px !important;
     padding-right: 28px !important;
     .column-blocks-wrapper {
-      padding-left: 33px !important;
+      padding-left: 40px !important;
       padding-top: 9px !important;
       padding-right: 17px !important;
     }
@@ -582,9 +581,13 @@
 //
 //Column Block General styling
 //
-#page-document.ui.container.Footer{
-  margin: 0% !important;
-  width: 100% !important;
+#page-document.ui.container.Footer > .columns-view{
+  position: relative;
+  width: 100vw;
+  right: 50%;
+  left: 50%;
+  margin-right: -50vw !important;
+  margin-left: -50vw !important;
 }
 
 
@@ -601,13 +604,13 @@
     // max-width: 100% !important;
     padding-top: 36px !important;
     padding-bottom: 21px !important;
-    padding-left: 15px !important;
+    padding-left: 22px !important;
     padding-right: 15px !important;
   }
 
   .section-footer #page-document .columns-view,
   #page-document.Footer>.columns-view,
-  .section-footer #page-edit>.ui.container>.blocks-form {
+        .section-footer #page-edit>.ui.container>.blocks-form {
     padding-top: 0px;
 
     .column-grid {
@@ -646,7 +649,6 @@
           padding-left: 0% !important;
           padding-right: 0% !important;
         }
-
         .column-grid {
           margin-left: 0% !important;
           margin-right: 0% !important;
@@ -664,7 +666,7 @@
     max-width: 750px !important;
   }
 
-  .section-footer #page-edit>.columnsBlock>.ui.column.grid.column-grid,
+        .section-footer #page-edit>.columnsBlock>.ui.column.grid.column-grid,
   #page-document.Footer>.columns-view>.ui.column.grid.column-grid,
   .section-footer #page-document>.columns-view>.ui.column.grid.column-grid {
     flex-direction: column !important;
@@ -702,7 +704,7 @@
   @media (min-width: 1200px) {
   .section-footer #page-document>.columns-view,
     #page-document.Footer>.columns-view {
-      padding-left: 35px !important;
+      padding-left: 42px !important;
       padding-bottom: 55px;
   }
 }
