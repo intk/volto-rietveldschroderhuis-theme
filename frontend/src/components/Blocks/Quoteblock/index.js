@@ -2,7 +2,6 @@ import quoteSVG from '@plone/volto/icons/quote.svg';
 
 import QuoteblockView from './QuoteblockView';
 import QuoteblockEdit from './QuoteblockEdit';
-import BlockRenderer from './BlockRenderer';
 
 const installQuoteblock = (config) => {
   config.blocks.blocksConfig.Quoteblock = {
