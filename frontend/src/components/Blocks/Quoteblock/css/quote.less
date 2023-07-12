@@ -1,0 +1,68 @@
+#view, #page-edit{
+  #quote-block-wrapper.Quoteblock{
+    background-color: #f9fafb;
+    position: relative;
+    width: 100vw;
+    right: 50% !important;
+    left: 50% !important;
+    margin-right: -50vw !important;
+    margin-left: -50vw !important;
+    .ui.stackable.stretched.column.grid{
+      flex-direction: column;
+      justify-content: center;
+      height: 110vh;
+      padding: 0% !important;
+
+      .column.grid-block-text{
+        width: 100%;
+        text-align: center;
+        padding: 0% !important;
+      }
+      .column span {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      h2{
+        padding: 0% !important;
+        color: #e70518 !important;
+        margin-top: 25px !important;
+        margin-bottom: 25px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        font-family: 'FranklinBook', Arial, sans-serif;
+        letter-spacing: 0.0em;
+        text-transform: none;
+        font-size: 17.6px !important;
+        line-height: 30px !important;
+
+        @media (min-width: 992px) {
+          font-size: 1.8vw !important;
+          margin-top: 0px !important;
+          line-height: 1.8vw !important;
+          margin-bottom: 20px !important;
+        }
+      }
+
+      p{
+        padding: 0% !important;
+        font-size: 27.2px;
+        line-height: 36px;
+        margin-top: 0px !important;
+        margin-bottom: 25px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        font-family: 'FranklinBook', Arial, sans-serif;
+        letter-spacing: 0.0em;
+        color: #292831;
+
+        @media (min-width: 992px){
+          font-size: 3vw;
+          line-height: 4.7vw;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
