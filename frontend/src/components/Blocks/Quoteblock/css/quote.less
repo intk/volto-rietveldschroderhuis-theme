@@ -1,5 +1,5 @@
 #view, #page-edit{
-  #quote-block-wrapper.Quoteblock{
+  #quote-block-wrapper.Quoteblock, .block-editor-Quoteblock{
     background-color: #f9fafb;
     position: relative;
     width: 100vw;
@@ -45,10 +45,10 @@
         }
       }
 
-      p{
+      p, .DraftEditor-editorContainer{
         padding: 0% !important;
-        font-size: 27.2px;
-        line-height: 36px;
+        font-size: 27.2px !important;
+        line-height: 36px !important;
         margin-top: 0px !important;
         margin-bottom: 25px !important;
         margin-left: 10px !important;
@@ -58,9 +58,9 @@
         color: #292831;
 
         @media (min-width: 992px){
-          font-size: 3vw;
-          line-height: 4.7vw;
-          margin-top: 20px;
+          font-size: 3vw !important;
+          line-height: 4.7vw !important;
+          margin-top: 20px !important;
         }
       }
     }
