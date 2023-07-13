@@ -581,7 +581,22 @@
 //
 //Column Block General styling
 //
-#page-document.ui.container.Footer > .columns-view{
+.section-footer #page-edit>.ui.container>.blocks-form>.invisible>div>.block-editor-columnsBlock {
+  position: relative;
+  width: 100vw;
+  right: 50%;
+  left: 50%;
+  margin-right: -50vw !important;
+  margin-left: -50vw !important;
+  padding-left: 10vw !important;
+  padding-right: 10vw !important;
+}
+.section-footer.has-sidebar #page-edit>.ui.container>.blocks-form>.invisible>div>.block-editor-columnsBlock {
+  padding-left: 15vw !important;
+  padding-right: 15vw !important;
+}
+
+#page-document.ui.container.Footer > .columns-view, .section-footer #page-document>.columns-view>.ui.column.grid.column-grid{
   position: relative;
   width: 100vw;
   right: 50%;
@@ -610,7 +625,7 @@
 
   .section-footer #page-document .columns-view,
   #page-document.Footer>.columns-view,
-        .section-footer #page-edit>.ui.container>.blocks-form {
+  .section-footer #page-edit>.ui.container>.blocks-form {
     padding-top: 0px;
 
     .column-grid {
