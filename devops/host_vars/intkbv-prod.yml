@@ -1,7 +1,7 @@
 ---
 ssh_port: 22
-hostname: "rietveldschroderhuis"
-fqdn: "{{ hostname }}.intk.com"
+hostname: "new"
+fqdn: "{{ hostname }}.rietveldschroderhuis.nl"
 swap_file_size_mb: "512"
 additional_ports:
   - 80
