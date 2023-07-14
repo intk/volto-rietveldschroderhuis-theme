@@ -1,4 +1,4 @@
-import quoteSVG from '@plone/volto/icons/quote.svg';
+import imageTextSVG from './imagetext.svg';
 
 import ImageTextView from './ImageTextView';
 import ImageTextEdit from './ImageTextEdit';
@@ -6,8 +6,8 @@ import ImageTextEdit from './ImageTextEdit';
 const installImageAndTextBlock = (config) => {
   config.blocks.blocksConfig.ImageAndTextBlock = {
     id: 'ImageAndTextBlock',
-    title: 'Image and Text Block',
-    icon: quoteSVG,
+    title: 'Image&Text Page',
+    icon: imageTextSVG,
     group: 'Text',
     view: ImageTextView,
     edit: ImageTextEdit,
