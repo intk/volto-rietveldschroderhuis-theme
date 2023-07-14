@@ -63,6 +63,8 @@ msgstr ""
 
 #: components/Blocks/ImageAndTextBlock/schema
 #: components/Blocks/Quoteblock/schema
+#: components/Blocks/SlidingTextBlock/schema
+#: components/Blocks/VideoPageBlock/schema
 # defaultMessage: Headline
 msgid "Headline"
 msgstr ""
@@ -84,12 +86,16 @@ msgstr ""
 
 #: components/Blocks/ImageAndTextBlock/templates
 #: components/Blocks/Quoteblock/templates
+#: components/Blocks/SlidingTextBlock/templates
+#: components/Blocks/VideoPageBlock/templates
 # defaultMessage: column
 msgid "column"
 msgstr ""
 
 #: components/Blocks/ImageAndTextBlock/templates
 #: components/Blocks/Quoteblock/templates
+#: components/Blocks/SlidingTextBlock/templates
+#: components/Blocks/VideoPageBlock/templates
 # defaultMessage: columns
 msgid "columns"
 msgstr ""
