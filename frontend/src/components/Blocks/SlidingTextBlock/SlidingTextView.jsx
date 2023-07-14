@@ -39,7 +39,7 @@ const ViewGrid = (props) => {
           className="background-image"
           style={{
             backgroundImage: `linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, #242424 130%), url(${
-              getScaleUrl(getPath(props.data.attachedimage), 'large') ||
+              getScaleUrl(getPath(data.columns[0].url), 'large') ||
               DefaultImageSVG
             })`,
             backgroundSize: 'cover',
@@ -54,14 +54,18 @@ const ViewGrid = (props) => {
             key={column.id}
             className={`grid-block-${column['@type']}`}
           >
-            <BlockRenderer
-              block={column.id}
-              id={column.id}
-              type={column['@type']}
-              data={column}
-              path={path}
-              blocksConfig={blocksConfig}
-            />
+            {column['@type'] === 'image' ? (
+              ''
+            ) : (
+              <BlockRenderer
+                block={column.id}
+                id={column.id}
+                type={column['@type']}
+                data={column}
+                path={path}
+                blocksConfig={blocksConfig}
+              />
+            )}
           </Grid.Column>
         ))}
       </Grid>

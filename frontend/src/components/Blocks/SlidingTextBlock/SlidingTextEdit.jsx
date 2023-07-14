@@ -347,16 +347,18 @@ class EditGrid extends Component {
             <h2 className="headline">{data.headline}</h2>
           )} */}
 
-          {
+          {this.props.data.columns &&
+          this.props.data.columns[0] &&
+          this.props.data.columns[0].url ? (
             <img
               className="background-image"
               src={
-                getScaleUrl(getPath(this.props.data.attachedimage), 'large') ||
+                getScaleUrl(getPath(this.props.data.columns[0].url), 'large') ||
                 DefaultImageSVG
               }
               alt="testalt"
             />
-          }
+          ) : null}
 
           {!this.props.data.columns?.length && (
             <TemplateChooser
