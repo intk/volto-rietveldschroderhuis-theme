@@ -51,6 +51,7 @@ msgstr ""
 msgid "Column Two Title Link"
 msgstr ""
 
+#: components/Blocks/ImageAndTextBlock/schema
 #: components/Blocks/Quoteblock/schema
 # defaultMessage: Headline
 msgid "Headline"
@@ -71,11 +72,13 @@ msgstr ""
 msgid "Site Logo"
 msgstr ""
 
+#: components/Blocks/ImageAndTextBlock/templates
 #: components/Blocks/Quoteblock/templates
 # defaultMessage: column
 msgid "column"
 msgstr ""
 
+#: components/Blocks/ImageAndTextBlock/templates
 #: components/Blocks/Quoteblock/templates
 # defaultMessage: columns
 msgid "columns"
