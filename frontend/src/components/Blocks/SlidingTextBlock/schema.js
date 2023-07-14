@@ -16,17 +16,13 @@ export const GridSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['headline', 'attachedimage'],
+        fields: ['headline'],
       },
     ],
 
     properties: {
       headline: {
         title: intl.formatMessage(messages.headline),
-      },
-      attachedimage: {
-        widget: 'attachedimage',
-        title: 'Image',
       },
     },
     required: [],
