@@ -29,7 +29,7 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                 <UniversalLink item={item}>
                   <PreviewImage
                     item={item}
-                    size="large"
+                    size="preview"
                     alt={item.image_caption ? item.image_caption : item.title}
                     className="ui image"
                   />
