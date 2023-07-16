@@ -44,15 +44,7 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
               >
                 {item['@type'] === 'Event' ? (
                   <div className="listing-dates">
-                    <div
-                      className={`listing-dates-wrapper ${
-                        item.start &&
-                        !item.open_end &&
-                        new Date(item.end) < new Date()
-                          ? 'expired'
-                          : ''
-                      }`}
-                    >
+                    <div className={`listing-dates-wrapper`}>
                       <When
                         start={item.start}
                         end={item.end}
