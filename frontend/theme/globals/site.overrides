@@ -929,7 +929,7 @@ p {
       font-size: 22px;
       text-decoration: none !important;
     }
-    .listing-dates{
+    .hero-dates{
       font-size: 15px;
       line-height: 32px;
       color: #494a51;
@@ -940,7 +940,7 @@ p {
       font-family: 'FranklinMed', Arial, sans-serif;
     }
     .listing-dates-wrapper.expired {
-      .listing-dates {
+      .hero-dates {
         text-decoration: line-through !important;
       }
     }

@@ -5,56 +5,7 @@ import { PreviewImage } from '@plone/volto/components';
 import { ConditionalLink, UniversalLink } from '@plone/volto/components';
 import { isInternalURL } from '@plone/volto/helpers/Url/Url';
 import { useIntl } from 'react-intl';
-
-const getDateRangeDescription = (lang, start, end) => {
-  const endDate = new Date(end || Date.now());
-  const startDate = new Date(start || Date.now());
-
-  const format = (date, options) =>
-    new Intl.DateTimeFormat(lang, options).format(date);
-  const defaultOptions = { day: 'numeric', month: 'short', year: 'numeric' };
-  const dayOptions = { day: 'numeric' };
-
-  if (
-    !endDate ||
-    (startDate.getDate() === endDate.getDate() &&
-      startDate.getMonth() === endDate.getMonth() &&
-      startDate.getFullYear() === endDate.getFullYear())
-  ) {
-    return format(startDate, defaultOptions);
-  }
-
-  if (
-    startDate.getMonth() === endDate.getMonth() &&
-    startDate.getFullYear() === endDate.getFullYear()
-  ) {
-    return `${format(startDate, dayOptions)} — ${format(
-      endDate,
-      defaultOptions,
-    )}`;
-  }
-
-  return `${format(startDate, defaultOptions)} — ${format(
-    endDate,
-    defaultOptions,
-  )}`;
-};
-
-const getHourRangeDescription = (lang, start, end, open_end, whole_day) => {
-  const endDate = new Date(end || Date.now());
-  const startDate = new Date(start || Date.now());
-
-  if (whole_day) return '';
-
-  const format = new Intl.DateTimeFormat(lang, {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  });
-  const startHour = format.format(startDate);
-
-  return open_end ? startHour : `${startHour} - ${format.format(endDate)}`;
-};
+import { When } from '@package/customizations/components/theme/View/EventDatesInfo';
 
 const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
   let link = null;
@@ -93,8 +44,8 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                   item.review_state === 'private' ? 'private' : ''
                 }`}
               >
-                {['Event'].includes(item['@type']) ? (
-                  <div className="listing-date-time">
+                {item['@type'] === 'Event' ? (
+                  <div className="listing-dates">
                     <div
                       className={`listing-dates-wrapper ${
                         item.start &&
@@ -104,33 +55,12 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                           : ''
                       }`}
                     >
-                      {item.start && !item.open_end ? (
-                        <span className="listing-dates">
-                          {getDateRangeDescription(
-                            intl.locale,
-                            item.start,
-                            item.end,
-                          )}
-                        </span>
-                      ) : (
-                        item.start && (
-                          <span className="listing-dates">
-                            {getDateRangeDescription(intl.locale, item.start)}
-                          </span>
-                        )
-                      )}
-                      {item.start && !item.whole_day && (
-                        <span className="listing-dates">
-                          {', '}
-                          {getHourRangeDescription(
-                            intl.locale,
-                            item.start,
-                            item.end,
-                            item.open_end,
-                            item.whole_day,
-                          )}{' '}
-                        </span>
-                      )}
+                      <When
+                        start={item.start}
+                        end={item.end}
+                        whole_day={item.whole_day}
+                        open_end={item.open_end}
+                      />
                     </div>
                   </div>
                 ) : (
