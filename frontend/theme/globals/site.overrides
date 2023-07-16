@@ -939,11 +939,11 @@ p {
       text-transform: uppercase;
       font-family: 'FranklinMed', Arial, sans-serif;
     }
-    .listing-dates-wrapper.expired {
-      .hero-dates {
-        text-decoration: line-through !important;
-      }
+
+    .expired .hero-dates {
+      text-decoration: line-through !important;
     }
+
   }
   @media only screen and (min-width: 1800px) {
     padding: 60px 99px 0px 107px;

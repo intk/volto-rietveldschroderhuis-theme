@@ -85,7 +85,17 @@ const When_ = ({ start, end, whole_day, open_end, moment: momentlib }) => {
 
   // TODO I18N INTL
   return (
-    <>
+    <div
+      className={`${
+        !(
+          startDate.getDate() === endDate?.getDate() &&
+          startDate.getMonth() === endDate?.getMonth() &&
+          startDate.getFullYear() === endDate?.getFullYear()
+        ) && new Date(end) < new Date()
+          ? 'expired'
+          : ''
+      }`}
+    >
       {start && !open_end ? (
         <span className="hero-dates">
           {getDateRangeDescription(intl.locale, startDate, endDate)}
@@ -108,7 +118,7 @@ const When_ = ({ start, end, whole_day, open_end, moment: momentlib }) => {
           )}{' '}
         </span>
       )}
-    </>
+    </div>
   );
 };
 
