@@ -2827,9 +2827,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/volto@npm:16.21.2":
-  version: 16.21.2
-  resolution: "@plone/volto@npm:16.21.2"
+"@plone/volto@npm:16.21.3":
+  version: 16.21.3
+  resolution: "@plone/volto@npm:16.21.3"
   dependencies:
     "@babel/core": ^7.0.0
     "@babel/plugin-proposal-export-default-from": 7.18.9
@@ -3011,7 +3011,7 @@ __metadata:
     webpack-node-externals: 3.0.0
     xmlrpc: 1.3.2
     yarnhook: 0.5.1
-  checksum: e82ad5d1692a6563868236d3ae7a6cefbaa1ed470f192c9224f34b3168c78d54da07a39273a3dcb76de773dba43e04c9bcdd3638eb292fe6d928073a06d24bfd
+  checksum: 0e585ad79e627966a3b75ed6b46faf28ce747db6922059c2e563b99d67dba73fc4998f1f74e7091137935bc39d4daa1937d08fe3b527867878457c2b63abe8d2
   languageName: node
   linkType: hard
 
@@ -11833,7 +11833,7 @@ __metadata:
     "@kitconcept/volto-carousel-block": 1.1.0
     "@kitconcept/volto-slider-block": "*"
     "@plone/scripts": ^2.1.5
-    "@plone/volto": 16.21.2
+    "@plone/volto": 16.21.3
     "@storybook/addon-actions": ^6.3.0
     "@storybook/addon-controls": 6.3.0
     "@storybook/addon-essentials": ^6.3.0
