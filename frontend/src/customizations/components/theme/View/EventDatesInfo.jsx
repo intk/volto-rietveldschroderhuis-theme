@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'semantic-ui-react';
-import cx from 'classnames';
 
 import { toBackendLang } from '@plone/volto/helpers';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -46,8 +45,6 @@ const getHourRangeDescription = (lang, start, end, open_end, whole_day) => {
   if (startHour === '00:00') return '';
   if (endHour === '23:59') return `, ${startHour}`;
 
-  console.log(start, end, open_end, whole_day )
-
   return open_end
     ? `, ${startHour}`
     : `, ${startHour} - ${end ? format.format(end) : ''}`;
@@ -83,10 +80,8 @@ const When_ = ({ start, end, whole_day, open_end, moment: momentlib }) => {
     return;
   }
 
-
   const startDate = new Date(datesInfo.startDate);
   const endDate = new Date(datesInfo.endDate);
-
 
   // TODO I18N INTL
   return (

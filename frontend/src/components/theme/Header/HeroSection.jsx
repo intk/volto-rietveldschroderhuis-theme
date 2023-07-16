@@ -31,19 +31,6 @@ const getDateRangeDescription = (lang, start, end) => {
   return `${format(start, defaultOptions)} — ${format(end, defaultOptions)}`;
 };
 
-const getHourRangeDescription = (lang, start, end, open_end, whole_day) => {
-  if (whole_day) return '';
-
-  const format = new Intl.DateTimeFormat(lang, {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  });
-  const startHour = format.format(start);
-
-  return open_end ? startHour : `${startHour} - ${format.format(end)}`;
-};
-
 function HeroSection(props) {
   const intl = useIntl();
   const { image_url, content } = props;
@@ -57,8 +44,6 @@ function HeroSection(props) {
   } = content || {};
 
   const isEvent = content?.['@type'] === 'Event';
-  const open_end = content?.open_end;
-  const whole_day = content?.whole_day;
   const endDate = new Date(end || Date.now());
   const startDate = new Date(start || Date.now());
 
@@ -96,31 +81,6 @@ function HeroSection(props) {
                 ) : (
                   ''
                 )}
-
-                {/* {startDate && isEvent && !open_end ? (
-                  <span className="hero-dates">
-                    {getDateRangeDescription(intl.locale, startDate, endDate)}
-                  </span>
-                ) : (
-                  startDate &&
-                  isEvent && (
-                    <span className="hero-dates">
-                      {getDateRangeDescription(intl.locale, startDate)}
-                    </span>
-                  )
-                )}
-                {startDate && isEvent && !whole_day && (
-                  <span className="hero-dates">
-                    {', '}
-                    {getHourRangeDescription(
-                      intl.locale,
-                      startDate,
-                      endDate,
-                      open_end,
-                      whole_day,
-                    )}{' '}
-                  </span>
-                )} */}
               </div>
               <h1 className="hero-title-floating">{title}</h1>
               <div className="description-container">
