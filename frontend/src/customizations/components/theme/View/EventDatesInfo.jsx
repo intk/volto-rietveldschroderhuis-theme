@@ -26,7 +26,7 @@ const getDateRangeDescription = (lang, start, end) => {
     start.getMonth() === end.getMonth() &&
     start.getFullYear() === end.getFullYear()
   ) {
-    return `${format(start, dayOptions)} — ${format(end, defaultOptions)}`;
+    return `${format(start, defaultOptions)} — ${format(end, defaultOptions)}`;
   }
 
   return `${format(start, defaultOptions)} — ${format(end, defaultOptions)}`;
