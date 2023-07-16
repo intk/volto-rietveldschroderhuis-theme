@@ -4,13 +4,11 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { PreviewImage } from '@plone/volto/components';
 import { ConditionalLink, UniversalLink } from '@plone/volto/components';
 import { isInternalURL } from '@plone/volto/helpers/Url/Url';
-import { useIntl } from 'react-intl';
 import { When } from '@package/customizations/components/theme/View/EventDatesInfo';
 
 const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
   let link = null;
   let href = linkHref?.[0]?.['@id'] || '';
-  const intl = useIntl();
 
   if (isInternalURL(href)) {
     link = (
