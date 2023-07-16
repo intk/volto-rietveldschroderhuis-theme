@@ -11,7 +11,7 @@ const getDateRangeDescription = (lang, start, end) => {
   const format = (date, options) =>
     new Intl.DateTimeFormat(lang, options).format(date);
   const defaultOptions = { day: 'numeric', month: 'short', year: 'numeric' };
-  const dayOptions = { day: 'numeric' };
+  // const dayOptions = { day: 'numeric' };
 
   if (
     !end ||
