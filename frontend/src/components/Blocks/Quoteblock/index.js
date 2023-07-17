@@ -6,13 +6,13 @@ import QuoteblockEdit from './QuoteblockEdit';
 const installQuoteblock = (config) => {
   config.blocks.blocksConfig.Quoteblock = {
     id: 'Quoteblock',
-    title: 'Quote Block',
+    title: 'Quote Page',
     icon: quoteSVG,
     group: 'Storytelling',
     view: QuoteblockView,
     edit: QuoteblockEdit,
     restricted: false,
-    mostUsed: true,
+    mostUsed: false,
     sidebarTab: 1,
     security: {
       addPermission: [],

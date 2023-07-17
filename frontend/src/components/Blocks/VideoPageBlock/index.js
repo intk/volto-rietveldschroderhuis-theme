@@ -1,4 +1,4 @@
-import imageTextSVG from './imagetext.svg';
+import videoSVG from '@plone/volto/icons/video.svg';
 
 import VideoPageView from './VideoPageView';
 import VideoPageEdit from './VideoPageEdit';
@@ -7,12 +7,12 @@ const installVideoPageBlock = (config) => {
   config.blocks.blocksConfig.VideoPageBlock = {
     id: 'VideoPageBlock',
     title: 'Video Page',
-    icon: imageTextSVG,
-    group: 'Text',
+    icon: videoSVG,
+    group: 'Storytelling',
     view: VideoPageView,
     edit: VideoPageEdit,
     restricted: false,
-    mostUsed: true,
+    mostUsed: false,
     sidebarTab: 1,
     security: {
       addPermission: [],

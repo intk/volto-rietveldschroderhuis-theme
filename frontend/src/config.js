@@ -45,6 +45,17 @@ export default function applyConfig(config) {
     'News Item': 'title',
   };
 
+  config.blocks.groupBlocksOrder.push({
+    id: 'Storytelling',
+    title: 'Storytelling',
+  });
+  config.blocks.groupBlocksOrder.push({
+    id: 'site',
+    title: 'Site',
+  });
+
+
+
   config.settings.asyncPropsExtenders = [
     ...config.settings.asyncPropsExtenders,
     {

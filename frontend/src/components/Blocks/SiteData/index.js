@@ -12,7 +12,7 @@ const installSiteDataBlock = (config) => {
     view: SiteDataView,
     edit: SiteDataEdit,
     restricted: false,
-    mostUsed: true,
+    mostUsed: false,
     sidebarTab: 1,
     security: {
       addPermission: [],
