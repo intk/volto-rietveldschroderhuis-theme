@@ -38,8 +38,8 @@ const ViewGrid = (props) => {
         <div
           className="background-image"
           style={{
-            backgroundImage: `linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, #242424 130%), url(${
-              getScaleUrl(getPath(data.columns[0].url), 'large') ||
+            backgroundImage: `url(${
+              getScaleUrl(getPath(data.columns[0].url), 'great') ||
               DefaultImageSVG
             })`,
             backgroundSize: 'cover',
@@ -48,7 +48,17 @@ const ViewGrid = (props) => {
           role="img"
           aria-label="testalt"
         />
-        <div className="shadow"></div>
+        <div
+          className="shadow"
+          style={{
+            backgroundImage:
+              'linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, #242424 200%)',
+            // zIndex: 1,
+            height: '100%',
+            width: '100vw',
+            position: 'absolute',
+          }}
+        ></div>
         {data.columns.map((column) => (
           <Grid.Column
             key={column.id}
