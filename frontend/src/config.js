@@ -54,8 +54,6 @@ export default function applyConfig(config) {
     title: 'Site',
   });
 
-
-
   config.settings.asyncPropsExtenders = [
     ...config.settings.asyncPropsExtenders,
     {
