@@ -6,6 +6,7 @@ zope.testrunner
 kitconcept.seo
 collective.volto.formsupport
 collective.volto.socialsettings
+collective.exportimport
 
 # Add required add-ons
 # (Ideally add them in setup.py for rietveld)
