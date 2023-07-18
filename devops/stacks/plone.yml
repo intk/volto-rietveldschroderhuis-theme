@@ -7,7 +7,6 @@ services:
     ports:
       - 80:80
       - 443:443
-      - 3000:3000
 
     deploy:
       labels:
@@ -67,6 +66,8 @@ services:
     networks:
       - nw-webserver
       - backend
+    ports:
+      - 3000:3000
     deploy:
       replicas: 2
       labels:
@@ -133,7 +134,7 @@ services:
         - traefik.http.routers.rt-backend-classic.service=svc-backend
         - traefik.http.routers.rt-backend-classic.middlewares=gzip,mw-backend-auth,mw-backend-vhm-classic
 
-  blocks-conversion:  # New service for backend communication
+  blocks-conversion: # New service for backend communication
     image: plone/blocks-conversion-tool:latest
     ports:
       - 5000:5000
