@@ -22,10 +22,56 @@ const messages = defineMessages({
 
 const getColumns = (numberOfColumns) => {
   const type = 'text';
+  const texts = [
+    {
+      blocks: [
+        {
+          key: uuid(),
+          text: 'Pablo Picasso',
+          type: 'header-two',
+          depth: 0,
+          inlineStyleRanges: [],
+          entityRanges: [],
+          data: {},
+        },
+      ],
+      entityMap: {},
+    },
+    {
+      blocks: [
+        {
+          key: uuid(),
+          text:
+            'Every child is an artist. The problem is how to remain an artist once we grow up.',
+          type: 'unstyled',
+          depth: 0,
+          inlineStyleRanges: [],
+          entityRanges: [],
+          data: {},
+        },
+      ],
+      entityMap: {},
+    },
+  ];
+
   return [...Array(numberOfColumns).keys()].map((i) => {
     return {
       id: uuid(),
       ...(type && { '@type': type }),
+      text: texts[i] || {
+        blocks: [
+          {
+            key: uuid(),
+            text: '',
+            type: 'unstyled',
+            depth: 0,
+            inlineStyleRanges: [],
+            entityRanges: [],
+            data: {},
+          },
+        ],
+        entityMap: {},
+      }, // If there are more columns than texts, default to empty string
     };
   });
 };
