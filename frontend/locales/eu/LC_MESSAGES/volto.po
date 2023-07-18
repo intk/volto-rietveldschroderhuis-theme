@@ -56,14 +56,6 @@ msgstr ""
 msgid "Column Two Title Link"
 msgstr ""
 
-#: components/Blocks/ImageAndTextBlock/schema
-#: components/Blocks/Quoteblock/schema
-#: components/Blocks/SlidingTextBlock/schema
-#: components/Blocks/VideoPageBlock/schema
-# defaultMessage: Headline
-msgid "Headline"
-msgstr ""
-
 #: components/Blocks/SiteData/schema
 # defaultMessage: Image caption
 msgid "ImageCaption"
