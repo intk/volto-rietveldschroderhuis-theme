@@ -353,10 +353,10 @@ class EditGrid extends Component {
             <img
               className="background-image"
               src={
-                getScaleUrl(getPath(this.props.data.columns[0].url), 'large') ||
+                getScaleUrl(getPath(this.props.data.columns[0].url), 'great') ||
                 DefaultImageSVG
               }
-              alt="testalt"
+              alt="Slidingtextimage"
             />
           ) : null}
 

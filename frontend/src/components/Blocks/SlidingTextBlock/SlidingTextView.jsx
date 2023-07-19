@@ -59,25 +59,37 @@ const ViewGrid = (props) => {
             position: 'absolute',
           }}
         ></div>
-        {data.columns.map((column) => (
-          <Grid.Column
-            key={column.id}
-            className={`grid-block-${column['@type']}`}
-          >
-            {column['@type'] === 'image' ? (
-              ''
-            ) : (
-              <BlockRenderer
-                block={column.id}
-                id={column.id}
-                type={column['@type']}
-                data={column}
-                path={path}
-                blocksConfig={blocksConfig}
-              />
-            )}
-          </Grid.Column>
-        ))}
+        <div
+          className="text-wrapper"
+          style={{
+            display: 'flex',
+            flexDirection: 'column-reverse',
+            zIndex: 0,
+          }}
+        >
+          {data.columns.map((column) => (
+            <Grid.Column
+              key={column.id}
+              className={`grid-block-${column['@type']}`}
+            >
+              {column['@type'] === 'image' ? (
+                <div id="photo-credit">
+                  <span>{column?.alt || ''}</span>
+                  <span>{column?.copyright || ''}</span>
+                </div>
+              ) : (
+                <BlockRenderer
+                  block={column.id}
+                  id={column.id}
+                  type={column['@type']}
+                  data={column}
+                  path={path}
+                  blocksConfig={blocksConfig}
+                />
+              )}
+            </Grid.Column>
+          ))}
+        </div>
       </Grid>
     </div>
   );
