@@ -145,3 +145,474 @@ msgstr ""
 # defaultMessage: Third row
 msgid "secLine3"
 msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#: components/Edit
+# defaultMessage: Aggiungi un campo
+msgid "Add field"
+msgstr "Veld toevoegen"
+
+#: components/Sidebar
+# defaultMessage: Cancel
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: components/Widget/SelectWidget
+# defaultMessage: Choices
+msgid "Choices"
+msgstr "Keuzes"
+
+#: components/Widget/FileWidget
+# defaultMessage: Choose a file
+msgid "Choose a file"
+msgstr "Kies een bestand"
+
+#: components/Widget/SelectWidget
+# defaultMessage: Close
+msgid "Close"
+msgstr "Sluiten"
+
+#: components/Widget/DatetimeWidget
+# defaultMessage: Date
+msgid "Date"
+msgstr "Datum"
+
+#: components/Widget/SelectWidget
+# defaultMessage: Default
+msgid "Default"
+msgstr "Standaard"
+
+#: components/Widget/SelectWidget
+# defaultMessage: Description
+msgid "Description"
+msgstr "Beschrijving"
+
+#: components/Widget/FileWidget
+# defaultMessage: Drop file here to replace the existing file
+msgid "Drop file here to replace the existing file"
+msgstr "Zet het bestand hier neer om het bestaande bestand te vervangen"
+
+#: components/Widget/FileWidget
+# defaultMessage: Drop file here to upload a new file
+msgid "Drop file here to upload a new file"
+msgstr "Zet het bestand hier neer om een nieuw bestand te uploaden"
+
+#: components/Widget/FileWidget
+# defaultMessage: Drop files here ...
+msgid "Drop files here ..."
+msgstr "Zet hier bestanden neer..."
+
+#: components/FormView
+# defaultMessage: Error
+msgid "Error"
+msgstr "Fout"
+
+#: components/Sidebar
+# defaultMessage: Form
+msgid "Form"
+msgstr "Formulier"
+
+#: components/Widget/HCaptchaWidget
+# defaultMessage: This site is protected by hCaptcha and its <a href="https://www.hcaptcha.com/privacy">Privacy Policy</a> and <a href="https://www.hcaptcha.com/terms">Terms of Service</a> apply.
+msgid "HCaptchaInvisibleInfo"
+msgstr ""
+
+#: components/Widget/SelectWidget
+# defaultMessage: No options
+msgid "No options"
+msgstr "Geen opties"
+
+#: components/Widget/SelectWidget
+# defaultMessage: No value
+msgid "No value"
+msgstr "Geen waarde"
+
+#: components/Widget/FileWidget
+# defaultMessage: Replace existing file
+msgid "Replace existing file"
+msgstr "Bestaand bestand vervangen"
+
+#: components/Widget/SelectWidget
+# defaultMessage: Required
+msgid "Required"
+msgstr "Vereist"
+
+#: components/Widget/SelectWidget
+# defaultMessage: Select…
+msgid "Select…"
+msgstr "Selecteer..."
+
+#: components/Widget/SelectWidget
+# defaultMessage: Short Name
+msgid "Short Name"
+msgstr "Korte naam"
+
+#: components/Widget/DatetimeWidget
+# defaultMessage: Time
+msgid "Time"
+msgstr "Tijd"
+
+#: components/Widget/SelectWidget
+# defaultMessage: Title
+msgid "Title"
+msgstr "Titel"
+
+#: components/Widget/SelectWidget
+# defaultMessage: Used for programmatic access to the fieldset.
+msgid "Used for programmatic access to the fieldset."
+msgstr "Gebruikt voor programmatische toegang tot de veldset."
+
+#: helpers/react-select
+# defaultMessage: Use Up and Down to choose options
+msgid "ay11_Use Up and Down to choose options"
+msgstr "Omhoog en Omlaag om opties te kiezen"
+
+#: helpers/react-select
+# defaultMessage: available
+msgid "ay11_select available"
+msgstr "beschikbaar"
+
+#: helpers/react-select
+# defaultMessage: availables
+msgid "ay11_select availables"
+msgstr "beschikbaar"
+
+#: helpers/react-select
+# defaultMessage: deselected
+msgid "ay11_select deselected"
+msgstr "gedeselecteerd"
+
+#: helpers/react-select
+# defaultMessage: disabled
+msgid "ay11_select disabled"
+msgstr "uitgeschakeld"
+
+#: helpers/react-select
+# defaultMessage: focused
+msgid "ay11_select focused"
+msgstr "gefocust"
+
+#: helpers/react-select
+# defaultMessage: for search term
+msgid "ay11_select for search term"
+msgstr "voor zoekterm"
+
+#: helpers/react-select
+# defaultMessage: is disabled. Select another option.
+msgid "ay11_select is disabled. Select another option."
+msgstr "is uitgeschakeld. Selecteer een andere optie."
+
+
+#: helpers/react-select
+# defaultMessage: option
+msgid "ay11_select option"
+msgstr "optie"
+
+#: helpers/react-select
+# defaultMessage: result
+msgid "ay11_select result"
+msgstr "resultaat"
+
+#: helpers/react-select
+# defaultMessage: results
+msgid "ay11_select results"
+msgstr "resultaten"
+
+#: helpers/react-select
+# defaultMessage: selected
+msgid "ay11_select selected"
+msgstr "geselecteerd"
+
+#: helpers/react-select
+# defaultMessage: value
+msgid "ay11_select value"
+msgstr "waarde"
+
+#: helpers/react-select
+# defaultMessage: Use left and right to toggle between focused values, press Backspace to remove the currently focused value
+msgid "ay11_select_Use left and right to toggle between focused values, press Backspace to remove the currently focused value"
+msgstr "Gebruik links en rechts om te schakelen tussen waarden met focus, druk op Backspace om de waarde met focus te verwijderen"
+
+#: helpers/react-select
+# defaultMessage: press Tab to select the option and exit the menu
+msgid "ay11_select__press Tab to select the option and exit the menu"
+msgstr "op Tab om de optie te selecteren en het menu te verlaten"
+
+#: helpers/react-select
+# defaultMessage: type to refine list
+msgid "ay11_select__type to refine list"
+msgstr "typ om de lijst te verfijnen"
+
+#: helpers/react-select
+# defaultMessage: is_focused
+msgid "ay11_select_is_focused"
+msgstr "is_gefocust"
+
+#: helpers/react-select
+# defaultMessage: press Down to open the menu
+msgid "ay11_select_press Down to open the menu"
+msgstr "druk op Omlaag om het menu te openen"
+
+#: helpers/react-select
+# defaultMessage: press Enter to select the currently focused option
+msgid "ay11_select_press Enter to select the currently focused option"
+msgstr "druk op Enter om de momenteel gefocuste optie te selecteren"
+
+#: helpers/react-select
+# defaultMessage: press Escape to exit the menu
+msgid "ay11_select_press Escape to exit the menu"
+msgstr "druk op Escape om de mij te verlaten"
+
+#: helpers/react-select
+# defaultMessage: press left to focus selected values
+msgid "ay11_select_press left to focus selected values"
+msgstr "druk naar links om geselecteerde waarden te focussen"
+
+#: formSchema
+# defaultMessage: Captcha provider
+msgid "captcha"
+msgstr ""
+
+#: formSchema
+# defaultMessage: Description
+msgid "description"
+msgstr "Beschrijving"
+
+#: formSchema
+# defaultMessage: Form
+msgid "form"
+msgstr "Formulier"
+
+#: components/View
+# defaultMessage: Form successfully submitted
+msgid "formSubmitted"
+msgstr "Formulier succesvol verzonden"
+
+#: formSchema
+# defaultMessage: Attached file will be sent via email, but not stored
+msgid "form_attachment_send_email_info_text"
+msgstr "Bijgevoegd bestand wordt via e-mail verzonden, maar niet opgeslagen"
+
+#: components/Sidebar
+# defaultMessage: Clear data
+msgid "form_clear_data"
+msgstr "gegevens wissen"
+
+#: components/Sidebar
+# defaultMessage: Are you sure you want to delete all saved items?
+msgid "form_confirmClearData"
+msgstr "Weet u zeker dat u alle opgeslagen items wilt verwijderen?"
+
+#: formSchema
+# defaultMessage: Default sender
+msgid "form_default_from"
+msgstr "Standaard afzender"
+
+#: formSchema
+# defaultMessage: Mail subject
+msgid "form_default_subject"
+msgstr "E-mailonderwerp"
+
+#: components/Edit
+#: components/FormView
+# defaultMessage: Invia
+msgid "form_default_submit_label"
+msgstr "Versturen"
+
+#: components/Sidebar
+# defaultMessage: Export data
+msgid "form_edit_exportCsv"
+msgstr "Gegevens exporteren"
+
+#: components/Edit
+# defaultMessage: Attenzione!
+msgid "form_edit_warning"
+msgstr "Let op!"
+
+#: components/Edit
+# defaultMessage: Enter a field of type 'Sender E-mail'. If it is not present, or it is present but not filled in by the user, the sender address of the e-mail will be the one configured in the right sidebar.
+msgid "form_edit_warning_from"
+msgstr "Voer een veld in van het type 'Sender E-mail'. Als het niet aanwezig is, of het is aanwezig maar niet ingevuld door de gebruiker, zal het afzenderadres van de e-mail het adres zijn dat is geconfigureerd in de rechterzijbalk."
+
+#: components/FormView
+# defaultMessage: Fill in the required fields
+msgid "form_empty_values_validation"
+msgstr "Vul de verplichte velden in"
+
+#: fieldSchema
+# defaultMessage: Description
+msgid "form_field_description"
+msgstr "Beschrijving"
+
+#: components/FieldTypeSchemaExtenders/FromSchemaExtender
+#: components/FieldTypeSchemaExtenders/SelectionSchemaExtender
+# defaultMessage: Possible values
+msgid "form_field_input_values"
+msgstr "Mogelijke waarden"
+
+#: fieldSchema
+# defaultMessage: Label
+msgid "form_field_label"
+msgstr ""
+
+#: fieldSchema
+# defaultMessage: Required
+msgid "form_field_required"
+msgstr "Vereist"
+
+#: fieldSchema
+# defaultMessage: Field type
+msgid "form_field_type"
+msgstr "Veldtype"
+
+#: fieldSchema
+# defaultMessage: Attachment
+msgid "form_field_type_attachment"
+msgstr "Bdijlage"
+
+#: fieldSchema
+# defaultMessage: Any attachments can be emailed, but will not be saved.
+msgid "form_field_type_attachment_info_text"
+msgstr "Eventuele bijlagen kunnen per e-mail worden verzonden, maar worden niet opgeslagen."
+
+#: fieldSchema
+# defaultMessage: Checkbox
+msgid "form_field_type_checkbox"
+msgstr "Selectievakje"
+
+#: fieldSchema
+# defaultMessage: Date
+msgid "form_field_type_date"
+msgstr "Datum"
+
+#: fieldSchema
+# defaultMessage: E-mail
+msgid "form_field_type_from"
+msgstr ""
+
+#: fieldSchema
+# defaultMessage: Multiple choice
+msgid "form_field_type_multiple_choice"
+msgstr "Meerkeuze"
+
+#: fieldSchema
+# defaultMessage: List
+msgid "form_field_type_select"
+msgstr "Lijst"
+
+#: fieldSchema
+# defaultMessage: Single choice
+msgid "form_field_type_single_choice"
+msgstr "Enkele keuze"
+
+#: fieldSchema
+# defaultMessage: Static text
+msgid "form_field_type_static_text"
+msgstr "Statische tekst"
+
+#: fieldSchema
+# defaultMessage: Text
+msgid "form_field_type_text"
+msgstr "Tekst"
+
+#: fieldSchema
+# defaultMessage: Textarea
+msgid "form_field_type_textarea"
+msgstr ""
+
+#: components/Sidebar
+# defaultMessage: {formDataCount} item(s) stored
+msgid "form_formDataCount"
+msgstr "{formDataCount} item(s) opgeslagen"
+
+#: components/FormView
+# defaultMessage: Clear
+msgid "form_reset"
+msgstr "Wissen"
+
+#: formSchema
+# defaultMessage: Store compiled data
+msgid "form_save_persistent_data"
+msgstr "Gecompileerde gegevens opslaan"
+
+#: components/Field
+# defaultMessage: Select a value
+msgid "form_select_a_value"
+msgstr "Selecteer een waarde"
+
+#: formSchema
+# defaultMessage: Send email to recipient
+msgid "form_send_email"
+msgstr "Stuur e-mail naar ontvanger"
+
+#: formSchema
+# defaultMessage: Submit button label
+msgid "form_submit_label"
+msgstr "Knoplabel verzenden"
+
+#: components/FormView
+# defaultMessage: Sent!
+msgid "form_submit_success"
+msgstr "Verzonden!"
+
+#: formSchema
+# defaultMessage: Recipients
+msgid "form_to"
+msgstr "Ontvangers"
+
+#: components/FieldTypeSchemaExtenders/FromSchemaExtender
+# defaultMessage: Send an email copy to this address
+msgid "form_useAsBCC"
+msgstr "Stuur een e-mailkopie naar dit adres"
+
+#: components/FieldTypeSchemaExtenders/FromSchemaExtender
+# defaultMessage: If selected, a copy of email will alse be sent to this address.
+msgid "form_useAsBCC_description"
+msgstr "Indien geselecteerd, wordt er ook een kopie van de e-mail naar dit adres gestuurd."
+
+#: components/FieldTypeSchemaExtenders/FromSchemaExtender
+# defaultMessage: Use as 'reply to'
+msgid "form_useAsReplyTo"
+msgstr "gebruiken als 'antwoord op'"
+
+#: components/FieldTypeSchemaExtenders/FromSchemaExtender
+# defaultMessage: If selected, this will be the address the receiver can use to reply.
+msgid "form_useAsReplyTo_description"
+msgstr "Indien geselecteerd, is dit het adres dat de ontvanger kan gebruiken om te antwoorden."
+
+#: components/Widget/NoRobotsCaptchaWidget
+# defaultMessage: Answer the question to prove that you are human
+msgid "resolveCaptcha"
+msgstr ""
+
+#: helpers/react-select
+# defaultMessage: No options
+msgid "select_noOptionsMessage"
+msgstr "Geen opties"
+
+#: helpers/react-select
+# defaultMessage: results
+msgid "select_risultati"
+msgstr "Resultaten"
+
+#: helpers/react-select
+# defaultMessage: result
+msgid "select_risultato"
+msgstr "Resultaat"
+
+#: formSchema
+# defaultMessage: Title
+msgid "title"
+msgstr "Titel"
