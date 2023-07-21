@@ -59,7 +59,7 @@ const tempTranslations = {
     nl: 'Fout',
   },
   stateSuccess: {
-    en: 'Send',
+    en: 'Sent!',
     nl: 'Verzonden!',
   },
   reset: {
