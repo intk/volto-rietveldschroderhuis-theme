@@ -42,8 +42,6 @@ const ViewGrid = (props) => {
               getScaleUrl(getPath(data.columns[0].url), 'great') ||
               DefaultImageSVG
             })`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
           }}
           role="img"
           aria-label="testalt"

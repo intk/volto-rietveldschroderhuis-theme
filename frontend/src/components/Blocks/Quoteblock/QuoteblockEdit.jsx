@@ -256,6 +256,16 @@ class EditGrid extends Component {
     });
   };
 
+  componentDidMount() {
+    let elements = document.getElementsByClassName(
+      'public-DraftEditorPlaceholder-inner',
+    );
+
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].textContent = 'ow ye test';
+    }
+  }
+
   /**
    * Render method.
    * @method render

@@ -86,7 +86,7 @@ class EditGrid extends Component {
         columns: [],
       });
       // Automatically select the second template
-      this.onSelectTemplate(1);
+      this.onSelectTemplate(2);
     }
   }
 

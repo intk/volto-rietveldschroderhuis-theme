@@ -1028,3 +1028,8 @@ p {
 #view #page-document .pagination-wrapper a.disabled{
   display: none;
 }
+
+
+#sliding-block-wrapper,#quote-block-wrapper {
+  margin-bottom: 0%;
+}

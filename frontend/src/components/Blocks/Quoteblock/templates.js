@@ -22,10 +22,28 @@ const messages = defineMessages({
 
 const getColumns = (numberOfColumns) => {
   const type = 'text';
+  // const texts = [
+  //   { content: 'Pablo Picasso', type: 'header-two' },
+  //   {
+  //     content:
+  //       'Every child is an artist. The problem is how to remain an artist once we grow up.',
+  //     type: 'unstyled',
+  //   },
+  // ];
+
   return [...Array(numberOfColumns).keys()].map((i) => {
     return {
       id: uuid(),
       ...(type && { '@type': type }),
+      // text: {
+      //   blocks: [
+      //     {
+      //       key: uuid(),
+      //       text: texts[i]?.content || '',
+      //       type: texts[i]?.type || 'unstyled',
+      //     },
+      //   ],
+      // },
     };
   });
 };

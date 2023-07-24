@@ -7,11 +7,6 @@
     left: 50% !important;
     margin-right: -50vw !important;
     margin-left: -50vw !important;
-
-    .block.Quoteblock::before {
-      z-index: 0;
-    }
-
     .ui.stackable.stretched.column.grid{
       flex-direction: column;
       justify-content: center;
@@ -27,42 +22,7 @@
         display: block;
         width: 100%;
         text-align: center;
-        margin-left: 0% !important;
-        // border: 1px solid red ;
       }
-
-      .public-DraftEditorPlaceholder-root{
-        width: 100%;
-      }
-      .public-DraftEditorPlaceholder-inner{
-        display: none;
-      }
-      .public-DraftEditorPlaceholder-root:after {
-        content: 'Every child is an artist. The problem is how to remain an artist once we grow up.' !important;
-        padding: 25px;
-        text-align: center !important;
-        width: 100%;
-        display: block;
-
-        padding: 0% !important;
-        font-size: 27.2px !important;
-        line-height: 36px !important;
-        margin-top: 0px !important;
-        margin-bottom: 25px !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-        font-family: 'FranklinBook', Arial, sans-serif;
-        letter-spacing: 0.0em;
-        color: #292831;
-
-        @media (min-width: 992px) {
-          font-size: 3vw !important;
-          line-height: 4.7vw !important;
-          margin-top: 0px !important;
-          margin-bottom: 10px !important;
-        }
-      }
-
 
       h2{
         padding: 0% !important;
@@ -105,56 +65,6 @@
         }
       }
     }
-
-    .ui.stackable.stretched.column.grid .column.grid-block-text:first-child {
-          .public-DraftEditorPlaceholder-root:after {
-              content: 'Pablo Picasso' !important;
-              padding: 0% !important;
-              color: #e70518 !important;
-              margin-top: 25px !important;
-              margin-bottom: 25px !important;
-              margin-left: 10px;
-              margin-right: 10px !important;
-              font-family: 'FranklinBook', Arial, sans-serif;
-              letter-spacing: 0.0em;
-              text-transform: none;
-              font-size: 17.6px !important;
-              line-height: 30px !important;
-
-              @media (min-width: 992px) {
-                font-size: 1.8vw !important;
-                margin-top: 0px !important;
-                line-height: 1.8vw !important;
-                margin-bottom: 20px !important;
-              }
-          }
-    }
-
-    .ui.stackable.stretched.column.grid .column.grid-block-text:first-child{
-    .public-DraftEditorPlaceholder-root:after {
-        padding: 0% !important;
-      }
-      p, span{
-        padding: 0% !important;
-        color: #e70518 !important;
-        margin-top: 25px !important;
-        margin-bottom: 25px !important;
-        margin-left: 10px;
-        margin-right: 10px !important;
-        font-family: 'FranklinBook', Arial, sans-serif;
-        letter-spacing: 0.0em;
-        text-transform: none;
-        font-size: 17.6px !important;
-        line-height: 30px !important;
-
-        @media (min-width: 992px) {
-          font-size: 1.8vw !important;
-          margin-top: 0px !important;
-          line-height: 1.8vw !important;
-          margin-bottom: 20px !important;
-        }
-      }
-    }
   }
 }
 
@@ -164,14 +74,15 @@
     background-color: white;
     width: 90vw !important;
     padding-left: 100px !important;
-    .ui.stackable.stretched.column.grid {
-        height: 90vh !important;
-        background-color: #f9fafb;
-    }
-    .block-add-button, .remove-block-button, .toolbar{
-      display: none;
-    }
+
+    // .ui.stackable.stretched.column.grid {
+        // padding-left: 100px !important;
+    // }
   }
+  // .DraftEditor-root {
+  //   border: 0.2px solid red;
+  //   margin-bottom: 5px !important;
+  // }
 }
 
 .has-sidebar #page-edit {
@@ -200,6 +111,11 @@
         width: 60vw !important;
       }
     }
+    // @media screen and (max-width: 1050px) {
+    //   .block-editor-Quoteblock {
+    //     width: 60vw !important;
+    //   }
+    // }
     @media screen and (max-width: 1000px) {
       .block-editor-Quoteblock {
       padding-left: 50px !important;
@@ -211,4 +127,14 @@
       }
     }
 }
-
+// .renderer-wrapper.selected::before {
+//   position: absolute;
+//   z-index: -1;
+//   top: -5px;
+//   left: -5px;
+//   width: calc(100% + 10px);
+//   height: calc(100% + 10px);
+//   border: 1px solid rgba(120, 192, 215, 0.5);
+//   border-radius: 3px;
+//   content: '';
+// }

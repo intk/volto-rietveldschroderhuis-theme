@@ -6,7 +6,7 @@ import SlidingTextEdit from './SlidingTextEdit';
 const SlidingTextBlock = (config) => {
   config.blocks.blocksConfig.SlidingTextBlock = {
     id: 'SlidingTextBlock',
-    title: 'Sliding Text Page',
+    title: 'Fullscreen image slide',
     icon: movefirst,
     group: 'Storytelling',
     view: SlidingTextView,
