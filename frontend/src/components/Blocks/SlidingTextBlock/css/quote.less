@@ -1,6 +1,5 @@
 #view,
 #page-edit {
-
   #sliding-block-wrapper.SlidingTextBlock,
   .block-editor-SlidingTextBlock {
     background-color: #fff;
@@ -11,6 +10,10 @@
     margin-right: -50vw !important;
     margin-left: -50vw !important;
     padding: 0% !important;
+
+    .block.SlidingTextBlock::before {
+        z-index: 0;
+      }
 
     .background-image {
       transform: translateZ(0);
@@ -77,6 +80,8 @@
         }
 
       }
+
+
 
       .column.grid-block-image{
         @media (min-width: 768px) {
@@ -159,6 +164,15 @@
     background-color: white;
     width: 90vw !important;
     padding-left: 100px !important;
+
+  .block-add-button,
+    .remove-block-button,
+    .toolbar {
+      display: none;
+    }
+    .column.grid-block-text {
+      border: 0.5px solid red;
+    }
   }
   p#photo-credit{
     display: none;
@@ -168,6 +182,8 @@
 .has-sidebar #page-edit {
   .block-editor-SlidingTextBlock {
     background-color: white;
+
+
   }
 
   .block-editor-SlidingTextBlock {
