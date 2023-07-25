@@ -1,5 +1,13 @@
 #view, #page-edit{
   #quote-block-wrapper.VideoPageBlock, .block-editor-VideoPageBlock{
+
+    .block.align.center iframe{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      transform: none;
+    }
+
     background-color: #fff;
     position: relative;
     width: 100vw;
@@ -23,12 +31,12 @@
         flex-direction: column;
         // padding-left: calc(5vw + 10px);
         // padding-right: calc(5vw + 10px);
-        padding-top: 5.21vw;
         padding-bottom: calc(5.21vw + 10px);
       }
       @media (min-width: 992px) {
+        padding-top: 5.21vw;
         padding-left: calc(5vw + 8px);
-        padding-right: calc(5vw + 8px);
+        padding-right: calc(5vw);
         padding-bottom: calc(5.21vw + 20px);
       }
       @media (min-width: 1200px){
@@ -87,6 +95,7 @@
       .column.grid-block-text{
         // text-align: center;
         flex-basis: 100%;
+        width: 100%;
         display: block !important;
         padding-top: 0px !important;
         padding-bottom: 0px !important;
@@ -102,18 +111,18 @@
           padding-right: 43px !important;
         }
         @media (min-width: 768px){
-          width: 50%;
-          padding-right: 6% !important;
+           padding-right: 6% !important;
           padding-left: 6% !important;
         }
         @media (min-width: 992px){
+          width: 50%;
           flex-basis: 50%;
           padding-top: 4% !important;
           padding-right: 0% !important;
           padding-left: 0% !important;
         }
         @media (min-width: 1200px) {
-          padding-top: 3% !important;
+          padding-top: 2% !important;
         }
         @media (min-width: 1600px) {
           padding-top: 2% !important;
@@ -189,7 +198,7 @@
           font-size: 2vw !important;
           line-height: 1.45em !important;
           margin-top: 8px !important;
-          margin-bottom: 35px !important
+          margin-bottom: 26px !important
         }
       }
     }
@@ -231,7 +240,7 @@
 
         @media (min-width: 992px) {
           // font-size: 1.8vw !important;
-          margin-top: 0px !important;
+          margin-top: 5px !important;
           line-height: 1.8vw !important;
           // margin-bottom: 37px !important;
         }
