@@ -31,7 +31,6 @@ const ViewGrid = (props) => {
       id="quote-block-wrapper"
     >
       {data.headline && <h2 className="headline">{data.headline}</h2>}
-
       <Grid stackable stretched columns={data.columns.length}>
         {data.columns.map((column) => (
           <Grid.Column

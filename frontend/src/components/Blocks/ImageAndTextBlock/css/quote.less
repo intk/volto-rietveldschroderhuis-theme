@@ -83,8 +83,9 @@
       }
 
       .column.grid-block-text{
-        align-self: start;
-        display: block !important;
+        display: flex !important;
+        align-self: flex-start;
+        // display: block !important;
         padding-top: 0px !important;
         padding-bottom: 0px !important;
         padding-left: 31px !important;
@@ -136,7 +137,8 @@
       }
 
       .column.grid-block-text:nth-child(2){
-        align-self: end;
+        // align-self: end;
+        align-self: flex-end;
         padding-bottom: 0% !important;
         @media (min-width: 768px) {
           padding-top: 10% !important;
