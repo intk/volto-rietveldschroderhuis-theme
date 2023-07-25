@@ -8,6 +8,7 @@ import config from '@plone/volto/registry';
 import './css/quote.less';
 import { getScaleUrl, getPath } from './utils';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 const ViewGrid = (props) => {
   const { data, path, className } = props;
@@ -39,12 +40,12 @@ const ViewGrid = (props) => {
           className="background-image"
           style={{
             backgroundImage: `url(${
-              getScaleUrl(getPath(data.columns[0].url), 'great') ||
-              DefaultImageSVG
+              flattenToAppURL(
+                getScaleUrl(getPath(data.columns[0].url), 'great'),
+              ) || DefaultImageSVG
             })`,
           }}
           role="img"
-          aria-label="testalt"
         />
         <div
           className="shadow"
