@@ -35,7 +35,7 @@ const ViewGrid = (props) => {
         {data.columns.map((column) => (
           <Grid.Column
             key={column.id}
-            className={`grid-block-${column['@type']}`}
+            className={`grid-block-${column['@type']} ${data.align}`}
           >
             <BlockRenderer
               block={column.id}
