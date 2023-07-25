@@ -6,18 +6,11 @@ export const GridSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['align'],
+        fields: [],
       },
     ],
 
-    properties: {
-      align: {
-        title: 'Alignment',
-        widget: 'align',
-        type: 'string',
-        default: 'left',
-      },
-    },
+    properties: {},
     required: [],
   };
 };
