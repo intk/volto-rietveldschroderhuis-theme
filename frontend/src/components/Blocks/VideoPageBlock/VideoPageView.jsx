@@ -18,9 +18,9 @@ const ViewGrid = (props) => {
         'block __grid',
         {
           [data['@type']]: data['@type'] !== '__grid',
-          centered: data.align === 'center' || data.align === undefined,
-          'space-between': data.align === 'space-between',
-          'centered-text': data.centeredText,
+          right: data.align === 'right' || data.align === undefined,
+          // 'space-between': data.align === 'space-between',
+          // 'centered-text': data.centeredText,
           one: data?.columns?.length === 1,
           two: data?.columns?.length === 2,
           three: data?.columns?.length === 3,
@@ -36,7 +36,7 @@ const ViewGrid = (props) => {
         {data.columns.map((column) => (
           <Grid.Column
             key={column.id}
-            className={`grid-block-${column['@type']}`}
+            className={`grid-block-${column['@type']} ${data.align}`}
           >
             <BlockRenderer
               block={column.id}

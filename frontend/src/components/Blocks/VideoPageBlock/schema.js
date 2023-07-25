@@ -1,16 +1,23 @@
 export const GridSchema = (props) => {
   return {
-    title: 'Grid',
+    title: 'VideoPage Block',
     block: '__grid',
     fieldsets: [
       {
         id: 'default',
         title: 'Default',
-        fields: [],
+        fields: ['align'],
       },
     ],
 
-    properties: {},
+    properties: {
+      align: {
+        title: 'Alignment',
+        widget: 'align',
+        type: 'string',
+        default: 'left',
+      },
+    },
     required: [],
   };
 };

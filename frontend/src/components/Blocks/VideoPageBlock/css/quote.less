@@ -20,7 +20,7 @@
       margin: 0% !important;
 
       @media (min-width: 768px){
-        flex-direction: row;
+        flex-direction: column;
         // padding-left: calc(5vw + 10px);
         // padding-right: calc(5vw + 10px);
         padding-top: 5.21vw;
@@ -45,6 +45,7 @@
 
 
       .column.grid-block-video{
+        width: 100%;
         flex-basis: 100%;
         padding: 0% !important;
         .block.video.align{
@@ -84,7 +85,6 @@
       // }
 
       .column.grid-block-text{
-        // width: 100%;
         // text-align: center;
         flex-basis: 100%;
         display: block !important;
@@ -92,6 +92,7 @@
         padding-bottom: 0px !important;
         padding-left: 31px !important;
         padding-right: 30px !important;
+        align-self: flex-start;
         @media (min-width: 550px){
           padding-left: 33px !important;
           padding-right: 33px !important;
@@ -101,9 +102,8 @@
           padding-right: 43px !important;
         }
         @media (min-width: 768px){
-          // padding-top: 5% !important;
+          width: 50%;
           padding-right: 6% !important;
-          // padding-bottom: 34.39px !important;
           padding-left: 6% !important;
         }
         @media (min-width: 992px){
@@ -118,7 +118,9 @@
         @media (min-width: 1600px) {
           padding-top: 2% !important;
         }
-
+      }
+      .column.grid-block-text.right {
+        align-self: flex-end;
       }
       .column span {
         display: block;
@@ -188,6 +190,55 @@
           line-height: 1.45em !important;
           margin-top: 8px !important;
           margin-bottom: 35px !important
+        }
+      }
+    }
+  }
+}
+
+#view,
+#page-edit {
+
+  #quote-block-wrapper.VideoPageBlock,
+  .block-editor-VideoPageBlock {
+
+    .ui.stackable.stretched.column.grid .column.grid-block-text:nth-child(2){
+      p,
+      span {
+        padding: 0% !important;
+        color: #e70518 !important;
+        margin-top: 10px !important;
+        margin-bottom: 0px !important;
+        margin-left: 0px !important;
+        margin-right: 10px !important;
+        font-family: 'FranklinBook', Arial, sans-serif;
+        letter-spacing: 0.0em;
+        text-transform: none;
+        font-size: 16px !important;
+        line-height: 30px !important;
+
+        @media (min-width: 650px) {
+          padding-top: 2px !important;
+        }
+
+        @media (min-width: 768px) {
+          font-size: 1.6vw !important;
+          margin-top: 8px !important;
+          padding-top: 0px !important;
+          margin-left: 0px !important;
+          line-height: 17.84px !important;
+        }
+
+        @media (min-width: 992px) {
+          // font-size: 1.8vw !important;
+          margin-top: 0px !important;
+          line-height: 1.8vw !important;
+          // margin-bottom: 37px !important;
+        }
+
+        @media (min-width: 1200px) {
+          font-size: 1.5vw !important;
+          // margin-bottom: 38px !important;
         }
       }
     }

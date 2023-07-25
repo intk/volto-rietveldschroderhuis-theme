@@ -384,7 +384,7 @@ class EditGrid extends Component {
                             return (
                               <Ref innerRef={provided.innerRef}>
                                 <Grid.Column
-                                  className={`grid-block-${item['@type']}`}
+                                  className={`grid-block-${item['@type']} ${data.align}`}
                                   key={item.id}
                                   {...provided.draggableProps}
                                   {...provided.dragHandleProps}
