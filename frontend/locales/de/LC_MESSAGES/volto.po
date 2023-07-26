@@ -71,6 +71,16 @@ msgstr ""
 msgid "ImageCaption"
 msgstr ""
 
+#: components/theme/Search/SearchBar
+# defaultMessage: Search
+msgid "Search"
+msgstr "Suche"
+
+#: components/theme/Search/SearchBar
+# defaultMessage: Search Site
+msgid "Search Site"
+msgstr "Website durchsuchen"
+
 #: components/Blocks/SiteData/schema
 # defaultMessage: Footer Data
 msgid "Site Data"
