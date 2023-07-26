@@ -1,0 +1,210 @@
+.section-search{
+  #page-search{
+    padding-top: 92px;
+    padding-left: 85px;
+    padding-right: 25px;
+    padding-left: 56px;
+    padding-right: 56px;
+
+    @media (min-width: 1200px){
+      width: 1170px;
+    }
+
+    @media (min-width: 992px) {
+      width: 970px;
+    }
+
+    @media (min-width: 768px){
+      padding-top: 122px;
+      width: 750px;
+    }
+
+  }
+
+  header{
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 650px;
+    }
+    padding-top: 120px;
+    margin-right: 17%;
+    margin-left: auto;
+    h1.documentFirstHeading{
+      margin-bottom: 3px !important;
+      @media (max-width: 768px) {
+        font-size: 40px !important;
+        line-height: 35px !important;
+        text-align: start !important;
+        padding-bottom: 25px !important;
+        padding-left: 15px !important;
+      }
+    }
+    .sort-by{
+      font-family: 'FranklinMed', Arial, Helvetica;
+      letter-spacing: 0.05em;
+      font-size: 17px;
+      line-height: 24px;
+      padding-bottom: 5px;
+    }
+    .button-sort{
+      width: auto !important;
+      background-color: white !important;
+      padding: 5px 5px 3px 5px !important;
+      color: black !important;
+      width: 100%;
+      font-family: 'FranklinMed', Arial, Helvetica;
+      letter-spacing: 0.05em;
+      font-size: 17px;
+      line-height: 24px;
+      border: 0.5px solid black !important;
+    }
+    .button-sort:hover {
+      background-color: black !important;
+      color: white !important;
+    }
+  }
+
+  #content-core{
+    max-width: 668px !important;
+    margin-left: auto;
+    margin-right: auto;
+      @media (min-width: 992px) {
+        // margin-left: -130px;
+        // margin-right: 130px;
+        padding: 6px 12px;
+        margin-bottom: 20px;
+      }
+  .tileItem{
+
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+    img{
+      padding-right: 12px;
+      @media (min-width: 992px){
+          margin-left: -95px;
+          margin-right: 95px;
+          width: 43.5%;
+          // aspect-ratio: 16 / 9.3;
+          padding-left: 15px;
+          padding-right: 15px;
+      }
+    }
+    .search-text-wrapper{
+      @media (min-width: 768px) {
+        padding-left: 15px;
+      }
+    }
+    }
+    h2.tileHeadline {
+      padding-top: 20px !important;
+      @media (max-height: 768) {
+          padding-top: 0px !important;
+        }
+      a.summary.url{
+        font-family: 'FranklinMed', Arial, sans-serif;
+        font-size: 25px;
+        color: #494A51;
+        letter-spacing: 0.0em;
+        line-height: 32px;
+        font-weight: 400;
+        text-transform: none;
+        border: none;
+        margin-bottom: 0px;
+        @media (min-width:768px) {
+          margin-top: -5px;
+        }
+      }
+      a.summary.url:hover{
+        border-bottom: none;
+      }
+    }
+    div.tileBody{
+      span.description {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        line-height: 30px;
+        font-size: 17px;
+        font-family: 'FranklinBook', Arial, sans-serif;
+        letter-spacing: 0.0em;
+        color: #494a51;
+        margin: 8px 0;
+        margin-bottom: 35px;
+      }
+    }
+  }
+  .items_total{
+    font-family: 'FranklinBook', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    color: #404040;
+    letter-spacing: 0.8px;
+    padding-top: 40px;
+    justify-content: flex-start;
+    strong{
+      padding-right: 5px;
+    }
+  }
+  .ui.header{
+    padding-bottom: 30px;
+  }
+
+  .searchbar{
+    width: 100%;
+
+    .field.searchbox{
+      border-left: 0px !important;
+      padding-left: 0px;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        .ui.transparent.input,button {
+          width: 100% !important;
+        }
+      }
+
+      .ui.transparent.input {
+        border: 1px solid #c3c3c3;
+        padding: 12px 20px 14px !important;
+        color: #9c9a9a;
+        opacity: 1;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        #input::placeholder{
+          color: #848484;
+          opacity: 1;
+          font-family: 'FranklinBook', Arial, sans-serif;
+          letter-spacing: 0.8px;
+        }
+        @media (min-width: 768px) {
+          padding: 16px 30px 11px !important;
+        }
+      }
+    }
+    @media (min-width: 768px){
+        .ui.form .field.searchbox {
+            padding-left: 20px;
+          }
+    }
+
+    button{
+      width: 120px !important;
+      background-color: white !important;
+      padding: 16px 30px 11px !important;
+      color: black !important;
+      width: 100%;
+      font-family: 'FranklinMed', Arial, Helvetica;
+      letter-spacing: 0.05em;
+      font-size: 17px;
+      line-height: 24px;
+      border: 1px solid black !important;
+      text-align: center !important;
+    }
+    button:hover {
+      background-color: black !important;
+      color: white !important;
+    }
+  }
+
+}
