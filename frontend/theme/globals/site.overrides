@@ -1036,3 +1036,46 @@ p {
 #sliding-block-wrapper,#quote-block-wrapper {
   margin-bottom: 0%;
 }
+
+
+.page-not-found{
+
+  #view .ui.container.view-wrapper{
+    padding-left: 15px;
+    padding-bottom: 15px;
+    @media (min-width: 768px) {
+      width: 730px !important;
+      padding-left: 0px;
+      padding-bottom: 0px;
+    }
+  }
+  #view h1.documentFirstHeading{
+    padding-left: 50px;
+    padding-top: 32px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 11px;
+
+    @media (min-width: 768px){
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    // @media (min-width: 992px){
+    //   padding-left: 145px;
+    //   padding-right: 145px;
+    // }
+    @media (min-width: 1140px){
+      margin-right: -6%;
+      margin-left: 6%;
+      // padding-right: 0px;
+      // padding-left: 0px;
+    }
+  }
+  #view p{
+    @media (min-width: 1140px){
+      margin-right: 1%;
+      margin-left: -1%;
+    }
+  }
+}
+
