@@ -134,16 +134,6 @@ services:
         - traefik.http.routers.rt-backend-classic.service=svc-backend
         - traefik.http.routers.rt-backend-classic.middlewares=gzip,mw-backend-auth,mw-backend-vhm-classic
 
-  blocks-conversion: # New service for backend communication
-    image: plone/blocks-conversion-tool:latest
-    ports:
-      - 5000:5000
-    networks:
-      - nw-webserver
-      - backend
-    depends_on:
-      - backend
-
   # db:
   #   image: postgres:14.2
   #   environment:
