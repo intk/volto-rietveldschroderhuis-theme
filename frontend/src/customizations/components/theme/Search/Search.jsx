@@ -295,12 +295,18 @@ class Search extends Component {
             <section id="content-core">
               {this.props.items.map((item) => (
                 <article className="tileItem" key={item['@id']}>
-                  <PreviewImage
-                    item={item}
-                    size="preview"
-                    alt={item.image_caption ? item.image_caption : item.title}
-                    className="ui image"
-                  />
+                  {console.log(item)}
+                  {item.image_field !== '' ? (
+                    <PreviewImage
+                      item={item}
+                      size="preview"
+                      alt={item.image_caption ? item.image_caption : item.title}
+                      className="ui image"
+                    />
+                  ) : (
+                    <div className="image-placeholder"></div>
+                  )}
+
                   <div className="search-text-wrapper">
                     <h2 className="tileHeadline">
                       <UniversalLink
