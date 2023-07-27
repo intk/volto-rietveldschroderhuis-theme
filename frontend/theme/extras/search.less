@@ -1,10 +1,15 @@
 .section-search{
   #page-search{
     padding-top: 92px;
-    padding-left: 85px;
-    padding-right: 25px;
+    // padding-left: 85px;
+    // padding-right: 25px;
     padding-left: 56px;
     padding-right: 56px;
+
+    @media (min-width: 768px){
+      padding-left: 37px;
+      padding-right: 37px;
+    }
 
     @media (min-width: 1200px){
       width: 1170px;
@@ -27,7 +32,7 @@
       width: 650px;
     }
     padding-top: 120px;
-    margin-right: 17%;
+    margin-right: 14%;
     margin-left: auto;
     h1.documentFirstHeading{
       margin-bottom: 3px !important;
@@ -71,7 +76,7 @@
       @media (min-width: 992px) {
         // margin-left: -130px;
         // margin-right: 130px;
-        padding: 6px 12px;
+        // padding: 6px 12px;
         margin-bottom: 20px;
       }
   .tileItem{
@@ -81,58 +86,87 @@
     flex-direction: column;
     @media (min-width: 768px) {
       flex-direction: row;
+      // margin-left: -15px;
+      // margin-right: -15px;
     }
     img{
+      object-fit: contain !important;
       padding-right: 12px;
+      @media (min-width: 768px){
+        width: 41%;
+        // padding-left: 15px;
+        padding-right: 16px;
+        margin-bottom: auto;
+      }
       @media (min-width: 992px){
-          margin-left: -95px;
-          margin-right: 95px;
-          width: 43.5%;
-          // aspect-ratio: 16 / 9.3;
-          padding-left: 15px;
-          padding-right: 15px;
+      //   padding-left: 0px;
+        // padding-right: 0px;
+      }
+      @media (min-width: 1140px){
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
+    @media (min-width: 1140px) {
+      margin-left: -85px;
+      margin-right: 85px;
+      // aspect-ratio: 16 / 9.3;
+      // padding-left: 15px;
+      // padding-right: 15px;
+    }
     .search-text-wrapper{
+      padding-right: 15px !important;
       @media (min-width: 768px) {
         padding-left: 15px;
       }
     }
     }
     h2.tileHeadline {
+      margin-bottom: 0px !important;
       padding-top: 20px !important;
-      @media (max-height: 768) {
-          padding-top: 0px !important;
-        }
+      line-height: 21px;
+
+      @media (min-width: 768px){
+        margin-top: -5px !important;
+        padding-top: 0px !important;
+      }
+
       a.summary.url{
         font-family: 'FranklinMed', Arial, sans-serif;
-        font-size: 25px;
+        font-size: 21.6px;
         color: #494A51;
-        letter-spacing: 0.0em;
+        letter-spacing: 0.00em;
         line-height: 32px;
         font-weight: 400;
         text-transform: none;
         border: none;
-        margin-bottom: 0px;
+        margin-bottom: 0px !important;
         @media (min-width:768px) {
           margin-top: -5px;
+          font-size: 25px;
         }
       }
       a.summary.url:hover{
-        border-bottom: none;
+        border-bottom: none !important;
       }
     }
+
     div.tileBody{
       span.description {
         margin-top: 0px;
         margin-bottom: 0px;
         line-height: 30px;
-        font-size: 17px;
+        font-size: 17px !important;
         font-family: 'FranklinBook', Arial, sans-serif;
         letter-spacing: 0.0em;
         color: #494a51;
         margin: 8px 0;
         margin-bottom: 35px;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 4;
+        // -webkit-box-orient: vertical;
       }
     }
   }
@@ -146,9 +180,15 @@
     strong{
       padding-right: 5px;
     }
+    @media (min-width: 768px){
+      // padding-left: 20px;
+    }
   }
   .ui.header{
     padding-bottom: 30px;
+    @media (min-width: 768px) {
+      // padding-left: 20px;
+    }
   }
 
   .searchbar{
@@ -178,14 +218,14 @@
           letter-spacing: 0.8px;
         }
         @media (min-width: 768px) {
-          padding: 16px 30px 11px !important;
+          padding: 16px 20px 11px !important;
         }
       }
     }
     @media (min-width: 768px){
-        .ui.form .field.searchbox {
-            padding-left: 20px;
-          }
+      .ui.form .field.searchbox {
+        // padding-left: 20px;
+      }
     }
 
     button{
@@ -206,5 +246,23 @@
       color: white !important;
     }
   }
-
+  .listing-dates-wrapper {
+    margin-bottom: 22px;
+    padding-top: 3px;
+    span{
+      font-size: 17px;
+      line-height: 30px;
+      color: rgba(0, 0, 0, 0.6);
+      letter-spacing: 0.05em;
+      font-family: 'FranklinBook', Arial, sans-serif;
+      word-wrap: normal;
+      text-transform: lowercase;
+    }
+    .expired{
+      span.hero-dates{
+        text-decoration: line-through;
+      }
+    }
+  }
 }
+

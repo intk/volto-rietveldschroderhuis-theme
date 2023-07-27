@@ -22,6 +22,7 @@ import { searchContent } from '@plone/volto/actions';
 import { SearchTags, Toolbar, Icon } from '@plone/volto/components';
 import { PreviewImage } from '@plone/volto/components';
 import SearchBar from '@package/components/theme/Search/SearchBar';
+import { When } from '@package/customizations/components/theme/View/EventDatesInfo';
 
 import { HiMiniArrowLongLeft } from 'react-icons/hi2';
 import { HiMiniArrowLongRight } from 'react-icons/hi2';
@@ -45,6 +46,18 @@ const translations = {
     de: 'Artikel gefunden.',
   },
 };
+
+function truncate(str, num) {
+  if (str.length <= num) {
+    return str;
+  }
+
+  const subString = str.substr(0, num);
+  return subString.substr(0, subString.lastIndexOf(' ')) + ' ...';
+}
+
+// const test = withQuerystringResults(this.props);
+// console.log(test);
 
 /**
  * Search class.
@@ -125,6 +138,7 @@ class Search extends Component {
     const options = qs.parse(this.props.history.location.search);
     this.setState({ currentPage: 1 });
     options['use_site_search_settings'] = 1;
+    options['metadata_fields'] = ['start', 'end', 'whole_day', 'open_end']; // Add this line
     this.props.searchContent('', options);
   };
 
@@ -189,8 +203,13 @@ class Search extends Component {
                     defaultMessage="Search results"
                   />
                 )} */}
-                {translations.searchresults[intl.locale]}
+                {translations.searchresults[intl.locale]} voor{' '}
+                {this.props.history.location.search.replace(
+                  '?SearchableText=',
+                  '',
+                )}
               </h1>
+
               {/* <SearchTags /> */}
               <div className="search">
                 <SearchBar />
@@ -290,19 +309,35 @@ class Search extends Component {
                         {item.title}
                       </UniversalLink>
                     </h2>
+                    {item['@type'] === 'Event' ? (
+                      <div className="listing-dates">
+                        <div className={`listing-dates-wrapper`}>
+                          <When
+                            start={item.start}
+                            end={item.end}
+                            whole_day={item.whole_day}
+                            open_end={item.open_end}
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      ''
+                    )}
                     {item.description && (
                       <div className="tileBody">
-                        <span className="description">{item.description}</span>
+                        <span className="description">
+                          {truncate(item.description, 155)}
+                        </span>
                       </div>
                     )}
-                    <div className="tileFooter">
+                    {/* <div className="tileFooter">
                       <UniversalLink item={item}>
                         <FormattedMessage
                           id="Read More…"
                           defaultMessage="Read More…"
                         />
                       </UniversalLink>
-                    </div>
+                    </div> */}
                     <div className="visualClear" />
                   </div>
                 </article>
