@@ -45,7 +45,11 @@ const SearchWidget = ({ onClose }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     setVisible(false);
-    history.push(`/search?SearchableText=${encodeURIComponent(text)}`);
+    history.push(
+      `/${intl.locale}/search?SearchableText=${encodeURIComponent(
+        text,
+      )}&Language=${intl.locale}`,
+    );
     // reset input value
     setText('');
     onClose();

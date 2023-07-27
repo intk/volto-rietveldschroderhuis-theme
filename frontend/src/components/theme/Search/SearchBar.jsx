@@ -45,10 +45,14 @@ const SearchBar = ({ onClose }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     setVisible(false);
-    history.push(`/search?SearchableText=${encodeURIComponent(text)}`);
+    history.push(
+      `/search?SearchableText=${encodeURIComponent(text)}&Language=${
+        intl.locale
+      }`,
+    );
     // reset input value
     setText('');
-    onClose();
+    // onClose();
   };
 
   return (

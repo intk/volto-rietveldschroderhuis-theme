@@ -45,6 +45,11 @@ const translations = {
     nl: 'resultaten voor de zoekopdracht.',
     de: 'Artikel gefunden.',
   },
+  for: {
+    en: 'for',
+    nl: 'voor',
+    de: 'für',
+  },
 };
 
 function truncate(str, num) {
@@ -203,11 +208,8 @@ class Search extends Component {
                     defaultMessage="Search results"
                   />
                 )} */}
-                {translations.searchresults[intl.locale]} voor{' '}
-                {this.props.history.location.search.replace(
-                  '?SearchableText=',
-                  '',
-                )}
+                {translations.searchresults[intl.locale]}{' '}
+                {translations.for[intl.locale]} {this.props.searchableText}
               </h1>
 
               {/* <SearchTags /> */}
@@ -408,6 +410,7 @@ export default compose(
       items: state.search.items,
       searchableText: qs.parse(props.history.location.search).SearchableText,
       pathname: props.location.pathname,
+      currentLang: state.intl?.locale,
     }),
     { searchContent },
   ),
