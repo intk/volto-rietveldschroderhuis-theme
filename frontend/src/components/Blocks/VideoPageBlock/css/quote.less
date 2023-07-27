@@ -23,12 +23,13 @@
 
 
     .ui.stackable.stretched.column.grid{
+      flex-wrap: wrap;
       justify-content: center;
       padding-bottom: 23px;
       margin: 0% !important;
 
       @media (min-width: 768px){
-        flex-direction: column;
+        flex-direction: row;
         // padding-left: calc(5vw + 10px);
         // padding-right: calc(5vw + 10px);
         padding-bottom: calc(5.21vw + 10px);
@@ -94,6 +95,7 @@
 
       .column.grid-block-text{
         // text-align: center;
+        line-height: unset !important;
         flex-basis: 100%;
         width: 100%;
         display: block !important;
@@ -207,11 +209,9 @@
 
 #view,
 #page-edit {
-
-  #quote-block-wrapper.VideoPageBlock,
-  .block-editor-VideoPageBlock {
-
-    .ui.stackable.stretched.column.grid .column.grid-block-text:nth-child(2){
+  #quote-block-wrapper.VideoPageBlock, .block-editor-VideoPageBlock {
+    .ui.stackable.stretched.column.grid .column.grid-block-text:nth-child(2),
+    .ui.stackable.stretched.column.grid .column.grid-block-text:nth-child(3) {
       p,
       span {
         padding: 0% !important;
