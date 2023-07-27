@@ -7,6 +7,7 @@ import { withServerErrorCode } from '@plone/volto/helpers/Utils/Utils';
 import { useDispatch, useSelector } from 'react-redux';
 import { getNavigation } from '@plone/volto/actions';
 import config from '@plone/volto/registry';
+import NotFoundSearch from '@package/components/theme/Search/NotFoundSearch';
 
 /**
  * Not found function.
@@ -60,6 +61,7 @@ const NotFound = () => {
       <p>
         <FormattedMessage id="Thank you." defaultMessage="Thank you." />
       </p>
+      <NotFoundSearch />
     </Container>
   );
 };

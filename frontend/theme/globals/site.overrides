@@ -1039,7 +1039,6 @@ p {
 
 
 .page-not-found{
-
   #view .ui.container.view-wrapper{
     padding-left: 15px;
     padding-bottom: 15px;
@@ -1047,6 +1046,12 @@ p {
       width: 730px !important;
       padding-left: 0px;
       padding-bottom: 0px;
+    }
+    .tileItem{
+      @media (min-width: 1140px) {
+        margin-left: -50px !important;
+        margin-right: 50px !important;
+      }
     }
   }
   #view h1.documentFirstHeading{
@@ -1065,16 +1070,10 @@ p {
     //   padding-right: 145px;
     // }
     @media (min-width: 1140px){
-      margin-right: -6%;
-      margin-left: 6%;
+      margin-right: -7%;
+      margin-left: 7%;
       // padding-right: 0px;
       // padding-left: 0px;
-    }
-  }
-  #view p{
-    @media (min-width: 1140px){
-      margin-right: 1%;
-      margin-left: -1%;
     }
   }
 }
