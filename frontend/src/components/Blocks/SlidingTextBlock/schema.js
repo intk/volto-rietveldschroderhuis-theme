@@ -1,6 +1,6 @@
 export const GridSchema = (props) => {
   return {
-    title: 'Grid',
+    title: 'Sliding Text Block',
     block: '__grid',
     fieldsets: [
       {

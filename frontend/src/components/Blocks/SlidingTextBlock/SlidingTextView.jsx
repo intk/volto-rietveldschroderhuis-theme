@@ -5,7 +5,7 @@ import cx from 'classnames';
 import BlockRenderer from './BlockRenderer';
 import { withBlockExtensions } from '@plone/volto/helpers';
 import config from '@plone/volto/registry';
-import './css/quote.less';
+import './css/slidingtextblock.less';
 import { getScaleUrl, getPath } from './utils';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 import { flattenToAppURL } from '@plone/volto/helpers';

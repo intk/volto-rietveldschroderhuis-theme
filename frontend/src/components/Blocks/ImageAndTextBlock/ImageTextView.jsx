@@ -5,7 +5,7 @@ import cx from 'classnames';
 import BlockRenderer from './BlockRenderer';
 import { withBlockExtensions } from '@plone/volto/helpers';
 import config from '@plone/volto/registry';
-import './css/quote.less';
+import './css/imageandtextblock.less';
 
 const ViewGrid = (props) => {
   const { data, path, className } = props;

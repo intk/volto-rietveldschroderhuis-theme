@@ -19,7 +19,7 @@ import BlockRenderer from './BlockRenderer';
 import TemplateChooser from './TemplateChooser';
 import NewBlockAddButton from './NewBlockAddButton';
 import GridData from './Data';
-import './css/quote.less';
+import './css/slidingtextblock.less';
 
 import {
   reorderArray,
