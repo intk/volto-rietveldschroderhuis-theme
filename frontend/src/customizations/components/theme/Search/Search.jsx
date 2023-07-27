@@ -295,7 +295,6 @@ class Search extends Component {
             <section id="content-core">
               {this.props.items.map((item) => (
                 <article className="tileItem" key={item['@id']}>
-                  {console.log(item)}
                   {item.image_field !== '' ? (
                     <PreviewImage
                       item={item}
