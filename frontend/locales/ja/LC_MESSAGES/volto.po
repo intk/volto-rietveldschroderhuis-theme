@@ -63,6 +63,7 @@ msgstr ""
 msgid "ImageCaption"
 msgstr ""
 
+#: components/theme/Search/NotFoundSearch
 #: components/theme/Search/SearchBar
 # defaultMessage: Search
 msgid "Search"
