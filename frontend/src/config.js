@@ -78,11 +78,11 @@ export default function applyConfig(config) {
             const action = getContent(url, null, `footer-${currentLang}`);
             return store.dispatch(action).catch((e) => {
               // eslint-disable-next-line
-              console.log(
-                `Footer links folder not found: ${url}. Please create as page
-                named ${siteDataPageId} in the root of your current language and
-                fill it with the appropriate action blocks`,
-              );
+              // console.log(
+              //   `Footer links folder not found: ${url}. Please create as page
+              //   named ${siteDataPageId} in the root of your current language and
+              //   fill it with the appropriate action blocks`,
+              // );
             });
           },
         };
