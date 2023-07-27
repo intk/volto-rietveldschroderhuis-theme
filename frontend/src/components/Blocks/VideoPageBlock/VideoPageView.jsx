@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from 'semantic-ui-react';
 import cx from 'classnames';
@@ -11,6 +11,20 @@ const ViewGrid = (props) => {
   const { data, path, className } = props;
   const blocksConfig =
     config.blocks.blocksConfig.__grid.blocksConfig || props.blocksConfig;
+  useEffect(() => {
+    const elements = document.querySelectorAll('.grid-block-text');
+    elements.forEach((el) => {
+      const p = el.querySelector('p');
+      if (
+        (p && p.childNodes.length === 1 && p.childNodes[0].nodeName === 'BR') ||
+        (el.childNodes.length === 1 && el.childNodes[0].nodeName === 'BR')
+      ) {
+        el.style.height = '0';
+        el.style.padding = '0';
+        el.style.margin = '0';
+      }
+    });
+  }, []);
 
   return (
     <div
