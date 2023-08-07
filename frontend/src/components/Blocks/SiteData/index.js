@@ -8,7 +8,7 @@ const installSiteDataBlock = (config) => {
     id: 'footerData',
     title: 'Footer Data',
     icon: downloadSVG,
-    group: 'site',
+    group: 'Site',
     view: SiteDataView,
     edit: SiteDataEdit,
     restricted: false,
