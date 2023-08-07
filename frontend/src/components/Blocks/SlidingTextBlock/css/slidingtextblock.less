@@ -72,8 +72,7 @@
 
       .column.grid-block-text, .column.grid-block-image {
         width: 100%;
-        padding: 50px 33px !important;
-        padding-right: 32px !important;
+        padding: 0px 33px 50px 32px !important;
         // height: 50%;
 
         @media (min-width: 768px) {
@@ -98,12 +97,14 @@
 
       }
 
-      .text-wrapper .column.grid-block-text:nth-child(3) {
+      .column.grid-block-text:nth-child(3) {
+        padding-bottom: 0px !important;
+
         .public-DraftEditorPlaceholder-root:after {
           padding: 0% !important;
         }
 
-        p{
+        p, span{
           padding: 0% !important;
           color: #fff !important;
           margin-top: 25px !important;

@@ -50,8 +50,12 @@ export default function applyConfig(config) {
     title: 'Storytelling',
   });
   config.blocks.groupBlocksOrder.push({
-    id: 'site',
+    id: 'Site',
     title: 'Site',
+  });
+  config.blocks.groupBlocksOrder.push({
+    id: 'Homepage',
+    title: 'Homepage',
   });
 
   config.settings.asyncPropsExtenders = [
