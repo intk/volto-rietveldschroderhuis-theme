@@ -5,9 +5,17 @@ import { useIntl } from 'react-intl';
 
 const SeethehouseBlockView = (props) => {
   const messages = defineMessages({
+    seewithyourowneyes: {
+      id: 'Seewithyourowneyes',
+      defaultMessage: 'Would you like to see the house with your own eyes?',
+    },
     ticket: {
       id: 'Ticket',
-      defaultMessage: 'Het huis met eigen ogen bekijken?',
+      defaultMessage: 'Ticket',
+    },
+    menu: {
+      id: 'Menu',
+      defaultMessage: 'Menu',
     },
   });
   const intl = useIntl();
@@ -26,16 +34,18 @@ const SeethehouseBlockView = (props) => {
 
   return (
     <div id="Tickets">
-      <h3 className="Header">{intl.formatMessage(messages.ticket)}</h3>
+      <h3 className="Header">
+        {intl.formatMessage(messages.seewithyourowneyes)}
+      </h3>
       <div className="buttons">
         <a
           className="button button1"
           href="https://tickets.rietveldschroderhuis.nl/nl/tickets"
         >
-          Tickets
+          {intl.formatMessage(messages.ticket)}
         </a>
         <button className="button button2" onClick={handleMenuOpen}>
-          Menu
+          {intl.formatMessage(messages.menu)}
         </button>
       </div>
     </div>

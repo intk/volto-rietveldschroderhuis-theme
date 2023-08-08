@@ -23,10 +23,6 @@ const messages = defineMessages({
     id: 'Copyright',
     defaultMessage: 'Copyright',
   },
-  ticket: {
-    id: 'Ticket',
-    defaultMessage: 'Het huis met eigen ogen bekijken?',
-  },
   newsletter: {
     id: 'Newsletter',
     defaultMessage: 'Nieuws over Rietveld in je mail',

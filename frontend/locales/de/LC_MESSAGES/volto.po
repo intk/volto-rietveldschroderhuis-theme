@@ -71,6 +71,11 @@ msgstr ""
 msgid "ImageCaption"
 msgstr ""
 
+#: components/Blocks/SeethehouseBlock/SeethehouseBlockView
+# defaultMessage: Menu
+msgid "Menu"
+msgstr "Menü"
+
 #: components/theme/Search/NotFoundSearch
 #: components/theme/Search/SearchBar
 # defaultMessage: Search
@@ -81,6 +86,11 @@ msgstr "Suche"
 # defaultMessage: Search Site
 msgid "Search Site"
 msgstr "Website durchsuchen"
+
+#: components/Blocks/SeethehouseBlock/SeethehouseBlockView
+# defaultMessage: Would you like to see the house with your own eyes?
+msgid "Seewithyourowneyes"
+msgstr "Möchten Sie das Haus mit eigenen Augen sehen?"
 
 #: components/Blocks/SiteData/schema
 # defaultMessage: Footer Data
@@ -93,7 +103,7 @@ msgid "Site Logo"
 msgstr ""
 
 #: components/Blocks/SeethehouseBlock/SeethehouseBlockView
-# defaultMessage: Het huis met eigen ogen bekijken?
+# defaultMessage: Ticket
 msgid "Ticket"
 msgstr ""
 
