@@ -58,11 +58,6 @@ msgstr ""
 msgid "Column Two Title Link"
 msgstr ""
 
-#: components/Blocks/SeethehouseBlock/SeethehouseBlockView
-# defaultMessage: Copyright
-msgid "Copyright"
-msgstr ""
-
 #: components/Blocks/SiteData/schema
 # defaultMessage: Image caption
 msgid "ImageCaption"
@@ -87,6 +82,11 @@ msgstr ""
 #: components/Blocks/SiteData/schema
 # defaultMessage: undefined
 msgid "Site Logo"
+msgstr ""
+
+#: components/Blocks/SeethehouseBlock/SeethehouseBlockView
+# defaultMessage: Het huis met eigen ogen bekijken?
+msgid "Ticket"
 msgstr ""
 
 #: components/Blocks/ImageAndTextBlock/templates
