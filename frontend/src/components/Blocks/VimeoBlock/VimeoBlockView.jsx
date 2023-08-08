@@ -25,14 +25,14 @@ const VimeoBlockView = (props) => {
       </div>
       <div className="vimeo-buttons">
         {props.data.button1 && (
-          <button className="button button1" href={props.data.button1link}>
+          <a className="button button1" href={props.data.button1link}>
             {props.data.button1}
-          </button>
+          </a>
         )}
         {props.data.button2 && (
-          <button className="button button2" href={props.data.button2link}>
+          <a className="button button2" href={props.data.button2link}>
             {props.data.button2}
-          </button>
+          </a>
         )}
       </div>
     </div>
