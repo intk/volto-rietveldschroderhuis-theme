@@ -6,7 +6,13 @@ export const VimeoBlockSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['VideoLink'],
+        fields: [
+          'VideoLink',
+          'button1',
+          'button1link',
+          'button2',
+          'button2link',
+        ],
       },
     ],
 
@@ -14,6 +20,22 @@ export const VimeoBlockSchema = (props) => {
       VideoLink: {
         title: 'Video Link',
         widget: 'url',
+      },
+      button1: {
+        type: 'sting',
+        title: 'Button 1',
+      },
+      button1link: {
+        type: 'sting',
+        title: 'Button 1 Link',
+      },
+      button2: {
+        type: 'sting',
+        title: 'Button 2',
+      },
+      button2link: {
+        type: 'sting',
+        title: 'Button 2 Link',
       },
     },
     required: [],

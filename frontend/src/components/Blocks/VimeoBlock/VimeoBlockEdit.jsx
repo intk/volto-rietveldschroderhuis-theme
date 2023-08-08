@@ -3,6 +3,7 @@ import { BlockDataForm, SidebarPortal } from '@plone/volto/components';
 import { getBaseUrl } from '@plone/volto/helpers';
 import VimeoBlockSchema from './schema';
 import VimeoBlockView from './VimeoBlockView';
+import './css/vimeoblock.less';
 
 const VimeoBlockEdit = (props) => {
   const { block, onChangeBlock, data = {}, selected } = props;

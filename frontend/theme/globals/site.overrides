@@ -1078,3 +1078,12 @@ p {
   }
 }
 
+.contenttype-lrf{
+  h1.documentFirstHeading{
+    display: none !important;
+  }
+  .ui.basic.segment.content-area{
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+}

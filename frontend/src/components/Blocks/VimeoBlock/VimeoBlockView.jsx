@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { injectIntl } from 'react-intl';
+import './css/vimeoblock.less';
 
 const VimeoBlockView = (props) => {
   const [videoLink, setVideoLink] = useState('');
@@ -13,21 +14,26 @@ const VimeoBlockView = (props) => {
   }, []);
 
   return (
-    <div id="vimeo-block" className="block align imagecards-block full">
-      <div className="full-width">
-        <div className="slider-wrapper" style={{ height: '600px' }}>
-          <div className="slider-slide">
-            <div className="slide-img">
-              <iframe
-                src={videoLink}
-                frameborder="0"
-                title="vimeo"
-                fullscreen
-                style={{ width: '100%', height: '100%' }}
-              ></iframe>
-            </div>
-          </div>
-        </div>
+    <div id="vimeo-block">
+      <div className="video-wrapper">
+        <iframe
+          src={videoLink}
+          frameborder="0"
+          title="vimeo"
+          fullscreen
+        ></iframe>
+      </div>
+      <div className="vimeo-buttons">
+        {props.data.button1 && (
+          <button className="button button1" href={props.data.button1link}>
+            {props.data.button1}
+          </button>
+        )}
+        {props.data.button2 && (
+          <button className="button button2" href={props.data.button2link}>
+            {props.data.button2}
+          </button>
+        )}
       </div>
     </div>
   );
