@@ -36,13 +36,15 @@ const ViewGrid = (props) => {
       {data.headline && <h2 className="headline">{data.headline}</h2>}
 
       <Grid stackable stretched columns={data.columns.length}>
+        {/* {console.log(
+          `${flattenToAppURL(getScaleUrl(data.columns[0].url, 'great'))}`,
+        )} */}
         <div
           className="background-image"
           style={{
             backgroundImage: `url(${
-              flattenToAppURL(
-                getScaleUrl(getPath(data.columns[0].url), 'great'),
-              ) || DefaultImageSVG
+              flattenToAppURL(getScaleUrl(data.columns[0].url, 'great')) ||
+              DefaultImageSVG
             })`,
           }}
           role="img"
