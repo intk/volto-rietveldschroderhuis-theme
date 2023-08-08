@@ -66,6 +66,11 @@ msgstr ""
 msgid "Column Two Title Link"
 msgstr ""
 
+#: components/Blocks/SeethehouseBlock/SeethehouseBlockView
+# defaultMessage: Copyright
+msgid "Copyright"
+msgstr ""
+
 #: components/Blocks/SiteData/schema
 # defaultMessage: Image caption
 msgid "ImageCaption"

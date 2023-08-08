@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-07-27T20:26:55.294Z\n"
+"POT-Creation-Date: 2023-08-08T12:56:16.066Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -51,6 +51,11 @@ msgstr ""
 #: components/Blocks/SiteData/schema
 # defaultMessage: Second column title link
 msgid "Column Two Title Link"
+msgstr ""
+
+#: components/Blocks/SeethehouseBlock/SeethehouseBlockView
+# defaultMessage: Copyright
+msgid "Copyright"
 msgstr ""
 
 #: components/Blocks/SiteData/schema
