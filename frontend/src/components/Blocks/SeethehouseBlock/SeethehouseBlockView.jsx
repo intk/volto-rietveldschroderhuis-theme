@@ -12,6 +12,18 @@ const SeethehouseBlockView = (props) => {
   });
   const intl = useIntl();
 
+  const handleMenuOpen = () => {
+    // Find the hamburger button by its class name
+    const hamburgerButton = document.querySelector(
+      '.hamburger.hamburger--arrow',
+    );
+
+    // Trigger a click event on the hamburger button
+    if (hamburgerButton) {
+      hamburgerButton.click();
+    }
+  };
+
   return (
     <div id="Tickets">
       <h3 className="Header">{intl.formatMessage(messages.ticket)}</h3>
@@ -22,9 +34,9 @@ const SeethehouseBlockView = (props) => {
         >
           Tickets
         </a>
-        <a className="button button2" href="/">
+        <button className="button button2" onClick={handleMenuOpen}>
           Menu
-        </a>
+        </button>
       </div>
     </div>
   );
