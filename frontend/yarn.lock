@@ -1722,24 +1722,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@datapunt/matomo-tracker-js@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "@datapunt/matomo-tracker-js@npm:0.3.1"
-  checksum: 731e5306c52308acc45fcc5767f21ad67d3290d35cdb1676541f2af75682d6b06e83f8b821bb407c61a1ff749ffd7a6cdea69cded50dfc0bab3e55b34b3b9abd
-  languageName: node
-  linkType: hard
-
-"@datapunt/matomo-tracker-react@npm:0.3.1":
-  version: 0.3.1
-  resolution: "@datapunt/matomo-tracker-react@npm:0.3.1"
-  dependencies:
-    "@datapunt/matomo-tracker-js": ^0.3.1
-  peerDependencies:
-    react: ">=16.8.6 <= 16.x.x"
-  checksum: ec3292464d12c9a25be133671a21953b83f2ca41787e166f5ef8af49e36e76d8e5ccd2282f5ab6023649ba4e04c1502728e2d15f35f9b6157c0d7d417b988010
-  languageName: node
-  linkType: hard
-
 "@discoveryjs/json-ext@npm:^0.5.3":
   version: 0.5.7
   resolution: "@discoveryjs/json-ext@npm:0.5.7"
@@ -1809,15 +1791,6 @@ __metadata:
     react-slick: 0.29.0
     slick-carousel: 1.8.1
   checksum: 173f5597a847fde3b7c9a1e24c0620b34c8d9a48c0fb7103af114ee7e2127ec83d96c5b9beae6da9b9c864f7034183595ee905bb53080dbe16b0f9e41e9355a4
-  languageName: node
-  linkType: hard
-
-"@eeacms/volto-matomo@npm:*":
-  version: 4.1.0
-  resolution: "@eeacms/volto-matomo@npm:4.1.0"
-  dependencies:
-    "@datapunt/matomo-tracker-react": 0.3.1
-  checksum: 7f91d9564d7a299d693da1710a6abbd0b25c251f74832a711e50d695df2c5e0ac44e79dc4200355338a2d91d43051b73726482a4ec1db04115d9b74e14f56c3e
   languageName: node
   linkType: hard
 
@@ -11827,7 +11800,6 @@ __metadata:
     "@eeacms/volto-columns-block": ^6.0.2
     "@eeacms/volto-hero-block": ^1.0.0
     "@eeacms/volto-listing-block": 4.2.1
-    "@eeacms/volto-matomo": "*"
     "@kitconcept/volto-blocks-grid": "*"
     "@kitconcept/volto-button-block": "*"
     "@kitconcept/volto-carousel-block": 1.1.0
