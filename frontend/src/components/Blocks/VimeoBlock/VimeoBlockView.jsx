@@ -16,12 +16,7 @@ const VimeoBlockView = (props) => {
   return (
     <div id="vimeo-block">
       <div className="video-wrapper">
-        <iframe
-          src={videoLink}
-          frameborder="0"
-          title="vimeo"
-          fullscreen
-        ></iframe>
+        <iframe src={videoLink} title="vimeo"></iframe>
       </div>
       <div className="vimeo-buttons">
         {props.data.button1 && (
