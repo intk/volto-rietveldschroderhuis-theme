@@ -18,7 +18,7 @@ import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers';
 export const View = ({ data, detached }) => {
   const href = data?.href?.[0]?.['@id'] || '';
   return (
-    <p
+    <div
       className={cx(
         'block image align',
         {
@@ -103,7 +103,7 @@ export const View = ({ data, detached }) => {
           })()}
         </>
       )}
-    </p>
+    </div>
   );
 };
 
