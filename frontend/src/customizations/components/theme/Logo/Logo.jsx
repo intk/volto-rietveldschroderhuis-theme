@@ -36,7 +36,7 @@ const Logo = (props) => {
   const intl = useIntl();
 
   const clickHandler = () => {
-    props.onCloseMobileMenu();
+    props.onCloseMobileMenu && props.onCloseMobileMenu();
   };
 
   return (
