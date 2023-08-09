@@ -128,7 +128,7 @@
           padding-left: 0% !important;
         }
         @media (min-width: 1200px) {
-          padding-top: 2% !important;
+          padding-top: 1% !important;
         }
         @media (min-width: 1600px) {
           padding-top: 2% !important;
@@ -138,7 +138,7 @@
         align-self: flex-end;
       }
       .column span {
-        display: block;
+        // display: block;
         // width: 100%;
         // text-align: center;
       }
@@ -204,7 +204,7 @@
           font-size: 2vw !important;
           line-height: 1.45em !important;
           margin-top: 8px !important;
-          margin-bottom: 26px !important
+          margin-bottom: 33px !important
         }
       }
     }
@@ -216,6 +216,9 @@
   #quote-block-wrapper.VideoPageBlock, .block-editor-VideoPageBlock {
     .ui.stackable.stretched.column.grid .column.grid-block-text:nth-child(2),
     .ui.stackable.stretched.column.grid .column.grid-block-text:nth-child(3) {
+      @media (min-width: 1200px) {
+          padding-top: 2% !important;
+        }
       p,
       span {
         padding: 0% !important;
