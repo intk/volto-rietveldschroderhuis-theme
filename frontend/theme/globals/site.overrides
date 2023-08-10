@@ -1091,3 +1091,9 @@ p {
     margin-top: 0px;
   }
 }
+
+.section-en, .section-de{
+  #Newsletter{
+    display: none;
+  }
+}
