@@ -38,8 +38,7 @@
     "@eeacms/volto-block-image-cards",
     "@eeacms/volto-hero-block",
     "@kitconcept/volto-button-block",
-    "@eeacms/volto-listing-block",
-    "@eeacms/volto-pdf-block"
+    "@eeacms/volto-listing-block"
   ],
   "jest": {
     "modulePathIgnorePatterns": [
@@ -156,7 +155,6 @@
     "@eeacms/volto-columns-block": "^6.0.2",
     "@eeacms/volto-hero-block": "^1.0.0",
     "@eeacms/volto-listing-block": "4.2.1",
-    "@eeacms/volto-pdf-block": "^1.0.0",
     "@kitconcept/volto-blocks-grid": "*",
     "@kitconcept/volto-button-block": "*",
     "@kitconcept/volto-carousel-block": "1.1.0",
