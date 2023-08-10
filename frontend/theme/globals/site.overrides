@@ -1091,7 +1091,7 @@ p {
   }
 }
 
-.contenttype-lrf{
+.view-viewview.contenttype-lrf{
   h1.documentFirstHeading{
     display: none !important;
   }
