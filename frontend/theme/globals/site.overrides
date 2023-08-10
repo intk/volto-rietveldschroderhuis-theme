@@ -890,6 +890,10 @@ p {
           line-height: 40px !important;
           // text-transform: none !important;
         }
+        h2 a:hover{
+          border-bottom: 2px solid #494a51 !important;
+          color: #282931 !important;
+        }
 
         a {
           line-height: 40px !important;
