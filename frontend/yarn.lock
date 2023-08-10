@@ -1667,6 +1667,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bundled-es-modules/pdfjs-dist@npm:^2.2.228-alpha1":
+  version: 2.16.106
+  resolution: "@bundled-es-modules/pdfjs-dist@npm:2.16.106"
+  checksum: acd01edce45104a8aac07e382ce4e8bf31ef3a206a3d24960c9117e29f92a3f06fc4c609ea6f017ec6c7f6332362a8c4522c6e19a7fa4443d60371d5aa925953
+  languageName: node
+  linkType: hard
+
 "@cnakazawa/watch@npm:^1.0.3":
   version: 1.0.4
   resolution: "@cnakazawa/watch@npm:1.0.4"
@@ -1800,6 +1807,15 @@ __metadata:
   dependencies:
     "@eeacms/volto-resize-helper": "*"
   checksum: 92940ccfd2ddc556ce21983371de898618a8e45fd6514d961fb54cc19b0f05c749e1b0dd0e0cef8f124317b64b605d3aa7049780d787d1d5664177db7efc1bc6
+  languageName: node
+  linkType: hard
+
+"@eeacms/volto-pdf-block@npm:^1.0.0":
+  version: 1.0.11
+  resolution: "@eeacms/volto-pdf-block@npm:1.0.11"
+  dependencies:
+    "@mikecousins/react-pdf": 5.5.1
+  checksum: 1459ba3a52064d2a2ff2797a5b90e6573a2719d069712626279d4f2e2206ae36879cab2e42237354002413effba92412419d8f1e16639c4e2be027674490ae56
   languageName: node
   linkType: hard
 
@@ -2671,6 +2687,17 @@ __metadata:
   version: 1.6.22
   resolution: "@mdx-js/util@npm:1.6.22"
   checksum: 4b393907e39a1a75214f0314bf72a0adfa5e5adffd050dd5efe9c055b8549481a3cfc9f308c16dfb33311daf3ff63added7d5fd1fe52db614c004f886e0e559a
+  languageName: node
+  linkType: hard
+
+"@mikecousins/react-pdf@npm:5.5.1":
+  version: 5.5.1
+  resolution: "@mikecousins/react-pdf@npm:5.5.1"
+  dependencies:
+    "@bundled-es-modules/pdfjs-dist": ^2.2.228-alpha1
+  peerDependencies:
+    react: ">=16"
+  checksum: a8c19eff10463d63fa4523cf95dcac416c57002e8f87816e67fd2bb21ffc71fb34139f916147f020604375bd940a112f53b290766646f96db3377f7f566e0676
   languageName: node
   linkType: hard
 
@@ -11800,6 +11827,7 @@ __metadata:
     "@eeacms/volto-columns-block": ^6.0.2
     "@eeacms/volto-hero-block": ^1.0.0
     "@eeacms/volto-listing-block": 4.2.1
+    "@eeacms/volto-pdf-block": ^1.0.0
     "@kitconcept/volto-blocks-grid": "*"
     "@kitconcept/volto-button-block": "*"
     "@kitconcept/volto-carousel-block": 1.1.0
