@@ -44,31 +44,38 @@ const messages = defineMessages({
 const tempTranslations = {
   submitLabel: {
     en: 'Submit',
-    nl: 'Indienen',
+    nl: 'Verzenden',
+    de: 'Schicken',
   },
   stateNormal: {
     en: 'Normal',
     nl: 'Normaal',
+    de: 'Normal',
   },
   stateLoading: {
     en: 'Loading',
     nl: 'Bezig met laden',
+    de: 'Wird geladen',
   },
   stateError: {
     en: 'Error',
     nl: 'Fout',
+    de: 'Falsch',
   },
   stateSuccess: {
     en: 'Sent!',
     nl: 'Verzonden!',
+    de: 'Gesendet!',
   },
   reset: {
     en: 'Clear',
     nl: 'Resetten',
+    de: 'Zurücksetzen',
   },
   empty_values: {
     en: 'Fill in the required fields',
     nl: 'Vul de vereiste velden in',
+    de: 'Füllen Sie die erforderlichen Felder aus',
   },
 };
 
