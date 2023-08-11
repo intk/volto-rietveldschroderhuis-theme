@@ -4,10 +4,9 @@
  * added aria- attributes
  */
 import React, { Component } from 'react';
-import { useSelector } from 'react-redux';
 import { compose } from 'redux';
 import PropTypes from 'prop-types';
-import { defineMessages, injectIntl, useIntl } from 'react-intl';
+import { defineMessages, injectIntl } from 'react-intl';
 import loadable from '@loadable/component';
 import cx from 'classnames';
 import { Icon, FormFieldWrapper } from '@plone/volto/components';
