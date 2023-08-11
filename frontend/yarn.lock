@@ -11822,7 +11822,7 @@ __metadata:
     stylelint-config-idiomatic-order: 8.1.0
     stylelint-config-prettier: 8.0.1
     stylelint-prettier: 1.1.2
-    volto-form-block: 3.0.1
+    volto-form-block: 3.1.0
     volto-multilingual-widget: 3.0.0
     volto-social-settings: 3.0.0
   languageName: unknown
@@ -24378,9 +24378,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-form-block@npm:3.0.1":
-  version: 3.0.1
-  resolution: "volto-form-block@npm:3.0.1"
+"volto-form-block@npm:3.1.0":
+  version: 3.1.0
+  resolution: "volto-form-block@npm:3.1.0"
   dependencies:
     "@hcaptcha/react-hcaptcha": ^0.3.6
     file-saver: ^2.0.5
@@ -24389,7 +24389,7 @@ __metadata:
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
     volto-subblocks: ^2.0.0
-  checksum: 6d70971826e847a6615a5344ec48e502447e07cde0332c3ff1dd9e2b80324cf66dbf4ccfefeac830bf975838b0d9ffbcc8c8993b5eedfa43552f2b8da28a4e2b
+  checksum: a8707b864ee32acf99151d302de6389d9a395623b2c384dbae3a1acb9e2b5c57f355f5d9318834fa9e49b004f14f97494534dd435daea65414ddce087e340009
   languageName: node
   linkType: hard
 
