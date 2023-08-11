@@ -1157,7 +1157,7 @@ p {
     margin-right: auto !important;
     margin-left: auto !important;
   }
-  #page-document > * {
+  .ui.content-area main > #view > #page-document > * {
     width: 80% !important;
     margin-right: auto;
     margin-left: auto;
