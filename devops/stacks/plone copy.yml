@@ -57,23 +57,6 @@ services:
     networks:
       - nw-webserver
 
-  # mailserver:
-  #   image: ghcr.io/docker-mailserver/docker-mailserver:latest
-  #   hostname: mail.new.rietveldschroderhuis.nl
-  #   ports:
-  #     - "25:25"
-  #     - "465:465"
-  #     - "587:587"
-  #     - "993:993"
-  #   volumes:
-  #     - vol-traefik-public-certificates:/etc/letsencrypt/acme.json:ro
-  #   environment:
-  #     - ENABLE_RSPAMD=1
-  #     - ENABLE_CLAMAV=1
-  #     - ENABLE_FAIL2BAN=1
-  #   cap_add:
-  #     - NET_ADMIN
-
   frontend:
     image: intkbv/rietveld-frontend:latest
     environment:

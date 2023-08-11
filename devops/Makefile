@@ -121,6 +121,11 @@ logs-backend: ## Display backend logs
 	@echo "$(GREEN)==> Logs for backend in $(DEPLOY_ENV) $(RESET)"
 	${DOCKER_CONTEXT} service logs plone_backend
 
+.PHONY: logs-mailserver
+logs-mailserver: ## Display mailserver logs
+	@echo "$(GREEN)==> Logs for mailserver in $(DEPLOY_ENV) $(RESET)"
+	${DOCKER_CONTEXT} service logs plone_mailserver
+
 .PHONY: scale-services
 scale-services: ## Scale services
 	@echo "$(GREEN)==> Scaling Frontend and Backend to $(DEPLOY_SCALES) in $(DEPLOY_ENV) $(RESET)"
@@ -143,3 +148,4 @@ remove-all:
 	${DOCKER_CONTEXT} service rm plone_backend
 	${DOCKER_CONTEXT} service rm plone_frontend
 	${DOCKER_CONTEXT} service rm plone_traefik
+	${DOCKER_CONTEXT} service rm plone_mailserver
