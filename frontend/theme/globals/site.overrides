@@ -1109,3 +1109,57 @@ p {
     display: none;
   }
 }
+
+
+.section-groepsrondleiding{
+  h1.documentFirstHeading{
+    font-size: 60px !important;
+    text-align: left;
+    margin-top: 25px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.05em !important;
+    padding-bottom: 0px;
+    color: #282931 !important;
+    line-height: 62px !important;
+    margin-bottom: 0px !important;
+    text-align: start !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  p{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  @media (min-width: 768px) {
+    #page-document{
+      padding-top: 170px !important;
+    }
+  }
+  @media (min-width: 768px) {
+    #page-document.ui.container {
+      width: 750px !important;
+    }
+  }
+  @media (min-width: 992px) {
+    #page-document.ui.container {
+      width: 970px !important;
+    }
+  }
+  @media (min-width: 1200px) {
+    #page-document.ui.container {
+      width: 1170px !important;
+    }
+  }
+  #page-document.ui.container {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  #page-document > * {
+    width: 80% !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

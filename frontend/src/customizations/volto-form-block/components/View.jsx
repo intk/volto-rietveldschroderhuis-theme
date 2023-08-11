@@ -9,6 +9,7 @@ import FormView from 'volto-form-block/components/FormView';
 import { formatDate } from '@plone/volto/helpers/Utils/Date';
 import config from '@plone/volto/registry';
 import { Captcha } from 'volto-form-block/components/Widget';
+import './View.less';
 
 const messages = defineMessages({
   formSubmitted: {
