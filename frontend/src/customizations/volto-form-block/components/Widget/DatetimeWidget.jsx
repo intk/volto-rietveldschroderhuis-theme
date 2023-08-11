@@ -4,9 +4,10 @@
  * added aria- attributes
  */
 import React, { Component } from 'react';
+import { useSelector } from 'react-redux';
 import { compose } from 'redux';
 import PropTypes from 'prop-types';
-import { defineMessages, injectIntl } from 'react-intl';
+import { defineMessages, injectIntl, useIntl } from 'react-intl';
 import loadable from '@loadable/component';
 import cx from 'classnames';
 import { Icon, FormFieldWrapper } from '@plone/volto/components';
@@ -33,6 +34,14 @@ const messages = defineMessages({
     defaultMessage: 'Time',
   },
 });
+
+const tempTranslations = {
+  date: {
+    en: 'Choose date...',
+    nl: 'Kies datum...',
+    de: 'Datum wählen...',
+  },
+};
 
 const PrevIcon = () => (
   <div
@@ -92,6 +101,7 @@ export class DatetimeWidgetComponent extends Component {
    * @param {Object} props Component properties
    * @constructs DatetimeWidget
    */
+
   constructor(props) {
     super(props);
     this.moment = props.moment.default;
@@ -227,7 +237,7 @@ export class DatetimeWidgetComponent extends Component {
               navPrev={<PrevIcon />}
               navNext={<NextIcon />}
               id={`${id}-date`}
-              placeholder={intl.formatMessage(messages.date)}
+              placeholder={tempTranslations['date'][this.props.intl.locale]}
               {...attributes}
             />
           </div>

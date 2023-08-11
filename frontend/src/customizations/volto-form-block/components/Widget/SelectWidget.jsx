@@ -32,6 +32,7 @@ import {
   getReactSelectAriaLiveMessages,
   getReactSelectScreenReaderStatus,
 } from 'volto-form-block/helpers/react-select';
+// import { langmap } from '../../../../../omelette/src/helpers';
 
 const messages = defineMessages({
   default: {
@@ -79,6 +80,14 @@ const messages = defineMessages({
     defaultMessage: 'No options',
   },
 });
+
+const tempTranslations = {
+  no_value: {
+    en: 'No value',
+    nl: 'Geen waarde',
+    de: 'Kein wert',
+  },
+};
 
 /**
  * SelectWidget component class.
@@ -206,7 +215,7 @@ class SelectWidget extends Component {
           ...(this.props.noValueOption && !this.props.default
             ? [
                 {
-                  label: this.props.intl.formatMessage(messages.no_value),
+                  label: tempTranslations['no_value'][this.props.intl.locale],
                   value: 'no-value',
                 },
               ]

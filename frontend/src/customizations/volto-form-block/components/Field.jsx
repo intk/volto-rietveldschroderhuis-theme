@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
 import WysiwygWidget from '@plone/volto/components/manage/Widgets/WysiwygWidget';
 import {
@@ -18,6 +19,7 @@ import config from '@plone/volto/registry';
 
 /* Style */
 import 'volto-form-block/components/Field.css';
+// import { selectAll } from '../../../../omelette/packages/volto-slate/src/utils';
 
 const messages = defineMessages({
   select_a_value: {
@@ -25,6 +27,13 @@ const messages = defineMessages({
     defaultMessage: 'Select a value',
   },
 });
+const tempTranslations = {
+  select: {
+    en: 'Select a value...',
+    nl: 'Selecteer een waarde...',
+    de: 'Wähle einen Wert...',
+  },
+};
 
 /**
  * Field class.
@@ -51,6 +60,8 @@ const Field = ({
   const isInvalid = () => {
     return !isOnEdit && !valid;
   };
+
+  const currentLang = useSelector((state) => state.intl.locale);
 
   return (
     <div className="field">
@@ -94,9 +105,7 @@ const Field = ({
           choices={[...(input_values?.map((v) => [v, v]) ?? [])]}
           value={value}
           onChange={onChange}
-          placeholder={
-            description || intl.formatMessage(messages.select_a_value)
-          }
+          placeholder={description || tempTranslations['select'][currentLang]}
           aria-label={intl.formatMessage(messages.select_a_value)}
           classNamePrefix="react-select"
           isDisabled={disabled}
