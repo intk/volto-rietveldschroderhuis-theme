@@ -13,8 +13,8 @@
   .inline.field .wrapper{
     border-bottom: 0px;
   }
-  .ui.form .ui.input input, .css-1ard45z-control{
-    border: 1px solid #C7D5D8;
+  .ui.form .ui.input input, .css-1ard45z-control, .css-t95vk8-control, textarea{
+    border: 1px solid #C7D5D8 !important;
   }
   .checkbox-group, .radio-group{
     display: flex;
@@ -43,8 +43,12 @@
   label::after{
     background-color: transparent !important;
   }
-  input, .react-select__value-container{
+  input, .react-select__value-container {
     padding-left: 10px !important;
+  }
+  textarea {
+    padding-left: 10px !important;
+    padding-top: 10px !important;
   }
   .center.aligned.column{
     text-align: end !important;
@@ -83,4 +87,7 @@
     border: #282931 !important;
     color: white !important;
   }
+  // .react-select-container .react-select__control{
+  //   width: 130px;
+  // }
 }

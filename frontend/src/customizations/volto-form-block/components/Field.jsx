@@ -90,6 +90,7 @@ const Field = ({
           value={value}
           rows={10}
           isDisabled={disabled}
+          placeholder={description}
           invalid={isInvalid().toString()}
           {...(isInvalid() ? { className: 'is-invalid' } : {})}
         />
