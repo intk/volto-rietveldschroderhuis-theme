@@ -1139,14 +1139,15 @@ p {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
   }
+  #page-document {
+    padding-top: 140px !important;
+  }
   @media (min-width: 768px) {
     #page-document{
       padding-top: 170px !important;
     }
   }
-  #page-document{
-    padding-top: 140px !important;
-  }
+
 
   @media (min-width: 768px) {
     #page-document.ui.container {
