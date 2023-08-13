@@ -1124,7 +1124,6 @@ p {
     padding-bottom: 0px;
     color: #282931 !important;
     line-height: 62px !important;
-    margin-bottom: 0px !important;
     text-align: start !important;
     margin-right: auto;
     margin-left: auto;
