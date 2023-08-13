@@ -8,15 +8,21 @@
     .column{
       padding-left: 0px;
       padding-right: 0px;
+
+      .stretched.row {
+        padding-bottom: 0% !important;
+      }
     }
   }
   .inline.field .wrapper{
     border-bottom: 0px;
   }
   .ui.form .ui.input input, .css-1ard45z-control, .css-t95vk8-control, textarea{
-    border: 1px solid #C7D5D8 !important;
+    border: 1px solid #c3c3c3 !important;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
+
+
   }
   .checkbox-group, .radio-group{
     display: flex;
@@ -37,7 +43,7 @@
     color: #666666;
   }
   .row{
-    padding-bottom: 10px !important;
+    padding-bottom: 14px !important;
   }
   label{
     font-size: 18px !important;
@@ -98,11 +104,17 @@
   }
   .ui.grid > .row > .eight.wide.column{
     width: 60% !important;
+    padding-left: 2px;
   }
 
-  .ui.form input[type=text], textarea, .react-select__placeholder{
+  .ui.form input[type=text], textarea, .react-select__placeholder, input{
     font-size: 16px !important;
     color: #727276 !important;
     font-family: 'FranklinBook', Arial, sans-serif !important;
+  }
+  label{
+    font-size: 18px;
+    margin-left: 0px;
+    line-height: 24px;
   }
 }
