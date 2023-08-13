@@ -1128,6 +1128,13 @@ p {
     margin-right: auto;
     margin-left: auto;
   }
+  @media screen and (max-width: 768px) {
+    h1.documentFirstHeading {
+      font-size: 35px !important;
+      letter-spacing: 1.75px !important;
+      line-height: 35px !important;
+    }
+  }
   p{
     margin-top: 0px !important;
     margin-bottom: 0px !important;
@@ -1137,6 +1144,10 @@ p {
       padding-top: 170px !important;
     }
   }
+  #page-document{
+    padding-top: 140px !important;
+  }
+
   @media (min-width: 768px) {
     #page-document.ui.container {
       width: 750px !important;
@@ -1158,9 +1169,19 @@ p {
     margin-right: auto !important;
     margin-left: auto !important;
   }
-  .ui.content-area main > #view > #page-document > * {
-    width: 80% !important;
-    margin-right: auto;
-    margin-left: auto;
+
+  @media screen and (min-width: 768px) {
+    .ui.content-area main > #view > #page-document > * {
+      width: 80% !important;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  @media screen and (max-width: 768px){
+    #page-document.ui.container>*:not(.block.image.align, .block.video.align),
+    #page-edit.ui.container>*:not(.block.image.align, .block.video.align) {
+      padding-left: 10px !important;
+      padding-right: 0px !important;
+    }
   }
 }
