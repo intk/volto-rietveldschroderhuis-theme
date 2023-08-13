@@ -11,7 +11,7 @@ const SeethehouseBlockView = (props) => {
     },
     ticket: {
       id: 'Ticket',
-      defaultMessage: 'Ticket',
+      defaultMessage: 'Tickets',
     },
     menu: {
       id: 'Menu',
