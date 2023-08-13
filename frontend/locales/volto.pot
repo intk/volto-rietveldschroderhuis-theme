@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-08-08T15:03:52.907Z\n"
+"POT-Creation-Date: 2023-08-13T19:16:43.253Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,7 @@ msgid "Site Logo"
 msgstr ""
 
 #: components/Blocks/SeethehouseBlock/SeethehouseBlockView
-# defaultMessage: Ticket
+# defaultMessage: Tickets
 msgid "Ticket"
 msgstr ""
 

@@ -88,7 +88,7 @@ msgid "Site Logo"
 msgstr ""
 
 #: components/Blocks/SeethehouseBlock/SeethehouseBlockView
-# defaultMessage: Ticket
+# defaultMessage: Tickets
 msgid "Ticket"
 msgstr ""
 
