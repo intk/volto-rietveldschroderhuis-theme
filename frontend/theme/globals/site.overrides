@@ -7,11 +7,12 @@ body {
   font-size: 16px;
   color: #404040;
 }
-@media screen and (min-width: 1200px) {
-  .view-viewview .ui.basic.segment.content-area {
-    margin-left: 100px;
-  }
-}
+// @media screen and (min-width: 1200px) {
+//   .view-viewview.contenttype-document .ui.basic.segment.content-area #page-document > *:not(div) {
+//    margin-left: 50px;
+//    box-sizing: border-box !important;
+//   }
+// }
 
 html {
   scroll-behavior: smooth;
