@@ -1108,7 +1108,7 @@ p {
   }
 }
 
-.view-viewview.contenttype-lrf{
+.view-viewview.contenttype-lrf:not(.section-search){
   h1.documentFirstHeading{
     display: none !important;
   }
