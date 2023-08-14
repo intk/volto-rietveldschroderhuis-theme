@@ -15,7 +15,7 @@
 @brand-primary-red: #e70518;
 
 
-@container-width: 650px;
+@container-width: 750px;
 
 @gray-dark: lighten(black, 25%);
 @gray: lighten(black, 50%);
