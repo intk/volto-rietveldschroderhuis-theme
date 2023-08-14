@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect } from 'react';
 import { BodyClass, toBackendLang } from '@plone/volto/helpers';
 import { FormattedMessage } from 'react-intl';
