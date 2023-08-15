@@ -84,13 +84,14 @@ const Footer = ({ intl }) => {
       u: 'c04600e3ceefae8c502cbabec',
       id: '42702e9770',
       'group[15893][1]': '1',
+      _: new Date().getTime(),
     };
 
     try {
       const response = await fetch(
         'https://centraalmuseum.us2.list-manage.com/subscribe/post-json?c=?',
         {
-          method: 'POST',
+          method: 'GET',
           headers: {
             'Content-Type': 'application/json',
           },
