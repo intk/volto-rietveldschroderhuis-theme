@@ -11818,6 +11818,7 @@ __metadata:
     prettier: 2.0.5
     razzle: 4.2.17
     react-icons: 4.10.1
+    react-mailchimp-subscribe: 2.1.3
     stylelint: 14.0.1
     stylelint-config-idiomatic-order: 8.1.0
     stylelint-config-prettier: 8.0.1
@@ -19844,6 +19845,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-mailchimp-subscribe@npm:2.1.3":
+  version: 2.1.3
+  resolution: "react-mailchimp-subscribe@npm:2.1.3"
+  dependencies:
+    jsonp: ^0.2.1
+    prop-types: ^15.5.10
+    to-querystring: ^1.0.4
+  peerDependencies:
+    react: ">=15"
+  checksum: 24eee4d962189af4af463a136330a24987e12b479f4c6b885ab9d387350245b2df12292ee2363f01a8b4505d633ad6bada030bb3a25096a278043f0c4088ca22
+  languageName: node
+  linkType: hard
+
 "react-medium-image-zoom@npm:3.0.15":
   version: 3.0.15
   resolution: "react-medium-image-zoom@npm:3.0.15"
@@ -23397,6 +23411,13 @@ __metadata:
   dependencies:
     kind-of: ^3.0.2
   checksum: 9425effee5b43e61d720940fa2b889623f77473d459c2ce3d4a580a4405df4403eec7be6b857455908070566352f9e2417304641ed158dda6f6a365fe3e66d70
+  languageName: node
+  linkType: hard
+
+"to-querystring@npm:^1.0.4":
+  version: 1.2.0
+  resolution: "to-querystring@npm:1.2.0"
+  checksum: 23de905b88c4e8e3f4fc9bd1bd5a0f44a8de487d55d15651fb5988f52d67d171e726096ddc181327d761ebc4c0d7e414026a28e0890fec976ddd5797befc0ddc
   languageName: node
   linkType: hard
 
