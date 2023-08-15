@@ -15,6 +15,7 @@ import {
 } from '@package/components/Blocks/SiteData/utils';
 import { Container, Segment, Grid, Label } from 'semantic-ui-react';
 import RenderBlocks from './RenderBlocks';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 import { useSiteDataContent } from '@package/helpers';
 
@@ -42,6 +43,75 @@ const messages = defineMessages({
   },
 });
 
+const cookietranslations = {
+  more_info_link: {
+    en: '/nl/over-ons/over-het-museum/privacyverklaring-en-cookies',
+    nl: '/nl/over-ons/over-het-museum/privacyverklaring-en-cookies',
+  },
+  more_info_text: {
+    en: 'Read more',
+    nl: 'Meer info',
+  },
+  text: {
+    en: 'We use cookies to enhance our website.',
+    nl: 'Wij gebruiken cookies om onze website te verbeteren.',
+  },
+  button_text: {
+    en: 'Accept',
+    nl: 'Accepteren',
+  },
+};
+
+const MailChimpForm = ({ status, message, onValidated }) => {
+  let email;
+  const submit = () =>
+    email &&
+    email.value.indexOf('@') > -1 &&
+    onValidated({
+      EMAIL: email.value,
+    });
+
+  return (
+    <>
+      <div id="newsletter-form">
+        <div id="formfield-form-widgets-email">
+          <input
+            id="form-widgets-email"
+            ref={(node) => (email = node)}
+            type="email"
+            placeholder="Je emailadres"
+          />
+          <br />
+        </div>
+        <div className="formControls">
+          <button id="form-buttons-subscribe" onClick={submit}>
+            Inschrijven
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <div className="message">
+          {status === 'sending' && <div style={{ color: 'blue' }}>...</div>}
+          {status === 'error' && (
+            <div
+              style={{ color: 'red' }}
+              dangerouslySetInnerHTML={{ __html: message }}
+            />
+          )}
+          {status === 'success' && (
+            <div
+              className="success-msg"
+              style={{ color: 'blue' }}
+              dangerouslySetInnerHTML={{ __html: message }}
+            />
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
+
 /**
  * Component to display the footer.
  * @function Footer
@@ -51,6 +121,8 @@ const messages = defineMessages({
 
 const Footer = ({ intl }) => {
   const siteDataContent = useSiteDataContent();
+  const mailchimp_url =
+    'https://centraalmuseum.us2.list-manage.com/subscribe/post?u=c04600e3ceefae8c502cbabec&amp;id=42702e9770&group%5B15893%5D%5B1%5D=1';
 
   const content = {
     blocks: siteDataContent.blocks,
@@ -76,92 +148,20 @@ const Footer = ({ intl }) => {
     });
   }, [history]);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const data = {
-      EMAIL: email,
-      u: 'c04600e3ceefae8c502cbabec',
-      id: '42702e9770',
-      'group[15893][1]': '1',
-      _: new Date().getTime(),
-    };
-
-    try {
-      const response = await fetch(
-        'https://centraalmuseum.us2.list-manage.com/subscribe/post-json?c=?',
-        {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        },
-      );
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setMessage(
-          'Bedankt voor je aanmelding. Je ontvangt een e-mail waarin je inschrijving wordt bevestigd.',
-        );
-        // setMessage(
-        //   {intl.formatMesssage(messages.approve)}
-        // )
-      } else {
-        setMessage('Aanmelden op nieuwsbrief mislukt.');
-      }
-    } catch (error) {
-      setMessage('Er is een fout opgetreden. Probeer het opnieuw.');
-    }
-  };
-
   return (
     <Container id="Footer-wrapper">
-      {/* <div id="Tickets">
-          <h3 className="Header">{intl.formatMessage(messages.ticket)}</h3>
-          <div className="buttons">
-            <button
-              className="button button1"
-              href="https://tickets.rietveldschroderhuis.nl/nl/tickets"
-            >
-              Tickets
-            </button>
-            <button className="button button2" href="/">
-              Menu
-            </button>
-          </div>
-        </div> */}
-
       <div id="Newsletter">
         <h3 className="Header">{intl.formatMessage(messages.newsletter)}</h3>
-        <form id="newsletter-form" onSubmit={handleSubmit}>
-          <div id="formfield-form-widgets-email">
-            <input
-              id="form-widgets-email"
-              name="EMAIL"
-              className="text-widget required textline-field"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              type="text"
-              placeholder="Je emailadres"
+        <MailchimpSubscribe
+          url={mailchimp_url}
+          render={({ subscribe, status, message }) => (
+            <MailChimpForm
+              status={status}
+              message={message}
+              onValidated={(formData) => subscribe(formData)}
             />
-          </div>
-          <div className="formControls">
-            <input
-              type="submit"
-              id="form-buttons-subscribe"
-              name="form.buttons.subscribe"
-              className="submit-widget button-field context"
-              value="Inschrijven"
-            />
-          </div>
-        </form>
-        {message && (
-          <div className="message">
-            <p>{message}</p>
-          </div>
-        )}
+          )}
+        />
       </div>
       <div id="view">
         <Container id="page-document" className="Footer">
