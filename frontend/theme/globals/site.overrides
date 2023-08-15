@@ -12,6 +12,7 @@ body {
   .view-viewview.contenttype-document .ui.basic.segment.content-area #page-document > .block.image.align,
   .view-viewview.contenttype-document .ui.basic.segment.content-area #page-document>.block.video.align,
   .view-viewview.contenttype-document .ui.basic.segment.content-area #page-document > .accordion-block,
+  .view-viewview.contenttype-document .ui.basic.segment.content-area #page-document>.block.__button
   .view-viewview.contenttype-event .ui.basic.segment.content-area #page-document> *:not(div, .documentFirstHeading),
   .view-viewview.contenttype-event .ui.basic.segment.content-area #page-document > .block.image.align,
   .view-viewview.contenttype-event .ui.basic.segment.content-area #page-document>.block.video.align,
