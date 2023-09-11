@@ -68,9 +68,7 @@ const SocialMediaButtonsView = (props) => {
         </a>
         <a
           className="popup"
-          href="mailto:info@rietveldschroderhuis.nl?subject=Rietveldschroderhuiswebsite"
-          // eslint-disable-next-line react/jsx-no-target-blank
-          target="_blank"
+          href="mailto:?subject=Rietveld Schröderhuis&body=https://www.rietveldschroderhuis.nl/nl/ontdek/rietveld-schroderhuis"
         >
           <svg
             className="button"
