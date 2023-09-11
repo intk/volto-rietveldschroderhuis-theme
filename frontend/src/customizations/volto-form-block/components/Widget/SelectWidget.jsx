@@ -81,13 +81,13 @@ const messages = defineMessages({
   },
 });
 
-const tempTranslations = {
-  no_value: {
-    en: 'No value',
-    nl: 'Geen waarde',
-    de: 'Kein wert',
-  },
-};
+// const tempTranslations = {
+//   no_value: {
+//     en: 'No value',
+//     nl: 'Geen waarde',
+//     de: 'Kein wert',
+//   },
+// };
 
 /**
  * SelectWidget component class.
