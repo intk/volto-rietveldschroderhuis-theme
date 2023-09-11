@@ -1208,3 +1208,8 @@ p {
 .DayPickerKeyboardShortcuts_buttonReset {
   display: none !important;
 }
+
+p > sub{
+  font-size: 12px;
+  color: #777777;
+}
