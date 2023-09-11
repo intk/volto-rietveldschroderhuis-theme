@@ -30,7 +30,7 @@ const messages = defineMessages({
 const tempTranslations = {
   select: {
     en: 'Select a value...',
-    nl: 'Selecteer een waarde...',
+    nl: 'Kies een tijdstip...',
     de: 'Wähle einen Wert...',
   },
 };
