@@ -1203,3 +1203,13 @@ p {
     }
   }
 }
+
+// Datepicker tip
+.DayPickerKeyboardShortcuts_buttonReset {
+  display: none !important;
+}
+
+// Make the 'Geen waarde' disappear
+.react-select__menu .react-select__option:last-child{
+  display: none !important;
+}
