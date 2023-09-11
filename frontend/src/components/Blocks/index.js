@@ -5,6 +5,7 @@ import installSlidingTextBlock from './SlidingTextBlock';
 import installVideoPageBlock from './VideoPageBlock';
 import installVimeoBlock from './VimeoBlock';
 import installSeethehouseBlock from './SeethehouseBlock';
+import installSocialMediaButtons from './SocialMediaButtons';
 import { compose } from 'redux';
 
 const installBlocks = (config) => {
@@ -16,6 +17,7 @@ const installBlocks = (config) => {
     installVideoPageBlock,
     installVimeoBlock,
     installSeethehouseBlock,
+    installSocialMediaButtons,
   )(config);
 };
 
