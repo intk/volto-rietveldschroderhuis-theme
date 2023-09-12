@@ -436,6 +436,11 @@ p {
   //   text-align: right !important;
   // }
 }
+.slate-table-block{
+    @media screen and (min-width: 1200px) {
+        width: 650px;
+      }
+}
 .slate-table-block * {
   font-size: 17px !important;
   background-color: #fff !important;
