@@ -449,6 +449,7 @@ p {
   border-right: 0px !important;
   p {
       letter-spacing: 1.275px !important;
+      line-height: 33px !important;
   }
 }
 .slate-table-block td{
