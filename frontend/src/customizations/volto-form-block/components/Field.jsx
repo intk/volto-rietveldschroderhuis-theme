@@ -48,6 +48,7 @@ const Field = ({
   required,
   input_values,
   value,
+  defaultValue,
   onChange,
   isOnEdit,
   valid,
@@ -104,9 +105,9 @@ const Field = ({
           getVocabulary={() => {}}
           getVocabularyTokenTitle={() => {}}
           choices={[...(input_values?.map((v) => [v, v]) ?? [])]}
-          value={value}
+          value={value || defaultValue}
           onChange={onChange}
-          placeholder={description || tempTranslations['select'][currentLang]}
+          placeholder={tempTranslations['select'][currentLang]}
           aria-label={intl.formatMessage(messages.select_a_value)}
           classNamePrefix="react-select"
           isDisabled={disabled}

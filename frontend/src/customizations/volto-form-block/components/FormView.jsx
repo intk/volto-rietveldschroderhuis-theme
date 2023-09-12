@@ -198,6 +198,7 @@ const FormView = ({
                               ? subblock.value
                               : formData[name]?.value
                           }
+                          defaultValue={subblock?.default_values}
                           valid={isValidField(name)}
                           formHasErrors={formErrors?.length > 0}
                         />
