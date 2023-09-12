@@ -20,6 +20,16 @@ const SocialMediaButtonsView = (props) => {
     window.open(shareURL, 'Popup', 'width=600,height=400');
   };
 
+  const handleMailShareClick = (e) => {
+    e.preventDefault();
+    const shareText = 'Rietveld Schröderhuis: ';
+    const shareURL =
+      'mailto:?subject=Rietveld Schröderhuis&body=' +
+      encodeURIComponent(shareText) +
+      encodeURIComponent(window.location.href);
+    window.open(shareURL);
+  };
+
   return (
     <div id="social-media-block">
       <div className="text">
@@ -68,7 +78,8 @@ const SocialMediaButtonsView = (props) => {
         </a>
         <a
           className="popup"
-          href="mailto:?subject=Rietveld Schröderhuis&body=https://www.rietveldschroderhuis.nl/nl/ontdek/rietveld-schroderhuis"
+          href="mailto:?subject=Rietveld Schröderhuis&body=https://www.rietveldschroderhuis.nl"
+          onClick={handleMailShareClick}
         >
           <svg
             className="button"
