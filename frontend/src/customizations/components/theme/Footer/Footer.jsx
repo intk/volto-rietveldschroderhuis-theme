@@ -18,6 +18,7 @@ import RenderBlocks from './RenderBlocks';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 import { useSiteDataContent } from '@package/helpers';
+import { langmap } from '../../../../../omelette/src/helpers';
 
 const messages = defineMessages({
   copyright: {
@@ -60,6 +61,16 @@ const cookietranslations = {
     en: 'Accept',
     nl: 'Accepteren',
   },
+  approve: {
+    en:
+      'Thank you for registering. You will receive an email confirming your registration.',
+    nl:
+      'Bedankt voor je aanmelding. Je ontvangt een e-mail waarin je inschrijving wordt bevestigd.',
+  },
+  unable: {
+    en: 'Unable to subscribe to newsletter.',
+    nl: 'Aanmelden op nieuwsbrief mislukt.',
+  },
 };
 
 const MailChimpForm = ({ status, message, onValidated }) => {
@@ -96,15 +107,19 @@ const MailChimpForm = ({ status, message, onValidated }) => {
           {status === 'error' && (
             <div
               style={{ color: 'red' }}
-              dangerouslySetInnerHTML={{ __html: message }}
-            />
+              // dangerouslySetInnerHTML={{ __html: message }}
+            >
+              <p>{cookietranslations['unable']['nl']}</p>
+            </div>
           )}
           {status === 'success' && (
             <div
               className="success-msg"
               style={{ color: 'blue' }}
-              dangerouslySetInnerHTML={{ __html: message }}
-            />
+              // dangerouslySetInnerHTML={{ __html: message }}
+            >
+              <p>{cookietranslations['approve']['nl']}</p>
+            </div>
           )}
         </div>
       </div>
