@@ -451,6 +451,16 @@ p {
   border-bottom: 0.625px rgb(234, 234, 234) solid;
 }
 
+.slate-table-block.very.basic {
+  thead, tbody{
+    tr th:last-child, tr td:last-child{
+      p{
+        text-align: right !important;
+      }
+    }
+  }
+}
+
 // ******************
 .ui.styled.accordion .title{
   background-color: #fbfbfb !important;
