@@ -7,7 +7,15 @@ const SocialMediaButtonsView = (props) => {
     const shareURL =
       'https://www.facebook.com/sharer/sharer.php?u=' +
       encodeURIComponent(window.location.href);
-    window.open(shareURL, 'Popup', 'width=600,height=400');
+    const width = 600;
+    const height = 400;
+    const left = (window.innerWidth - width) / 2;
+    const top = (window.innerHeight - height) / 2;
+    window.open(
+      shareURL,
+      'Popup',
+      `width=${width},height=${height},left=${left},top=${top}`,
+    );
   };
 
   const handleTwitterShareClick = (e) => {
@@ -17,7 +25,16 @@ const SocialMediaButtonsView = (props) => {
       'https://twitter.com/intent/tweet?text=' +
       encodeURIComponent(shareText) +
       encodeURIComponent(window.location.href);
-    window.open(shareURL, 'Popup', 'width=600,height=400');
+
+    const width = 600;
+    const height = 400;
+    const left = (window.innerWidth - width) / 2;
+    const top = (window.innerHeight - height) / 2;
+    window.open(
+      shareURL,
+      'Popup',
+      `width=${width},height=${height},left=${left},top=${top}`,
+    );
   };
 
   const handleMailShareClick = (e) => {
