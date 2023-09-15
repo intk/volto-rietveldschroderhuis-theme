@@ -216,6 +216,13 @@
   #quote-block-wrapper.VideoPageBlock, .block-editor-VideoPageBlock {
     .ui.stackable.stretched.column.grid .column.grid-block-text:nth-child(2),
     .ui.stackable.stretched.column.grid .column.grid-block-text:nth-child(3) {
+      p::after,
+        .public-DraftStyleDefault-block span span::after {
+          content: "\00a0\00a0\00a0\00a0\00a0———";
+        }
+      p:has(br)::after{
+        content: "";
+      }
       @media (min-width: 1200px) {
           padding-top: 2% !important;
         }
