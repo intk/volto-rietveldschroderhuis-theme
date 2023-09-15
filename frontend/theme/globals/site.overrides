@@ -891,6 +891,8 @@ p {
     justify-content: flex-start;
 
     .listing-items {
+      position: relative;
+      z-index: 9;
       width: 33.15%;
       margin-bottom: 10px;
       display: flex;
