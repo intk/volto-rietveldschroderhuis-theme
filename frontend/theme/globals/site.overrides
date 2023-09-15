@@ -857,6 +857,11 @@ p {
 }
 
 // listing default
+body:not(.has-mobile-menu-open){
+  #content-core .listing-items {
+    z-index: 9;
+  }
+}
 #view #page-document .block.listing.default #page-listing, #page-edit .block.listing.default #page-listing {
   position: relative;
   width: 100vw;
@@ -892,7 +897,6 @@ p {
 
     .listing-items {
       position: relative;
-      z-index: 9;
       width: 33.15%;
       margin-bottom: 10px;
       display: flex;
