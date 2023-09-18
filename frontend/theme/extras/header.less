@@ -483,6 +483,7 @@ main,
 .header-bg,
 .logo,
 #footerWrapper {
+  overflow-y: auto;
   transform: translateX(0) !important;
   transition: transform 0.4s cubic-bezier(0.91, 0.01, 0.6, 0.99);
 }
@@ -584,10 +585,8 @@ body.intk-menu-opening {
   .header-bg,
   .logo,
   #footerWrapper{
-    overflow-y: visible;
     transform: translateX(100%) !important;
     transition: transform 0.4s cubic-bezier(0.91, 0.1, 0.6, 0.99);
-    --webkit-overflow-scrolling: touch;
   }
 
   .search {
@@ -664,10 +663,6 @@ body.has-toolbar.has-hero-image {
       margin-top: auto;
       margin-bottom: auto;
       color: #404040 !important;
-    }
-    #input::placeholder{
-      // font-size: 15px;
-      // line-height: 15px;
     }
   }
   .tools-search-wrapper{
@@ -986,8 +981,8 @@ body.has-toolbar.has-hero-image {
 }
 
 .mobile-menu.mobile-menu-enter-done{
-  --webkit-overflow-scrolling: touch;
-  height: 100%;
-  max-height: 2000px;
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+.right-section{
+  z-index: 10;
 }

@@ -39,6 +39,9 @@ const Header = (props) => {
         <BodyClass className="has-hero-section" />
       )}
       {isSearch && <BodyClass className="has-hero-section" />}
+      <div className="right-section">
+        <Navigation pathname={pathname} navigation={navigationItems} />
+      </div>
       <div
         className={cx(
           'header-wrapper',
@@ -55,10 +58,6 @@ const Header = (props) => {
           >
             <div className="logo">
               <Logo black={content?.hide_top_image} />
-            </div>
-
-            <div className="right-section">
-              <Navigation pathname={pathname} navigation={navigationItems} />
             </div>
           </div>
         </div>
