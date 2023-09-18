@@ -7,6 +7,9 @@ body {
   font-size: 16px;
   color: #404040;
 }
+div#main {
+  overflow-x: hidden;
+}
 @media screen and (min-width: 1200px) {
   .view-viewview.contenttype-document .ui.basic.segment.content-area #page-document > *:not(div, .documentFirstHeading),
   .view-viewview.contenttype-document .ui.basic.segment.content-area #page-document > .block.image.align,
@@ -1235,3 +1238,5 @@ p > sub{
   font-size: 12px;
   color: #777777;
 }
+
+
