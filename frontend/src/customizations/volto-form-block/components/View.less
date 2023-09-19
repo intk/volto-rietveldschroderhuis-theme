@@ -133,3 +133,59 @@
     line-height: 24px;
   }
 }
+
+.DateInput, .date-input input, #subblock-select .eight.wide.column{
+  width: 187px !important;
+}
+.row#subblock-select .react-select__control{
+  min-height: 44px !important;
+  height: 44px !important;
+}
+.block.form .field .static-text{
+  margin-top: 45px !important;
+}
+
+@media screen and (max-width: 992px) {
+  .block.form .row{
+    padding-bottom: 6px !important;
+  }
+  #subblock-textarea textarea, #subblock-textarea .wrapper{
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
+
+  .centered.row.row-padded-top{
+    button{
+      width: 100%;
+    }
+  }
+  .block.form .ui.segment .column .stretched.row{
+    flex-direction: column;
+  }
+
+  .block.form .column.grid .row{
+    label{
+      visibility: hidden;
+    }
+  }
+  .block.form .column.grid {
+
+  .row#subblock-date, .row#subblock-select, .row#subblock-checkbox{
+    label{
+      visibility: visible;
+    }
+  }
+
+  .row#subblock-checkbox .ui.checkbox{
+    padding-left: 0px;
+  }
+
+}
+
+  .block.form .inline.field .wrapper{
+    min-height: 50px;
+  }
+  .block.form .ui.grid>.row>.eight.wide.column{
+    width: 100% !important;
+  }
+}

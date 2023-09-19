@@ -180,7 +180,10 @@ const FormView = ({
                   );
 
                   return (
-                    <Grid.Row key={'row' + index}>
+                    <Grid.Row
+                      key={'row' + index}
+                      id={`subblock-${subblock.field_type}`}
+                    >
                       <Grid.Column>
                         <Field
                           {...subblock}
