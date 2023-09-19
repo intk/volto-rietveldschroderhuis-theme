@@ -52,15 +52,16 @@ const ContentMetadataTags = (props) => {
         <title>
           {(seo_title || title)?.replace(/\u00AD/g, '')}
           {props.content['@type'] !== 'LRF'
-            ? language === 'nl'
+            ? props.content.language.token === 'nl'
               ? ' - Rietveld Schröderhuis'
-              : language === 'en'
+              : props.content.language.token === 'en'
               ? ' - Rietveld Schroder House'
-              : language === 'de'
-              ? ' - Rietveld Schroder Hause'
+              : props.content.language.token === 'de'
+              ? ' - Rietveld-Schroder-Haus'
               : ' - Rietveld Schröderhuis'
             : ''}
         </title>
+        {console.log(props.content.language.token)}
         <meta name="description" content={seo_description || description} />
         <meta
           property="og:title"
