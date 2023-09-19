@@ -11,7 +11,7 @@ const ContentMetadataTags = (props) => {
     seo_canonical_url,
     seo_noindex,
     title,
-    description
+    description,
   } = props.content;
 
   const getContentImageInfo = () => {
