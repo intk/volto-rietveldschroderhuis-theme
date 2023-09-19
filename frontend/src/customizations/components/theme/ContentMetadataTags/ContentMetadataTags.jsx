@@ -49,16 +49,17 @@ const ContentMetadataTags = (props) => {
     <>
       <Helmet>
         <title>
-          {(seo_title || title)?.replace(/\u00AD/g, '')}
-          {props?.content['@type'] !== 'LRF'
-            ? props.content?.language?.token === 'nl'
-              ? ' - Rietveld Schröderhuis'
-              : props.content?.language?.token === 'en'
-              ? ' - Rietveld Schroder House'
-              : props.content?.language?.token === 'de'
-              ? ' - Rietveld-Schroder-Haus'
-              : ' - Rietveld Schröderhuis'
-            : ''}
+          {`${(seo_title || title)?.replace(/\u00AD/g, '')}${
+            props?.content['@type'] !== 'LRF'
+              ? props.content?.language?.token === 'nl'
+                ? ' - Rietveld Schröderhuis'
+                : props.content?.language?.token === 'en'
+                ? ' - Rietveld Schroder House'
+                : props.content?.language?.token === 'de'
+                ? ' - Rietveld-Schroder-Haus'
+                : ' - Rietveld Schröderhuis'
+              : ''
+          }`}
         </title>
         <meta name="description" content={seo_description || description} />
         <meta
