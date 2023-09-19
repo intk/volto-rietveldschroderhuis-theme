@@ -12,7 +12,7 @@ const ContentMetadataTags = (props) => {
     seo_noindex,
     title,
     description,
-    language
+    language,
   } = props.content;
 
   const getContentImageInfo = () => {
@@ -50,17 +50,17 @@ const ContentMetadataTags = (props) => {
     <>
       <Helmet>
         <title>
-          {(seo_title || title)?.replace(/\u00AD/g, '')} -
-          {language.token === 'nl'
-            ? 'Rietveld Schröderhuis'
-            : language.token === 'en'
-            ? 'Rietveld Schröder House'
-            : language.token === 'de'
-            ? 'Rietveld-Schröder-Haus'
-            : 'Rietveld Schröderhuis'}
+          {(seo_title || title)?.replace(/\u00AD/g, '')}
+          {props.content['@type'] !== 'LRF'
+            ? language === 'nl'
+              ? ' - Rietveld Schröderhuis'
+              : language === 'en'
+              ? ' - Rietveld Schroder House'
+              : language === 'de'
+              ? ' - Rietveld Schroder Hause'
+              : ' - Rietveld Schröderhuis'
+            : ''}
         </title>
-
-        {console.log(language.token)}
         <meta name="description" content={seo_description || description} />
         <meta
           property="og:title"
