@@ -29,7 +29,7 @@ export default function applyConfig(config) {
     defaultLanguage: DEFAULT_LANG,
   };
   config.settings.cookiebotDomainGroupId =
-    'c6718f17-016b-4d02-9bc2-9f1467f610fb';
+    '48dd9bde-34f3-4c22-9b32-5cd8172daa34';
 
   config.settings.navDepth = 2;
   config.settings.siteDataPageId = 'footer';
