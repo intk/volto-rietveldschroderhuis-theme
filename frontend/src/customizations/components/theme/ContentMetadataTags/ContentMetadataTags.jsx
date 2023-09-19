@@ -11,8 +11,7 @@ const ContentMetadataTags = (props) => {
     seo_canonical_url,
     seo_noindex,
     title,
-    description,
-    language,
+    description
   } = props.content;
 
   const getContentImageInfo = () => {
@@ -61,7 +60,6 @@ const ContentMetadataTags = (props) => {
               : ' - Rietveld Schröderhuis'
             : ''}
         </title>
-        {console.log(props.content.language.token)}
         <meta name="description" content={seo_description || description} />
         <meta
           property="og:title"
