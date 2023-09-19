@@ -28,6 +28,8 @@ export default function applyConfig(config) {
     supportedLanguages: ['nl', 'en', 'de'],
     defaultLanguage: DEFAULT_LANG,
   };
+  config.settings.cookiebotDomainGroupId =
+    'c6718f17-016b-4d02-9bc2-9f1467f610fb';
 
   config.settings.navDepth = 2;
   config.settings.siteDataPageId = 'footer';
