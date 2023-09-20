@@ -63,9 +63,9 @@ const tempTranslations = {
     de: 'Falsch',
   },
   stateSuccess: {
-    en: 'Sent!',
-    nl: 'Verzonden!',
-    de: 'Gesendet!',
+    en: 'Thank you very much for your request',
+    nl: 'Hartelijke dank voor uw aanvraag',
+    de: 'Vielen Dank für Ihre Anfrage',
   },
   reset: {
     en: 'Clear',

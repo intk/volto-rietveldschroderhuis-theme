@@ -20,12 +20,17 @@ const messages = defineMessages({
 
 const tempTranslations = {
   success: {
-    en: 'Form successfully submitted',
-    nl: 'Formulier succesvol ingediend',
+    en:
+      'Please note: your application is not yet final. We will contact you within two working days to confirm your request.',
+    nl:
+      'Let op: uw aanvraag is nog niet definitief. Wij nemen binnen twee werkdagen contact met u op om uw aanvraag te bevestigen.',
+    de:
+      'Bitte beachten Sie: Ihre Bewerbung ist noch nicht endgültig. Wir werden uns innerhalb von zwei Werktagen mit Ihnen in Verbindung setzen, um Ihre Anfrage zu bestätigen.',
   },
   error: {
     en: 'Error while sending',
     nl: 'Fout tijdens het verzenden',
+    de: 'Fehler beim Senden',
   },
 };
 
