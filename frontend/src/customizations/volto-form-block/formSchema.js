@@ -49,7 +49,6 @@ const messages = defineMessages({
 });
 
 export default (formData) => {
-  console.log(formData)
   var intl = useIntl();
   const emailFields =
     formData?.subblocks?.reduce((acc, field) => {
