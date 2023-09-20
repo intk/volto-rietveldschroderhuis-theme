@@ -3,7 +3,7 @@
  * @module components/manage/Blocks/Image/View
  */
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
@@ -82,7 +82,6 @@ export const View = ({ data, detached }) => {
                     className="photo-credit-copytight"
                     dangerouslySetInnerHTML={{ __html: data.caption?.data }}
                   />
-                  {console.log(data?.caption)}
                 </div>
               );
             } else {
