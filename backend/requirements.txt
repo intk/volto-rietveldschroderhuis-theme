@@ -4,8 +4,8 @@
 zope.testrunner
 
 kitconcept.seo
-# git+https://github.com/intk/collective.volto.formsupport.git
-collective.volto.formsupport
+git+https://github.com/intk/collective.volto.formsupport.git
+#collective.volto.formsupport
 collective.volto.socialsettings
 collective.exportimport
 
