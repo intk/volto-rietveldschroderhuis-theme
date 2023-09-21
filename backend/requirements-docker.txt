@@ -1,5 +1,6 @@
 -c constraints.txt
 src/rietveld
 collective.exportimport
-git+https://github.com/intk/collective.volto.formsupport.git
+# git+https://github.com/intk/collective.volto.formsupport.git
+collective.volto.formsupport
 
