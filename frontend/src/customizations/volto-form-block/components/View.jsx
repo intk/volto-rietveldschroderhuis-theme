@@ -167,9 +167,9 @@ const View = ({ data, id, path }) => {
           data.subblocks.forEach((subblock) => {
             let name = getFieldName(subblock.label, subblock.id);
             if (!formattedFormData[name]?.value && subblock.default_values) {
-              formattedFormData[name].field_id = subblock.field_id;
               formattedFormData[name] = {
                 ...formattedFormData[name],
+                label: subblock.label,
                 value: subblock.default_values,
               };
             }
