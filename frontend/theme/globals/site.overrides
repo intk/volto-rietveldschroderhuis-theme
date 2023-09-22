@@ -596,6 +596,12 @@ p {
       margin-bottom: 18px !important;
     }
   }
+  @media (max-width: 480px){
+    .documentFirstHeading, .documentDescription {
+      padding-left: 55px !important;
+      padding-right: 55px !important;
+    }
+  }
 }
 //Hero title
 .description-container,
