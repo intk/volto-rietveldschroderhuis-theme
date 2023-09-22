@@ -1265,6 +1265,16 @@ body:not(.has-mobile-menu-open){
   .image-wrapper- > a {
     border-bottom: 0px solid white !important;
   }
+  .image-wrapper-small{
+    #photo-credit{
+      max-width: 25% !important;
+    }
+  }
+  .image-wrapper-medium{
+    #photo-credit{
+      max-width: 50% !important;
+    }
+  }
 }
 
 .block.__grid {
