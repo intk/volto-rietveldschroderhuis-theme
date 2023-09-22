@@ -1239,4 +1239,6 @@ p > sub{
   color: #777777;
 }
 
-
+.block.__grid img{
+  max-width: 100% !important;
+}
