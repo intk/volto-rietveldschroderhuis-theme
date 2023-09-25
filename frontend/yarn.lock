@@ -2640,7 +2640,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mbarde/volto-image-crop-widget@npm:*":
+"@mbarde/volto-image-crop-widget@npm:0.5.1":
   version: 0.5.1
   resolution: "@mbarde/volto-image-crop-widget@npm:0.5.1"
   dependencies:
@@ -11844,7 +11844,7 @@ __metadata:
     "@kitconcept/volto-button-block": 2.2.0
     "@kitconcept/volto-carousel-block": 1.1.0
     "@kitconcept/volto-slider-block": 4.3.0
-    "@mbarde/volto-image-crop-widget": "*"
+    "@mbarde/volto-image-crop-widget": 0.5.1
     "@plone/scripts": ^2.1.5
     "@plone/volto": 16.21.3
     "@storybook/addon-actions": ^6.3.0
