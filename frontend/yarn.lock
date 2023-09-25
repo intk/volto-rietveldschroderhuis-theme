@@ -2640,6 +2640,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mbarde/volto-image-crop-widget@npm:*":
+  version: 0.5.1
+  resolution: "@mbarde/volto-image-crop-widget@npm:0.5.1"
+  dependencies:
+    "@plone/scripts": "*"
+    react-image-crop: 10.0.9
+  checksum: 403a04fa7eef0fbbb2a903b5f6baedde2d0ee7500649e8d698d1a0a66d6fe718b9335b298a502bab510a06284155d7d9eef0a4f6d6c5301d8e4660699e6d62ac
+  languageName: node
+  linkType: hard
+
 "@mdx-js/mdx@npm:^1.6.22":
   version: 1.6.22
   resolution: "@mdx-js/mdx@npm:1.6.22"
@@ -2764,6 +2774,26 @@ __metadata:
     mkdirp: ^1.0.4
     rimraf: ^3.0.2
   checksum: 52dc02259d98da517fae4cb3a0a3850227bdae4939dda1980b788a7670636ca2b4a01b58df03dd5f65c1e3cb70c50fa8ce5762b582b3f499ec30ee5ce1fd9380
+  languageName: node
+  linkType: hard
+
+"@plone/scripts@npm:*":
+  version: 3.0.0
+  resolution: "@plone/scripts@npm:3.0.0"
+  dependencies:
+    babel-plugin-react-intl: 5.1.17
+    babel-preset-razzle: 4.2.17
+    chalk: 4
+    commander: 8.2.0
+    fs-extra: 10.1.0
+    git-url-parse: ^11.6.0
+    mrs-developer: "*"
+    pofile: 1.0.10
+  bin:
+    addon: addon/index.js
+    changelogupdater: changelogupdater.cjs
+    i18n: i18n.cjs
+  checksum: c5a03a68fd16f731fd40bbf94e3bc6addb4395a04049eb98fbb95f1e1ebcc2468e003149b829261a1b577d50cce032d80dc99c8e812a126621f730f6e431cb97
   languageName: node
   linkType: hard
 
@@ -7987,7 +8017,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^1.0.4, clsx@npm:^1.1.1":
+"clsx@npm:^1.0.4, clsx@npm:^1.1.1, clsx@npm:^1.2.1":
   version: 1.2.1
   resolution: "clsx@npm:1.2.1"
   checksum: 30befca8019b2eb7dbad38cff6266cf543091dae2825c856a62a8ccf2c3ab9c2907c4d12b288b73101196767f66812365400a227581484a05f968b0307cfaf12
@@ -11814,6 +11844,7 @@ __metadata:
     "@kitconcept/volto-button-block": 2.2.0
     "@kitconcept/volto-carousel-block": 1.1.0
     "@kitconcept/volto-slider-block": 4.3.0
+    "@mbarde/volto-image-crop-widget": "*"
     "@plone/scripts": ^2.1.5
     "@plone/volto": 16.21.3
     "@storybook/addon-actions": ^6.3.0
@@ -11834,6 +11865,7 @@ __metadata:
     stylelint-config-prettier: 8.0.1
     stylelint-prettier: 1.1.2
     volto-form-block: 3.1.0
+    volto-google-analytics: 2.0.0
     volto-multilingual-widget: 3.0.0
   languageName: unknown
   linkType: soft
@@ -19717,6 +19749,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-ga4@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "react-ga4@npm:1.4.1"
+  checksum: 4c33ecb47dfc26c241a6af8e2b08b29b6c059f40e456e93d1c2b65c995edce18f32d9777295774ec992d968d7c5efdd105eb62398972d85ff2e2b6dad8646a26
+  languageName: node
+  linkType: hard
+
+"react-ga@npm:2.7.0":
+  version: 2.7.0
+  resolution: "react-ga@npm:2.7.0"
+  peerDependencies:
+    prop-types: ^15.6.0
+    react: ^15.6.2 || ^16.0
+  checksum: 15d8571c156edfaa204ff0041db7a901b0eeca3e3b21774e918269b0fe48204bb5b6a3df882caea5e0077aa3a32be39a48e7082e556563338f2a78b402a59463
+  languageName: node
+  linkType: hard
+
 "react-google-recaptcha-v3@npm:^1.8.0":
   version: 1.10.1
   resolution: "react-google-recaptcha-v3@npm:1.10.1"
@@ -19735,6 +19784,17 @@ __metadata:
   peerDependencies:
     react: "*"
   checksum: b6c8d4fe482b112e1041515d93ef7670a0af128855c926052a076b64d0b991cdd4391394b26467100f8da3859db1ebd8f9c6b7614fa5969fde83de45c71031a3
+  languageName: node
+  linkType: hard
+
+"react-image-crop@npm:10.0.9":
+  version: 10.0.9
+  resolution: "react-image-crop@npm:10.0.9"
+  dependencies:
+    clsx: ^1.2.1
+  peerDependencies:
+    react: ">=16.13.1"
+  checksum: 52f2644f727851b323b62f333943b9537a626c7d4e1874441f5b5df0946aa3440d37159de260060556c42468c84d60db66ee8f2c4507c74127531dde68c7d5e4
   languageName: node
   linkType: hard
 
@@ -24432,6 +24492,18 @@ __metadata:
     "@plone/volto": ">=16.0.0-alpha.38"
     volto-subblocks: ^2.0.0
   checksum: a8707b864ee32acf99151d302de6389d9a395623b2c384dbae3a1acb9e2b5c57f355f5d9318834fa9e49b004f14f97494534dd435daea65414ddce087e340009
+  languageName: node
+  linkType: hard
+
+"volto-google-analytics@npm:2.0.0":
+  version: 2.0.0
+  resolution: "volto-google-analytics@npm:2.0.0"
+  dependencies:
+    react-ga: 2.7.0
+    react-ga4: ^1.4.1
+  peerDependencies:
+    "@plone/volto": ">=16.0.0-alpha.38"
+  checksum: 9aec3d6ddd3843d64b3dca5aacf212de34586db386f688df4dd4f87f345c644c616e9cf645d1f982880a73f189296c16e8c941caf7471fc51ce1294a4b91affa
   languageName: node
   linkType: hard
 
