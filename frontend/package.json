@@ -38,7 +38,7 @@
     "@eeacms/volto-hero-block",
     "@kitconcept/volto-button-block",
     "@eeacms/volto-listing-block",
-    "@codesyntax/volto-cookiebot"
+    "@mbarde/volto-image-crop-widget"
   ],
   "jest": {
     "modulePathIgnorePatterns": [
@@ -160,6 +160,7 @@
     "@kitconcept/volto-button-block": "2.2.0",
     "@kitconcept/volto-carousel-block": "1.1.0",
     "@kitconcept/volto-slider-block": "4.3.0",
+    "@mbarde/volto-image-crop-widget": "*",
     "@plone/volto": "16.21.3",
     "react-icons": "4.10.1",
     "react-mailchimp-subscribe": "2.1.3",
