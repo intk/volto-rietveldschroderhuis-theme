@@ -41,11 +41,13 @@ function HeroSection(props) {
     multiple_content_view,
     start,
     end,
+    preview_image_alt_text,
   } = content || {};
 
   const isEvent = content?.['@type'] === 'Event';
   const endDate = new Date(end || Date.now());
   const startDate = new Date(start || Date.now());
+  console.log(props)
 
   return (
     <div className="herosection">
@@ -59,13 +61,14 @@ function HeroSection(props) {
                 image={content.preview_image}
                 width="100vw"
                 height="90vh"
+                alt={preview_image_alt_text}
               />
 
-              {preview_caption && (
+              {/* {preview_caption && (
                 <figcaption className="content-image-caption">
                   {preview_caption}
                 </figcaption>
-              )}
+              )} */}
             </figure>
             <div className="header-title-dates">
               <div className="hero-dates-wrapper">
