@@ -19,6 +19,7 @@ import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 import { useSiteDataContent } from '@package/helpers';
 import { langmap } from '../../../../../omelette/src/helpers';
+import { useGoogleAnalytics } from 'volto-google-analytics';
 
 const messages = defineMessages({
   copyright: {
@@ -135,6 +136,7 @@ const MailChimpForm = ({ status, message, onValidated }) => {
  */
 
 const Footer = ({ intl }) => {
+  useGoogleAnalytics();
   const siteDataContent = useSiteDataContent();
   const mailchimp_url =
     'https://centraalmuseum.us2.list-manage.com/subscribe/post?u=c04600e3ceefae8c502cbabec&amp;id=42702e9770&group%5B15893%5D%5B1%5D=1';
