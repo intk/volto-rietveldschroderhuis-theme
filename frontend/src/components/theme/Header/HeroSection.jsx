@@ -37,7 +37,7 @@ function HeroSection(props) {
   const {
     title,
     description,
-    preview_caption,
+    // preview_caption,
     multiple_content_view,
     start,
     end,
@@ -47,7 +47,6 @@ function HeroSection(props) {
   const isEvent = content?.['@type'] === 'Event';
   const endDate = new Date(end || Date.now());
   const startDate = new Date(start || Date.now());
-  console.log(props)
 
   return (
     <div className="herosection">
