@@ -60,6 +60,25 @@ export default function applyConfig(config) {
     title: 'Homepage',
   });
 
+  config.settings.slate.toolbarButtons = [
+    'bold',
+    'italic',
+    'strikethrough',
+    'link',
+    'separator',
+    'heading-two',
+    'heading-three',
+    'separator',
+    'sub',
+    'sup',
+    'separator',
+    'numbered-list',
+    'bulleted-list',
+    'blockquote',
+    'styleMenu',
+    'callout',
+  ];
+
   config.settings.asyncPropsExtenders = [
     ...config.settings.asyncPropsExtenders,
     {

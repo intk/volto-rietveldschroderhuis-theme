@@ -1240,6 +1240,19 @@ body:not(.has-mobile-menu-open){
   display: none !important;
 }
 
+#view, #page-edit{
+  p.callout {
+    font-size: 15px;
+    color: #777777;
+    margin-top: 0px;
+    border: none;
+    box-shadow: none;
+    padding-left: 0px;
+    @media screen and (max-width: 1200px) {
+      font-size: 12px;
+    }
+  }
+}
 #view #photo-credit, #page-edit #photo-credit {
   p {
     font-size: 15px;
