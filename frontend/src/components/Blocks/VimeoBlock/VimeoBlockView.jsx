@@ -17,6 +17,17 @@ const VimeoBlockView = (props) => {
     <div id="vimeo-block">
       <div className="video-wrapper">
         <iframe src={videoLink} frameBorder="0" title="vimeo"></iframe>
+        <div
+          className="shadow"
+          style={{
+            backgroundImage:
+              'linear-gradient(to bottom, rgba(46, 46, 46, 0) 0%, #242424 200%)',
+            // zIndex: 1,
+            height: '100%',
+            width: '100vw',
+            position: 'absolute',
+          }}
+        ></div>
       </div>
       <div className="vimeo-buttons">
         {props.data.button1 && (
