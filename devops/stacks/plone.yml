@@ -2,9 +2,10 @@ version: "3.3"
 
 services:
   frontend:
-    image: intkbv/rietveld-frontend:sha-2a68517
+    image: intkbv/rietveld-frontend:sha-f2f40b6
     environment:
       RAZZLE_INTERNAL_API_PATH: http://backend:8080/Plone
+      RAZZLE_GA4_CODE: "G-33ERDL4GY0"
     depends_on:
       - backend
     networks:
@@ -18,6 +19,7 @@ services:
     image: intkbv/rietveld-frontend:latest
     environment:
       RAZZLE_INTERNAL_API_PATH: http://backend:8080/Plone
+      RAZZLE_GA4_CODE: "G-33ERDL4GY0"
     depends_on:
       - backend
     networks:
