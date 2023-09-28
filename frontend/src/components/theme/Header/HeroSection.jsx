@@ -37,11 +37,10 @@ function HeroSection(props) {
   const {
     title,
     description,
-    // preview_caption,
+    preview_caption,
     multiple_content_view,
     start,
     end,
-    preview_caption
   } = content || {};
 
   const isEvent = content?.['@type'] === 'Event';
