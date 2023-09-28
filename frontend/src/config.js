@@ -18,6 +18,8 @@ import '@plone/volto/config';
 import { getContent } from '@plone/volto/actions';
 import installFooter from './footer';
 import installBlocks from './components/Blocks';
+import { BlockButton } from '@plone/volto-slate/editor/ui';
+import tiny from '@plone/volto/icons/tiny.svg';
 
 export default function applyConfig(config) {
   const DEFAULT_LANG = 'nl';
@@ -78,6 +80,18 @@ export default function applyConfig(config) {
     'styleMenu',
     'callout',
   ];
+
+  const { slate } = config.settings;
+
+  // Override the callout button
+  slate.buttons['callout'] = (props) => (
+    <BlockButton
+      format="callout"
+      icon={tiny}
+      title="Discreet" // Use the custom title
+      {...props}
+    />
+  );
 
   config.settings.asyncPropsExtenders = [
     ...config.settings.asyncPropsExtenders,
