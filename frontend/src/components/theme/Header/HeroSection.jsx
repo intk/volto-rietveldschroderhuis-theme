@@ -41,7 +41,7 @@ function HeroSection(props) {
     multiple_content_view,
     start,
     end,
-    preview_image_alt_text,
+    preview_caption
   } = content || {};
 
   const isEvent = content?.['@type'] === 'Event';
@@ -60,7 +60,7 @@ function HeroSection(props) {
                 image={content.preview_image}
                 width="100vw"
                 height="90vh"
-                alt={preview_image_alt_text}
+                alt={preview_caption || title}
               />
 
               {/* {preview_caption && (

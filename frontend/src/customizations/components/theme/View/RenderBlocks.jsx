@@ -28,9 +28,28 @@ const RenderBlocks = (props) => {
   const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
   const blocksConfig = props.blocksConfig || config.blocks.blocksConfig;
   const CustomTag = props.as || React.Fragment;
-
+  // const header_type = content.header_type['title'];
   return hasBlocksData(content) ? (
     <CustomTag>
+      {/* {header_type === 'image' ? (
+        <StyleWrapper
+          key={block}
+          {...props}
+          id={block}
+          block={block}
+          data={blockData}
+        >
+          <Block
+            id={block}
+            metadata={metadata}
+            properties={content}
+            data={blockData}
+            path={getBaseUrl(location?.pathname || '')}
+            blocksConfig={blocksConfig}
+          />
+        </StyleWrapper>
+      ) : null} */}
+
       {map(content[blocksLayoutFieldname].items, (block) => {
         const Block =
           blocksConfig[content[blocksFieldname]?.[block]?.['@type']]?.view ||
