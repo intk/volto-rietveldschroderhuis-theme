@@ -77,11 +77,15 @@ export const View = ({ data, detached }) => {
                   >
                     {image}
                   </UniversalLink>
-                  <p
-                    id="photo-credit"
-                    className="photo-credit-copytight"
-                    dangerouslySetInnerHTML={{ __html: data.caption?.data }}
-                  />
+                  {data.caption?.data ? (
+                    <p
+                      id="photo-credit"
+                      className="photo-credit-copytight"
+                      dangerouslySetInnerHTML={{ __html: data.caption.data }}
+                    />
+                  ) : (
+                    ''
+                  )}
                 </div>
               );
             } else {
