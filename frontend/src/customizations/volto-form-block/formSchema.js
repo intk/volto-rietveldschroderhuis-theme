@@ -33,7 +33,6 @@ const messages = defineMessages({
     id: 'captcha',
     defaultMessage: 'Captcha provider',
   },
-
   store: {
     id: 'form_save_persistent_data',
     defaultMessage: 'Store compiled data',
